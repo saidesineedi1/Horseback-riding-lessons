@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rider Dashboard & Analytics | Silver Hoof Stables</title>
+  <meta name="description"
+    content="Silver Hoof Stables Premier Rider Portal & Analytics Dashboard. Monitor revenue growth, session volume, riding progress, trail bookings, and horse care.">
+
+  <!-- Google Fonts: Open Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Base Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+  <!-- Dashboard Page Custom Stylesheet -->
+  <link rel="stylesheet" href="dash.css">
+</head>
+
+<body class="dash-body">
+
+  <div class="dash-portal-layout">
+
+    <!-- ==========================================================================
+       LEFT SIDEBAR NAVIGATION
+       ========================================================================== -->
+    <aside class="dash-sidebar" id="dash-sidebar">
+
+      <!-- Brand Logo Header (Matches Home 1 Exactly & Links Back) -->
+      <a href="index.html" class="dash-sidebar-brand" title="Return to Silver Hoof Stables Home">
+        <div class="logo-icon">
+          <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">SILVER HOOF</span>
+          <span class="brand-sub">STABLES</span>
+        </div>
+      </a>
+
+      <!-- Sidebar Main Navigation Menu -->
+      <nav class="dash-sidebar-nav">
+        <span class="nav-section-label">PORTAL NAVIGATION</span>
+
+        <ul class="sidebar-menu">
+          <li class="sidebar-item">
+            <button class="sidebar-link active dash-tab-item" data-tab="overview">
+              <span class="nav-icon-slot"><i class="fa-solid fa-chart-pie"></i></span>
+              <span class="nav-link-text">Overview &amp; Analytics</span>
+            </button>
+          </li>
+          <li class="sidebar-item">
+            <button class="sidebar-link dash-tab-item" data-tab="book">
+              <span class="nav-icon-slot"><i class="fa-solid fa-calendar-check"></i></span>
+              <span class="nav-link-text">Bookings &amp; Sales</span>
+              <span class="nav-badge badge-count">14</span>
+            </button>
+          </li>
+          <li class="sidebar-item">
+            <button class="sidebar-link dash-tab-item" data-tab="progress">
+              <span class="nav-icon-slot"><i class="fa-solid fa-graduation-cap"></i></span>
+              <span class="nav-link-text">Rider Progress &amp; Notes</span>
+            </button>
+          </li>
+          <li class="sidebar-item">
+            <button class="sidebar-link dash-tab-item" data-tab="trail">
+              <span class="nav-icon-slot"><i class="fa-solid fa-horse-head"></i></span>
+              <span class="nav-link-text">Trail &amp; Boarding Care</span>
+            </button>
+          </li>
+          <li class="sidebar-item">
+            <button class="sidebar-link dash-tab-item" data-tab="payments">
+              <span class="nav-icon-slot"><i class="fa-solid fa-receipt"></i></span>
+              <span class="nav-link-text">Billing &amp; Invoices</span>
+            </button>
+          </li>
+          <li class="sidebar-item">
+            <button class="sidebar-link dash-tab-item" data-tab="settings">
+              <span class="nav-icon-slot"><i class="fa-solid fa-sliders"></i></span>
+              <span class="nav-link-text">Settings &amp; Prefs</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Bottom Compact VIP Member Card & Site Return -->
+      <div class="sidebar-vip-card">
+        <div class="vip-card-header">
+          <div class="vip-badge-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div class="vip-meta">
+            <span class="vip-tier">VIP EQUESTRIAN</span>
+            <span class="vip-id">Member #SH-8849</span>
+          </div>
+        </div>
+        <a href="index.html" class="sidebar-exit-link" title="Return to Main Website">
+          <i class="fa-solid fa-house-chimney"></i>
+          <span>Return to Main Website</span>
+        </a>
+      </div>
+
+    </aside>
+
+    <!-- ==========================================================================
+       MAIN CONTENT AREA
+       ========================================================================== -->
+    <div class="dash-main-wrapper">
+
+      <!-- TOP PORTAL HEADER BAR -->
+      <header class="dash-top-bar">
+        <div class="top-bar-left">
+          <button class="mobile-sidebar-toggle" id="sidebar-toggle-btn" aria-label="Toggle Navigation Sidebar">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="page-title-wrap">
+            <span class="portal-tag"><i class="fa-solid fa-gem"></i> PREMIUM RIDER PORTAL</span>
+            <h1 class="portal-heading" id="dash-user-welcome">Welcome back, Sarah Vance</h1>
+          </div>
+        </div>
+
+        <div class="top-bar-right">
+          <!-- Search Box -->
+          <div class="top-search-wrap">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="dash-search-input" placeholder="Search orders, batch, lessons..."
+              oninput="handleDashSearch(this.value)">
+          </div>
+
+          <!-- Controls: RTL & Theme Toggles -->
+          <div class="top-controls">
+            <button class="icon-btn" id="rtl-toggle" title="Toggle RTL">RTL</button>
+            <button class="icon-btn" id="theme-toggle" title="Toggle Theme"><i class="fa-solid fa-moon"
+                id="theme-icon"></i></button>
+
+            <!-- Notification Bell -->
+            <button class="icon-btn notif-btn" title="Notifications"
+              onclick="showDashToast('You have 3 unread instructor notes and booking updates.')">
+              <i class="fa-solid fa-bell"></i>
+              <span class="notif-badge">3</span>
+            </button>
+          </div>
+
+          <!-- User Profile Avatar Pill -->
+          <div class="user-profile-pill" onclick="switchDashTab('settings')">
+            <img src="images/hero2_rider_portrait.jpg" alt="Sarah Vance Avatar" class="profile-avatar">
+            <div class="profile-meta">
+              <span class="profile-name" id="pill-user-name">Elena Vance</span>
+              <span class="profile-role">Apothecary Admin</span>
+            </div>
+            <i class="fa-solid fa-chevron-down profile-arrow"></i>
+          </div>
+        </div>
+      </header>
+
+      <!-- PORTAL CONTENT WRAPPER -->
+      <main class="dash-content-area">
+
+        <!-- ===================================================================
+             PANEL 1: OVERVIEW & ANALYTICS (DEFAULT VIEW WITH CHARTS)
+             =================================================================== -->
+        <div class="dash-panel active" id="panel-overview">
+
+          <!-- TOP 4 KPI METRIC CARDS STRIP -->
+          <div class="kpi-grid-4">
+
+            <!-- KPI 1: MONTHLY REVENUE -->
+            <div class="kpi-card">
+              <div class="kpi-header">
+                <span class="kpi-label">MONTHLY REVENUE</span>
+                <div class="kpi-icon-pill icon-purple">
+                  <i class="fa-solid fa-dollar-sign"></i>
+                </div>
+              </div>
+              <div class="kpi-body">
+                <h3 class="kpi-value">$48,250.00</h3>
+                <div class="kpi-trend trend-up">
+                  <span class="trend-badge"><i class="fa-solid fa-arrow-trend-up"></i> +18.4%</span>
+                  <span class="trend-sub">vs last month</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- KPI 2: TOTAL ORDERS / BOOKINGS -->
+            <div class="kpi-card">
+              <div class="kpi-header">
+                <span class="kpi-label">TOTAL ORDERS</span>
+                <div class="kpi-icon-pill icon-green">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+              </div>
+              <div class="kpi-body">
+                <h3 class="kpi-value">1,420</h3>
+                <div class="kpi-trend trend-up">
+                  <span class="trend-badge"><i class="fa-solid fa-arrow-trend-up"></i> +12.1%</span>
+                  <span class="trend-sub">vs last month</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- KPI 3: ACTIVE MEMBERS -->
+            <div class="kpi-card">
+              <div class="kpi-header">
+                <span class="kpi-label">ACTIVE MEMBERS</span>
+                <div class="kpi-icon-pill icon-gold">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </div>
+              <div class="kpi-body">
+                <h3 class="kpi-value">3,890</h3>
+                <div class="kpi-trend trend-up">
+                  <span class="trend-badge"><i class="fa-solid fa-arrow-trend-up"></i> +24.8%</span>
+                  <span class="trend-sub">repeat ritual subscribers</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- KPI 4: STOCK / STABLE HEALTH -->
+            <div class="kpi-card">
+              <div class="kpi-header">
+                <span class="kpi-label">STOCK HEALTH</span>
+                <div class="kpi-icon-pill icon-teal">
+                  <i class="fa-solid fa-leaf"></i>
+                </div>
+              </div>
+              <div class="kpi-body">
+                <h3 class="kpi-value">98.4%</h3>
+                <div class="kpi-trend trend-optimal">
+                  <span class="trend-badge badge-opt"><i class="fa-solid fa-check"></i> Optimal</span>
+                  <span class="trend-sub">42 active batches</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ANALYTICS CHARTS SECTION 1 -->
+          <div class="charts-row-grid">
+
+            <!-- LEFT CHART: REVENUE & VISITOR GROWTH (LINE CHART) -->
+            <div class="chart-card chart-card-large">
+              <div class="chart-header">
+                <div class="chart-title-group">
+                  <h3 class="chart-title">Revenue & Visitor Growth</h3>
+                  <p class="chart-sub">Monthly trend comparison for organic formulas & ritual bookings</p>
+                </div>
+                <div class="chart-actions">
+                  <button class="time-filter-btn active" onclick="toggleLineChartSpan('6m', this)">6 Months</button>
+                  <button class="time-filter-btn" onclick="toggleLineChartSpan('1y', this)">1 Year</button>
+                </div>
+              </div>
+
+              <!-- Line Chart Legend -->
+              <div class="chart-legend-bar">
+                <div class="legend-item">
+                  <span class="legend-color legend-revenue"></span>
+                  <span>Monthly Revenue ($)</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-color legend-visitors"></span>
+                  <span>Unique Visitors</span>
+                </div>
+              </div>
+
+              <!-- Line Chart Canvas / SVG Container -->
+              <div class="svg-chart-container">
+                <svg class="line-chart-svg" viewBox="0 0 700 280" preserveAspectRatio="none">
+                  <defs>
+                    <!-- Purple Area Gradient -->
+                    <linearGradient id="purpleGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.38" />
+                      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.0" />
+                    </linearGradient>
+                    <!-- Green Line Gradient -->
+                    <linearGradient id="greenGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#10B981" stop-opacity="0.2" />
+                      <stop offset="100%" stop-color="#10B981" stop-opacity="0.0" />
+                    </linearGradient>
+                  </defs>
+
+                  <!-- Y-Axis Horizontal Grid Lines -->
+                  <line x1="50" y1="30" x2="680" y2="30" class="chart-grid-line" />
+                  <line x1="50" y1="70" x2="680" y2="70" class="chart-grid-line" />
+                  <line x1="50" y1="110" x2="680" y2="110" class="chart-grid-line" />
+                  <line x1="50" y1="150" x2="680" y2="150" class="chart-grid-line" />
+                  <line x1="50" y1="190" x2="680" y2="190" class="chart-grid-line" />
+                  <line x1="50" y1="230" x2="680" y2="230" class="chart-grid-line" />
+
+                  <!-- Y-Axis Labels -->
+                  <text x="40" y="34" class="chart-axis-text">$50000</text>
+                  <text x="40" y="74" class="chart-axis-text">$45000</text>
+                  <text x="40" y="114" class="chart-axis-text">$40000</text>
+                  <text x="40" y="154" class="chart-axis-text">$35000</text>
+                  <text x="40" y="194" class="chart-axis-text">$30000</text>
+                  <text x="40" y="234" class="chart-axis-text">$25000</text>
+                  <text x="40" y="260" class="chart-axis-text">$10000</text>
+
+                  <!-- X-Axis Month Labels -->
+                  <text x="80" y="260" class="chart-axis-text">Mar</text>
+                  <text x="200" y="260" class="chart-axis-text">Apr</text>
+                  <text x="320" y="260" class="chart-axis-text">May</text>
+                  <text x="440" y="260" class="chart-axis-text">Jun</text>
+                  <text x="560" y="260" class="chart-axis-text">Jul</text>
+                  <text x="660" y="260" class="chart-axis-text">Aug</text>
+
+                  <!-- Revenue Gradient Filled Area -->
+                  <polygon points="80,200 200,175 320,120 440,105 560,85 660,42 660,230 80,230"
+                    fill="url(#purpleGrad)" />
+
+                  <!-- Green Dashed Line (Visitors) -->
+                  <path d="M 80,220 Q 200,205 320,185 T 440,170 T 560,150 T 660,135" class="chart-line-green" />
+
+                  <!-- Purple Solid Line (Revenue) -->
+                  <path d="M 80,200 Q 200,175 320,120 T 440,105 T 560,85 T 660,42" class="chart-line-purple" />
+
+                  <!-- Revenue Line Data Dots -->
+                  <circle cx="80" cy="200" r="5" class="chart-dot dot-purple"
+                    onclick="showDashToast('Mar Revenue: $28,400')" />
+                  <circle cx="200" cy="175" r="5" class="chart-dot dot-purple"
+                    onclick="showDashToast('Apr Revenue: $32,100')" />
+                  <circle cx="320" cy="120" r="5" class="chart-dot dot-purple"
+                    onclick="showDashToast('May Revenue: $39,500')" />
+                  <circle cx="440" cy="105" r="5" class="chart-dot dot-purple"
+                    onclick="showDashToast('Jun Revenue: $42,000')" />
+                  <circle cx="560" cy="85" r="5" class="chart-dot dot-purple"
+                    onclick="showDashToast('Jul Revenue: $45,200')" />
+                  <circle cx="660" cy="42" r="6" class="chart-dot dot-purple active-dot"
+                    onclick="showDashToast('Aug Revenue: $48,250 Peak!')" />
+
+                  <!-- Visitor Line Data Dots -->
+                  <circle cx="80" cy="220" r="4" class="chart-dot dot-green" />
+                  <circle cx="200" cy="205" r="4" class="chart-dot dot-green" />
+                  <circle cx="320" cy="185" r="4" class="chart-dot dot-green" />
+                  <circle cx="440" cy="170" r="4" class="chart-dot dot-green" />
+                  <circle cx="560" cy="150" r="4" class="chart-dot dot-green" />
+                  <circle cx="660" cy="135" r="4" class="chart-dot dot-green" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- RIGHT CHART: CATEGORY SALES / DISCIPLINE BOOKINGS (BAR GRAPH) -->
+            <div class="chart-card chart-card-small">
+              <div class="chart-header">
+                <div class="chart-title-group">
+                  <h3 class="chart-title">Category Sales</h3>
+                  <p class="chart-sub">Sales volume across organic product lines & disciplines</p>
+                </div>
+              </div>
+
+              <!-- Bar Graph Canvas / Container -->
+              <div class="bar-graph-wrapper">
+                <div class="bar-graph-y-axis">
+                  <span>600</span>
+                  <span>500</span>
+                  <span>400</span>
+                  <span>300</span>
+                  <span>200</span>
+                  <span>100</span>
+                  <span>0</span>
+                </div>
+
+                <div class="bar-graph-columns">
+                  <!-- Bar 1: Face Oils / Dressage -->
+                  <div class="bar-col" onclick="showDashToast('Dressage / Face Oils: 540 Sales')">
+                    <div class="bar-fill bar-purple" style="height: 90%;">
+                      <span class="bar-tooltip">540</span>
+                    </div>
+                    <span class="bar-label">Face Oils</span>
+                  </div>
+
+                  <!-- Bar 2: Soaps / Hunter Jumper -->
+                  <div class="bar-col" onclick="showDashToast('Soaps / Jumping: 420 Sales')">
+                    <div class="bar-fill bar-light-purple" style="height: 70%;">
+                      <span class="bar-tooltip">420</span>
+                    </div>
+                    <span class="bar-label">Soaps</span>
+                  </div>
+
+                  <!-- Bar 3: Toners / Trail Rides -->
+                  <div class="bar-col" onclick="showDashToast('Toners / Trail Rides: 310 Sales')">
+                    <div class="bar-fill bar-sage-green" style="height: 51%;">
+                      <span class="bar-tooltip">310</span>
+                    </div>
+                    <span class="bar-label">Toners</span>
+                  </div>
+
+                  <!-- Bar 4: Butters / Youth Academy -->
+                  <div class="bar-col" onclick="showDashToast('Butters / Youth Acad.: 280 Sales')">
+                    <div class="bar-fill bar-gold" style="height: 46%;">
+                      <span class="bar-tooltip">280</span>
+                    </div>
+                    <span class="bar-label">Butters</span>
+                  </div>
+
+                  <!-- Bar 5: Ritual Sets / Boarding -->
+                  <div class="bar-col" onclick="showDashToast('Ritual Sets / Boarding: 190 Sales')">
+                    <div class="bar-fill bar-terracotta" style="height: 31%;">
+                      <span class="bar-tooltip">190</span>
+                    </div>
+                    <span class="bar-label">Ritual Sets</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ANALYTICS CHARTS SECTION 2 (ADDITIONAL BARCHARTS & RADARS) -->
+          <div class="charts-row-grid grid-even">
+
+            <!-- CHART 3: WEEKLY ARENA & LESSON OCCUPANCY (HORIZONTAL BAR CHART) -->
+            <div class="chart-card">
+              <div class="chart-header">
+                <div class="chart-title-group">
+                  <h3 class="chart-title"><i class="fa-solid fa-chart-column"></i> Weekly Arena & Riding Slot Capacity
+                  </h3>
+                  <p class="chart-sub">Peak hour occupancy rates across Silver Hoof outdoor & indoor arenas</p>
+                </div>
+              </div>
+
+              <div class="horizontal-bar-list">
+                <div class="hbar-item">
+                  <div class="hbar-info">
+                    <span class="hbar-day">Monday</span>
+                    <span class="hbar-val">85% Occupied</span>
+                  </div>
+                  <div class="hbar-track">
+                    <div class="hbar-fill fill-gold" style="width: 85%;"></div>
+                  </div>
+                </div>
+
+                <div class="hbar-item">
+                  <div class="hbar-info">
+                    <span class="hbar-day">Tuesday</span>
+                    <span class="hbar-val">92% Occupied</span>
+                  </div>
+                  <div class="hbar-track">
+                    <div class="hbar-fill fill-purple" style="width: 92%;"></div>
+                  </div>
+                </div>
+
+                <div class="hbar-item">
+                  <div class="hbar-info">
+                    <span class="hbar-day">Wednesday</span>
+                    <span class="hbar-val">78% Occupied</span>
+                  </div>
+                  <div class="hbar-track">
+                    <div class="hbar-fill fill-green" style="width: 78%;"></div>
+                  </div>
+                </div>
+
+                <div class="hbar-item">
+                  <div class="hbar-info">
+                    <span class="hbar-day">Thursday</span>
+                    <span class="hbar-val">88% Occupied</span>
+                  </div>
+                  <div class="hbar-track">
+                    <div class="hbar-fill fill-gold" style="width: 88%;"></div>
+                  </div>
+                </div>
+
+                <div class="hbar-item">
+                  <div class="hbar-info">
+                    <span class="hbar-day">Friday</span>
+                    <span class="hbar-val">96% Occupied</span>
+                  </div>
+                  <div class="hbar-track">
+                    <div class="hbar-fill fill-purple" style="width: 96%;"></div>
+                  </div>
+                </div>
+
+                <div class="hbar-item">
+                  <div class="hbar-info">
+                    <span class="hbar-day">Saturday (Peak)</span>
+                    <span class="hbar-val">99% Occupied</span>
+                  </div>
+                  <div class="hbar-track">
+                    <div class="hbar-fill fill-red" style="width: 99%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CHART 4: RIDER SKILL GAUGES & PERFORMANCE GAUGES -->
+            <div class="chart-card">
+              <div class="chart-header">
+                <div class="chart-title-group">
+                  <h3 class="chart-title"><i class="fa-solid fa-bullseye"></i> Rider Skill Mastery Scores</h3>
+                  <p class="chart-sub">Instructor verified competency metrics for Sarah Vance</p>
+                </div>
+              </div>
+
+              <div class="radial-gauges-grid">
+
+                <div class="gauge-card">
+                  <div class="gauge-circle ring-gold" style="--percent: 95;">
+                    <span class="gauge-number">95%</span>
+                  </div>
+                  <span class="gauge-label">Horsemanship</span>
+                </div>
+
+                <div class="gauge-card">
+                  <div class="gauge-circle ring-purple" style="--percent: 88;">
+                    <span class="gauge-number">88%</span>
+                  </div>
+                  <span class="gauge-label">Dressage Form</span>
+                </div>
+
+                <div class="gauge-card">
+                  <div class="gauge-circle ring-green" style="--percent: 82;">
+                    <span class="gauge-number">82%</span>
+                  </div>
+                  <span class="gauge-label">Jumping Control</span>
+                </div>
+
+                <div class="gauge-card">
+                  <div class="gauge-circle ring-teal" style="--percent: 94;">
+                    <span class="gauge-number">94%</span>
+                  </div>
+                  <span class="gauge-label">Trail Nav</span>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RECENT ORDERS & BOOKINGS DATA TABLE -->
+          <div class="table-card">
+            <div class="table-card-header">
+              <div class="table-title-group">
+                <h3 class="table-title">Recent Rider Bookings & Orders</h3>
+                <p class="table-sub">Live status tracking for session slots and equipment purchases</p>
+              </div>
+              <button class="btn btn-gold-sm" onclick="switchDashTab('book')">
+                <i class="fa-solid fa-plus"></i> New Booking
+              </button>
+            </div>
+
+            <div class="table-responsive">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Order / Slot ID</th>
+                    <th>Discipline & Details</th>
+                    <th>Instructor & Horse</th>
+                    <th>Date & Time</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>#SH-9482</strong></td>
+                    <td>
+                      <div class="tbl-item-group">
+                        <i class="fa-solid fa-chess-knight tbl-icon"></i>
+                        <span>Intermediate Dressage Clinic</span>
+                      </div>
+                    </td>
+                    <td>Coach Marcus &bull; <em>Zeus</em></td>
+                    <td>Tomorrow, 10:30 AM</td>
+                    <td><strong>$125.00</strong></td>
+                    <td><span class="status-pill pill-confirmed">Confirmed</span></td>
+                  </tr>
+
+                  <tr>
+                    <td><strong>#SH-9410</strong></td>
+                    <td>
+                      <div class="tbl-item-group">
+                        <i class="fa-solid fa-mountain-sun tbl-icon"></i>
+                        <span>Sunset Mountain Ridge Trail</span>
+                      </div>
+                    </td>
+                    <td>Guide Elena &bull; <em>Apollo</em></td>
+                    <td>Sep 20, 2026, 04:00 PM</td>
+                    <td><strong>$85.00</strong></td>
+                    <td><span class="status-pill pill-confirmed">Confirmed</span></td>
+                  </tr>
+
+                  <tr>
+                    <td><strong>#SH-9388</strong></td>
+                    <td>
+                      <div class="tbl-item-group">
+                        <i class="fa-solid fa-trophy tbl-icon"></i>
+                        <span>Hunter Jumper Technique</span>
+                      </div>
+                    </td>
+                    <td>Coach Sarah &bull; <em>Titan</em></td>
+                    <td>Sep 14, 2026, 11:00 AM</td>
+                    <td><strong>$140.00</strong></td>
+                    <td><span class="status-pill pill-completed">Completed</span></td>
+                  </tr>
+
+                  <tr>
+                    <td><strong>#SH-9290</strong></td>
+                    <td>
+                      <div class="tbl-item-group">
+                        <i class="fa-solid fa-house-chimney-window tbl-icon"></i>
+                        <span>Full-Care Stable Boarding Fee</span>
+                      </div>
+                    </td>
+                    <td>Silver Hoof Barn Team</td>
+                    <td>Sep 01, 2026</td>
+                    <td><strong>$1,200.00</strong></td>
+                    <td><span class="status-pill pill-completed">Completed</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ===================================================================
+             PANEL 2: BOOKINGS & SALES
+             =================================================================== -->
+        <div class="dash-panel" id="panel-book">
+          <div class="panel-header-bar">
+            <h2>Book a Riding Slot</h2>
+            <p>Select your skill level and reserve an available arena time slot</p>
+          </div>
+
+          <div class="filter-pills-row">
+            <button class="skill-btn active" data-filter="all">All Levels</button>
+            <button class="skill-btn" data-filter="beginner">Beginner</button>
+            <button class="skill-btn" data-filter="intermediate">Intermediate</button>
+            <button class="skill-btn" data-filter="advanced">Advanced</button>
+          </div>
+
+          <div class="slots-grid">
+            <div class="slot-card" data-level="intermediate">
+              <span class="slot-badge level-inter">Intermediate</span>
+              <h3>Dressage Precision & Arena Figures</h3>
+              <p class="slot-instructor"><i class="fa-solid fa-user-tie"></i> Instructor: Coach Marcus Vance</p>
+              <p class="slot-time"><i class="fa-regular fa-clock"></i> Tomorrow, 10:30 AM - 11:30 AM</p>
+              <div class="slot-footer">
+                <span class="slot-price">$125 / session</span>
+                <button class="btn btn-gold-sm"
+                  onclick="confirmSlotBooking('Dressage Precision', 'Tomorrow 10:30 AM')">Reserve Slot</button>
+              </div>
+            </div>
+
+            <div class="slot-card" data-level="advanced">
+              <span class="slot-badge level-adv">Advanced</span>
+              <h3>Hunter Jumper Course Navigation</h3>
+              <p class="slot-instructor"><i class="fa-solid fa-user-tie"></i> Instructor: Sarah Jenkins</p>
+              <p class="slot-time"><i class="fa-regular fa-clock"></i> Saturday, 02:00 PM - 03:30 PM</p>
+              <div class="slot-footer">
+                <span class="slot-price">$150 / session</span>
+                <button class="btn btn-gold-sm"
+                  onclick="confirmSlotBooking('Hunter Jumper Course', 'Saturday 2:00 PM')">Reserve Slot</button>
+              </div>
+            </div>
+
+            <div class="slot-card" data-level="beginner">
+              <span class="slot-badge level-beg">Beginner</span>
+              <h3>Foundational Horsemanship & Trot</h3>
+              <p class="slot-instructor"><i class="fa-solid fa-user-tie"></i> Instructor: David Miller</p>
+              <p class="slot-time"><i class="fa-regular fa-clock"></i> Sunday, 09:00 AM - 10:00 AM</p>
+              <div class="slot-footer">
+                <span class="slot-price">$95 / session</span>
+                <button class="btn btn-gold-sm"
+                  onclick="confirmSlotBooking('Foundational Horsemanship', 'Sunday 9:00 AM')">Reserve Slot</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             PANEL 3: RIDER PROGRESS & NOTES
+             =================================================================== -->
+        <div class="dash-panel" id="panel-progress">
+          <div class="panel-header-bar flex-header">
+            <div>
+              <h2>Instructor Evaluations &amp; Rider Progress</h2>
+              <p>Comprehensive skill competency matrix, arena evaluation logs, and training milestones</p>
+            </div>
+            <div class="panel-header-actions">
+              <button class="btn btn-outline-gold-sm"
+                onclick="showDashToast('Exporting Rider Portfolio &amp; Skill Report (PDF)...')">
+                <i class="fa-solid fa-file-arrow-down"></i> Export Portfolio
+              </button>
+            </div>
+          </div>
+
+          <!-- 4 Quick KPI Progress Cards -->
+          <div class="progress-kpi-grid">
+            <div class="prog-kpi-card">
+              <div class="prog-kpi-icon gold-glow"><i class="fa-solid fa-award"></i></div>
+              <div class="prog-kpi-meta">
+                <span class="prog-kpi-label">Current Mastery Level</span>
+                <span class="prog-kpi-value">Level 3 Advanced</span>
+                <span class="prog-kpi-sub"><i class="fa-solid fa-circle-check text-emerald"></i> Top 5% Rider
+                  Cohort</span>
+              </div>
+            </div>
+
+            <div class="prog-kpi-card">
+              <div class="prog-kpi-icon purple-glow"><i class="fa-solid fa-hourglass-half"></i></div>
+              <div class="prog-kpi-meta">
+                <span class="prog-kpi-label">Logged Arena Hours</span>
+                <span class="prog-kpi-value">142.5 hrs</span>
+                <span class="prog-kpi-sub text-gold"><i class="fa-solid fa-arrow-trend-up"></i> +12.5 hrs this
+                  month</span>
+              </div>
+            </div>
+
+            <div class="prog-kpi-card">
+              <div class="prog-kpi-icon teal-glow"><i class="fa-solid fa-star"></i></div>
+              <div class="prog-kpi-meta">
+                <span class="prog-kpi-label">Instructor Rating Avg</span>
+                <span class="prog-kpi-value">4.95 / 5.0</span>
+                <div class="prog-stars-row">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="prog-kpi-card">
+              <div class="prog-kpi-icon emerald-glow"><i class="fa-solid fa-bullseye"></i></div>
+              <div class="prog-kpi-meta">
+                <span class="prog-kpi-label">Next Target Event</span>
+                <span class="prog-kpi-value">Regional Trials</span>
+                <span class="prog-kpi-sub"><i class="fa-regular fa-calendar"></i> October 14, 2026</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2-Column Layout: Left Competency Matrix & Right Evaluation Feed -->
+          <div class="progress-details-grid">
+
+            <!-- Left: Competencies & Goals -->
+            <div class="prog-left-col">
+              <!-- Skill Competency Card -->
+              <div class="prog-card">
+                <div class="prog-card-header">
+                  <div>
+                    <h3>Skill Competency Matrix</h3>
+                    <p class="text-sub">Verified by Senior British Horse Society Instructors</p>
+                  </div>
+                  <span class="badge-pill-gold">Verified</span>
+                </div>
+
+                <div class="competency-bars-list">
+                  <div class="comp-item">
+                    <div class="comp-header">
+                      <span class="comp-name"><i class="fa-solid fa-circle-dot text-gold"></i> Dressage Seat &amp; Rein
+                        Contact</span>
+                      <span class="comp-score">94%</span>
+                    </div>
+                    <div class="comp-bar-track">
+                      <div class="comp-bar-fill fill-gold" style="width: 94%;"></div>
+                    </div>
+                  </div>
+
+                  <div class="comp-item">
+                    <div class="comp-header">
+                      <span class="comp-name"><i class="fa-solid fa-circle-dot text-emerald"></i> Canter Transitions
+                        &amp; Leads</span>
+                      <span class="comp-score">90%</span>
+                    </div>
+                    <div class="comp-bar-track">
+                      <div class="comp-bar-fill fill-green" style="width: 90%;"></div>
+                    </div>
+                  </div>
+
+                  <div class="comp-item">
+                    <div class="comp-header">
+                      <span class="comp-name"><i class="fa-solid fa-circle-dot text-purple"></i> Hunter Jumper 3'3"
+                        Oxers</span>
+                      <span class="comp-score">86%</span>
+                    </div>
+                    <div class="comp-bar-track">
+                      <div class="comp-bar-fill fill-purple" style="width: 86%;"></div>
+                    </div>
+                  </div>
+
+                  <div class="comp-item">
+                    <div class="comp-header">
+                      <span class="comp-name"><i class="fa-solid fa-circle-dot text-teal"></i> Trail Groundwork &amp;
+                        Safety</span>
+                      <span class="comp-score">98%</span>
+                    </div>
+                    <div class="comp-bar-track">
+                      <div class="comp-bar-fill fill-teal" style="width: 98%;"></div>
+                    </div>
+                  </div>
+
+                  <div class="comp-item">
+                    <div class="comp-header">
+                      <span class="comp-name"><i class="fa-solid fa-circle-dot text-gold"></i> Arena Showmanship &amp;
+                        Posture</span>
+                      <span class="comp-score">92%</span>
+                    </div>
+                    <div class="comp-bar-track">
+                      <div class="comp-bar-fill fill-gold" style="width: 92%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Active Training Focus Card -->
+              <div class="prog-card goal-focus-card">
+                <div class="prog-card-header">
+                  <h3>Active Q3 Focus Goals</h3>
+                  <span class="status-pill pill-confirmed">On Schedule</span>
+                </div>
+                <div class="goal-checklist">
+                  <div class="goal-check-item done">
+                    <i class="fa-solid fa-square-check text-emerald"></i>
+                    <span>Master lateral two-track shoulder-in across center line</span>
+                  </div>
+                  <div class="goal-check-item in-progress">
+                    <i class="fa-regular fa-square-minus text-gold"></i>
+                    <span>Tighten jumping rollback turn distance by 0.8 seconds</span>
+                  </div>
+                  <div class="goal-check-item upcoming">
+                    <i class="fa-regular fa-square text-muted"></i>
+                    <span>Complete 15-mile endurance cross-country trial checkpoint</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Instructor Evaluation Timeline Logs -->
+            <div class="prog-right-col">
+              <div class="prog-card">
+                <div class="prog-card-header">
+                  <div>
+                    <h3>Instructor Evaluation Records</h3>
+                    <p class="text-sub">Chronological assessment debriefs after logged arena rides</p>
+                  </div>
+                </div>
+
+                <div class="eval-cards-list">
+                  <!-- Eval 1 -->
+                  <div class="eval-log-card">
+                    <div class="eval-log-header">
+                      <div class="eval-instructor-info">
+                        <img src="images/instructor_marcus.jpg" alt="Coach Marcus Vance" class="eval-coach-thumb">
+                        <div>
+                          <span class="coach-name">Coach Marcus Vance</span>
+                          <span class="coach-role">Senior Dressage Master</span>
+                        </div>
+                      </div>
+                      <div class="eval-meta-badge">
+                        <span class="eval-date"><i class="fa-regular fa-calendar"></i> Sep 14, 2026</span>
+                        <div class="eval-rating-pill"><i class="fa-solid fa-star"></i> 4.9 / 5.0</div>
+                      </div>
+                    </div>
+                    <div class="eval-body">
+                      <div class="eval-title-row">
+                        <h4>Dressage Seat &amp; Rein Contact Evaluation</h4>
+                        <span class="eval-horse-tag"><i class="fa-solid fa-horse"></i> Dakota (Warmblood)</span>
+                      </div>
+                      <p class="eval-notes">“Sarah displayed superb balance and upright pelvic alignment during extended
+                        trot transitions. Rein contact remained remarkably elastic and soft throughout the serpentine
+                        loops. Focus next session: sharpening hind-quarter engagement on canter strike-offs.”</p>
+                      <div class="eval-skill-tags">
+                        <span class="skill-tag">Elastic Reins</span>
+                        <span class="skill-tag">Trot Extensions</span>
+                        <span class="skill-tag">Serpentines</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Eval 2 -->
+                  <div class="eval-log-card">
+                    <div class="eval-log-header">
+                      <div class="eval-instructor-info">
+                        <img src="images/instructor_eleanor.jpg" alt="Guide Elena Rostova" class="eval-coach-thumb">
+                        <div>
+                          <span class="coach-name">Guide Elena Rostova</span>
+                          <span class="coach-role">Master Trail Expeditioner</span>
+                        </div>
+                      </div>
+                      <div class="eval-meta-badge">
+                        <span class="eval-date"><i class="fa-regular fa-calendar"></i> Sep 08, 2026</span>
+                        <div class="eval-rating-pill"><i class="fa-solid fa-star"></i> 5.0 / 5.0</div>
+                      </div>
+                    </div>
+                    <div class="eval-body">
+                      <div class="eval-title-row">
+                        <h4>Trail Obstacle &amp; Creek Ford Crossing</h4>
+                        <span class="eval-horse-tag"><i class="fa-solid fa-horse"></i> Apollo (Quarter Horse)</span>
+                      </div>
+                      <p class="eval-notes">“Flawless execution crossing steep rocky terrain and rapid stream crossings.
+                        Demonstrated superior trail mindfulness, keeping horse relaxed and confident. Superb seat weight
+                        shifts navigating descending inclines.”</p>
+                      <div class="eval-skill-tags">
+                        <span class="skill-tag">Water Forwards</span>
+                        <span class="skill-tag">Weight Incline Balance</span>
+                        <span class="skill-tag">Trail Composure</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Eval 3 -->
+                  <div class="eval-log-card">
+                    <div class="eval-log-header">
+                      <div class="eval-instructor-info">
+                        <div class="coach-initials-thumb">SJ</div>
+                        <div>
+                          <span class="coach-name">Coach Sarah Jenkins</span>
+                          <span class="coach-role">Hunter Jumper Specialist</span>
+                        </div>
+                      </div>
+                      <div class="eval-meta-badge">
+                        <span class="eval-date"><i class="fa-regular fa-calendar"></i> Aug 28, 2026</span>
+                        <div class="eval-rating-pill"><i class="fa-solid fa-star"></i> 4.8 / 5.0</div>
+                      </div>
+                    </div>
+                    <div class="eval-body">
+                      <div class="eval-title-row">
+                        <h4>3-Foot Oxer Lines &amp; Striding Precision</h4>
+                        <span class="eval-horse-tag"><i class="fa-solid fa-horse"></i> Dakota (Warmblood)</span>
+                      </div>
+                      <p class="eval-notes">“Consistent 5-stride counts achieved through the related distance oxer line.
+                        Crest release timing was natural. Only minor adjustment needed on keeping eyes focused forward
+                        to the rollback fence.”</p>
+                      <div class="eval-skill-tags">
+                        <span class="skill-tag">Oxer Navigation</span>
+                        <span class="skill-tag">Crest Release</span>
+                        <span class="skill-tag">Striding Rhythm</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Eval 4 -->
+                  <div class="eval-log-card">
+                    <div class="eval-log-header">
+                      <div class="eval-instructor-info">
+                        <div class="coach-initials-thumb">DM</div>
+                        <div>
+                          <span class="coach-name">David Miller</span>
+                          <span class="coach-role">Head of Equine Groundwork</span>
+                        </div>
+                      </div>
+                      <div class="eval-meta-badge">
+                        <span class="eval-date"><i class="fa-regular fa-calendar"></i> Aug 15, 2026</span>
+                        <div class="eval-rating-pill"><i class="fa-solid fa-star"></i> 5.0 / 5.0</div>
+                      </div>
+                    </div>
+                    <div class="eval-body">
+                      <div class="eval-title-row">
+                        <h4>Ground Manners, Lunging &amp; Roundpen Communication</h4>
+                        <span class="eval-horse-tag"><i class="fa-solid fa-horse"></i> Valkyrie (Friesian)</span>
+                      </div>
+                      <p class="eval-notes">“Calm, authoritative body language in the roundpen. Horse hooked-on within 8
+                        minutes. Exemplary safety checks on saddle fitting, girth tightness, and snaffle bit placement.”
+                      </p>
+                      <div class="eval-skill-tags">
+                        <span class="skill-tag">Roundpen Hook-on</span>
+                        <span class="skill-tag">Tack Safety</span>
+                        <span class="skill-tag">Equine Psychology</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             PANEL 4: TRAIL & BOARDING CARE
+             =================================================================== -->
+        <div class="dash-panel" id="panel-trail">
+          <div class="panel-header-bar flex-header">
+            <div>
+              <h2>Trail Expeditions &amp; Boarding Care Telemetry</h2>
+              <p>Real-time boarding wellness logs for Dakota and booking upcoming guided wilderness trails</p>
+            </div>
+            <div class="panel-header-actions">
+              <span class="status-pill pill-confirmed"><i class="fa-solid fa-shield-halved"></i> Full-Board VIP
+                Tier</span>
+            </div>
+          </div>
+
+          <!-- Section A: Live Horse Boarding & Stable Telemetry Card -->
+          <div class="boarding-telemetry-card">
+            <div class="boarding-header">
+              <div class="boarding-horse-profile">
+                <img src="images/horse_dakota.jpg" alt="Dakota" class="boarding-horse-avatar">
+                <div>
+                  <div class="horse-title-row">
+                    <h3>Dakota</h3>
+                    <span class="badge-pill-gold">Belgian Warmblood</span>
+                    <span class="badge-pill-sub">7 Yrs &bull; Gelding</span>
+                  </div>
+                  <p class="boarding-stall-info"><i class="fa-solid fa-warehouse text-gold"></i> Barn A &bull; Luxury
+                    Stall #07 &bull; Private Grass Paddock Access</p>
+                </div>
+              </div>
+
+              <div class="boarding-quick-actions">
+                <button class="btn btn-gold-sm"
+                  onclick="showDashToast('Connecting to Barn A Stall #07 Live HD Camera Stream...')">
+                  <i class="fa-solid fa-video"></i> Live Stall Cam
+                </button>
+                <button class="btn btn-outline-gold-sm"
+                  onclick="showDashToast('Care Request transmitted to Barn Manager!')">
+                  <i class="fa-solid fa-bell-concierge"></i> Special Care Request
+                </button>
+              </div>
+            </div>
+
+            <!-- Telemetry Stats Grid -->
+            <div class="care-telemetry-grid">
+              <div class="telemetry-box">
+                <div class="telem-icon gold-box"><i class="fa-solid fa-utensils"></i></div>
+                <div class="telem-meta">
+                  <span class="telem-label">Morning Nutrition</span>
+                  <span class="telem-val">Timothy Hay + Vitality Mash</span>
+                  <span class="telem-status text-emerald"><i class="fa-solid fa-check-circle"></i> Fed at 07:00
+                    AM</span>
+                </div>
+              </div>
+
+              <div class="telemetry-box">
+                <div class="telem-icon emerald-box"><i class="fa-solid fa-sun"></i></div>
+                <div class="telem-meta">
+                  <span class="telem-label">Daily Turnout Paddock</span>
+                  <span class="telem-val">Sunny Meadow Paddock #3</span>
+                  <span class="telem-status text-emerald"><i class="fa-solid fa-clock"></i> 09:30 AM &ndash; 12:30 PM
+                    (Active)</span>
+                </div>
+              </div>
+
+              <div class="telemetry-box">
+                <div class="telem-icon teal-box"><i class="fa-solid fa-broom"></i></div>
+                <div class="telem-meta">
+                  <span class="telem-label">Stall Sanitization</span>
+                  <span class="telem-val">Kiln-Dried Pine Shavings</span>
+                  <span class="telem-status text-emerald"><i class="fa-solid fa-check-circle"></i> Refreshed at 10:15
+                    AM</span>
+                </div>
+              </div>
+
+              <div class="telemetry-box">
+                <div class="telem-icon purple-box"><i class="fa-solid fa-stethoscope"></i></div>
+                <div class="telem-meta">
+                  <span class="telem-label">Veterinary &amp; Farrier</span>
+                  <span class="telem-val">Dr. Henderson &bull; 6-Wk Trim</span>
+                  <span class="telem-status text-gold"><i class="fa-regular fa-calendar-check"></i> Next Due Sep 24,
+                    2026</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section B: Scenic Trail Expeditions -->
+          <div class="trail-expeditions-section">
+            <div class="section-title-wrap">
+              <div>
+                <h3>Scenic Trail Expeditions &amp; Wilderness Rides</h3>
+                <p class="text-sub">Reserve your spot on our curated wilderness trails led by senior guides</p>
+              </div>
+            </div>
+
+            <div class="trail-expeditions-grid">
+              <!-- Card 1 -->
+              <div class="trail-exp-card">
+                <div class="trail-exp-media">
+                  <img src="images/lesson_sunset_trail.jpg" alt="Sunset Mountain Ridge Trail">
+                  <span class="trail-badge badge-sunset"><i class="fa-solid fa-mountain-sun"></i> Signature Trail</span>
+                  <span class="trail-price-tag">$85 <small>/ rider</small></span>
+                </div>
+                <div class="trail-exp-content">
+                  <h4>Sunset Mountain Ridge Trail</h4>
+                  <p class="trail-desc">Ascend panoramic pine-crested ridges overlooking the valley during golden hour.
+                    Gentle slopes with optional trot stretches.</p>
+                  <div class="trail-specs-row">
+                    <span><i class="fa-regular fa-clock text-gold"></i> 2.5 Hours</span>
+                    <span><i class="fa-solid fa-arrows-up-down text-gold"></i> +450 ft Elev.</span>
+                    <span><i class="fa-solid fa-signal text-emerald"></i> Intermediate</span>
+                  </div>
+                  <div class="trail-card-footer">
+                    <span class="trail-slots-left"><i class="fa-solid fa-user-group text-gold"></i> 4 spots left for
+                      Saturday</span>
+                    <button class="btn btn-gold-sm" onclick="registerForTrail('Sunset Mountain Ridge Trail')">Book
+                      Spot</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="trail-exp-card">
+                <div class="trail-exp-media">
+                  <img src="images/gallery_trail_creek.jpg" alt="Whispering Pines Forest &amp; Creek Loop">
+                  <span class="trail-badge badge-pines"><i class="fa-solid fa-tree"></i> Woodland Trail</span>
+                  <span class="trail-price-tag">$65 <small>/ rider</small></span>
+                </div>
+                <div class="trail-exp-content">
+                  <h4>Whispering Pines &amp; Creek Loop</h4>
+                  <p class="trail-desc">Meander through old-growth cedar canopy trails and shallow gravel creek
+                    crossings. Exceptionally peaceful and shaded.</p>
+                  <div class="trail-specs-row">
+                    <span><i class="fa-regular fa-clock text-gold"></i> 1.5 Hours</span>
+                    <span><i class="fa-solid fa-arrows-up-down text-gold"></i> Gentle Flat</span>
+                    <span><i class="fa-solid fa-signal text-emerald"></i> All Skill Levels</span>
+                  </div>
+                  <div class="trail-card-footer">
+                    <span class="trail-slots-left"><i class="fa-solid fa-user-group text-gold"></i> 6 spots left for
+                      Sunday</span>
+                    <button class="btn btn-gold-sm" onclick="registerForTrail('Whispering Pines &amp; Creek Loop')">Book
+                      Spot</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="trail-exp-card">
+                <div class="trail-exp-media">
+                  <img src="images/hero2_gallop_meadow.jpg" alt="Alpine Valley Extended Expedition">
+                  <span class="trail-badge badge-alpine"><i class="fa-solid fa-compass"></i> Half-Day Trek</span>
+                  <span class="trail-price-tag">$120 <small>/ rider</small></span>
+                </div>
+                <div class="trail-exp-content">
+                  <h4>Alpine Valley Wilderness Expedition</h4>
+                  <p class="trail-desc">Extended adventure into backcountry wildflower meadows with a curated picnic
+                    lunch included beside mountain waterfalls.</p>
+                  <div class="trail-specs-row">
+                    <span><i class="fa-regular fa-clock text-gold"></i> 3.5 Hours</span>
+                    <span><i class="fa-solid fa-arrows-up-down text-gold"></i> +800 ft Elev.</span>
+                    <span><i class="fa-solid fa-signal text-gold"></i> Adv. Intermediate</span>
+                  </div>
+                  <div class="trail-card-footer">
+                    <span class="trail-slots-left"><i class="fa-solid fa-user-group text-gold"></i> 2 spots left for
+                      Next Sat</span>
+                    <button class="btn btn-gold-sm"
+                      onclick="registerForTrail('Alpine Valley Wilderness Expedition')">Book Spot</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             PANEL 5: BILLING & INVOICES
+             =================================================================== -->
+        <div class="dash-panel" id="panel-payments">
+          <div class="panel-header-bar">
+            <h2>Payment Receipts &amp; Invoices</h2>
+            <p>View transaction history and download official statements</p>
+          </div>
+
+          <div class="table-responsive">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Invoice ID</th>
+                  <th>Date</th>
+                  <th>Description</th>
+                  <th>Amount</th>
+                  <th>Receipt</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#INV-2026-089</td>
+                  <td>Sep 01, 2026</td>
+                  <td>Full-Care Stabling Board (Monthly)</td>
+                  <td>$1,200.00</td>
+                  <td><button class="btn btn-outline-sm"
+                      onclick="showDashToast('Downloading Invoice #INV-2026-089 PDF...')">Download PDF</button></td>
+                </tr>
+                <tr>
+                  <td>#INV-2026-074</td>
+                  <td>Aug 15, 2026</td>
+                  <td>4x Private Lesson Package</td>
+                  <td>$480.00</td>
+                  <td><button class="btn btn-outline-sm"
+                      onclick="showDashToast('Downloading Invoice #INV-2026-074 PDF...')">Download PDF</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             PANEL 6: SETTINGS & PREFS
+             =================================================================== -->
+        <div class="dash-panel" id="panel-settings">
+          <div class="panel-header-bar flex-header">
+            <div>
+              <h2>Account &amp; Stable Portal Preferences</h2>
+              <p>Configure personal rider credentials, automated stable alert notifications, and horse boarding
+                directives</p>
+            </div>
+            <div class="panel-header-actions">
+              <span class="status-pill pill-confirmed"><i class="fa-solid fa-shield-check"></i> Security 2FA
+                Active</span>
+            </div>
+          </div>
+
+          <form class="settings-premium-form"
+            onsubmit="event.preventDefault(); showDashToast('Portal preferences updated successfully!');">
+            <div class="settings-cards-grid">
+
+              <!-- Card 1: Rider Profile & Contact -->
+              <div class="settings-card">
+                <div class="settings-card-header">
+                  <div class="settings-icon gold-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+                  <div>
+                    <h3>Rider Profile &amp; Contact</h3>
+                    <p class="text-sub">Identity and direct emergency contact</p>
+                  </div>
+                </div>
+
+                <div class="settings-fields-grid">
+                  <div class="form-group">
+                    <label>Full Legal Name</label>
+                    <input type="text" value="Sarah Vance" class="dash-input" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" value="sarah.vance@silverhoof.com" class="dash-input" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" value="+1 (555) 384-9921" class="dash-input">
+                  </div>
+                  <div class="form-group">
+                    <label>Riding Discipline &amp; Level</label>
+                    <select class="dash-input">
+                      <option selected>Level 3 Advanced &bull; Hunter / Dressage</option>
+                      <option>Level 2 Intermediate &bull; Cross-Country</option>
+                      <option>Level 1 Novice &bull; Foundational Riding</option>
+                    </select>
+                  </div>
+                  <div class="form-group full-width">
+                    <label>Emergency Contact &amp; Physician</label>
+                    <input type="text" value="Marcus Vance (Spouse) - +1 (555) 384-9922" class="dash-input">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2: Notification Toggles -->
+              <div class="settings-card">
+                <div class="settings-card-header">
+                  <div class="settings-icon purple-icon"><i class="fa-solid fa-bell"></i></div>
+                  <div>
+                    <h3>Notification &amp; Alert Preferences</h3>
+                    <p class="text-sub">Automated alerts via SMS and email</p>
+                  </div>
+                </div>
+
+                <div class="toggle-options-list">
+                  <div class="toggle-option-item">
+                    <div class="toggle-label-wrap">
+                      <span class="toggle-title">Arena Lesson Reminders</span>
+                      <span class="toggle-desc">Receive notification 2 hours prior to scheduled lesson</span>
+                    </div>
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+
+                  <div class="toggle-option-item">
+                    <div class="toggle-label-wrap">
+                      <span class="toggle-title">Live Barn Weather &amp; Trail Status</span>
+                      <span class="toggle-desc">Instant alerts for rainfall, trail closures or arena condition
+                        changes</span>
+                    </div>
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+
+                  <div class="toggle-option-item">
+                    <div class="toggle-label-wrap">
+                      <span class="toggle-title">Veterinary &amp; Farrier Bulletins</span>
+                      <span class="toggle-desc">Daily care logs, medical schedule reminders, and shoeing notes</span>
+                    </div>
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+
+                  <div class="toggle-option-item">
+                    <div class="toggle-label-wrap">
+                      <span class="toggle-title">Exclusive Stables Events &amp; Clinics</span>
+                      <span class="toggle-desc">Priority invitations to visiting Olympic trainer masterclasses</span>
+                    </div>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3: Horse Boarding Directives -->
+              <div class="settings-card">
+                <div class="settings-card-header">
+                  <div class="settings-icon emerald-icon"><i class="fa-solid fa-horse-head"></i></div>
+                  <div>
+                    <h3>Horse &amp; Boarding Directives</h3>
+                    <p class="text-sub">Specific daily instructions for barn staff</p>
+                  </div>
+                </div>
+
+                <div class="settings-fields-grid">
+                  <div class="form-group">
+                    <label>Assigned Horse</label>
+                    <input type="text" value="Dakota (Warmblood Gelding)" class="dash-input" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label>Assigned Tack Locker</label>
+                    <input type="text" value="Locker #TL-42 (Barn A East Wing)" class="dash-input" readonly>
+                  </div>
+                  <div class="form-group full-width">
+                    <label>Dietary Supplements &amp; Grain Schedule</label>
+                    <input type="text" value="2x Daily: 1 scoop Electrolytes + Joint Glucosamine with 5pm evening mash"
+                      class="dash-input">
+                  </div>
+                  <div class="form-group full-width">
+                    <label>Turnout Instructions &amp; Blanket Weight</label>
+                    <input type="text"
+                      value="Medium weight turnout blanket if temperature drops below 55°F; fly boots in morning"
+                      class="dash-input">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4: Portal Security & Login -->
+              <div class="settings-card">
+                <div class="settings-card-header">
+                  <div class="settings-icon teal-icon"><i class="fa-solid fa-lock"></i></div>
+                  <div>
+                    <h3>Portal Security &amp; Login</h3>
+                    <p class="text-sub">Manage password credentials and access</p>
+                  </div>
+                </div>
+
+                <div class="settings-fields-grid">
+                  <div class="form-group full-width">
+                    <label>Current Password</label>
+                    <input type="password" value="••••••••••••" class="dash-input">
+                  </div>
+                  <div class="form-group">
+                    <label>New Password</label>
+                    <input type="password" placeholder="Enter new password" class="dash-input">
+                  </div>
+                  <div class="form-group">
+                    <label>Confirm New Password</label>
+                    <input type="password" placeholder="Confirm new password" class="dash-input">
+                  </div>
+                  <div class="form-group full-width">
+                    <div class="security-2fa-status">
+                      <div>
+                        <strong>Two-Factor Authentication (2FA)</strong>
+                        <p class="text-sub">Protected via Authenticator App &amp; SMS verification</p>
+                      </div>
+                      <span class="status-pill pill-confirmed">Enabled</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Settings Action Bar -->
+            <div class="settings-action-bar">
+              <span class="save-hint"><i class="fa-solid fa-circle-info text-gold"></i> Changes are synced to your
+                stable member account</span>
+              <div class="action-buttons-group">
+                <button type="button" class="btn btn-outline-gold-sm"
+                  onclick="showDashToast('Form changes discarded.')">Discard</button>
+                <button type="submit" class="btn btn-gold-pill">Save All Changes</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+  <!-- Dynamic Dashboard Script -->
+  <script src="dash.js"></script>
+</body>
+
+</html>

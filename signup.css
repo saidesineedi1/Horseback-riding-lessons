@@ -1,0 +1,36 @@
+/* ==========================================================================
+   SILVER HOOF STABLES - SIGNUP PAGE CUSTOM STYLESHEET
+   ========================================================================== */
+
+/* Custom select arrow for experience level dropdown */
+.input-pill-wrap select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23C6A15B' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  cursor: pointer;
+}
+
+[dir="rtl"] .input-pill-wrap select {
+  background-position: left 12px center;
+}
+
+/* Suppress duplicate password reveal eye in Edge / IE */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.input-pill-wrap select option {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  padding: 8px;
+}
+
+.remember-checkbox-wrap span a {
+  display: inline;
+}

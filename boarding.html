@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horse Boarding & Care | Silver Hoof Stables</title>
+  <meta name="description"
+    content="Experience luxury full-care horse boarding, pasture boarding, and VIP training packages at Silver Hoof Stables. 14'x14' matted stalls, 24/7 supervision, and 150 acres of amenities.">
+
+  <!-- Google Fonts: Open Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Base Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+  <!-- Boarding Page Custom Stylesheet -->
+  <link rel="stylesheet" href="boarding.css">
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+     HEADER / NAVIGATION BAR (Matches Home 1 Exactly)
+     ========================================================================== -->
+  <header class="header" id="header">
+    <div class="container header-container">
+
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">
+          <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">SILVER HOOF</span>
+          <span class="brand-sub">STABLES</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links (Middle) -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item dropdown">
+            <a href="index.html" class="nav-link" id="home-dropdown-btn">
+              Home <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html" class="dropdown-item" id="home-1-link">Home 1 (Classic)</a></li>
+              <li><a href="home2.html" class="dropdown-item" id="home-2-link">Home 2 (Luxury Ranch)</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="lessons.html" class="nav-link">Lessons</a></li>
+          <li class="nav-item"><a href="trail-rides.html" class="nav-link">Trail Rides</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="boarding.html" class="nav-link active">Boarding</a></li>
+          <li class="nav-item"><a href="dash.html" class="nav-link dashboard-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Controls & Actions -->
+      <div class="header-actions">
+        <!-- RTL Toggle -->
+        <button class="icon-btn" id="rtl-toggle" title="Toggle Text Direction (LTR / RTL)" aria-label="Toggle RTL">
+          <span class="btn-label">RTL</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="icon-btn" id="theme-toggle" title="Toggle Theme (Dark / Light)" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+
+        <!-- Login Button -->
+        <button class="btn btn-primary" id="open-login-btn" onclick="openLoginModal()">
+          <i class="fa-solid fa-user"></i> Login
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="hamburger-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+     MAIN CONTENT WRAPPER
+     ========================================================================== -->
+  <main>
+
+    <!-- SECTION 1 — PREMIUM HERO BANNER (2-COLUMN DUAL-IMAGE COMPOSITION) -->
+    <section class="boarding-hero-section">
+      <div class="boarding-hero-bg" style="background-image: url('images/our_story_ranch.jpg');"></div>
+      <div class="boarding-hero-overlay"></div>
+
+      <div class="container boarding-hero-container">
+        <div class="boarding-hero-grid">
+
+          <!-- LEFT COLUMN: Narrative, CTAs & Quick Specs -->
+          <div class="boarding-hero-text-col">
+            <div class="gold-divider-wrap">
+              <span class="gold-line"></span>
+              <span class="hero-welcome">5-STAR EQUINE SANCTUARY</span>
+              <span class="gold-line"></span>
+            </div>
+
+            <h1 class="boarding-hero-title">
+              Premier Horse Boarding &amp;<br>
+              <span class="boarding-hero-accent">World-Class Care.</span>
+            </h1>
+
+            <p class="boarding-hero-subtitle">
+              Spacious oak stalls, 10-acre lush pastures, 24/7 veterinary supervision, and climate-controlled stables designed for your horse's ultimate health, security, and contentment.
+            </p>
+
+            <!-- Hero Action Buttons -->
+            <div class="boarding-hero-cta-btns">
+              <a href="#boarding-packages" class="btn btn-primary" id="boarding-hero-packages-btn">
+                <i class="fa-solid fa-gem"></i> Explore Stabling Options
+              </a>
+              <a href="contact.html" class="btn btn-outline-hero" id="boarding-hero-tour-btn">
+                <i class="fa-solid fa-calendar-check"></i> Schedule Facility Tour
+              </a>
+            </div>
+
+            <!-- Hero Quick Specs Strip -->
+            <div class="hero-specs-strip">
+              <div class="spec-stat-item">
+                <span class="num">14'x14'</span>
+                <span class="lbl">Oak Matted Stalls</span>
+              </div>
+              <div class="spec-divider"></div>
+              <div class="spec-stat-item">
+                <span class="num">10-Acres</span>
+                <span class="lbl">Green Pastures</span>
+              </div>
+              <div class="spec-divider"></div>
+              <div class="spec-stat-item">
+                <span class="num">24/7</span>
+                <span class="lbl">Care &amp; Video Monitor</span>
+              </div>
+              <div class="spec-divider"></div>
+              <div class="spec-stat-item">
+                <span class="num">3x Daily</span>
+                <span class="lbl">Custom Nutrition</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Unique Dual-Image Aligned Composition -->
+          <div class="boarding-hero-media-col">
+            <div class="boarding-dual-composition">
+              
+              <!-- Ambient Halo Glow behind frames -->
+              <div class="hero-media-ambient-glow"></div>
+
+              <!-- Primary Grand Image: Sanctuary Grounds & Barns -->
+              <div class="boarding-image-card primary-card">
+                <div class="image-frame-wrapper">
+                  <img src="images/our_story_ranch.jpg" alt="Silver Hoof Stables Ranch & Boarding Grounds" class="hero-img-primary">
+                  <div class="image-overlay-tint"></div>
+                </div>
+                <!-- Floating Glass Badge: 150-Acre Estate -->
+                <div class="floating-badge badge-top-left">
+                  <div class="badge-icon-wrap">
+                    <i class="fa-solid fa-mountain-sun"></i>
+                  </div>
+                  <div class="badge-text-wrap">
+                    <span class="badge-title">150-Acre Estate</span>
+                    <span class="badge-caption">Private Turnout Paddocks</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Secondary Overlapping Card: Stables & Bonding Care -->
+              <div class="boarding-image-card secondary-card">
+                <div class="image-frame-wrapper">
+                  <img src="images/gallery_stable_bonding.jpg" alt="Equine Care and Bonding in Stables" class="hero-img-secondary">
+                  <div class="image-overlay-tint"></div>
+                </div>
+                <!-- Floating Glass Badge: 24/7 Supervision -->
+                <div class="floating-badge badge-bottom-right">
+                  <div class="badge-icon-wrap">
+                    <i class="fa-solid fa-shield-heart"></i>
+                  </div>
+                  <div class="badge-text-wrap">
+                    <span class="badge-title">24/7 Supervision</span>
+                    <span class="badge-caption">Certified Stable Masters</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Luxury Geometric Gold Accent Bracket -->
+              <div class="hero-geometric-accent"></div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 2 — EXCELLENCE IN HORSE CARE (PREMIUM SHOWCASE & INTERACTIVE CARDS) -->
+    <section class="section boarding-exp-section" id="excellence-care">
+      <div class="container">
+        <div class="care-showcase-grid">
+
+          <!-- Left Column: Multi-Layered Visual Showcase -->
+          <div class="care-showcase-media">
+            <div class="care-media-composition">
+              
+              <!-- Ambient Glow & Geometric Bracket -->
+              <div class="care-ambient-glow"></div>
+              <div class="care-geometric-accent"></div>
+
+              <!-- Primary Showcase Image: Pasture Turnout & Freedom -->
+              <div class="care-card-primary">
+                <div class="care-img-frame">
+                  <img src="images/hero2_gallop_meadow.jpg" alt="Horse Enjoying Daily Green Pasture Turnout" class="care-img-main">
+                  <div class="care-img-tint"></div>
+                </div>
+                <!-- Floating Badge: Pasture Turnout -->
+                <div class="care-floating-badge badge-pasture">
+                  <div class="care-badge-icon">
+                    <i class="fa-solid fa-sun icon-gold"></i>
+                  </div>
+                  <div class="care-badge-info">
+                    <strong>10-Acre Irrigated Pastures</strong>
+                    <span>Daily Rotation &amp; Social Herds</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Secondary Overlapping Image: Daily Grooming & Conditioning -->
+              <div class="care-card-secondary">
+                <div class="care-img-frame">
+                  <img src="images/horse_dakota.jpg" alt="Champion Horse Under Expert Daily Care" class="care-img-thumb">
+                  <div class="care-img-tint"></div>
+                </div>
+                <!-- Floating Badge: Resident Care -->
+                <div class="care-floating-badge badge-vitality">
+                  <div class="care-badge-icon">
+                    <i class="fa-solid fa-heart-pulse icon-gold"></i>
+                  </div>
+                  <div class="care-badge-info">
+                    <strong>5-Star Vitality Protocol</strong>
+                    <span>Daily Health &amp; Weight Tracking</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right Column: Narrative & 4 Luxury Feature Cards -->
+          <div class="care-showcase-text">
+            <div class="section-tag-row">
+              <div class="section-tag">
+                <span class="tag-line"></span>
+                EXCELLENCE IN HORSE CARE
+              </div>
+            </div>
+
+            <h2 class="section-title">
+              A Royal Haven Tailored to <span class="care-accent">Every Equine Resident.</span>
+            </h2>
+            <p class="section-lead">
+              At Silver Hoof Stables, horse boarding is far more than providing shelter—it is an all-inclusive sanctuary where every resident receives dedicated personal affection, bespoke nutrition, and uncompromising veterinary oversight.
+            </p>
+            <p class="section-body">
+              Our 150-acre ranch features climate-controlled wooden barns with dust-free straw bedding, automatic temperature-regulated waterers, and private turnout paddocks. Whether your horse is an active competitor or a cherished companion, our full-time stable masters cater to every detail.
+            </p>
+
+            <!-- 4 Enhanced Interactive Care Feature Cards -->
+            <div class="exp-features-grid">
+              
+              <div class="exp-feature-item">
+                <div class="exp-feature-header">
+                  <div class="exp-icon-circle">
+                    <i class="fa-solid fa-wheat-awn"></i>
+                  </div>
+                  <span class="feature-pill">3x Daily Feeding</span>
+                </div>
+                <h4>Customized Nutrition Plans</h4>
+                <p>Premium organic orchard grass, alfalfa, tailored grains, and managed supplement regimens.</p>
+              </div>
+
+              <div class="exp-feature-item">
+                <div class="exp-feature-header">
+                  <div class="exp-icon-circle">
+                    <i class="fa-solid fa-seedling"></i>
+                  </div>
+                  <span class="feature-pill">All-Day Rotation</span>
+                </div>
+                <h4>Daily Pasture Turnout</h4>
+                <p>Individual or compatible group turnout on 10-acre seeded, lush green irrigated pastures.</p>
+              </div>
+
+              <div class="exp-feature-item">
+                <div class="exp-feature-header">
+                  <div class="exp-icon-circle">
+                    <i class="fa-solid fa-fan"></i>
+                  </div>
+                  <span class="feature-pill">Dust-Free Bedding</span>
+                </div>
+                <h4>Climate-Controlled Stables</h4>
+                <p>Individual stall ventilation, automated fly-misting systems, and seasonal blanketing care.</p>
+              </div>
+
+              <div class="exp-feature-item">
+                <div class="exp-feature-header">
+                  <div class="exp-icon-circle">
+                    <i class="fa-solid fa-user-doctor"></i>
+                  </div>
+                  <span class="feature-pill">24/7 On-Call Care</span>
+                </div>
+                <h4>On-Site Vet &amp; Farrier</h4>
+                <p>Scheduled routine health diagnostics, master farrier visits, and immediate emergency response.</p>
+              </div>
+
+            </div>
+
+            <!-- Reassurance Trust Strip -->
+            <div class="care-trust-strip">
+              <div class="trust-item">
+                <i class="fa-solid fa-shield-check icon-gold"></i>
+                <span>Hospital Partnered</span>
+              </div>
+              <div class="trust-dot"></div>
+              <div class="trust-item">
+                <i class="fa-solid fa-video icon-gold"></i>
+                <span>CCTV Stall Access</span>
+              </div>
+              <div class="trust-dot"></div>
+              <div class="trust-item">
+                <i class="fa-solid fa-lock icon-gold"></i>
+                <span>Private Tack Locker</span>
+              </div>
+              <div class="trust-dot"></div>
+              <div class="trust-item">
+                <i class="fa-solid fa-certificate icon-gold"></i>
+                <span>Certified Masters</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 3 — BOARDING OPTIONS & PACKAGES -->
+    <section class="section boarding-options-section">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag-row center">
+            <div class="section-tag">
+              <span class="tag-line"></span>
+              TAILORED CARE PACKAGES
+              <span class="tag-line"></span>
+            </div>
+          </div>
+          <h2 class="section-title">Flexible Boarding Options & Pricing</h2>
+          <p class="section-description">
+            Choose the ideal level of accommodation and attention for your horse.
+          </p>
+        </div>
+
+        <!-- 3 Boarding Package Cards Grid -->
+        <div class="boarding-packages-grid">
+
+          <!-- Package 1: Full-Care Executive -->
+          <div class="package-card">
+            <div class="package-header">
+              <span class="pkg-tier">EXECUTIVE STABLING</span>
+              <h3 class="pkg-title">Full-Care Barn Boarding</h3>
+              <div class="pkg-price">
+                <span class="val">$850</span>
+                <span class="unit">/ month</span>
+              </div>
+            </div>
+            <div class="package-body">
+              <ul class="pkg-features">
+                <li><i class="fa-solid fa-circle-check icon-gold"></i> 14'x14' private matted oak stall</li>
+                <li><i class="fa-solid fa-circle-check icon-gold"></i> 3x daily feeding (Hay, Grain & Supplements)</li>
+                <li><i class="fa-solid fa-circle-check icon-gold"></i> Stall mucked 2x daily & fresh wood shavings</li>
+                <li><i class="fa-solid fa-circle-check icon-gold"></i> Daily individual or group pasture turnout</li>
+                <li><i class="fa-solid fa-circle-check icon-gold"></i> Blanketing, fly mask & boot management</li>
+                <li><i class="fa-solid fa-circle-check icon-gold"></i> Private heated tack locker included</li>
+              </ul>
+              <button class="btn btn-gold-pill btn-full" onclick="openBoardingModal('Full-Care Barn Boarding')">
+                Reserve Executive Stall <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Package 2: Pasture Boarding (Featured) -->
+          <div class="package-card featured-pkg">
+            <div class="featured-ribbon">MOST POPULAR</div>
+            <div class="package-header">
+              <span class="pkg-tier">NATURAL OUTDOOR</span>
+              <h3 class="pkg-title">Pasture Boarding & Shelter</h3>
+              <div class="pkg-price">
+                <span class="val">$550</span>
+                <span class="unit">/ month</span>
+              </div>
+            </div>
+            <div class="package-body">
+              <ul class="pkg-features">
+                <li><i class="fa-solid fa-circle-check icon-gold"></i> 10-acre green pasture freedom</li>
+                <li><i class="fa-solid fa-circle-check icon-gold"></i> 24/7 spacious three-sided run-in shelters</li>
+                <li><i class="fa-solid fa-circle-check icon-gold"></i> Free-choice quality orchard hay & mineral block</li>
+                <li><i class="fa-solid fa-circle-check icon-gold"></i> Daily health, water & fence inspections</li>
+                <li><i class="fa-solid fa-circle-check icon-gold"></i> Heated water troughs in winter</li>
+                <li><i class="fa-solid fa-circle-check icon-gold"></i> Shared tack room access</li>
+              </ul>
+              <button class="btn btn-gold-pill btn-full" onclick="openBoardingModal('Pasture Boarding & Shelter')">
+                Reserve Pasture Board <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Package 3: VIP Training & Boarding -->
+          <div class="package-card">
+            <div class="package-header">
+              <span class="pkg-tier">SHOW & COMPETITION</span>
+              <h3 class="pkg-title">VIP Training & Boarding</h3>
+              <div class="pkg-price">
+                <span class="val">$1,350</span>
+                <span class="unit">/ month</span>
+              </div>
+            </div>
+            <div class="package-body">
+              <ul class="pkg-features">
+                <li><i class="fa-solid fa-circle-check icon-gold"></i> All Full-Care Barn Boarding inclusions</li>
+                <li><i class="fa-solid fa-circle-check icon-gold"></i> 3x weekly professional trainer rides / schooling</li>
+                <li><i class="fa-solid fa-circle-check icon-gold"></i> Post-workout grooming, bath & liniment wraps</li>
+                <li><i class="fa-solid fa-circle-check icon-gold"></i> Priority access to indoor mirrored arena</li>
+                <li><i class="fa-solid fa-circle-check icon-gold"></i> Show trailer staging & competition prep</li>
+                <li><i class="fa-solid fa-circle-check icon-gold"></i> 24/7 stall HD camera livestream access</li>
+              </ul>
+              <button class="btn btn-gold-pill btn-full" onclick="openBoardingModal('VIP Training & Boarding')">
+                Reserve VIP Package <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SECTION 4 — FACILITIES & CARE STANDARDS -->
+    <section class="section boarding-facilities-section">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag-row center">
+            <div class="section-tag">
+              <span class="tag-line"></span>
+              WORLD-CLASS INFRASTRUCTURE
+              <span class="tag-line"></span>
+            </div>
+          </div>
+          <h2 class="section-title">State-of-the-Art Stables & Amenities</h2>
+          <p class="section-description">
+            Designed for horse comfort, rider luxury, and 24/7 peace of mind.
+          </p>
+        </div>
+
+        <!-- 6 Facilities Cards Grid -->
+        <div class="facilities-grid">
+
+          <div class="facility-card">
+            <div class="facility-icon-box">
+              <i class="fa-solid fa-warehouse"></i>
+            </div>
+            <h4>Indoor Mirrored Arena</h4>
+            <p>120'x220' climate-controlled arena with dust-free footing and full wall mirror alignment.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-icon-box">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <h4>Outdoor Jumping Ring</h4>
+            <p>Regulation jumping arena equipped with competition oxers, verticals, and all-weather footing.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-icon-box">
+              <i class="fa-solid fa-key"></i>
+            </div>
+            <h4>Private Tack Rooms</h4>
+            <p>Heated oak tack lockers with keypad security, saddle racks, and bridle hooks.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-icon-box">
+              <i class="fa-solid fa-shower"></i>
+            </div>
+            <h4>Hot/Cold Wash Bays</h4>
+            <p>Four rubberized grooming bays featuring temperature-controlled wash water and infrared heat lamps.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-icon-box">
+              <i class="fa-solid fa-video"></i>
+            </div>
+            <h4>24/7 HD Camera Security</h4>
+            <p>Round-the-clock video monitoring across barn aisles, pastures, and electronic security gates.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-icon-box">
+              <i class="fa-solid fa-couch"></i>
+            </div>
+            <h4>Rider Lounge & Clubhouse</h4>
+            <p>Comfortable viewing lounge with fireplace, Wi-Fi, espresso bar, and viewing windows.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SECTION 5 — PREMIUM CTA CARD SECTION (No Border) -->
+    <section class="section boarding-cta-section">
+      <div class="container">
+        <div class="boarding-cta-card">
+          <div class="cta-glow-overlay"></div>
+          <div class="boarding-cta-content">
+            <span class="cta-badge-tag"><i class="fa-solid fa-horse"></i> VISIT OUR STABLES TODAY</span>
+            <h2 class="boarding-cta-title">Schedule a Personal Stables Tour</h2>
+            <p class="boarding-cta-sub">
+              Meet our stables manager, tour our facilities, and inspect our available stalls firsthand.
+            </p>
+            <div class="boarding-cta-btns">
+              <button class="btn btn-gold-pill btn-large" onclick="openBoardingModal('Stables Tour Request')">
+                Book a Stables Tour <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <a href="tel:18005554663" class="btn btn-outline-hero btn-large">
+                <i class="fa-solid fa-phone"></i> Call Stables Manager
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ==========================================================================
+     FOOTER SECTION (Matches Home 1 Exactly)
+     ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+
+      <!-- Left Column: Logo & Brand Info & Social Links -->
+      <div class="footer-col footer-brand-col">
+        <a href="index.html" class="brand-logo footer-logo">
+          <div class="logo-icon">
+            <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">SILVER HOOF</span>
+            <span class="brand-sub">STABLES</span>
+          </div>
+        </a>
+        <p class="footer-about">
+          Silver Hoof Stables is a premier luxury horseback riding center dedicated to excellence in riding education,
+          equine welfare, and unforgettable trail experiences.
+        </p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+      </div>
+
+      <!-- Middle Column 1: Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="lessons.html"><i class="fa-solid fa-chevron-right"></i> Lessons</a></li>
+          <li><a href="trail-rides.html"><i class="fa-solid fa-chevron-right"></i> Trail Rides</a></li>
+        </ul>
+      </div>
+
+      <!-- Middle Column 2: Additional Links -->
+      <div class="footer-col">
+        <h4 class="footer-title">Additional Links</h4>
+        <ul class="footer-links">
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
+          <li><a href="boarding.html"><i class="fa-solid fa-chevron-right"></i> Boarding</a></li>
+          <li><a href="home2.html"><i class="fa-solid fa-chevron-right"></i> Home 2 (Luxury)</a></li>
+        </ul>
+      </div>
+
+      <!-- Right Column: Address & Contact Details -->
+      <div class="footer-col">
+        <h4 class="footer-title">Contact & Stables</h4>
+        <div class="footer-contact-details">
+          <p><i class="fa-solid fa-location-dot"></i> 450 Equestrian Trail, Rolling Hills, CA 90274</p>
+          <p><i class="fa-solid fa-phone"></i> +1 (800) 555-HOOF</p>
+          <p><i class="fa-solid fa-envelope"></i> info@silverhoofstables.com</p>
+          <p><i class="fa-solid fa-clock"></i> Mon-Sun: 7:00 AM – 7:00 PM</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Terms & Conditions Line -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>&copy; 2026 Silver Hoof Stables. All Rights Reserved.</p>
+        <div class="footer-terms-links">
+          <a href="#"
+            onclick="alert('Terms & Conditions: Silver Hoof Stables safety rules & riding terms apply.'); return false;">Terms
+            & Conditions</a>
+          <span class="sep">|</span>
+          <a href="#"
+            onclick="alert('Privacy Policy: We value your privacy and protect your personal information.'); return false;">Privacy
+            Policy</a>
+          <span class="sep">|</span>
+          <a href="#"
+            onclick="alert('Cookie Policy: Our site uses essential cookies for preferences.'); return false;">Cookie
+            Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+     MODALS & INTERACTIVE OVERLAYS
+     ========================================================================== -->
+  <!-- BOOK A LESSON / BOARDING MODAL -->
+  <div class="modal-backdrop" id="booking-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="booking-close" onclick="closeBookingModal()">&times;</button>
+      <div class="modal-header">
+        <i class="fa-solid fa-horse modal-header-icon"></i>
+        <h3>Boarding & Tour Request</h3>
+        <p>Select your preferred package or tour schedule</p>
+      </div>
+      <form id="booking-form" onsubmit="handleBookingSubmit(event)">
+        <div class="form-group">
+          <label for="b-program">Select Package / Request *</label>
+          <select id="b-program" required>
+            <option value="Full-Care Barn Boarding">Full-Care Barn Boarding ($850/mo)</option>
+            <option value="Pasture Boarding & Shelter">Pasture Boarding & Shelter ($550/mo)</option>
+            <option value="VIP Training & Boarding">VIP Training & Boarding ($1,350/mo)</option>
+            <option value="Stables Tour Request">Personal Stables Tour Request</option>
+          </select>
+        </div>
+
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="b-name">Your Full Name *</label>
+            <input type="text" id="b-name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="b-phone">Phone Number *</label>
+            <input type="tel" id="b-phone" placeholder="+1 (555) 000-0000" required>
+          </div>
+        </div>
+
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="b-date">Preferred Start / Tour Date *</label>
+            <input type="date" id="b-date" required>
+          </div>
+          <div class="form-group">
+            <label for="b-time">Horse Breed & Age</label>
+            <input type="text" id="b-horse-info" placeholder="e.g. 8yr Quarter Horse Gelding">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="b-notes">Special Dietary or Medical Needs</label>
+          <textarea id="b-notes" rows="3"
+            placeholder="Tell us about special feeding schedules, turnouts, or veterinarian notes..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-gold-pill btn-full">
+          Submit Boarding Inquiry <i class="fa-solid fa-check-circle"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- LOGIN MODAL -->
+  <div class="modal-backdrop" id="login-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="login-close" onclick="closeLoginModal()">&times;</button>
+      <div class="modal-header">
+        <i class="fa-solid fa-user-lock modal-header-icon"></i>
+        <h3>Rider Portal Login</h3>
+        <p>Enter your credentials to access your account & schedules</p>
+      </div>
+      <form id="login-form" onsubmit="handleLoginSubmit(event)">
+        <div class="form-group">
+          <label for="l-email">Email Address *</label>
+          <input type="email" id="l-email" placeholder="rider@example.com" required value="rider@silverhoof.com">
+        </div>
+        <div class="form-group">
+          <label for="l-password">Password *</label>
+          <input type="password" id="l-password" placeholder="••••••••" required value="password123">
+        </div>
+        <button type="submit" class="btn btn-gold-pill btn-full">
+          Sign In to Portal <i class="fa-solid fa-right-to-bracket"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript Files -->
+  <script src="index.js"></script>
+  <script src="boarding.js"></script>
+</body>
+
+</html>

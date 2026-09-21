@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Silver Hoof Stables</title>
+  <meta name="description"
+    content="Get in touch with Silver Hoof Stables. Contact our equestrian team for riding lessons, trail ride bookings, horse boarding, and facility tours.">
+
+  <!-- Google Fonts: Open Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Base Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+  <!-- Contact Page Custom Stylesheet -->
+  <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+     HEADER / NAVIGATION BAR (Matches Home 1 Exactly)
+     ========================================================================== -->
+  <header class="header" id="header">
+    <div class="container header-container">
+
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">
+          <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">SILVER HOOF</span>
+          <span class="brand-sub">STABLES</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links (Middle) -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item dropdown">
+            <a href="index.html" class="nav-link" id="home-dropdown-btn">
+              Home <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html" class="dropdown-item" id="home-1-link">Home 1 (Classic)</a></li>
+              <li><a href="home2.html" class="dropdown-item" id="home-2-link">Home 2 (Luxury Ranch)</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="lessons.html" class="nav-link">Lessons</a></li>
+          <li class="nav-item"><a href="trail-rides.html" class="nav-link">Trail Rides</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+          <li class="nav-item"><a href="boarding.html" class="nav-link">Boarding</a></li>
+          <li class="nav-item"><a href="dash.html" class="nav-link dashboard-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Controls & Actions -->
+      <div class="header-actions">
+        <!-- RTL Toggle -->
+        <button class="icon-btn" id="rtl-toggle" title="Toggle Text Direction (LTR / RTL)" aria-label="Toggle RTL">
+          <span class="btn-label">RTL</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="icon-btn" id="theme-toggle" title="Toggle Theme (Dark / Light)" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+
+        <!-- Login Button -->
+        <button class="btn btn-primary" id="open-login-btn" onclick="openLoginModal()">
+          <i class="fa-solid fa-user"></i> Login
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="hamburger-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+     MAIN CONTENT WRAPPER
+     ========================================================================== -->
+  <main>
+
+    <!-- SECTION 1 — PREMIUM HERO BANNER (STYLISH 4-IMAGE ALIGNED COMPOSITION) -->
+    <section class="contact-hero-section">
+      <div class="contact-hero-bg" style="background-image: url('images/hero2_ranch_sunset.jpg');"></div>
+      <div class="contact-hero-overlay"></div>
+
+      <div class="container contact-hero-container">
+        
+        <!-- Two Column Aligned Hero Grid -->
+        <div class="contact-hero-grid">
+
+          <!-- LEFT COLUMN: Narrative & Quick Contact Actions -->
+          <div class="contact-hero-text-col">
+            <div class="gold-divider-wrap">
+              <span class="gold-line"></span>
+              <span class="hero-welcome">CONNECT WITH OUR STABLES</span>
+              <span class="gold-line"></span>
+            </div>
+
+            <h1 class="contact-hero-title">
+              We’re Here to Help You<br>
+              <span class="contact-hero-accent">Saddle Up &amp; Ride.</span>
+            </h1>
+
+            <p class="contact-hero-subtitle">
+              Have questions about riding lessons, scenic trail excursions, luxury horse boarding, or scheduling a private stable tour? Our dedicated equestrian advisors are ready to assist you.
+            </p>
+
+            <!-- Hero Action CTA Buttons -->
+            <div class="contact-hero-cta-btns">
+              <a href="#contact-page-form" class="btn btn-primary" id="contact-hero-msg-btn">
+                <i class="fa-solid fa-paper-plane"></i> Send Direct Message
+              </a>
+              <a href="tel:18005554663" class="btn btn-outline-hero" id="contact-hero-call-btn">
+                <i class="fa-solid fa-phone"></i> +1 (800) 555-HOOF
+              </a>
+            </div>
+
+            <!-- Quick Metrics / Contact Strip -->
+            <div class="contact-hero-stats">
+              <div class="contact-stat">
+                <span class="stat-num"><i class="fa-solid fa-location-dot"></i></span>
+                <span class="stat-lbl">Rolling Hills, CA</span>
+              </div>
+              <div class="stat-line"></div>
+              <div class="contact-stat">
+                <span class="stat-num">2-4 Hrs</span>
+                <span class="stat-lbl">Fast Response</span>
+              </div>
+              <div class="stat-line"></div>
+              <div class="contact-stat">
+                <span class="stat-num">7 Days</span>
+                <span class="stat-lbl">Visitor Center</span>
+              </div>
+              <div class="stat-line"></div>
+              <div class="contact-stat">
+                <span class="stat-num">100%</span>
+                <span class="stat-lbl">Dedicated Care</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Unique 4-Image Aligned Quad Composition -->
+          <div class="contact-hero-media-col">
+            <div class="hero-quad-composition">
+              
+              <!-- Ambient Halo Glow behind frames -->
+              <div class="hero-quad-ambient-glow"></div>
+
+              <!-- 4-Image Grid -->
+              <div class="quad-cards-grid">
+
+                <!-- Card 1 (Top-Left): Sanctuary Estate Grounds -->
+                <div class="quad-card card-top-left">
+                  <div class="image-frame-wrapper">
+                    <img src="images/our_story_ranch.jpg" alt="Silver Hoof Stables Historic Grounds" class="quad-img">
+                    <div class="image-overlay-tint"></div>
+                  </div>
+                  <!-- Floating Badge -->
+                  <div class="quad-badge badge-top-left">
+                    <div class="badge-icon-wrap">
+                      <i class="fa-solid fa-landmark"></i>
+                    </div>
+                    <div class="badge-text-wrap">
+                      <span class="badge-title">Sanctuary Grounds</span>
+                      <span class="badge-caption">45 Pristine Acres</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2 (Top-Right): Master Trainers & Direct Guidance -->
+                <div class="quad-card card-top-right">
+                  <div class="image-frame-wrapper">
+                    <img src="images/instructor_marcus.jpg" alt="Silver Hoof Master Trainer Coach Marcus" class="quad-img">
+                    <div class="image-overlay-tint"></div>
+                  </div>
+                  <!-- Floating Badge -->
+                  <div class="quad-badge badge-top-right">
+                    <div class="badge-icon-wrap gold-glow">
+                      <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div class="badge-text-wrap">
+                      <span class="badge-title">Master Trainers</span>
+                      <span class="badge-caption">Direct Guidance</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3 (Bottom-Left): Stable Life & VIP Tours -->
+                <div class="quad-card card-bottom-left">
+                  <div class="image-frame-wrapper">
+                    <img src="images/gallery_stable_bonding.jpg" alt="VIP Stable Bonding & Horse Care" class="quad-img">
+                    <div class="image-overlay-tint"></div>
+                  </div>
+                  <!-- Floating Badge -->
+                  <div class="quad-badge badge-bottom-left">
+                    <div class="badge-icon-wrap">
+                      <i class="fa-solid fa-building-wheat"></i>
+                    </div>
+                    <div class="badge-text-wrap">
+                      <span class="badge-title">VIP Stable Tours</span>
+                      <span class="badge-caption">Daily 8am - 6pm</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 4 (Bottom-Right): 5-Star Rider Experience -->
+                <div class="quad-card card-bottom-right">
+                  <div class="image-frame-wrapper">
+                    <img src="images/hero2_rider_portrait.jpg" alt="5-Star Concierge Rider Care" class="quad-img">
+                    <div class="image-overlay-tint"></div>
+                  </div>
+                  <!-- Floating Badge -->
+                  <div class="quad-badge badge-bottom-right">
+                    <div class="stars-row">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="badge-title">5.0 Star Rated</span>
+                    <span class="badge-caption">Concierge Care</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Central Floating Gold Shield Badge -->
+              <div class="quad-center-badge">
+                <i class="fa-solid fa-shield-halved icon-gold"></i>
+                <span>Concierge Equestrian Care</span>
+              </div>
+
+              <!-- Decorative Luxury Gold Geometric Corner Frame -->
+              <div class="hero-quad-geometric-accent"></div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SECTION 2 — CONTACT FORM & ADDRESS CARDS (Split Layout) -->
+    <section class="section contact-main-section">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag-row center">
+            <div class="section-tag">
+              <span class="tag-line"></span>
+              GET IN TOUCH
+              <span class="tag-line"></span>
+            </div>
+          </div>
+          <h2 class="section-title">Send Us a Message or Visit</h2>
+          <p class="section-description">
+            Our friendly equestrian advisors typically respond within 2 to 4 business hours.
+          </p>
+        </div>
+
+        <div class="contact-split-grid">
+
+          <!-- Left Column: Interactive Contact Form Card -->
+          <div class="contact-form-card">
+            <h3 class="form-card-title"><i class="fa-solid fa-paper-plane icon-gold"></i> Direct Message Form</h3>
+            <p class="form-card-sub">Fill out the fields below and we'll reach out promptly.</p>
+
+            <form id="contact-page-form" onsubmit="handleContactPageSubmit(event)">
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="c-name">Full Name *</label>
+                  <input type="text" id="c-name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                  <label for="c-email">Email Address *</label>
+                  <input type="email" id="c-email" placeholder="john@example.com" required>
+                </div>
+              </div>
+
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="c-phone">Phone Number *</label>
+                  <input type="tel" id="c-phone" placeholder="+1 (555) 000-0000" required>
+                </div>
+                <div class="form-group">
+                  <label for="c-inquiry">Inquiry Category *</label>
+                  <select id="c-inquiry" required>
+                    <option value="Riding Lessons">Riding Lessons & Programs</option>
+                    <option value="Trail Rides">Guided Wilderness Trail Rides</option>
+                    <option value="Horse Boarding">Full-Care Horse Boarding</option>
+                    <option value="Private Event">Private Events & Group Clinics</option>
+                    <option value="General Inquiry">General Information</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="c-contact-pref">Preferred Contact Method</label>
+                <div class="radio-options-row">
+                  <label class="radio-label">
+                    <input type="radio" name="c-pref" value="Email" checked> Email
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="c-pref" value="Phone"> Phone Call
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="c-pref" value="WhatsApp"> WhatsApp / SMS
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="c-message">Your Message or Questions *</label>
+                <textarea id="c-message" rows="5" placeholder="Tell us about your riding experience, preferred dates, or specific questions..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-gold-pill btn-full">
+                Send Message Now <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+
+          <!-- Right Column: Address & Details Cards -->
+          <div class="contact-info-stack">
+
+            <!-- Card 1: Location & Hours -->
+            <div class="info-card">
+              <div class="info-icon-box">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="info-content">
+                <h4>Stable Ranch Address</h4>
+                <p>450 Equestrian Trail, Rolling Hills, CA 90274</p>
+                <div class="info-detail">
+                  <i class="fa-solid fa-clock icon-gold"></i>
+                  <span>Mon – Sun: 7:00 AM – 7:00 PM</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Direct Phone & Email -->
+            <div class="info-card">
+              <div class="info-icon-box">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="info-content">
+                <h4>Direct Phone & Email</h4>
+                <p>Office: +1 (800) 555-HOOF (4663)</p>
+                <p>Email: info@silverhoofstables.com</p>
+                <div class="info-detail">
+                  <i class="fa-solid fa-comments icon-gold"></i>
+                  <span>Live Office Support Available Daily</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Emergency Duty Hotline -->
+            <div class="info-card highlight-info">
+              <div class="info-icon-box">
+                <i class="fa-solid fa-shield-heart"></i>
+              </div>
+              <div class="info-content">
+                <h4>24/7 Stables Emergency Line</h4>
+                <p>Dedicated helpline for horse boarders & medical emergencies.</p>
+                <strong class="emergency-num">+1 (800) 555-VET1</strong>
+              </div>
+            </div>
+
+            <!-- Card 4: Social Channels -->
+            <div class="info-card">
+              <div class="info-icon-box">
+                <i class="fa-solid fa-share-nodes"></i>
+              </div>
+              <div class="info-content">
+                <h4>Follow & Connect Online</h4>
+                <p>Stay updated with ranch events, trail photos, and rider accomplishments.</p>
+                <div class="contact-social-links">
+                  <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                  <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SECTION 3 — MAP & LOCATION SECTION -->
+    <section class="section contact-map-section">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag-row center">
+            <div class="section-tag">
+              <span class="tag-line"></span>
+              RANCH LOCATION MAP
+              <span class="tag-line"></span>
+            </div>
+          </div>
+          <h2 class="section-title">Find Us in Rolling Hills</h2>
+          <p class="section-description">
+            Conveniently located 20 minutes from downtown with private visitor parking.
+          </p>
+        </div>
+
+        <div class="map-card-container">
+          <div class="map-iframe-wrap">
+            <iframe
+              title="Silver Hoof Stables Map Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106000.0000000000!2d-118.358!3d33.758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd4a4444444444%3A0x4444444444444444!2sRolling%20Hills%2C%20CA%2090274!5e0!3m2!1sen!2sus!4v1650000000000!5m2!1sen!2sus"
+              width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+
+          <div class="map-info-bar">
+            <div class="map-info-item">
+              <i class="fa-solid fa-square-parking icon-gold"></i>
+              <div>
+                <strong>Free Parking</strong>
+                <span>Spacious lot for vehicles & horse trailers</span>
+              </div>
+            </div>
+
+            <div class="map-info-item">
+              <i class="fa-solid fa-route icon-gold"></i>
+              <div>
+                <strong>Easy Access</strong>
+                <span>Paved access road leading directly to main courtyard</span>
+              </div>
+            </div>
+
+            <div class="map-info-item">
+              <i class="fa-solid fa-tree icon-gold"></i>
+              <div>
+                <strong>150 Acres Ranch</strong>
+                <span>Private arena, round pens, and backcountry trailheads</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SECTION 4 — CONTACT & BOOKING FAQS -->
+    <section class="section contact-faq-section">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag-row center">
+            <div class="section-tag">
+              <span class="tag-line"></span>
+              COMMON QUESTIONS
+              <span class="tag-line"></span>
+            </div>
+          </div>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-description">
+            Quick answers regarding visiting, lesson policies, and trail scheduling.
+          </p>
+        </div>
+
+        <div class="faq-accordion-wrap">
+
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-q">
+              <span>How far in advance should I book riding lessons or trail rides?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-accordion-a">
+              <p>We recommend booking at least 48 to 72 hours in advance, especially for weekend sunset trail rides and peak afternoon lesson slots. Online bookings can be made up to 30 days ahead.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-q">
+              <span>What is your cancellation and rescheduling policy?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-accordion-a">
+              <p>Cancellations or rescheduling requests made at least 24 hours prior to your scheduled session receive a 100% refund or credit. Same-day cancellations may incur a nominal rebooking fee.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-q">
+              <span>Are family members allowed to watch riding lessons?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-accordion-a">
+              <p>Yes! We have comfortable indoor and outdoor clubhouse seating areas with panoramic arena views where friends and family can relax during lessons.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-q">
+              <span>Do you offer gift certificates or private group packages?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-accordion-a">
+              <p>We offer customized digital and physical gift certificates for all riding packages, as well as private group bookings for birthday celebrations, corporate retreats, and family trail excursions.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-q">
+              <span>What should I wear for my first visit to Silver Hoof Stables?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-accordion-a">
+              <p>Please wear comfortable long pants (breeches or sturdy denim jeans) and closed-toe boots with a 1-inch heel. We provide ASTM/SEI-certified riding helmets for all guests at no extra charge.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SECTION 5 — PREMIUM CTA CARD SECTION -->
+    <section class="section contact-cta-section">
+      <div class="container">
+        <div class="contact-cta-card">
+          <div class="cta-glow-overlay"></div>
+          <div class="contact-cta-content">
+            <span class="cta-badge-tag"><i class="fa-solid fa-horse"></i> START YOUR EQUESTRIAN JOURNEY</span>
+            <h2 class="contact-cta-title">Ready to Experience Silver Hoof Stables?</h2>
+            <p class="contact-cta-sub">
+              Book your first session online or call our stables office to schedule a personal ranch tour.
+            </p>
+            <div class="contact-cta-btns">
+              <button class="btn btn-gold-pill btn-large" onclick="openBookingModal()">
+                Book a Lesson <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <a href="lessons.html" class="btn btn-outline-hero btn-large">
+                Explore All Lessons <i class="fa-solid fa-list"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ==========================================================================
+     FOOTER SECTION (Matches Home 1 Exactly)
+     ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+
+      <!-- Left Column: Logo & Brand Info & Social Links -->
+      <div class="footer-col footer-brand-col">
+        <a href="index.html" class="brand-logo footer-logo">
+          <div class="logo-icon">
+            <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">SILVER HOOF</span>
+            <span class="brand-sub">STABLES</span>
+          </div>
+        </a>
+        <p class="footer-about">
+          Silver Hoof Stables is a premier luxury horseback riding center dedicated to excellence in riding education,
+          equine welfare, and unforgettable trail experiences.
+        </p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+      </div>
+
+      <!-- Middle Column 1: Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="lessons.html"><i class="fa-solid fa-chevron-right"></i> Lessons</a></li>
+          <li><a href="trail-rides.html"><i class="fa-solid fa-chevron-right"></i> Trail Rides</a></li>
+        </ul>
+      </div>
+
+      <!-- Middle Column 2: Additional Links -->
+      <div class="footer-col">
+        <h4 class="footer-title">Additional Links</h4>
+        <ul class="footer-links">
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
+          <li><a href="index.html#boarding"><i class="fa-solid fa-chevron-right"></i> Boarding</a></li>
+          <li><a href="home2.html"><i class="fa-solid fa-chevron-right"></i> Home 2 (Luxury)</a></li>
+        </ul>
+      </div>
+
+      <!-- Right Column: Address & Contact Details -->
+      <div class="footer-col">
+        <h4 class="footer-title">Contact & Stables</h4>
+        <div class="footer-contact-details">
+          <p><i class="fa-solid fa-location-dot"></i> 450 Equestrian Trail, Rolling Hills, CA 90274</p>
+          <p><i class="fa-solid fa-phone"></i> +1 (800) 555-HOOF</p>
+          <p><i class="fa-solid fa-envelope"></i> info@silverhoofstables.com</p>
+          <p><i class="fa-solid fa-clock"></i> Mon-Sun: 7:00 AM – 7:00 PM</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Terms & Conditions Line -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>&copy; 2026 Silver Hoof Stables. All Rights Reserved.</p>
+        <div class="footer-terms-links">
+          <a href="#"
+            onclick="alert('Terms & Conditions: Silver Hoof Stables safety rules & riding terms apply.'); return false;">Terms
+            & Conditions</a>
+          <span class="sep">|</span>
+          <a href="#"
+            onclick="alert('Privacy Policy: We value your privacy and protect your personal information.'); return false;">Privacy
+            Policy</a>
+          <span class="sep">|</span>
+          <a href="#"
+            onclick="alert('Cookie Policy: Our site uses essential cookies for preferences.'); return false;">Cookie
+            Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+     MODALS & INTERACTIVE OVERLAYS
+     ========================================================================== -->
+  <!-- BOOK A LESSON MODAL -->
+  <div class="modal-backdrop" id="booking-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="booking-close" onclick="closeBookingModal()">&times;</button>
+      <div class="modal-header">
+        <i class="fa-solid fa-horse modal-header-icon"></i>
+        <h3>Book Your Lesson</h3>
+        <p>Select your program and preferred schedule</p>
+      </div>
+      <form id="booking-form" onsubmit="handleBookingSubmit(event)">
+        <div class="form-group">
+          <label for="b-program">Select Program / Plan *</label>
+          <select id="b-program" required>
+            <option value="Beginner Riding Foundations">Beginner Riding Foundations ($65)</option>
+            <option value="Hunter & Show Jumping Mastery">Hunter & Show Jumping Mastery ($110)</option>
+            <option value="Classical Dressage & Precision">Classical Dressage & Precision ($145)</option>
+            <option value="Groundwork & Equine Horsemanship">Groundwork & Equine Horsemanship ($75)</option>
+            <option value="Guided Wilderness & Sunset Trails">Guided Wilderness & Sunset Trails ($95)</option>
+            <option value="Youth & Junior Equestrian Academy">Youth & Junior Equestrian Academy ($80)</option>
+          </select>
+        </div>
+
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="b-name">Your Full Name *</label>
+            <input type="text" id="b-name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="b-phone">Phone Number *</label>
+            <input type="tel" id="b-phone" placeholder="+1 (555) 000-0000" required>
+          </div>
+        </div>
+
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="b-date">Preferred Date *</label>
+            <input type="date" id="b-date" required>
+          </div>
+          <div class="form-group">
+            <label for="b-time">Preferred Time Slot *</label>
+            <select id="b-time" required>
+              <option value="08:00 AM">08:00 AM - Morning</option>
+              <option value="10:30 AM">10:30 AM - Morning</option>
+              <option value="02:00 PM">02:00 PM - Afternoon</option>
+              <option value="05:00 PM">05:00 PM - Sunset Ride</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="b-notes">Experience Level & Special Requests</label>
+          <textarea id="b-notes" rows="3"
+            placeholder="Tell us if you are a first-time rider, previous experience, or any special requests..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-gold-pill btn-full">
+          Confirm Booking Request <i class="fa-solid fa-check-circle"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- LOGIN MODAL -->
+  <div class="modal-backdrop" id="login-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="login-close" onclick="closeLoginModal()">&times;</button>
+      <div class="modal-header">
+        <i class="fa-solid fa-user-lock modal-header-icon"></i>
+        <h3>Rider Portal Login</h3>
+        <p>Enter your credentials to access your account & schedules</p>
+      </div>
+      <form id="login-form" onsubmit="handleLoginSubmit(event)">
+        <div class="form-group">
+          <label for="l-email">Email Address *</label>
+          <input type="email" id="l-email" placeholder="rider@example.com" required value="rider@silverhoof.com">
+        </div>
+        <div class="form-group">
+          <label for="l-password">Password *</label>
+          <input type="password" id="l-password" placeholder="••••••••" required value="password123">
+        </div>
+        <button type="submit" class="btn btn-gold-pill btn-full">
+          Sign In to Portal <i class="fa-solid fa-right-to-bracket"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript Files -->
+  <script src="index.js"></script>
+  <script src="contact.js"></script>
+</body>
+
+</html>

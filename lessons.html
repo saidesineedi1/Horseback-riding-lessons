@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riding Lessons & Academy | Silver Hoof Stables</title>
+  <meta name="description"
+    content="Explore our premier riding lesson programs. Beginner riding foundations, show jumping, classical dressage, groundwork horsemanship, and guided trail rides.">
+
+  <!-- Google Fonts: Open Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Base Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+  <!-- Lessons Page Custom Stylesheet -->
+  <link rel="stylesheet" href="lessons.css">
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+     HEADER / NAVIGATION BAR (Consistently Matches Home 1)
+     ========================================================================== -->
+  <header class="header" id="header">
+    <div class="container header-container">
+
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">
+          <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">SILVER HOOF</span>
+          <span class="brand-sub">STABLES</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links (Middle) -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item dropdown">
+            <a href="index.html" class="nav-link" id="home-dropdown-btn">
+              Home <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html" class="dropdown-item" id="home-1-link">Home 1 (Classic)</a></li>
+              <li><a href="home2.html" class="dropdown-item" id="home-2-link">Home 2 (Luxury Ranch)</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="lessons.html" class="nav-link active">Lessons</a></li>
+          <li class="nav-item"><a href="trail-rides.html" class="nav-link">Trail Rides</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="boarding.html" class="nav-link">Boarding</a></li>
+          <li class="nav-item"><a href="dash.html" class="nav-link dashboard-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Controls & Actions -->
+      <div class="header-actions">
+        <!-- RTL Toggle -->
+        <button class="icon-btn" id="rtl-toggle" title="Toggle Text Direction (LTR / RTL)" aria-label="Toggle RTL">
+          <span class="btn-label">RTL</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="icon-btn" id="theme-toggle" title="Toggle Theme (Dark / Light)" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+
+        <!-- Login Button -->
+        <button class="btn btn-primary" id="open-login-btn" onclick="openLoginModal()">
+          <i class="fa-solid fa-user"></i> Login
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="hamburger-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+     MAIN CONTENT WRAPPER
+     ========================================================================== -->
+  <main>
+
+    <!-- SECTION 01 — HERO BANNER (PREMIUM STYLISH 3-IMAGE COMPOSITION) -->
+    <section class="lessons-hero-section">
+      <div class="lessons-hero-bg" style="background-image: url('images/lesson_beginner_foundations.jpg');"></div>
+      <div class="lessons-hero-overlay"></div>
+
+      <div class="container lessons-hero-container">
+        
+        <!-- Two Column Aligned Hero Grid -->
+        <div class="lessons-hero-grid">
+
+          <!-- LEFT COLUMN: Narrative & Metrics -->
+          <div class="lessons-hero-text-col">
+            <div class="gold-divider-wrap">
+              <span class="gold-line"></span>
+              <span class="hero-welcome">WORLD-CLASS ACADEMY</span>
+              <span class="gold-line"></span>
+            </div>
+
+            <h1 class="lessons-hero-title">
+              Master the Art of<br>
+              <span class="lessons-hero-accent">Equestrian Horsemanship.</span>
+            </h1>
+
+            <p class="lessons-hero-subtitle">
+              From foundational posture and gentle pony care to championship hunter jumping and precision dressage — experience 6 progressive instruction tiers guided by certified equestrian masters.
+            </p>
+
+            <!-- Hero Action CTA Buttons -->
+            <div class="lessons-hero-cta-btns">
+              <a href="#lessons-grid" class="btn btn-primary" id="lessons-hero-explore-btn">
+                <i class="fa-solid fa-graduation-cap"></i> Explore All Programs
+              </a>
+              <button class="btn btn-outline-hero" onclick="openBookingModal()" id="lessons-hero-book-btn">
+                <i class="fa-solid fa-calendar-check"></i> Book Trial Lesson
+              </button>
+            </div>
+
+            <!-- Quick Metrics Strip -->
+            <div class="lessons-hero-stats">
+              <div class="lessons-stat">
+                <span class="stat-num">06</span>
+                <span class="stat-lbl">Signature Programs</span>
+              </div>
+              <div class="stat-line"></div>
+              <div class="lessons-stat">
+                <span class="stat-num">100%</span>
+                <span class="stat-lbl">Safety Certified</span>
+              </div>
+              <div class="stat-line"></div>
+              <div class="lessons-stat">
+                <span class="stat-num">35+</span>
+                <span class="stat-lbl">Champion Horses</span>
+              </div>
+              <div class="stat-line"></div>
+              <div class="lessons-stat">
+                <span class="stat-num">1:1 &amp; Group</span>
+                <span class="stat-lbl">Custom Formats</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Premium Aligned 3-Image Composition -->
+          <div class="lessons-hero-media-col">
+            <div class="hero-trio-composition">
+              
+              <!-- Ambient Halo Glow behind frames -->
+              <div class="hero-trio-ambient-glow"></div>
+
+              <!-- Image 1: Main Centerpiece (Dressage & Precision) -->
+              <div class="trio-card card-center">
+                <div class="image-frame-wrapper">
+                  <img src="images/lesson_dressage_precision.jpg" alt="Dressage Precision Riding Lesson" class="trio-img">
+                  <div class="image-overlay-tint"></div>
+                </div>
+                <!-- Floating Glass Badge: Precision Discipline -->
+                <div class="trio-badge badge-center">
+                  <div class="badge-icon-wrap gold-glow">
+                    <i class="fa-solid fa-trophy"></i>
+                  </div>
+                  <div class="badge-text-wrap">
+                    <span class="badge-title">Championship Mastery</span>
+                    <span class="badge-caption">Dressage &amp; Precision</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Image 2: Top Left Offset (Beginner Foundations & Guidance) -->
+              <div class="trio-card card-top-left">
+                <div class="image-frame-wrapper">
+                  <img src="images/lesson_beginner_foundations.jpg" alt="Beginner Foundations Lesson" class="trio-img">
+                  <div class="image-overlay-tint"></div>
+                </div>
+                <!-- Floating Glass Badge: Foundations -->
+                <div class="trio-badge badge-top-left">
+                  <div class="badge-icon-wrap">
+                    <i class="fa-solid fa-seedling"></i>
+                  </div>
+                  <div class="badge-text-wrap">
+                    <span class="badge-title">Foundations</span>
+                    <span class="badge-caption">All Ages &amp; Novices</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Image 3: Bottom Right Offset (Show Jumping & Action) -->
+              <div class="trio-card card-bottom-right">
+                <div class="image-frame-wrapper">
+                  <img src="images/lesson_hunter_jumper.jpg" alt="Hunter Jumper Lesson" class="trio-img">
+                  <div class="image-overlay-tint"></div>
+                </div>
+                <!-- Floating Glass Badge: Stars Rating -->
+                <div class="trio-badge badge-bottom-right">
+                  <div class="stars-row">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="badge-title">Hunter Jumper</span>
+                  <span class="badge-caption">Certified Trainers</span>
+                </div>
+              </div>
+
+              <!-- Decorative Luxury Gold Geometric Corner Frame -->
+              <div class="hero-geometric-accent"></div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 02 — 6 LESSON CARDS GRID -->
+    <section class="section lessons-grid-section" id="lessons-grid">
+      <div class="container">
+
+        <div class="section-tag-row center">
+          <div class="section-tag">
+            <span class="tag-line"></span>
+            CURATED RIDING PROGRAMS
+            <span class="tag-line"></span>
+          </div>
+        </div>
+        <h2 class="section-title text-center">Explore Our 6 Specialized Lessons</h2>
+        <p class="section-subtitle text-center">Each lesson is thoughtfully structured to build confidence, skill precision, and a deep bond with your horse.</p>
+
+        <div class="lessons-cards-grid">
+
+          <!-- Card 1: Beginner Riding Foundations -->
+          <div class="lesson-card">
+            <div class="lesson-card-img-wrap">
+              <img src="images/lesson_beginner_foundations.jpg" alt="Beginner Riding Foundations">
+              <span class="lesson-card-badge">BEGINNER FRIENDLY</span>
+            </div>
+            <div class="lesson-card-body">
+              <div class="lesson-meta-row">
+                <span class="meta-item"><i class="fa-solid fa-clock"></i> 60 Mins</span>
+                <span class="meta-item"><i class="fa-solid fa-user-group"></i> Max 4 Riders</span>
+              </div>
+              <h3 class="lesson-card-title">Beginner Riding Foundations</h3>
+              <p class="lesson-card-desc">
+                Learn fundamental posture, rein controls, walk-trot transitions, and safe grooming etiquette with calm, experienced lesson horses.
+              </p>
+              <div class="lesson-card-footer">
+                <div class="lesson-price">
+                  <span class="price-val">$65</span>
+                  <span class="price-unit">/ session</span>
+                </div>
+                <a href="lesson-detail.html?id=beginner-foundations" class="btn btn-gold-pill btn-sm">
+                  Details <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Hunter & Show Jumping Mastery -->
+          <div class="lesson-card">
+            <div class="lesson-card-img-wrap">
+              <img src="images/lesson_hunter_jumper.jpg" alt="Hunter & Show Jumping Mastery">
+              <span class="lesson-card-badge gold-badge">POPULAR</span>
+            </div>
+            <div class="lesson-card-body">
+              <div class="lesson-meta-row">
+                <span class="meta-item"><i class="fa-solid fa-clock"></i> 75 Mins</span>
+                <span class="meta-item"><i class="fa-solid fa-user-group"></i> Max 3 Riders</span>
+              </div>
+              <h3 class="lesson-card-title">Hunter & Show Jumping Mastery</h3>
+              <p class="lesson-card-desc">
+                Refine two-point position, course navigation rhythm, stride counting, and jumping technical barriers up to 1.20m height.
+              </p>
+              <div class="lesson-card-footer">
+                <div class="lesson-price">
+                  <span class="price-val">$110</span>
+                  <span class="price-unit">/ session</span>
+                </div>
+                <a href="lesson-detail.html?id=hunter-jumper" class="btn btn-gold-pill btn-sm">
+                  Details <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Classical Dressage & Precision -->
+          <div class="lesson-card">
+            <div class="lesson-card-img-wrap">
+              <img src="images/lesson_dressage_precision.jpg" alt="Classical Dressage & Precision">
+              <span class="lesson-card-badge">ADVANCED</span>
+            </div>
+            <div class="lesson-card-body">
+              <div class="lesson-meta-row">
+                <span class="meta-item"><i class="fa-solid fa-clock"></i> 60 Mins</span>
+                <span class="meta-item"><i class="fa-solid fa-user"></i> Private 1-on-1</span>
+              </div>
+              <h3 class="lesson-card-title">Classical Dressage & Precision</h3>
+              <p class="lesson-card-desc">
+                Elevate seat sensitivity, collection, lateral movements, half-halts, and expressive trots inside our regulation indoor dressage arena.
+              </p>
+              <div class="lesson-card-footer">
+                <div class="lesson-price">
+                  <span class="price-val">$145</span>
+                  <span class="price-unit">/ session</span>
+                </div>
+                <a href="lesson-detail.html?id=dressage-precision" class="btn btn-gold-pill btn-sm">
+                  Details <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Groundwork & Equine Horsemanship -->
+          <div class="lesson-card">
+            <div class="lesson-card-img-wrap">
+              <img src="images/lesson_horsemanship.jpg" alt="Groundwork & Equine Horsemanship">
+              <span class="lesson-card-badge">ALL SKILL LEVELS</span>
+            </div>
+            <div class="lesson-card-body">
+              <div class="lesson-meta-row">
+                <span class="meta-item"><i class="fa-solid fa-clock"></i> 60 Mins</span>
+                <span class="meta-item"><i class="fa-solid fa-user-group"></i> Max 5 Riders</span>
+              </div>
+              <h3 class="lesson-card-title">Groundwork & Equine Horsemanship</h3>
+              <p class="lesson-card-desc">
+                Master round-pen lunging, horse psychology, halter control, desensitization techniques, and grooming bond rituals.
+              </p>
+              <div class="lesson-card-footer">
+                <div class="lesson-price">
+                  <span class="price-val">$75</span>
+                  <span class="price-unit">/ session</span>
+                </div>
+                <a href="lesson-detail.html?id=equine-horsemanship" class="btn btn-gold-pill btn-sm">
+                  Details <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Guided Wilderness & Sunset Trails -->
+          <div class="lesson-card">
+            <div class="lesson-card-img-wrap">
+              <img src="images/lesson_sunset_trail.jpg" alt="Guided Wilderness & Sunset Trails">
+              <span class="lesson-card-badge gold-badge">MOST POPULAR</span>
+            </div>
+            <div class="lesson-card-body">
+              <div class="lesson-meta-row">
+                <span class="meta-item"><i class="fa-solid fa-clock"></i> 90 Mins</span>
+                <span class="meta-item"><i class="fa-solid fa-compass"></i> Outdoor Trail</span>
+              </div>
+              <h3 class="lesson-card-title">Guided Wilderness & Sunset Trails</h3>
+              <p class="lesson-card-desc">
+                Ride along pine-lined forest streams and open meadow pastures during golden hour with certified trail guides.
+              </p>
+              <div class="lesson-card-footer">
+                <div class="lesson-price">
+                  <span class="price-val">$95</span>
+                  <span class="price-unit">/ session</span>
+                </div>
+                <a href="lesson-detail.html?id=sunset-trail" class="btn btn-gold-pill btn-sm">
+                  Details <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Youth & Junior Equestrian Academy -->
+          <div class="lesson-card">
+            <div class="lesson-card-img-wrap">
+              <img src="images/lesson_youth_academy.jpg" alt="Youth & Junior Equestrian Academy">
+              <span class="lesson-card-badge">AGES 6-15</span>
+            </div>
+            <div class="lesson-card-body">
+              <div class="lesson-meta-row">
+                <span class="meta-item"><i class="fa-solid fa-clock"></i> 60 Mins</span>
+                <span class="meta-item"><i class="fa-solid fa-child"></i> Junior Group</span>
+              </div>
+              <h3 class="lesson-card-title">Youth & Junior Equestrian Academy</h3>
+              <p class="lesson-card-desc">
+                Fun, supportive, safety-first riding instruction on gentle ponies, building balance, responsibility, and horsemanship skills.
+              </p>
+              <div class="lesson-card-footer">
+                <div class="lesson-price">
+                  <span class="price-val">$80</span>
+                  <span class="price-unit">/ session</span>
+                </div>
+                <a href="lesson-detail.html?id=youth-academy" class="btn btn-gold-pill btn-sm">
+                  Details <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 03 — STUDENT TESTIMONIALS -->
+    <section class="section testimonials-section" id="testimonials">
+      <div class="container">
+
+        <div class="section-tag-row center">
+          <div class="section-tag">
+            <span class="tag-line"></span>
+            STUDENT REVIEWS
+            <span class="tag-line"></span>
+          </div>
+        </div>
+        <h2 class="section-title text-center">Stories from Our Riding Community</h2>
+        <p class="section-subtitle text-center">Hear how our riding lessons transformed confidence, skill levels, and horse bonding.</p>
+
+        <div class="testimonials-grid">
+
+          <!-- Testimonial 1 -->
+          <div class="testi-card">
+            <div class="testi-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testi-text">
+              “Taking Beginner Foundations at Silver Hoof was the best decision I made. Coach Eleanor is incredibly patient, and my lesson horse Apollo made me feel safe from minute one!”
+            </p>
+            <div class="testi-user">
+              <div class="testi-avatar">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div>
+                <h4 class="testi-name">Claire Montgomery</h4>
+                <span class="testi-role">Beginner Foundations Student</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testi-card">
+            <div class="testi-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testi-text">
+              “The Show Jumping Mastery program elevated my competition technique dramatically. Coach Marcus helped me fix my stride counting, and we qualified for regionals!”
+            </p>
+            <div class="testi-user">
+              <div class="testi-avatar">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div>
+                <h4 class="testi-name">David Sterling</h4>
+                <span class="testi-role">Show Jumping Competitor</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testi-card">
+            <div class="testi-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testi-text">
+              “My 8-year-old daughter enrolled in the Youth Academy and she looks forward to Saturday mornings all week long! Incredible instructors and immaculate facilities.”
+            </p>
+            <div class="testi-user">
+              <div class="testi-avatar">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div>
+                <h4 class="testi-name">Samantha Vance</h4>
+                <span class="testi-role">Parent of Youth Rider</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 04 — FAQS -->
+    <section class="section faq-section" id="faqs">
+      <div class="container">
+
+        <div class="section-tag-row center">
+          <div class="section-tag">
+            <span class="tag-line"></span>
+            LESSON QUESTIONS & ANSWERS
+            <span class="tag-line"></span>
+          </div>
+        </div>
+        <h2 class="section-title text-center">Frequently Asked Questions</h2>
+        <p class="section-subtitle text-center">Got questions about scheduling, riding gear, or lesson logistics? We've got answers.</p>
+
+        <div class="faq-accordion-wrap">
+
+          <!-- FAQ Item 1 -->
+          <div class="faq-card active">
+            <div class="faq-header" onclick="toggleFaq(this)">
+              <h3 class="faq-question">
+                <i class="fa-solid fa-circle-question icon-gold"></i>
+                Are riding helmets and protective gear provided?
+              </h3>
+              <span class="faq-toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-body">
+              <p>
+                Yes! We provide complimentary ASTM/SEI-certified riding helmets for all students. We require long pants (breeches or jeans) and closed-toe boots with a small 1-inch heel.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-card">
+            <div class="faq-header" onclick="toggleFaq(this)">
+              <h3 class="faq-question">
+                <i class="fa-solid fa-circle-question icon-gold"></i>
+                Can I choose a specific horse for my lesson?
+              </h3>
+              <span class="faq-toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-body">
+              <p>
+                Our head trainer pairs each student with a horse that matches their height, skill level, and temperament goals. Returning students can request their favorite horse subject to availability!
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-card">
+            <div class="faq-header" onclick="toggleFaq(this)">
+              <h3 class="faq-question">
+                <i class="fa-solid fa-circle-question icon-gold"></i>
+                What happens in case of bad weather?
+              </h3>
+              <span class="faq-toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-body">
+              <p>
+                Rain or shine, our state-of-the-art climate-controlled covered indoor arena allows lessons to proceed uninterrupted. Trail rides may be rescheduled if weather poses a safety hazard.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq-card">
+            <div class="faq-header" onclick="toggleFaq(this)">
+              <h3 class="faq-question">
+                <i class="fa-solid fa-circle-question icon-gold"></i>
+                Do you offer discounted multi-lesson packages?
+              </h3>
+              <span class="faq-toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-body">
+              <p>
+                Yes! We offer 5-session and 10-session lesson packages with up to 15% savings, as well as monthly subscription plans for dedicated riders.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 05 — CTA CARD -->
+    <section class="section lessons-cta-section" id="cta">
+      <div class="container">
+        <div class="lessons-cta-card">
+          <div class="cta-glow-overlay"></div>
+          <div class="lessons-cta-content">
+            <span class="cta-badge-tag"><i class="fa-solid fa-horse"></i> START YOUR EQUESTRIAN JOURNEY</span>
+            <h2 class="lessons-cta-title">Ready to Take Your First Lesson?</h2>
+            <p class="lessons-cta-sub">
+              Reserve your spot online today or speak with our lesson coordinator to pick the perfect program for you.
+            </p>
+            <div class="lessons-cta-btns">
+              <button class="btn btn-gold-pill btn-large" onclick="openBookingModal()">
+                Book a Lesson <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button class="btn btn-outline-hero btn-large" onclick="openLoginModal()">
+                Rider Login <i class="fa-solid fa-user"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+     FOOTER SECTION (Identical to Home 1)
+     ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+
+      <!-- Left Column: Logo & Brand Info & Social Links -->
+      <div class="footer-col footer-brand-col">
+        <a href="index.html" class="brand-logo footer-logo">
+          <div class="logo-icon">
+            <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">SILVER HOOF</span>
+            <span class="brand-sub">STABLES</span>
+          </div>
+        </a>
+        <p class="footer-about">
+          Silver Hoof Stables is a premier luxury horseback riding center dedicated to excellence in riding education,
+          equine welfare, and unforgettable trail experiences.
+        </p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+      </div>
+
+      <!-- Middle Column 1: Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="lessons.html"><i class="fa-solid fa-chevron-right"></i> Lessons</a></li>
+          <li><a href="index.html#gallery"><i class="fa-solid fa-chevron-right"></i> Trail Rides</a></li>
+        </ul>
+      </div>
+
+      <!-- Middle Column 2: Additional Links -->
+      <div class="footer-col">
+        <h4 class="footer-title">Additional Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#pricing"><i class="fa-solid fa-chevron-right"></i> Pricing</a></li>
+          <li><a href="index.html#boarding"><i class="fa-solid fa-chevron-right"></i> Boarding</a></li>
+          <li><a href="home2.html"><i class="fa-solid fa-chevron-right"></i> Home 2 (Luxury)</a></li>
+          <li><a href="#faqs"><i class="fa-solid fa-chevron-right"></i> FAQs</a></li>
+        </ul>
+      </div>
+
+      <!-- Right Column: Address & Contact Details -->
+      <div class="footer-col">
+        <h4 class="footer-title">Contact & Stables</h4>
+        <div class="footer-contact-details">
+          <p><i class="fa-solid fa-location-dot"></i> 450 Equestrian Trail, Rolling Hills, CA 90274</p>
+          <p><i class="fa-solid fa-phone"></i> +1 (800) 555-HOOF</p>
+          <p><i class="fa-solid fa-envelope"></i> info@silverhoofstables.com</p>
+          <p><i class="fa-solid fa-clock"></i> Mon-Sun: 7:00 AM – 7:00 PM</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Terms & Conditions Line -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>&copy; 2026 Silver Hoof Stables. All Rights Reserved.</p>
+        <div class="footer-terms-links">
+          <a href="#"
+            onclick="alert('Terms & Conditions: Silver Hoof Stables safety rules & riding terms apply.'); return false;">Terms
+            & Conditions</a>
+          <span class="sep">|</span>
+          <a href="#"
+            onclick="alert('Privacy Policy: We value your privacy and protect your personal information.'); return false;">Privacy
+            Policy</a>
+          <span class="sep">|</span>
+          <a href="#"
+            onclick="alert('Cookie Policy: Our site uses essential cookies for preferences.'); return false;">Cookie
+            Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+     MODALS & INTERACTIVE OVERLAYS
+     ========================================================================== -->
+  <!-- BOOK A LESSON MODAL -->
+  <div class="modal-backdrop" id="booking-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="booking-close" onclick="closeBookingModal()">&times;</button>
+      <div class="modal-header">
+        <i class="fa-solid fa-horse modal-header-icon"></i>
+        <h3>Book Your Lesson</h3>
+        <p>Select your program and preferred schedule</p>
+      </div>
+      <form id="booking-form" onsubmit="handleBookingSubmit(event)">
+        <div class="form-group">
+          <label for="b-program">Select Program / Plan *</label>
+          <select id="b-program" required>
+            <option value="Beginner Riding Foundations">Beginner Riding Foundations ($65)</option>
+            <option value="Hunter & Show Jumping Mastery">Hunter & Show Jumping Mastery ($110)</option>
+            <option value="Classical Dressage & Precision">Classical Dressage & Precision ($145)</option>
+            <option value="Groundwork & Equine Horsemanship">Groundwork & Equine Horsemanship ($75)</option>
+            <option value="Guided Wilderness & Sunset Trails">Guided Wilderness & Sunset Trails ($95)</option>
+            <option value="Youth & Junior Equestrian Academy">Youth & Junior Equestrian Academy ($80)</option>
+          </select>
+        </div>
+
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="b-name">Your Full Name *</label>
+            <input type="text" id="b-name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="b-phone">Phone Number *</label>
+            <input type="tel" id="b-phone" placeholder="+1 (555) 000-0000" required>
+          </div>
+        </div>
+
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="b-date">Preferred Date *</label>
+            <input type="date" id="b-date" required>
+          </div>
+          <div class="form-group">
+            <label for="b-time">Preferred Time Slot *</label>
+            <select id="b-time" required>
+              <option value="08:00 AM">08:00 AM - Morning</option>
+              <option value="10:30 AM">10:30 AM - Morning</option>
+              <option value="02:00 PM">02:00 PM - Afternoon</option>
+              <option value="05:00 PM">05:00 PM - Sunset Ride</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="b-notes">Experience Level & Special Requests</label>
+          <textarea id="b-notes" rows="3"
+            placeholder="Tell us if you are a first-time rider, previous experience, or any special requests..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-gold-pill btn-full">
+          Confirm Booking Request <i class="fa-solid fa-check-circle"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- LOGIN MODAL -->
+  <div class="modal-backdrop" id="login-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="login-close" onclick="closeLoginModal()">&times;</button>
+      <div class="modal-header">
+        <i class="fa-solid fa-user-lock modal-header-icon"></i>
+        <h3>Rider Portal Login</h3>
+        <p>Enter your credentials to access your account & schedules</p>
+      </div>
+      <form id="login-form" onsubmit="handleLoginSubmit(event)">
+        <div class="form-group">
+          <label for="l-email">Email Address *</label>
+          <input type="email" id="l-email" placeholder="rider@example.com" required value="rider@silverhoof.com">
+        </div>
+        <div class="form-group">
+          <label for="l-password">Password *</label>
+          <input type="password" id="l-password" placeholder="••••••••" required value="password123">
+        </div>
+        <button type="submit" class="btn btn-gold-pill btn-full">
+          Sign In to Portal <i class="fa-solid fa-right-to-bracket"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript Files -->
+  <script src="index.js"></script>
+  <script src="lessons.js"></script>
+</body>
+
+</html>

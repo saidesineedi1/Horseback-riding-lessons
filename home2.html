@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silver Hoof Stables | Luxury Ranch & Equestrian Experience (Home 2)</title>
+  <meta name="description"
+    content="Experience luxury horseback riding, trail rides, lessons, and stabling at Silver Hoof Stables. More than a ride. It's a lifestyle.">
+
+  <!-- Google Fonts: Open Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="home2.css">
+</head>
+
+<body>
+
+  <!-- Header / Navigation Bar -->
+  <header class="header" id="header">
+    <div class="container header-container">
+
+      <!-- Brand Logo -->
+      <a href="home2.html" class="brand-logo">
+        <div class="logo-icon">
+          <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">SILVER HOOF</span>
+          <span class="brand-sub">STABLES</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links (Middle) -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item dropdown">
+            <a href="home2.html" class="nav-link active" id="home-dropdown-btn">
+              Home <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html" class="dropdown-item" id="home-1-link">Home 1 (Classic)</a></li>
+              <li><a href="home2.html" class="dropdown-item active" id="home-2-link">Home 2 (Luxury Ranch)</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="lessons.html" class="nav-link">Lessons</a></li>
+          <li class="nav-item"><a href="trail-rides.html" class="nav-link">Trail Rides</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="boarding.html" class="nav-link">Boarding</a></li>
+          <li class="nav-item"><a href="dash.html" class="nav-link dashboard-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Controls & Actions -->
+      <div class="header-actions">
+        <!-- RTL Toggle -->
+        <button class="icon-btn" id="rtl-toggle" title="Toggle Text Direction (LTR / RTL)" aria-label="Toggle RTL">
+          <span class="btn-label">RTL</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="icon-btn" id="theme-toggle" title="Toggle Theme (Dark / Light)" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+
+        <!-- Login Button -->
+        <button class="btn btn-primary" id="open-login-btn" onclick="openLoginModal()">
+          <i class="fa-solid fa-user"></i> Login
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="hamburger-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- SECTION 01 — HERO (2-Column Split with 3-Image Collage) -->
+    <section class="hero2-section" id="hero">
+      <div class="container hero2-container">
+        <div class="hero2-grid">
+
+          <!-- Left Text Content -->
+          <div class="hero2-text-col">
+            <div class="gold-divider-wrap align-left">
+              <span class="gold-line"></span>
+              <span class="hero-welcome">LUXURY RANCH EXPERIENCE</span>
+            </div>
+
+            <h1 class="hero2-title">
+              More Than a Ride.<br>
+              <span class="hero2-accent">It’s a Lifestyle.</span>
+            </h1>
+
+            <p class="hero2-subtitle">
+              Expert instruction. Well-cared-for horses. Unforgettable experiences across scenic ranch trails.
+            </p>
+
+            <div class="hero2-buttons">
+              <button class="btn btn-gold-pill btn-large" onclick="openBookingModal()">
+                Book a Lesson <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button class="btn btn-outline-hero btn-large" onclick="scrollToSection('trail-rides')">
+                Explore Trail Rides <i class="fa-solid fa-compass"></i>
+              </button>
+            </div>
+
+            <!-- Hero Statistics Strip -->
+            <div class="hero2-stats-grid">
+              <div class="hero2-stat-item">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="hero2-stat-item">
+                <span class="stat-number">25+</span>
+                <span class="stat-label">Well-Cared Horses</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="hero2-stat-item">
+                <span class="stat-number">1,200+</span>
+                <span class="stat-label">Riders Trained</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right 3 Unique Images Layout -->
+          <div class="hero2-images-col">
+            <div class="hero2-image-composition">
+              <!-- Main Card -->
+              <div class="hero2-img-card hero2-img-main">
+                <img src="images/hero2_rider_portrait.jpg" alt="Equestrian Rider Portrait">
+                <div class="img-badge top-badge">
+                  <i class="fa-solid fa-award"></i> Premier Riding Academy
+                </div>
+              </div>
+              <!-- Secondary Card -->
+              <div class="hero2-img-card hero2-img-secondary">
+                <img src="images/hero2_gallop_meadow.jpg" alt="Galloping Stallion in Meadow">
+                <div class="img-caption-tag">Open Fields & Trails</div>
+              </div>
+              <!-- Tertiary Card -->
+              <div class="hero2-img-card hero2-img-tertiary">
+                <img src="images/hero2_ranch_sunset.jpg" alt="Luxury Ranch Stables at Sunset">
+                <div class="img-caption-tag">5-Star Facility</div>
+              </div>
+
+              <!-- Decorative Accent Elements -->
+              <div class="hero2-deco-ring"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="hero2-scroll-indicator" onclick="scrollToSection('our-stable')">
+        <span>SCROLL DOWN</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+    </section>
+
+
+    <!-- SECTION 02 — OUR STABLE (Split Layout) -->
+    <section class="section our-stable-section" id="our-stable">
+      <div class="container">
+        <div class="split-layout align-center">
+
+          <!-- Left Text Column -->
+          <div class="split-text-col">
+            <div class="section-tag-row">
+              <div class="section-tag">
+                <span class="tag-line"></span>
+                OUR STABLE
+              </div>
+            </div>
+
+            <h2 class="section-title">A Home for Horses, a Place for You.</h2>
+            <p class="section-lead">
+              Silver Hoof Stables is a sanctuary dedicated to horse-centered learning, professional riding instruction, and supportive growth in breathtaking countryside surroundings.
+            </p>
+            <p class="section-body">
+              Whether you are taking your very first step in the saddle or refining advanced dressage techniques, our ranch offers a welcoming community built around care, safety, and mutual trust.
+            </p>
+
+            <div class="cta-wrap">
+              <button class="btn btn-gold-pill" onclick="openBookingModal()">
+                Discover Our Stable <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Image Column (Stacked Composite) -->
+          <div class="split-image-col">
+            <div class="composite-image-wrapper">
+              <!-- Reins / Leaf Background Motif SVG -->
+              <svg class="decorative-motif-svg" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="150" cy="150" r="140" stroke="var(--clr-antique-gold)" stroke-opacity="0.25" stroke-dasharray="6 6"/>
+                <path d="M50 150 C100 50, 200 50, 250 150 C200 250, 100 250, 50 150 Z" stroke="var(--clr-antique-gold)" stroke-opacity="0.15" stroke-width="1.5"/>
+              </svg>
+
+              <div class="main-composite-card">
+                <img src="images/gallery_stable_bonding.jpg" alt="Rider with Gray Horse in Stables" class="composite-img-main">
+              </div>
+              <div class="inset-composite-card">
+                <img src="images/horse_dakota.jpg" alt="Countryside Stable View" class="composite-img-inset">
+                <div class="inset-badge">
+                  <i class="fa-solid fa-shield-halved"></i>
+                  <span>100% Care Standard</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 03 — LESSONS FOR EVERY RIDER -->
+    <section class="section lessons-home2-section" id="lessons">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <span class="tag-line"></span>
+            HORSEBACK RIDING LESSONS
+            <span class="tag-line"></span>
+          </div>
+          <h2 class="section-title">Lessons for Every Rider</h2>
+          <p class="section-description">
+            All Ages &bull; All Skill Levels
+          </p>
+        </div>
+
+        <!-- 4 Premium Cards Grid -->
+        <div class="lessons-cards-grid">
+
+          <!-- Card 1: Beginner -->
+          <div class="lesson-card">
+            <div class="lesson-img-wrap">
+              <img src="images/horse_sierra.jpg" alt="Beginner Rider Lesson">
+              <span class="skill-badge">All Ages Novice</span>
+            </div>
+            <div class="lesson-card-body">
+              <h3>Beginner</h3>
+              <p>Build confidence & learn the basics. Gentle introduction to mounting, rein guidance, and school horse balance in a safe environment.</p>
+              <button class="btn-text-gold lesson-arrow-btn" onclick="openBookingWithProgram('Beginner Rider Lesson')">
+                Explore Program <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2: Intermediate -->
+          <div class="lesson-card featured-lesson">
+            <div class="featured-ribbon">Most Popular</div>
+            <div class="lesson-img-wrap">
+              <img src="images/gallery_jumping.jpg" alt="Intermediate Rider Lesson">
+              <span class="skill-badge">Trot & Canter</span>
+            </div>
+            <div class="lesson-card-body">
+              <h3>Intermediate</h3>
+              <p>Improve skills & ride with control. Canter transitions, low hurdle prep, trail readiness, and developing harmonious saddle balance.</p>
+              <button class="btn-text-gold lesson-arrow-btn" onclick="openBookingWithProgram('Intermediate Rider Lesson')">
+                Explore Program <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3: Advanced -->
+          <div class="lesson-card">
+            <div class="lesson-img-wrap">
+              <img src="images/horse_valkyrie.jpg" alt="Advanced Dressage Lesson">
+              <span class="skill-badge">Jumping & Dressage</span>
+            </div>
+            <div class="lesson-card-body">
+              <h3>Advanced</h3>
+              <p>Refine technique & reach your goals. Precision dressage maneuvers, obstacle hurdle jumps, competition prep, and biomechanics.</p>
+              <button class="btn-text-gold lesson-arrow-btn" onclick="openBookingWithProgram('Advanced Rider Lesson')">
+                Explore Program <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 4: Kids & Youth -->
+          <div class="lesson-card">
+            <div class="lesson-img-wrap">
+              <img src="images/horse_apollo.jpg" alt="Kids & Youth Riding Lessons">
+              <span class="skill-badge">Ages 5 – 15</span>
+            </div>
+            <div class="lesson-card-body">
+              <h3>Kids & Youth</h3>
+              <p>Fun, safe & engaging for young riders. Helmet safety, pony grooming, balance games, and friendly instruction for kids.</p>
+              <button class="btn-text-gold lesson-arrow-btn" onclick="openBookingWithProgram('Youth Riding Lesson')">
+                Explore Program <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center margin-top-lg">
+          <button class="btn btn-gold-pill btn-large" onclick="openBookingModal()">
+            Book Your Lesson <i class="fa-solid fa-horse"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SECTION 04 — TRAIL RIDES (Dramatic Split Screen) -->
+    <section class="section trail-rides-section" id="trail-rides">
+      <div class="container-full">
+        <div class="dramatic-split-grid">
+
+          <!-- Left Side: Large Cinematic Image -->
+          <div class="dramatic-image-side">
+            <img src="images/gallery_trail_creek.jpg" alt="Guided Trail Ride Stream Crossing">
+            <div class="dramatic-image-overlay">
+              <div class="trail-badge-overlay">
+                <i class="fa-solid fa-compass"></i>
+                <span>150 Acres of Private Countryside Trails</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side: Content -->
+          <div class="dramatic-content-side">
+            <div class="dramatic-content-inner">
+              <div class="section-tag-row">
+                <div class="section-tag">
+                  <span class="tag-line"></span>
+                  GUIDED TRAIL TREKS
+                </div>
+              </div>
+
+              <h2 class="section-title">Trail Rides</h2>
+              <p class="section-subtitle">Scenic Trails &bull; Real Adventures</p>
+              <p class="section-body">
+                Explore breathtaking landscapes, fresh mountain air, and peaceful trails on horseback. Guided trail rides create a memorable connection between rider, horse, and nature.
+              </p>
+
+              <!-- 3 Feature Rows -->
+              <div class="trail-feature-rows">
+                <div class="trail-feature-row">
+                  <div class="trail-icon-box">
+                    <i class="fa-solid fa-tree"></i>
+                  </div>
+                  <div>
+                    <h4>Scenic Routes</h4>
+                    <p>Forests, rivers & open mountain trails</p>
+                  </div>
+                </div>
+
+                <div class="trail-feature-row">
+                  <div class="trail-icon-box">
+                    <i class="fa-solid fa-clock"></i>
+                  </div>
+                  <div>
+                    <h4>Flexible Durations</h4>
+                    <p>1 hr &bull; 2 hr &bull; Half Day &bull; Full Day</p>
+                  </div>
+                </div>
+
+                <div class="trail-feature-row">
+                  <div class="trail-icon-box">
+                    <i class="fa-solid fa-shield"></i>
+                  </div>
+                  <div>
+                    <h4>All Skill Levels</h4>
+                    <p>Beginner friendly to advanced trail treks</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cta-wrap">
+                <button class="btn btn-gold-pill" onclick="openBookingWithProgram('Guided Sunset Trail Rides')">
+                  View Trail Rides <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 05 — MEET OUR INSTRUCTORS -->
+    <section class="section instructors-section" id="instructors">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <span class="tag-line"></span>
+            OUR MASTER TRAINERS
+            <span class="tag-line"></span>
+          </div>
+          <h2 class="section-title">Meet Our Instructors</h2>
+          <p class="section-description">
+            Experience &bull; Passion &bull; Dedication
+          </p>
+          <p class="section-lead-sm">
+            Our certified equestrian instructors focus on rider progress, confidence, technique, and horse safety.
+          </p>
+        </div>
+
+        <!-- 4 Instructor Cards Grid -->
+        <div class="instructors-grid">
+
+          <!-- Instructor 1 -->
+          <div class="instructor-card">
+            <div class="instructor-img-box">
+              <img src="images/instructor_marcus.jpg" alt="Daniel Carter Head Instructor">
+              <span class="exp-tag">15+ Yrs Exp</span>
+            </div>
+            <div class="instructor-info">
+              <h3>Daniel Carter</h3>
+              <p class="role-text">Head Instructor & Master Trainer</p>
+              <p class="bio-text">Specializes in advanced biomechanics, hunter-jumper technique, and equestrian mindset coaching.</p>
+              <button class="btn-text-gold" onclick="openBookingWithProgram('Instruction with Daniel Carter')">
+                Book Session <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Instructor 2 -->
+          <div class="instructor-card">
+            <div class="instructor-img-box">
+              <img src="images/instructor_eleanor.jpg" alt="Emily Roberts Training Specialist">
+              <span class="exp-tag">10+ Yrs Exp</span>
+            </div>
+            <div class="instructor-info">
+              <h3>Emily Roberts</h3>
+              <p class="role-text">Training Specialist & Dressage Coach</p>
+              <p class="bio-text">Dedicated to seat alignment, soft hands rein communication, and dressage movement mastery.</p>
+              <button class="btn-text-gold" onclick="openBookingWithProgram('Instruction with Emily Roberts')">
+                Book Session <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Instructor 3 -->
+          <div class="instructor-card">
+            <div class="instructor-img-box">
+              <img src="images/gallery_trail_creek.jpg" alt="James Miller Trail Guide">
+              <span class="exp-tag">12+ Yrs Exp</span>
+            </div>
+            <div class="instructor-info">
+              <h3>James Miller</h3>
+              <p class="role-text">Senior Trail Guide & Wilderness Specialist</p>
+              <p class="bio-text">Passionate about wilderness navigation, trail safety, and creating unforgettable outdoor treks.</p>
+              <button class="btn-text-gold" onclick="openBookingWithProgram('Trail Ride with James Miller')">
+                Book Session <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Instructor 4 -->
+          <div class="instructor-card">
+            <div class="instructor-img-box">
+              <img src="images/gallery_stable_bonding.jpg" alt="Sophia Bennett Beginner Coach">
+              <span class="exp-tag">8+ Yrs Exp</span>
+            </div>
+            <div class="instructor-info">
+              <h3>Sophia Bennett</h3>
+              <p class="role-text">Beginner Coach & Youth Instructor</p>
+              <p class="bio-text">Fosters rider confidence, gentle mounting practices, and nurturing horse care for new riders.</p>
+              <button class="btn-text-gold" onclick="openBookingWithProgram('Instruction with Sophia Bennett')">
+                Book Session <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center margin-top-lg">
+          <button class="btn btn-gold-pill btn-large" onclick="openBookingModal()">
+            Meet the Team <i class="fa-solid fa-user-group"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SECTION 06 — BOARDING & HORSE CARE (Split Layout) -->
+    <section class="section boarding-home2-section" id="boarding">
+      <div class="container">
+        <div class="split-layout align-center reverse-mobile">
+
+          <!-- Left Image Side -->
+          <div class="split-image-col">
+            <div class="boarding-image-card">
+              <img src="images/our_story_ranch.jpg" alt="Spacious Horse Stable Lodge">
+              <div class="boarding-overlay-tag">
+                <i class="fa-solid fa-crown"></i>
+                <span>Royal Stabling Standards</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Text Side -->
+          <div class="split-text-col">
+            <div class="section-tag-row">
+              <div class="section-tag">
+                <span class="tag-line"></span>
+                HORSE CARE & STABLING
+              </div>
+            </div>
+
+            <h2 class="section-title">Boarding & Horse Care</h2>
+            <p class="section-subtitle">Comfort &bull; Safety &bull; Well-being</p>
+            <p class="section-body">
+              Providing a clean, safe, comfortable environment and attentive daily care for boarded horses in our climate-controlled wooden stables and spacious pastures.
+            </p>
+
+            <!-- 4 Feature Items Grid -->
+            <div class="boarding-features-grid">
+              <div class="b-feature-item">
+                <i class="fa-solid fa-house-chimney-window icon-gold"></i>
+                <div>
+                  <h4>Spacious Stalls</h4>
+                  <p>Clean & comfortable 14'x14' oak stalls</p>
+                </div>
+              </div>
+
+              <div class="b-feature-item">
+                <i class="fa-solid fa-mountain-sun icon-gold"></i>
+                <div>
+                  <h4>Pasture Access</h4>
+                  <p>Room to roam on 10-acre green pastures</p>
+                </div>
+              </div>
+
+              <div class="b-feature-item">
+                <i class="fa-solid fa-wheat-awn icon-gold"></i>
+                <div>
+                  <h4>Daily Care</h4>
+                  <p>Feeding, grooming & health checks 3x daily</p>
+                </div>
+              </div>
+
+              <div class="b-feature-item">
+                <i class="fa-solid fa-user-shield icon-gold"></i>
+                <div>
+                  <h4>Professional Staff</h4>
+                  <p>Dedicated 24/7 equestrian supervision</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="cta-wrap">
+              <button class="btn btn-gold-pill" onclick="openBookingWithProgram('Full-Care Boarding')">
+                Explore Boarding <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 07 — FINAL CTA + PREMIUM FOOTER -->
+    <section class="section final-cta-section" id="final-cta">
+      <div class="final-cta-bg" style="background-image: url('images/hero_sunset_riding.jpg');"></div>
+      <div class="final-cta-overlay"></div>
+
+      <div class="container final-cta-container">
+        <div class="final-cta-content text-center">
+
+          <span class="cta-community-tag">JOIN OUR RIDING COMMUNITY</span>
+          <h2 class="final-cta-title">Your Next Ride Starts Here.</h2>
+          <p class="final-cta-sub">Learn &bull; Explore &bull; Belong</p>
+
+          <!-- Testimonial Block -->
+          <div class="final-testimonial-box">
+            <i class="fa-solid fa-quote-left quote-icon-gold"></i>
+            <p class="final-quote-text">
+              “Silver Hoof Stables gave me more than riding lessons — it gave me confidence, friendships and a deeper connection with nature.”
+            </p>
+            <p class="final-quote-author">— <strong>Emily R.</strong>, <em>Rider</em></p>
+          </div>
+
+          <!-- Buttons -->
+          <div class="final-cta-buttons">
+            <button class="btn btn-gold-pill btn-large" onclick="openBookingModal()">
+              Book a Lesson <i class="fa-solid fa-horse"></i>
+            </button>
+            <button class="btn btn-outline-hero btn-large" onclick="openLoginModal()">
+              Login to Rider Dashboard <i class="fa-solid fa-right-to-bracket"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER SECTION -->
+  <footer class="footer">
+    <div class="container footer-container">
+
+      <!-- Left Column: Logo & Brand Info & Social Links -->
+      <div class="footer-col footer-brand-col">
+        <a href="home2.html" class="brand-logo footer-logo">
+          <div class="logo-icon">
+            <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">SILVER HOOF</span>
+            <span class="brand-sub">STABLES</span>
+          </div>
+        </a>
+        <p class="footer-about">
+          Silver Hoof Stables is a premier luxury horseback riding center dedicated to excellence in riding education, equine welfare, and unforgettable trail experiences.
+        </p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+      </div>
+
+      <!-- Column 1: Explore -->
+      <div class="footer-col">
+        <h4 class="footer-title">Explore</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home 1 (Classic)</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="lessons.html"><i class="fa-solid fa-chevron-right"></i> Lessons</a></li>
+          <li><a href="trail-rides.html"><i class="fa-solid fa-chevron-right"></i> Trail Rides</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2: Rider Portal -->
+      <div class="footer-col">
+        <h4 class="footer-title">Rider</h4>
+        <ul class="footer-links">
+          <li><a href="#" onclick="openRiderDashboard(); return false;"><i class="fa-solid fa-chevron-right"></i> Rider Dashboard</a></li>
+          <li><a href="#" onclick="openRiderDashboard(); return false;"><i class="fa-solid fa-chevron-right"></i> Upcoming Sessions</a></li>
+          <li><a href="#" onclick="openRiderDashboard(); return false;"><i class="fa-solid fa-chevron-right"></i> Riding Progress</a></li>
+          <li><a href="#" onclick="openRiderDashboard(); return false;"><i class="fa-solid fa-chevron-right"></i> Manage Payments</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Contact & Stables -->
+      <div class="footer-col">
+        <h4 class="footer-title">Contact & Stables</h4>
+        <div class="footer-contact-details">
+          <p><i class="fa-solid fa-location-dot"></i> 450 Equestrian Trail, Rolling Hills, CA 90274</p>
+          <p><i class="fa-solid fa-phone"></i> +1 (800) 555-HOOF</p>
+          <p><i class="fa-solid fa-envelope"></i> info@silverhoofstables.com</p>
+          <p><i class="fa-solid fa-clock"></i> Mon-Sun: 7:00 AM – 7:00 PM</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Terms & Conditions Line -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>&copy; 2026 Silver Hoof Stables. All Rights Reserved.</p>
+        <div class="footer-terms-links">
+          <a href="#" onclick="alert('Terms & Conditions: Silver Hoof Stables safety rules & riding terms apply.'); return false;">Terms & Conditions</a>
+          <span class="sep">|</span>
+          <a href="#" onclick="alert('Privacy Policy: We value your privacy and protect your personal information.'); return false;">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL FOR GALLERY -->
+  <div class="modal-backdrop" id="lightbox-modal">
+    <div class="lightbox-content">
+      <button class="modal-close" id="lightbox-close">&times;</button>
+      <img src="" id="lightbox-img" alt="Gallery preview">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- BOOK A LESSON MODAL -->
+  <div class="modal-backdrop" id="booking-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="booking-close">&times;</button>
+      <div class="modal-header">
+        <i class="fa-solid fa-horse modal-header-icon"></i>
+        <h3>Book Your Lesson</h3>
+        <p>Select your program and preferred schedule</p>
+      </div>
+      <form id="booking-form" onsubmit="handleBookingSubmit(event)">
+        <div class="form-group">
+          <label for="b-program">Select Program / Plan *</label>
+          <select id="b-program" required>
+            <option value="Beginner Riding Lessons">Beginner Riding Lessons ($65)</option>
+            <option value="Intermediate Rider Lesson">Intermediate Rider Lesson ($85)</option>
+            <option value="Advanced & Dressage Training">Advanced & Dressage Training ($145)</option>
+            <option value="Youth Riding Lesson">Youth Riding Lesson ($60)</option>
+            <option value="Guided Sunset Trail Rides">Guided Sunset Trail Rides ($95)</option>
+            <option value="Full-Care Boarding">Full-Care Boarding</option>
+          </select>
+        </div>
+
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="b-name">Your Full Name *</label>
+            <input type="text" id="b-name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="b-phone">Phone Number *</label>
+            <input type="tel" id="b-phone" placeholder="+1 (555) 000-0000" required>
+          </div>
+        </div>
+
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="b-date">Preferred Date *</label>
+            <input type="date" id="b-date" required>
+          </div>
+          <div class="form-group">
+            <label for="b-time">Preferred Time Slot *</label>
+            <select id="b-time" required>
+              <option value="08:00 AM">08:00 AM - Morning</option>
+              <option value="10:30 AM">10:30 AM - Morning</option>
+              <option value="02:00 PM">02:00 PM - Afternoon</option>
+              <option value="05:00 PM">05:00 PM - Sunset Ride</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="b-notes">Experience Level & Special Requests</label>
+          <textarea id="b-notes" rows="3"
+            placeholder="Tell us if you are a first-time rider, previous experience, or any special requests..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-gold-pill btn-full">
+          Confirm Booking Request <i class="fa-solid fa-check-circle"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- RIDER PORTAL LOGIN MODAL -->
+  <div class="modal-backdrop" id="login-modal">
+    <div class="modal-card login-modal-card">
+      <button class="modal-close" id="login-close">&times;</button>
+      <div class="modal-header">
+        <i class="fa-solid fa-user-check modal-header-icon"></i>
+        <h3>Rider Portal Login</h3>
+        <p>Access your riding progress, book slots, & manage payments</p>
+      </div>
+      <form id="login-form" onsubmit="handleLoginSubmit(event)">
+        <div class="form-group">
+          <label for="l-email">Rider Email Address *</label>
+          <input type="email" id="l-email" placeholder="sarah.j@silverhoof.com" value="sarah.j@silverhoof.com" required>
+        </div>
+        <div class="form-group">
+          <label for="l-password">Password *</label>
+          <input type="password" id="l-password" placeholder="••••••••" value="rider12345" required>
+        </div>
+        <button type="submit" class="btn btn-gold-pill btn-full">
+          Sign In to Portal <i class="fa-solid fa-arrow-right-to-bracket"></i>
+        </button>
+        <div class="demo-login-divider"><span>OR QUICK DEMO</span></div>
+        <button type="button" class="btn btn-outline btn-full" onclick="quickDemoLogin()">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Sign In as Demo Rider (Sarah Jenkins)
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- RIDER DASHBOARD MODAL PORTAL -->
+  <div class="modal-backdrop" id="rider-dashboard-modal">
+    <div class="modal-card dashboard-modal-card">
+      <button class="modal-close" id="dashboard-close">&times;</button>
+
+      <!-- Dashboard Header Profile Banner -->
+      <div class="dashboard-header-banner">
+        <div class="dashboard-user-info">
+          <div class="dashboard-avatar"><i class="fa-solid fa-user-ninja"></i></div>
+          <div>
+            <h3 id="dash-user-name">Sarah Jenkins</h3>
+            <p class="dashboard-user-meta">
+              <span><i class="fa-solid fa-id-badge"></i> ID: #RH-8842</span>
+              <span class="badge-level"><i class="fa-solid fa-star"></i> Intermediate Level II</span>
+              <span><i class="fa-solid fa-horse"></i> Assigned: Dakota</span>
+            </p>
+          </div>
+        </div>
+        <button class="btn btn-outline btn-sm" onclick="closeRiderDashboard()"><i
+            class="fa-solid fa-right-from-bracket"></i> Sign Out</button>
+      </div>
+
+      <!-- Dashboard Main Navigation Tabs -->
+      <div class="dashboard-body">
+        <div class="dashboard-tabs">
+          <button class="dash-tab-btn active" onclick="switchDashTab('overview', this)"><i
+              class="fa-solid fa-chart-pie"></i> Overview</button>
+          <button class="dash-tab-btn" onclick="switchDashTab('book-lesson', this)"><i
+              class="fa-solid fa-calendar-plus"></i> Book Lesson Slots</button>
+          <button class="dash-tab-btn" onclick="switchDashTab('progress-notes', this)"><i
+              class="fa-solid fa-clipboard-check"></i> Riding Progress Notes</button>
+          <button class="dash-tab-btn" onclick="switchDashTab('trail-register', this)"><i
+              class="fa-solid fa-compass"></i> Trail Rides</button>
+          <button class="dash-tab-btn" onclick="switchDashTab('schedule', this)"><i
+              class="fa-solid fa-clock-rotate-left"></i> Sessions Schedule</button>
+          <button class="dash-tab-btn" onclick="switchDashTab('payments', this)"><i class="fa-solid fa-credit-card"></i>
+            Manage Payments</button>
+        </div>
+
+        <!-- Tab Content Area -->
+        <div class="dashboard-tab-content">
+
+          <!-- Tab 1: Overview -->
+          <div class="dash-pane active" id="pane-overview">
+            <h4>Rider Performance Overview</h4>
+            <div class="dash-stats-grid">
+              <div class="dash-stat-card">
+                <i class="fa-solid fa-award icon-gold"></i>
+                <div class="stat-val">24</div>
+                <div class="stat-lbl">Lessons Completed</div>
+              </div>
+              <div class="dash-stat-card">
+                <i class="fa-solid fa-stopwatch icon-gold"></i>
+                <div class="stat-val">18.5</div>
+                <div class="stat-lbl">Hours Ridden</div>
+              </div>
+              <div class="dash-stat-card">
+                <i class="fa-solid fa-shield-heart icon-gold"></i>
+                <div class="stat-val">96%</div>
+                <div class="stat-lbl">Safety Score</div>
+              </div>
+              <div class="dash-stat-card">
+                <i class="fa-solid fa-wallet icon-gold"></i>
+                <div class="stat-val" id="dash-overview-balance">$65.00</div>
+                <div class="stat-lbl">Account Balance</div>
+              </div>
+            </div>
+
+            <div class="dash-next-session">
+              <div class="next-session-badge">UPCOMING SESSION</div>
+              <div class="next-session-details">
+                <div>
+                  <h5>Intermediate Jumping & Trot Transition</h5>
+                  <p><i class="fa-solid fa-calendar"></i> Tomorrow, 10:30 AM &bull; <i class="fa-solid fa-user-tie"></i>
+                    Coach Daniel Carter &bull; <i class="fa-solid fa-horse"></i> Horse: Dakota</p>
+                </div>
+                <button class="btn btn-gold-pill btn-sm"
+                  onclick="switchDashTab('schedule', document.querySelectorAll('.dash-tab-btn')[4])">View
+                  Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2: Book Lesson Slots -->
+          <div class="dash-pane" id="pane-book-lesson">
+            <h4>Book Lesson Slot by Skill Level</h4>
+            <form id="dash-book-form" onsubmit="handleDashBooking(event)">
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label>Skill Level *</label>
+                  <select id="dash-skill-level" required>
+                    <option value="Beginner">Beginner (Mounting & Balance)</option>
+                    <option value="Intermediate" selected>Intermediate (Trot, Canter & Low Hurdles)</option>
+                    <option value="Advanced">Advanced (Show Jumping & Dressage)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Discipline / Program *</label>
+                  <select id="dash-program-select" required>
+                    <option value="Western Pleasure & Trail Prep">Western Pleasure & Trail Prep ($65)</option>
+                    <option value="English Hunt Seat & Trot">English Hunt Seat & Trot ($85)</option>
+                    <option value="Show Jumping & Canter Mastery" selected>Show Jumping & Canter Mastery ($120)</option>
+                    <option value="High-Step Precision Dressage">High-Step Precision Dressage ($145)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label>Date *</label>
+                  <input type="date" id="dash-date" required>
+                </div>
+                <div class="form-group">
+                  <label>Preferred Time Slot *</label>
+                  <select id="dash-time" required>
+                    <option value="08:00 AM">08:00 AM - Morning</option>
+                    <option value="10:30 AM" selected>10:30 AM - Morning</option>
+                    <option value="02:00 PM">02:00 PM - Afternoon</option>
+                    <option value="05:00 PM">05:00 PM - Sunset</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-gold-pill btn-full">Confirm Slot Reservation <i
+                  class="fa-solid fa-calendar-check"></i></button>
+            </form>
+          </div>
+
+          <!-- Tab 3: Progress Notes -->
+          <div class="dash-pane" id="pane-progress-notes">
+            <h4>Instructor Notes & Skill Meter</h4>
+            <div class="progress-skills-grid">
+              <div class="skill-meter-card">
+                <div class="skill-label-wrap"><span>Mounting & Balance</span><span>95%</span></div>
+                <div class="meter-bar-track"><div class="meter-fill" style="width: 95%;"></div></div>
+              </div>
+              <div class="skill-meter-card">
+                <div class="skill-label-wrap"><span>Canter Transition</span><span>80%</span></div>
+                <div class="meter-bar-track"><div class="meter-fill" style="width: 80%;"></div></div>
+              </div>
+              <div class="skill-meter-card">
+                <div class="skill-label-wrap"><span>Rein Communication</span><span>88%</span></div>
+                <div class="meter-bar-track"><div class="meter-fill" style="width: 88%;"></div></div>
+              </div>
+              <div class="skill-meter-card">
+                <div class="skill-label-wrap"><span>Hurdle Jump (3ft)</span><span>65%</span></div>
+                <div class="meter-bar-track"><div class="meter-fill" style="width: 65%;"></div></div>
+              </div>
+            </div>
+
+            <div class="instructor-notes-timeline">
+              <div class="note-card">
+                <div class="note-header"><strong>Coach Daniel Carter</strong><span class="note-date">Sept 10, 2026</span></div>
+                <p>"Sarah showed exceptional posture balance during canter transitions today. Ready to introduce low hurdle jumps next week."</p>
+                <div class="note-tags"><span class="tag">Canter</span><span class="tag">Posture A+</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 4: Trail Register -->
+          <div class="dash-pane" id="pane-trail-register">
+            <h4>Upcoming Guided Trail Rides</h4>
+            <div class="trail-cards-list">
+              <div class="trail-item-card">
+                <div class="trail-info">
+                  <h5>Pine Creek Sunset Trek</h5>
+                  <p><i class="fa-solid fa-clock"></i> This Saturday, 5:00 PM &bull; 2.5 Hours Trail</p>
+                  <span class="badge-slots">3 Slots Remaining</span>
+                </div>
+                <button class="btn btn-gold-pill btn-sm" onclick="quickRegisterTrail('Pine Creek Sunset Trek')">Register ($95)</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 5: Sessions Schedule -->
+          <div class="dash-pane" id="pane-schedule">
+            <h4>Your Scheduled Sessions</h4>
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th>Session</th>
+                  <th>Date & Time</th>
+                  <th>Instructor</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="dash-schedule-tbody">
+                <tr>
+                  <td>Intermediate Jumping</td>
+                  <td>Tomorrow, 10:30 AM</td>
+                  <td>Daniel Carter</td>
+                  <td><span class="status-badge confirmed">Confirmed</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Tab 6: Manage Payments -->
+          <div class="dash-pane" id="pane-payments">
+            <h4>Account Balance & Invoices</h4>
+            <div class="billing-summary-box">
+              <div>
+                <span class="stat-lbl">Current Balance Due</span>
+                <div class="balance-amt">$65.00</div>
+              </div>
+              <button class="btn btn-gold-pill" onclick="payAccountBalance()">Pay Balance ($65.00)</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="index.js"></script>
+  <script src="home2.js"></script>
+</body>
+
+</html>

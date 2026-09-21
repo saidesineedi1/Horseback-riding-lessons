@@ -1,0 +1,1105 @@
+/* ==========================================================================
+   SILVER HOOF STABLES - TRAIL RIDES PAGE STYLESHEET
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   SECTION 1 — HERO BANNER SECTION
+   -------------------------------------------------------------------------- */
+.trail-hero-section {
+  position: relative;
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.75rem 0 3.75rem 0;
+  overflow: hidden;
+  background-color: var(--clr-deep-brown);
+}
+
+.trail-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 35%;
+  transform: scale(1.03);
+  opacity: 0.22;
+  filter: blur(2px);
+  transition: transform 8s ease;
+}
+
+.trail-hero-section:hover .trail-hero-bg {
+  transform: scale(1.06);
+}
+
+.trail-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 75% 50%, rgba(198, 161, 91, 0.14) 0%, transparent 60%),
+              linear-gradient(
+                to bottom,
+                rgba(28, 21, 15, 0.92) 0%,
+                rgba(28, 21, 15, 0.82) 50%,
+                rgba(28, 21, 15, 0.98) 100%
+              );
+  z-index: 1;
+}
+
+[data-theme="light"] .trail-hero-section {
+  background-color: #EFE8DC;
+}
+
+[data-theme="light"] .trail-hero-overlay {
+  background: radial-gradient(circle at 75% 50%, rgba(198, 161, 91, 0.15) 0%, transparent 60%),
+              linear-gradient(
+                to bottom,
+                rgba(245, 241, 232, 0.92) 0%,
+                rgba(245, 241, 232, 0.84) 50%,
+                rgba(245, 241, 232, 0.97) 100%
+              );
+}
+
+.trail-hero-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* Two Column Aligned Hero Grid */
+.trail-hero-grid {
+  display: grid;
+  grid-template-columns: 1.08fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+[dir="rtl"] .trail-hero-grid {
+  grid-template-columns: 1fr 1.08fr;
+}
+
+/* LEFT COLUMN: Narrative & Metrics */
+.trail-hero-text-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+[dir="rtl"] .trail-hero-text-col {
+  align-items: flex-start;
+  text-align: right;
+}
+
+.trail-hero-text-col .gold-divider-wrap {
+  margin-bottom: 0.85rem;
+}
+
+.trail-hero-title {
+  font-size: 3.25rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0.4rem 0 1.25rem 0;
+  letter-spacing: -0.5px;
+}
+
+[data-theme="light"] .trail-hero-title {
+  color: var(--text-primary);
+}
+
+.trail-hero-accent {
+  color: var(--clr-antique-gold);
+  font-style: italic;
+  font-weight: 600;
+}
+
+.trail-hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--clr-beige);
+  line-height: 1.7;
+  margin-bottom: 1.8rem;
+  font-weight: 400;
+  max-width: 560px;
+}
+
+[data-theme="light"] .trail-hero-subtitle {
+  color: var(--text-secondary);
+}
+
+/* Hero CTA Buttons */
+.trail-hero-cta-btns {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.25rem;
+  flex-wrap: wrap;
+}
+
+.trail-hero-cta-btns .btn {
+  padding: 0.65rem 1.45rem !important;
+  font-size: 0.85rem !important;
+  border-radius: 50px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.trail-hero-cta-btns .btn:hover {
+  transform: translateY(-2px);
+}
+
+.trail-hero-cta-btns .btn-outline-hero {
+  color: #F5F1E8 !important;
+  border: 1.5px solid rgba(198, 161, 91, 0.6) !important;
+  background: rgba(37, 28, 20, 0.6) !important;
+  backdrop-filter: blur(8px);
+}
+
+.trail-hero-cta-btns .btn-outline-hero:hover {
+  border-color: var(--clr-antique-gold) !important;
+  color: #1C150F !important;
+  background: var(--clr-antique-gold) !important;
+  box-shadow: 0 8px 24px rgba(198, 161, 91, 0.35);
+}
+
+[data-theme="light"] .trail-hero-cta-btns .btn-outline-hero {
+  color: #2B2118 !important;
+  border: 1.5px solid #2B2118 !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+[data-theme="light"] .trail-hero-cta-btns .btn-outline-hero:hover {
+  background: #2B2118 !important;
+  color: #F5F1E8 !important;
+  border-color: #2B2118 !important;
+}
+
+/* Quick Metrics Bar */
+.trail-hero-stats {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: rgba(37, 28, 20, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid var(--border-color);
+  border-radius: 50px;
+  padding: 0.85rem 2rem;
+  gap: 1.8rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="light"] .trail-hero-stats {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(92, 64, 51, 0.2);
+  box-shadow: 0 10px 30px rgba(43, 33, 24, 0.1);
+}
+
+.trail-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trail-stat .stat-num {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--clr-antique-gold);
+  line-height: 1;
+}
+
+.trail-stat .stat-lbl {
+  font-size: 0.7rem;
+  color: var(--clr-beige);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 0.25rem;
+  white-space: nowrap;
+}
+
+[data-theme="light"] .trail-stat .stat-lbl {
+  color: var(--text-muted);
+}
+
+.stat-line {
+  width: 1px;
+  height: 24px;
+  background-color: var(--border-color);
+}
+
+/* RIGHT COLUMN: STYLISH ALIGNED DUAL-IMAGE COMPOSITION */
+.trail-hero-media-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.trail-dual-composition {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  height: 460px;
+  margin: 0 auto;
+}
+
+/* Ambient Radial Halo Glow */
+.trail-hero-ambient-glow {
+  position: absolute;
+  top: 12%;
+  left: 10%;
+  width: 80%;
+  height: 76%;
+  background: radial-gradient(circle, rgba(198, 161, 91, 0.28) 0%, rgba(200, 125, 59, 0.12) 50%, transparent 75%);
+  filter: blur(34px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Luxury Geometric Corner Bracket */
+.trail-hero-geometric-accent {
+  position: absolute;
+  top: -10px;
+  right: 6px;
+  width: 120px;
+  height: 120px;
+  border-top: 2.5px solid rgba(198, 161, 91, 0.55);
+  border-right: 2.5px solid rgba(198, 161, 91, 0.55);
+  border-radius: 0 26px 0 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+[dir="rtl"] .trail-hero-geometric-accent {
+  right: auto;
+  left: 6px;
+  border-right: none;
+  border-left: 2.5px solid rgba(198, 161, 91, 0.55);
+  border-radius: 26px 0 0 0;
+}
+
+/* Image Cards */
+.trail-image-card {
+  position: absolute;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+}
+
+.trail-image-card .image-frame-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+  background-color: var(--bg-card);
+}
+
+.trail-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.65s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.trail-image-card:hover img {
+  transform: scale(1.06);
+}
+
+.image-overlay-tint {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 60%, rgba(28, 21, 15, 0.45) 100%);
+  pointer-events: none;
+}
+
+/* Primary Grand Card (Pine Creek Sunset Trail) */
+.trail-image-card.primary-card {
+  top: 0;
+  left: 0;
+  width: 78%;
+  height: 350px;
+  border-radius: 26px;
+  z-index: 1;
+}
+
+[dir="rtl"] .trail-image-card.primary-card {
+  left: auto;
+  right: 0;
+}
+
+.trail-image-card.primary-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  z-index: 4;
+}
+
+.trail-image-card.primary-card .image-frame-wrapper {
+  border: 2.5px solid rgba(198, 161, 91, 0.7);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+/* Secondary Overlapping Card (Rolling Hills Meadow Gallop) */
+.trail-image-card.secondary-card {
+  bottom: 0;
+  right: 0;
+  width: 66%;
+  height: 270px;
+  border-radius: 22px;
+  z-index: 3;
+}
+
+[dir="rtl"] .trail-image-card.secondary-card {
+  right: auto;
+  left: 0;
+}
+
+.trail-image-card.secondary-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  z-index: 5;
+}
+
+.trail-image-card.secondary-card .image-frame-wrapper {
+  border: 2.5px solid rgba(198, 161, 91, 0.65);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+/* Floating Badges */
+.floating-badge {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(28, 21, 15, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(198, 161, 91, 0.45);
+  border-radius: 14px;
+  padding: 0.6rem 1.05rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  z-index: 6;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.floating-badge:hover {
+  transform: translateY(-3px);
+  border-color: var(--clr-antique-gold);
+}
+
+[data-theme="light"] .floating-badge {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(198, 161, 91, 0.5);
+  box-shadow: 0 10px 25px rgba(43, 33, 24, 0.15);
+}
+
+.badge-top-left {
+  top: -14px;
+  left: -12px;
+}
+
+[dir="rtl"] .badge-top-left {
+  left: auto;
+  right: -12px;
+}
+
+.badge-bottom-right {
+  bottom: -16px;
+  right: -12px;
+}
+
+[dir="rtl"] .badge-bottom-right {
+  right: auto;
+  left: -12px;
+}
+
+.badge-icon-wrap {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(198, 161, 91, 0.18);
+  border: 1px solid var(--clr-antique-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-antique-gold);
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.badge-icon-wrap.gold-glow {
+  box-shadow: 0 0 12px rgba(198, 161, 91, 0.4);
+}
+
+.badge-text-wrap {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+[dir="rtl"] .badge-text-wrap {
+  text-align: right;
+}
+
+.stars-row {
+  display: flex;
+  gap: 2px;
+  color: #FFC107;
+  font-size: 0.7rem;
+  margin-bottom: 2px;
+}
+
+.badge-title {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.1;
+}
+
+[data-theme="light"] .badge-title {
+  color: var(--text-primary);
+}
+
+.badge-caption {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--clr-antique-gold);
+  letter-spacing: 0.4px;
+}
+
+.section-tag-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.section-tag-row.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+
+/* --------------------------------------------------------------------------
+   SECTION 2 — TRAIL PACKAGES & ROUTES SHOWCASE
+   -------------------------------------------------------------------------- */
+.trail-packages-section {
+  background-color: var(--bg-primary);
+  padding: 5rem 0;
+}
+
+.trail-packages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-top: 3.5rem;
+}
+
+.trail-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.trail-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--clr-antique-gold);
+  box-shadow: var(--shadow-md);
+}
+
+.trail-card-img {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.trail-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.trail-card:hover .trail-card-img img {
+  transform: scale(1.08);
+}
+
+.trail-card-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(28, 21, 15, 0.88);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--clr-antique-gold);
+  color: var(--clr-antique-gold);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  letter-spacing: 0.5px;
+}
+
+[dir="rtl"] .trail-card-badge {
+  left: auto;
+  right: 1rem;
+}
+
+.trail-card-badge.gold-badge {
+  background: var(--clr-antique-gold);
+  color: #2B2118;
+  border-color: var(--clr-antique-gold);
+}
+
+.trail-card-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.trail-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.trail-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.trail-card-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.trail-card-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.trail-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.trail-highlights li {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 600;
+}
+
+.trail-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-color);
+  margin-top: auto;
+}
+
+.trail-price .val {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--clr-antique-gold);
+}
+
+.trail-price .unit {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+
+/* --------------------------------------------------------------------------
+   SECTION 3 — THE SILVER HOOF DIFFERENCE (PREMIUM NEATLY ALIGNED SHOWCASE)
+   -------------------------------------------------------------------------- */
+.trail-experience-section {
+  background-color: var(--bg-card);
+  padding: 5rem 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.diff-split-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  margin-top: 3.25rem;
+}
+
+[dir="rtl"] .diff-split-grid {
+  grid-template-columns: 1fr 1.15fr;
+}
+
+/* LEFT COLUMN: 4 Neatly Aligned Feature Cards */
+.diff-cards-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.diff-feature-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
+}
+
+.diff-feature-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--clr-antique-gold);
+  box-shadow: var(--shadow-md), 0 8px 24px rgba(198, 161, 91, 0.12);
+}
+
+.diff-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.diff-icon-box {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: rgba(198, 161, 91, 0.12);
+  border: 1px solid rgba(198, 161, 91, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.diff-feature-card:hover .diff-icon-box {
+  transform: scale(1.08);
+  background: rgba(198, 161, 91, 0.22);
+}
+
+.diff-card-num {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--clr-antique-gold);
+  letter-spacing: 1px;
+  opacity: 0.85;
+}
+
+.diff-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.45rem;
+  line-height: 1.3;
+}
+
+.diff-desc {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 1.15rem;
+  flex-grow: 1;
+}
+
+.diff-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--clr-antique-gold);
+  background: rgba(198, 161, 91, 0.1);
+  border: 1px solid rgba(198, 161, 91, 0.25);
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+  letter-spacing: 0.3px;
+}
+
+[data-theme="light"] .diff-pill {
+  background: rgba(198, 161, 91, 0.15);
+  color: #8C6228;
+  border-color: rgba(198, 161, 91, 0.4);
+}
+
+/* RIGHT COLUMN: MULTI-LAYERED VISUAL SHOWCASE */
+.diff-media-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.diff-showcase-composition {
+  position: relative;
+  width: 100%;
+  max-width: 490px;
+  height: 480px;
+  margin: 0 auto;
+}
+
+/* Ambient Glow */
+.diff-ambient-glow {
+  position: absolute;
+  top: 15%;
+  left: 12%;
+  width: 76%;
+  height: 70%;
+  background: radial-gradient(circle, rgba(198, 161, 91, 0.3) 0%, rgba(200, 125, 59, 0.12) 50%, transparent 75%);
+  filter: blur(34px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Geometric Corner Accent */
+.diff-geometric-accent {
+  position: absolute;
+  top: -12px;
+  right: -8px;
+  width: 110px;
+  height: 110px;
+  border-top: 2.5px solid rgba(198, 161, 91, 0.55);
+  border-right: 2.5px solid rgba(198, 161, 91, 0.55);
+  border-radius: 0 24px 0 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+[dir="rtl"] .diff-geometric-accent {
+  right: auto;
+  left: -8px;
+  border-right: none;
+  border-left: 2.5px solid rgba(198, 161, 91, 0.55);
+  border-radius: 24px 0 0 0;
+}
+
+/* Diff Image Cards */
+.diff-image-card {
+  position: absolute;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+}
+
+.diff-image-card .image-frame-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+  background-color: var(--bg-primary);
+}
+
+.diff-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.65s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.diff-image-card:hover img {
+  transform: scale(1.06);
+}
+
+/* Primary Diff Card (Crystal Creek Crossings) */
+.diff-image-card.primary-diff-card {
+  top: 0;
+  left: 0;
+  width: 82%;
+  height: 360px;
+  border-radius: 24px;
+  z-index: 1;
+}
+
+[dir="rtl"] .diff-image-card.primary-diff-card {
+  left: auto;
+  right: 0;
+}
+
+.diff-image-card.primary-diff-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  z-index: 4;
+}
+
+.diff-image-card.primary-diff-card .image-frame-wrapper {
+  border: 2.5px solid rgba(198, 161, 91, 0.7);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+/* Secondary Inset Diff Card (Sunset Ranch Campfire Vista) */
+.diff-image-card.secondary-diff-card {
+  bottom: 0;
+  right: 0;
+  width: 62%;
+  height: 240px;
+  border-radius: 20px;
+  z-index: 3;
+}
+
+[dir="rtl"] .diff-image-card.secondary-diff-card {
+  right: auto;
+  left: 0;
+}
+
+.diff-image-card.secondary-diff-card:hover {
+  transform: translateY(-7px) scale(1.02);
+  z-index: 5;
+}
+
+.diff-image-card.secondary-diff-card .image-frame-wrapper {
+  border: 2.5px solid rgba(198, 161, 91, 0.65);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+/* Diff Floating Glass Badges */
+.diff-glass-badge {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: rgba(28, 21, 15, 0.9);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(198, 161, 91, 0.45);
+  border-radius: 14px;
+  padding: 0.55rem 1rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  z-index: 6;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.diff-glass-badge:hover {
+  transform: translateY(-3px);
+  border-color: var(--clr-antique-gold);
+}
+
+[data-theme="light"] .diff-glass-badge {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(198, 161, 91, 0.5);
+  box-shadow: 0 10px 25px rgba(43, 33, 24, 0.15);
+}
+
+.diff-glass-badge.badge-top-right {
+  top: -14px;
+  right: -12px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.5rem 0.85rem;
+}
+
+[dir="rtl"] .diff-glass-badge.badge-top-right {
+  right: auto;
+  left: -12px;
+  align-items: flex-end;
+}
+
+.diff-glass-badge.badge-bottom-left {
+  bottom: -16px;
+  left: -12px;
+}
+
+[dir="rtl"] .diff-glass-badge.badge-bottom-left {
+  left: auto;
+  right: -12px;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 4 — FAQS & HIGH-IMPACT CTA CARD
+   -------------------------------------------------------------------------- */
+.trail-faq-cta-section {
+  background-color: var(--bg-primary);
+  padding: 5rem 0 6rem 0;
+}
+
+.trail-cta-card-wrap {
+  margin-top: 5rem;
+}
+
+.trail-cta-card {
+  position: relative;
+  background: var(--clr-deep-brown);
+  border-radius: 28px;
+  padding: 4.5rem 2.5rem;
+  text-align: center;
+  overflow: hidden;
+  border: none !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.trail-cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.trail-cta-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.trail-cta-sub {
+  font-size: 1.1rem;
+  color: var(--clr-beige);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.trail-cta-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE BREAKPOINTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .trail-hero-section {
+    padding: 2.25rem 0 3rem 0;
+  }
+  .trail-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .trail-hero-text-col {
+    align-items: center;
+    text-align: center;
+  }
+  [dir="rtl"] .trail-hero-text-col {
+    align-items: center;
+    text-align: center;
+  }
+  .trail-hero-subtitle {
+    text-align: center;
+  }
+  .trail-hero-cta-btns {
+    justify-content: center;
+  }
+  .trail-hero-stats {
+    justify-content: center;
+  }
+  .trail-hero-title {
+    font-size: 2.6rem;
+  }
+
+  .diff-split-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+  .diff-cards-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .trail-packages-grid {
+    grid-template-columns: 1fr;
+  }
+  .trail-cta-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .diff-cards-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .trail-hero-title {
+    font-size: 2rem;
+  }
+  .trail-hero-stats {
+    flex-direction: column;
+    padding: 1.25rem;
+    gap: 1rem;
+    border-radius: 24px;
+    width: 100%;
+  }
+  .trail-dual-composition {
+    height: 340px;
+    max-width: min(100%, 300px);
+    width: 100%;
+    margin: 0 auto;
+  }
+  .badge-top-left {
+    left: 0 !important;
+    top: -8px;
+  }
+  [dir="rtl"] .badge-top-left {
+    right: 0 !important;
+    left: auto !important;
+  }
+  .badge-bottom-right {
+    right: 0 !important;
+    bottom: -8px;
+  }
+  [dir="rtl"] .badge-bottom-right {
+    left: 0 !important;
+    right: auto !important;
+  }
+  .trail-image-card.primary-card {
+    height: 250px;
+    width: 82%;
+  }
+  .trail-image-card.secondary-card {
+    height: 190px;
+    width: 70%;
+  }
+  .diff-showcase-composition {
+    height: 340px;
+    max-width: min(100%, 300px);
+    width: 100%;
+    margin: 0 auto;
+  }
+  .diff-image-card.primary-diff-card {
+    height: 250px;
+    width: 84%;
+  }
+  .diff-image-card.secondary-diff-card {
+    height: 180px;
+    width: 68%;
+  }
+  .trail-cta-title {
+    font-size: 1.75rem;
+  }
+}

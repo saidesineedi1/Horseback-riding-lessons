@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Silver Hoof Stables - Luxury Riding & Equine Heritage</title>
+  <meta name="description"
+    content="Discover the legacy of Silver Hoof Stables. Our vision, mission, expert team of instructors, milestones, and premier horse riding facilities.">
+
+  <!-- Google Fonts: Open Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Base & Home 1 Stylesheets -->
+  <link rel="stylesheet" href="index.css">
+  <!-- About Page Custom Stylesheet -->
+  <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+     HEADER / NAVIGATION BAR (Consistently Matches Home 1)
+     ========================================================================== -->
+  <header class="header" id="header">
+    <div class="container header-container">
+
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">
+          <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">SILVER HOOF</span>
+          <span class="brand-sub">STABLES</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links (Middle) -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item dropdown">
+            <a href="index.html" class="nav-link" id="home-dropdown-btn">
+              Home <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html" class="dropdown-item" id="home-1-link">Home 1 (Classic)</a></li>
+              <li><a href="home2.html" class="dropdown-item" id="home-2-link">Home 2 (Luxury Ranch)</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+          <li class="nav-item"><a href="lessons.html" class="nav-link">Lessons</a></li>
+          <li class="nav-item"><a href="trail-rides.html" class="nav-link">Trail Rides</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="boarding.html" class="nav-link">Boarding</a></li>
+          <li class="nav-item"><a href="dash.html" class="nav-link dashboard-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Controls & Actions -->
+      <div class="header-actions">
+        <!-- RTL Toggle -->
+        <button class="icon-btn" id="rtl-toggle" title="Toggle Text Direction (LTR / RTL)" aria-label="Toggle RTL">
+          <span class="btn-label">RTL</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="icon-btn" id="theme-toggle" title="Toggle Theme (Dark / Light)" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+
+        <!-- Login Button -->
+        <button class="btn btn-primary" id="open-login-btn" onclick="openLoginModal()">
+          <i class="fa-solid fa-user"></i> Login
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="hamburger-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+     MAIN CONTENT WRAPPER
+     ========================================================================== -->
+  <main>
+
+    <!-- SECTION 01 — PREMIUM HERO BANNER (STYLISH DUAL-IMAGE COMPOSITION) -->
+    <section class="about-hero-section">
+      <div class="about-hero-bg" style="background-image: url('images/our_story_ranch.jpg');"></div>
+      <div class="about-hero-overlay"></div>
+
+      <div class="container about-hero-container">
+        
+        <!-- Two Column Aligned Hero Grid -->
+        <div class="about-hero-grid">
+          
+          <!-- LEFT COLUMN: Narrative & Credentials -->
+          <div class="about-hero-text-col">
+            <div class="gold-divider-wrap">
+              <span class="gold-line"></span>
+              <span class="hero-welcome">LUXURY EQUINE HERITAGE</span>
+              <span class="gold-line"></span>
+            </div>
+
+            <h1 class="about-hero-title">
+              Our Legacy &amp;<br>
+              <span class="about-hero-accent">Equestrian Passion.</span>
+            </h1>
+
+            <p class="about-hero-subtitle">
+              Pioneering world-class equine welfare, champion bloodline stewardship, and transformative equestrian instruction across 45 pristine rolling acres since 2012.
+            </p>
+
+            <!-- Hero Action CTA Buttons -->
+            <div class="about-hero-cta-btns">
+              <a href="#vision-mission" class="btn btn-primary" id="about-hero-discover-btn">
+                <i class="fa-solid fa-compass"></i> Discover Our Story
+              </a>
+              <a href="contact.html" class="btn btn-outline-hero" id="about-hero-tour-btn">
+                <i class="fa-solid fa-calendar-check"></i> Book Stable Tour
+              </a>
+            </div>
+
+            <!-- Quick Stats Glass Bar -->
+            <div class="about-hero-stats">
+              <div class="about-stat">
+                <span class="stat-num">14+</span>
+                <span class="stat-lbl">Years Heritage</span>
+              </div>
+              <div class="stat-line"></div>
+              <div class="about-stat">
+                <span class="stat-num">35+</span>
+                <span class="stat-lbl">Champion Horses</span>
+              </div>
+              <div class="stat-line"></div>
+              <div class="about-stat">
+                <span class="stat-num">2,500+</span>
+                <span class="stat-lbl">Happy Riders</span>
+              </div>
+              <div class="stat-line"></div>
+              <div class="about-stat">
+                <span class="stat-num">100%</span>
+                <span class="stat-lbl">Care Standard</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Stylish Aligned Dual-Image Showcase -->
+          <div class="about-hero-media-col">
+            <div class="hero-dual-composition">
+              
+              <!-- Ambient Halo Glow behind frames -->
+              <div class="hero-media-ambient-glow"></div>
+
+              <!-- Primary Grand Image: Ranch Estate & Stables -->
+              <div class="hero-image-card primary-card">
+                <div class="image-frame-wrapper">
+                  <img src="images/our_story_ranch.jpg" alt="Silver Hoof Stables Historic Ranch Grounds" class="hero-img-primary">
+                  <div class="image-overlay-tint"></div>
+                </div>
+                <!-- Floating Glass Badge: Heritage Establishment -->
+                <div class="floating-badge badge-top-left">
+                  <div class="badge-icon-wrap">
+                    <i class="fa-solid fa-landmark"></i>
+                  </div>
+                  <div class="badge-text-wrap">
+                    <span class="badge-title">Est. 2012 Sanctuary</span>
+                    <span class="badge-caption">45 Pristine Acres</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Secondary Aligned Overlapping Image: Rider & Champion Horse Connection -->
+              <div class="hero-image-card secondary-card">
+                <div class="image-frame-wrapper">
+                  <img src="images/hero2_rider_portrait.jpg" alt="Silver Hoof Stables Rider and Champion Horse" class="hero-img-secondary">
+                  <div class="image-overlay-tint"></div>
+                </div>
+                <!-- Floating Glass Badge: Certified Trust / Rating -->
+                <div class="floating-badge badge-bottom-right">
+                  <div class="badge-icon-wrap gold-glow">
+                    <i class="fa-solid fa-award"></i>
+                  </div>
+                  <div class="badge-text-wrap">
+                    <div class="stars-row">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="badge-title">Certified Master Care</span>
+                    <span class="badge-caption">5.0 Star Rider Community</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Decorative Luxury Gold Geometric Corner / Border Frame -->
+              <div class="hero-geometric-accent"></div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 02 — OUR VISION & OUR MISSION -->
+    <section class="section vision-mission-section" id="vision-mission">
+      <div class="container">
+        
+        <div class="section-tag-row center">
+          <div class="section-tag">
+            <span class="tag-line"></span>
+            FOUNDATIONAL PILLARS
+            <span class="tag-line"></span>
+          </div>
+        </div>
+        <h2 class="section-title text-center">Driven by Purpose, Guided by Passion</h2>
+        <p class="section-subtitle text-center">Discover the core values that shape every lesson, trail ride, and equine partnership at Silver Hoof.</p>
+
+        <div class="vision-mission-grid">
+          
+          <!-- Vision Card -->
+          <div class="vm-card vision-card">
+            <div class="vm-card-header">
+              <div class="vm-icon-box">
+                <i class="fa-solid fa-eye icon-gold"></i>
+              </div>
+              <div class="vm-badge">OUR VISION</div>
+            </div>
+            <h3 class="vm-title">Harmonious Equine Excellence</h3>
+            <p class="vm-body">
+              To set the global benchmark in horse-centered learning, sustainable pasture stewardship, and compassionate riding education — creating a sanctuary where humans and horses flourish together in total harmony.
+            </p>
+            <ul class="vm-list">
+              <li><i class="fa-solid fa-circle-check icon-gold"></i> Gold-standard horse welfare and holistic care protocols</li>
+              <li><i class="fa-solid fa-circle-check icon-gold"></i> Eco-conscious trail preservation and countryside stewardship</li>
+              <li><i class="fa-solid fa-circle-check icon-gold"></i> Accessible, inclusive riding programs for all skill levels</li>
+            </ul>
+          </div>
+
+          <!-- Mission Card -->
+          <div class="vm-card mission-card">
+            <div class="vm-card-header">
+              <div class="vm-icon-box">
+                <i class="fa-solid fa-bullseye icon-gold"></i>
+              </div>
+              <div class="vm-badge">OUR MISSION</div>
+            </div>
+            <h3 class="vm-title">Empowering Riders, Caring for Horses</h3>
+            <p class="vm-body">
+              To provide inspiring, safety-first equestrian instruction, serene trail rides, and luxury boarding that instills confidence, refines horsemanship skills, and nurtures lifelong bonds between rider and horse.
+            </p>
+            <ul class="vm-list">
+              <li><i class="fa-solid fa-circle-check icon-gold"></i> Certified professional trainers dedicated to individual rider growth</li>
+              <li><i class="fa-solid fa-circle-check icon-gold"></i> Custom equine diets, hydrotherapy, and climate-controlled stalls</li>
+              <li><i class="fa-solid fa-circle-check icon-gold"></i> Uncompromising safety standards and welcoming community culture</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 03 — COMPANY TIMELINE -->
+    <section class="section timeline-section" id="timeline">
+      <div class="container">
+        
+        <div class="section-tag-row center">
+          <div class="section-tag">
+            <span class="tag-line"></span>
+            OUR JOURNEY
+            <span class="tag-line"></span>
+          </div>
+        </div>
+        <h2 class="section-title text-center">Milestones That Define Our Legacy</h2>
+        <p class="section-subtitle text-center">From humble countryside beginnings to an internationally recognized luxury riding academy.</p>
+
+        <!-- Timeline Container -->
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+
+          <!-- Item 1 (2012) -->
+          <div class="timeline-item timeline-left">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-year">2012</span>
+              <h3 class="timeline-title">Founding of Silver Hoof Stables</h3>
+              <p class="timeline-desc">
+                Founded by Master Trainer Marcus Vance with 5 rescued horses and 10 acres of pristine rolling countryside.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 (2016) -->
+          <div class="timeline-item timeline-right">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-building-wheat"></i>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-year">2016</span>
+              <h3 class="timeline-title">State-of-the-Art Covered Arena</h3>
+              <p class="timeline-desc">
+                Constructed our all-weather regulation indoor dressage arena and opened private scenic forest trails to the public.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 (2019) -->
+          <div class="timeline-item timeline-left">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-year">2019</span>
+              <h3 class="timeline-title">Championship Academy Launch</h3>
+              <p class="timeline-desc">
+                Established our elite hunter-jumper and dressage competitive coaching division, producing regional award-winning riders.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4 (2023) -->
+          <div class="timeline-item timeline-right">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-shield-heart"></i>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-year">2023</span>
+              <h3 class="timeline-title">Luxury Boarding & Equine Spa</h3>
+              <p class="timeline-desc">
+                Unveiled 24 climate-controlled private stalls, automatic equine feeders, and an state-of-the-art hydrotherapy wellness center.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 5 (2026) -->
+          <div class="timeline-item timeline-left">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-year">2026</span>
+              <h3 class="timeline-title">Global Equestrian Accreditation</h3>
+              <p class="timeline-desc">
+                Honored with 5-star premier ranch accreditation and expanding our sustainable horsemanship initiatives worldwide.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 04 — TEAM CARDS -->
+    <section class="section team-section" id="team">
+      <div class="container">
+        
+        <div class="section-tag-row center">
+          <div class="section-tag">
+            <span class="tag-line"></span>
+            MEET OUR EXPERTS
+            <span class="tag-line"></span>
+          </div>
+        </div>
+        <h2 class="section-title text-center">Passionate Leaders Behind Silver Hoof</h2>
+        <p class="section-subtitle text-center">Our team of certified instructors, equine veterinarians, and horsemanship leads bring decades of world-class experience.</p>
+
+        <div class="team-cards-grid">
+          
+          <!-- Team Member 1 -->
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="images/instructor_marcus.jpg" alt="Marcus Vance - Head Master Trainer">
+              <span class="team-exp-badge">20+ Yrs Exp</span>
+            </div>
+            <div class="team-card-info">
+              <h3 class="team-name">Coach Marcus Vance</h3>
+              <span class="team-role">Founder & Master Trainer</span>
+              <p class="team-bio">
+                Grand Prix jumping champion specializing in horse communication, rider confidence, and advanced jumping mechanics.
+              </p>
+              <div class="team-socials">
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:marcus@silverhoofstables.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="images/instructor_eleanor.jpg" alt="Eleanor Vance - Head Dressage Specialist">
+              <span class="team-exp-badge">15+ Yrs Exp</span>
+            </div>
+            <div class="team-card-info">
+              <h3 class="team-name">Eleanor Vance</h3>
+              <span class="team-role">Head Dressage Clinician</span>
+              <p class="team-bio">
+                Certified dressage master with a focus on harmony, seat position, and refined cueing techniques for competitive riders.
+              </p>
+              <div class="team-socials">
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:eleanor@silverhoofstables.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="images/hero2_rider_portrait.jpg" alt="Dr. Julian Hayes - Equine Wellness Lead">
+              <span class="team-exp-badge">12+ Yrs Exp</span>
+            </div>
+            <div class="team-card-info">
+              <h3 class="team-name">Dr. Julian Hayes, DVM</h3>
+              <span class="team-role">Equine Health & Wellness Director</span>
+              <p class="team-bio">
+                Doctor of Veterinary Medicine overseeing custom nutritional programs, physical therapy, and 24/7 boarding medical care.
+              </p>
+              <div class="team-socials">
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:julian@silverhoofstables.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 4 -->
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="images/gallery_stable_bonding.jpg" alt="Sophia Martinez - Trail & Youth Director">
+              <span class="team-exp-badge">10+ Yrs Exp</span>
+            </div>
+            <div class="team-card-info">
+              <h3 class="team-name">Sophia Martinez</h3>
+              <span class="team-role">Trail Rides & Youth Program Lead</span>
+              <p class="team-bio">
+                Certified horsemanship instructor passionate about introducing young riders to the joy of riding and leading sunset trail excursions.
+              </p>
+              <div class="team-socials">
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:sophia@silverhoofstables.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 05 — FREQUENTLY ASKED QUESTIONS (FAQS) -->
+    <section class="section faq-section" id="faqs">
+      <div class="container">
+        
+        <div class="section-tag-row center">
+          <div class="section-tag">
+            <span class="tag-line"></span>
+            FREQUENTLY ASKED QUESTIONS
+            <span class="tag-line"></span>
+          </div>
+        </div>
+        <h2 class="section-title text-center">Everything You Need to Know</h2>
+        <p class="section-subtitle text-center">Have questions about riding at Silver Hoof? We've compiled quick answers for you.</p>
+
+        <div class="faq-accordion-wrap">
+          
+          <!-- FAQ Item 1 -->
+          <div class="faq-card active">
+            <div class="faq-header" onclick="toggleFaq(this)">
+              <h3 class="faq-question">
+                <i class="fa-solid fa-circle-question icon-gold"></i>
+                Do I need prior riding experience to take a lesson?
+              </h3>
+              <span class="faq-toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-body">
+              <p>
+                No prior experience is required! We welcome absolute beginners as well as seasoned riders. Our gentle, well-trained lesson horses and certified instructors provide step-by-step guidance tailored to your comfort level.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-card">
+            <div class="faq-header" onclick="toggleFaq(this)">
+              <h3 class="faq-question">
+                <i class="fa-solid fa-circle-question icon-gold"></i>
+                What should I wear for my first riding session?
+              </h3>
+              <span class="faq-toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-body">
+              <p>
+                We recommend wearing long, comfortable fitted pants (such as breeches or sturdy jeans) and closed-toe boots with a small heel (1 inch) for stirrup safety. ASTM/SEI-certified riding helmets are provided complimentary for all riders.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-card">
+            <div class="faq-header" onclick="toggleFaq(this)">
+              <h3 class="faq-question">
+                <i class="fa-solid fa-circle-question icon-gold"></i>
+                What are your horse boarding care standards?
+              </h3>
+              <span class="faq-toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-body">
+              <p>
+                Our luxury boarding packages include 12x12 climate-controlled rubber-matted stalls, daily pasture turnout, custom veterinarian-approved grain and hay nutrition, automatic waterers, and 24/7 on-site staff supervision.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq-card">
+            <div class="faq-header" onclick="toggleFaq(this)">
+              <h3 class="faq-question">
+                <i class="fa-solid fa-circle-question icon-gold"></i>
+                Can I book a private trail ride for a special occasion?
+              </h3>
+              <span class="faq-toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-body">
+              <p>
+                Yes! We offer exclusive private sunset trail rides perfect for anniversaries, birthdays, corporate retreats, or family gatherings. Contact our front desk to customize your itinerary.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="faq-card">
+            <div class="faq-header" onclick="toggleFaq(this)">
+              <h3 class="faq-question">
+                <i class="fa-solid fa-circle-question icon-gold"></i>
+                How do I cancel or reschedule my reservation?
+              </h3>
+              <span class="faq-toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-body">
+              <p>
+                You can easily reschedule or cancel your lesson up to 24 hours in advance free of charge via your Rider Dashboard or by calling our office directly at +1 (800) 555-HOOF.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 06 — CTA CARD SECTION -->
+    <section class="section about-cta-section" id="cta">
+      <div class="container">
+        <div class="about-cta-card">
+          <div class="cta-glow-overlay"></div>
+          <div class="about-cta-content">
+            <span class="cta-badge-tag"><i class="fa-solid fa-horse"></i> JOIN OUR EQUESTRIAN FAMILY</span>
+            <h2 class="about-cta-title">Ready to Experience the Silver Hoof Difference?</h2>
+            <p class="about-cta-sub">
+              Book your first lesson online or visit our ranch for a private guided tour of our stables and arenas.
+            </p>
+            <div class="about-cta-btns">
+              <button class="btn btn-gold-pill btn-large" onclick="openBookingModal()">
+                Book a Lesson <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button class="btn btn-outline-hero btn-large" onclick="openLoginModal()">
+                Rider Login <i class="fa-solid fa-user"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+     FOOTER SECTION (Identical to Home 1)
+     ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+
+      <!-- Left Column: Logo & Brand Info & Social Links -->
+      <div class="footer-col footer-brand-col">
+        <a href="index.html" class="brand-logo footer-logo">
+          <div class="logo-icon">
+            <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">SILVER HOOF</span>
+            <span class="brand-sub">STABLES</span>
+          </div>
+        </a>
+        <p class="footer-about">
+          Silver Hoof Stables is a premier luxury horseback riding center dedicated to excellence in riding education,
+          equine welfare, and unforgettable trail experiences.
+        </p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+      </div>
+
+      <!-- Middle Column 1: Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="index.html#lessons"><i class="fa-solid fa-chevron-right"></i> Lessons</a></li>
+          <li><a href="index.html#gallery"><i class="fa-solid fa-chevron-right"></i> Trail Rides</a></li>
+        </ul>
+      </div>
+
+      <!-- Middle Column 2: Additional Links -->
+      <div class="footer-col">
+        <h4 class="footer-title">Additional Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#pricing"><i class="fa-solid fa-chevron-right"></i> Pricing</a></li>
+          <li><a href="index.html#boarding"><i class="fa-solid fa-chevron-right"></i> Boarding</a></li>
+          <li><a href="home2.html"><i class="fa-solid fa-chevron-right"></i> Home 2 (Luxury)</a></li>
+          <li><a href="#faqs"><i class="fa-solid fa-chevron-right"></i> FAQs</a></li>
+        </ul>
+      </div>
+
+      <!-- Right Column: Address & Contact Details -->
+      <div class="footer-col">
+        <h4 class="footer-title">Contact & Stables</h4>
+        <div class="footer-contact-details">
+          <p><i class="fa-solid fa-location-dot"></i> 450 Equestrian Trail, Rolling Hills, CA 90274</p>
+          <p><i class="fa-solid fa-phone"></i> +1 (800) 555-HOOF</p>
+          <p><i class="fa-solid fa-envelope"></i> info@silverhoofstables.com</p>
+          <p><i class="fa-solid fa-clock"></i> Mon-Sun: 7:00 AM – 7:00 PM</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Terms & Conditions Line -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>&copy; 2026 Silver Hoof Stables. All Rights Reserved.</p>
+        <div class="footer-terms-links">
+          <a href="#"
+            onclick="alert('Terms & Conditions: Silver Hoof Stables safety rules & riding terms apply.'); return false;">Terms
+            & Conditions</a>
+          <span class="sep">|</span>
+          <a href="#"
+            onclick="alert('Privacy Policy: We value your privacy and protect your personal information.'); return false;">Privacy
+            Policy</a>
+          <span class="sep">|</span>
+          <a href="#"
+            onclick="alert('Cookie Policy: Our site uses essential cookies for preferences.'); return false;">Cookie
+            Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+     MODALS & INTERACTIVE OVERLAYS
+     ========================================================================== -->
+  <!-- BOOK A LESSON MODAL -->
+  <div class="modal-backdrop" id="booking-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="booking-close" onclick="closeBookingModal()">&times;</button>
+      <div class="modal-header">
+        <i class="fa-solid fa-horse modal-header-icon"></i>
+        <h3>Book Your Lesson</h3>
+        <p>Select your program and preferred schedule</p>
+      </div>
+      <form id="booking-form" onsubmit="handleBookingSubmit(event)">
+        <div class="form-group">
+          <label for="b-program">Select Program / Plan *</label>
+          <select id="b-program" required>
+            <option value="Beginner Riding Lessons">Beginner Riding Lessons ($65)</option>
+            <option value="Advanced & Dressage Training">Advanced & Dressage Training ($145)</option>
+            <option value="Guided Sunset Trail Rides">Guided Sunset Trail Rides ($95)</option>
+            <option value="Full-Care Boarding">Full-Care Boarding</option>
+          </select>
+        </div>
+
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="b-name">Your Full Name *</label>
+            <input type="text" id="b-name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="b-phone">Phone Number *</label>
+            <input type="tel" id="b-phone" placeholder="+1 (555) 000-0000" required>
+          </div>
+        </div>
+
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="b-date">Preferred Date *</label>
+            <input type="date" id="b-date" required>
+          </div>
+          <div class="form-group">
+            <label for="b-time">Preferred Time Slot *</label>
+            <select id="b-time" required>
+              <option value="08:00 AM">08:00 AM - Morning</option>
+              <option value="10:30 AM">10:30 AM - Morning</option>
+              <option value="02:00 PM">02:00 PM - Afternoon</option>
+              <option value="05:00 PM">05:00 PM - Sunset Ride</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="b-notes">Experience Level & Special Requests</label>
+          <textarea id="b-notes" rows="3"
+            placeholder="Tell us if you are a first-time rider, previous experience, or any special requests..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-gold-pill btn-full">
+          Confirm Booking Request <i class="fa-solid fa-check-circle"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- LOGIN MODAL -->
+  <div class="modal-backdrop" id="login-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="login-close" onclick="closeLoginModal()">&times;</button>
+      <div class="modal-header">
+        <i class="fa-solid fa-user-lock modal-header-icon"></i>
+        <h3>Rider Portal Login</h3>
+        <p>Enter your credentials to access your account & schedules</p>
+      </div>
+      <form id="login-form" onsubmit="handleLoginSubmit(event)">
+        <div class="form-group">
+          <label for="l-email">Email Address *</label>
+          <input type="email" id="l-email" placeholder="rider@example.com" required value="rider@silverhoof.com">
+        </div>
+        <div class="form-group">
+          <label for="l-password">Password *</label>
+          <input type="password" id="l-password" placeholder="••••••••" required value="password123">
+        </div>
+        <button type="submit" class="btn btn-gold-pill btn-full">
+          Sign In to Portal <i class="fa-solid fa-right-to-bracket"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript Files -->
+  <script src="index.js"></script>
+  <script src="about.js"></script>
+</body>
+
+</html>

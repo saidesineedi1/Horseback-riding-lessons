@@ -1,0 +1,892 @@
+/* ==========================================================================
+   SILVER HOOF STABLES - LESSON DETAIL PAGE STYLESHEET
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HERO BANNER
+   -------------------------------------------------------------------------- */
+.detail-hero-section {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 0 3.5rem 0;
+  overflow: hidden;
+  text-align: center;
+  background-color: var(--clr-deep-brown);
+}
+
+.detail-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 30%;
+  transform: scale(1.03);
+  transition: transform 8s ease;
+}
+
+.detail-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(28, 21, 15, 0.85) 0%,
+    rgba(28, 21, 15, 0.72) 50%,
+    rgba(28, 21, 15, 0.95) 100%
+  );
+  z-index: 1;
+}
+
+.detail-hero-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.detail-breadcrumbs {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(37, 28, 20, 0.65);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(198, 161, 91, 0.3);
+  padding: 0.4rem 1.1rem;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  color: var(--clr-beige);
+  margin-bottom: 1.25rem;
+}
+
+.detail-breadcrumbs a {
+  color: var(--clr-warm-white);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.detail-breadcrumbs a:hover {
+  color: var(--clr-antique-gold);
+}
+
+.detail-breadcrumbs .sep {
+  font-size: 0.65rem;
+  color: var(--clr-antique-gold);
+  opacity: 0.7;
+}
+
+.detail-breadcrumbs .current {
+  color: var(--clr-antique-gold);
+  font-weight: 700;
+}
+
+.detail-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: var(--clr-antique-gold);
+  background: rgba(198, 161, 91, 0.15);
+  border: 1px solid rgba(198, 161, 91, 0.35);
+  padding: 0.3rem 0.9rem;
+  border-radius: 50px;
+  margin-bottom: 0.85rem;
+}
+
+.detail-hero-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.detail-hero-sub {
+  font-size: 1.15rem;
+  color: var(--clr-beige);
+  max-width: 780px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. PROGRAM SWITCHER BAR
+   -------------------------------------------------------------------------- */
+.program-switcher-bar {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.85rem 0;
+  position: sticky;
+  top: 75px;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.switcher-scroll-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+  scrollbar-width: thin;
+}
+
+.switcher-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.switcher-tab i {
+  color: var(--clr-antique-gold);
+}
+
+.switcher-tab:hover {
+  border-color: var(--clr-antique-gold);
+  color: var(--text-primary);
+}
+
+.switcher-tab.active {
+  background: var(--clr-antique-gold);
+  color: #2B2118;
+  border-color: var(--clr-antique-gold);
+}
+
+.switcher-tab.active i {
+  color: #2B2118;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. LESSON DETAIL MAIN LAYOUT & CONTENT
+   -------------------------------------------------------------------------- */
+.detail-main-section {
+  background-color: var(--bg-primary);
+  padding: 4rem 0 6rem 0;
+}
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 3.5rem;
+  align-items: stretch;
+}
+
+.detail-sidebar-col {
+  height: 100%;
+}
+
+/* Left Column Content */
+.detail-content-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.detail-img-box {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  height: 420px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+.detail-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-overlay-caption {
+  position: absolute;
+  bottom: 0;
+  inset-x: 0;
+  background: linear-gradient(to top, rgba(28, 21, 15, 0.95) 0%, rgba(28, 21, 15, 0) 100%);
+  padding: 2rem 1.75rem 1.25rem 1.75rem;
+  color: var(--clr-warm-white);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.detail-block {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 2.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.block-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.block-intro-text {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.block-body p {
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.block-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Curriculum Grid */
+.curriculum-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.curr-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.35rem;
+}
+
+.curr-num {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #2B2118;
+  background: var(--clr-antique-gold);
+  padding: 0.2rem 0.65rem;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 0.6rem;
+}
+
+.curr-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.curr-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Session Timeline Breakdown */
+.session-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.timeline-step {
+  display: flex;
+  gap: 1.25rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  align-items: flex-start;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline-step:hover {
+  border-color: var(--clr-antique-gold);
+  transform: translateX(4px);
+}
+
+.timeline-time {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #2B2118;
+  background: var(--clr-antique-gold);
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.timeline-content h4 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.timeline-content p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Equine Partners Grid */
+.equine-partners-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.equine-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.equine-card:hover {
+  border-color: var(--clr-antique-gold);
+  transform: translateY(-4px);
+}
+
+.equine-img-wrap {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.equine-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.equine-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #2B2118;
+  background: var(--clr-antique-gold);
+  padding: 0.25rem 0.65rem;
+  border-radius: 50px;
+}
+
+.equine-info {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.equine-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.equine-meta {
+  font-size: 0.8rem;
+  color: var(--clr-antique-gold);
+  font-weight: 700;
+}
+
+.equine-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0.3rem 0 0 0;
+}
+
+/* Split Subblocks (What's Included & Gear Needed) */
+.detail-split-blocks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
+
+.detail-subblock {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 1.8rem;
+}
+
+.detail-subblock h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.check-list li {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  line-height: 1.5;
+}
+
+.check-list li i {
+  color: var(--clr-antique-gold);
+  font-size: 0.95rem;
+  margin-top: 0.15rem;
+}
+
+/* Milestones List */
+.milestones-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.milestone-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.1rem 1.5rem;
+}
+
+.milestone-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(198, 161, 91, 0.15);
+  border: 1px solid var(--clr-antique-gold);
+  color: var(--clr-antique-gold);
+  font-size: 1rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.milestone-text h4 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.milestone-text p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Arena Safety Grid */
+.safety-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.safety-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.35rem;
+}
+
+.safety-icon {
+  font-size: 1.6rem;
+  color: var(--clr-antique-gold);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.safety-card h4 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.safety-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Program Specific FAQs */
+.detail-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-faq-item {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.detail-faq-q {
+  width: 100%;
+  padding: 1.15rem 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  cursor: pointer;
+  text-align: left;
+}
+
+.detail-faq-q i {
+  color: var(--clr-antique-gold);
+  transition: transform 0.3s ease;
+}
+
+.detail-faq-item.active .detail-faq-q i {
+  transform: rotate(180deg);
+}
+
+.detail-faq-a {
+  display: none;
+  padding: 0 1.35rem 1.15rem 1.35rem;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.detail-faq-item.active .detail-faq-a {
+  display: block;
+}
+
+/* Instructor Highlight Card */
+.instructor-highlight-card {
+  background: var(--bg-card);
+  border: 1.5px solid var(--clr-antique-gold);
+  border-radius: 24px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.inst-avatar-box {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--clr-antique-gold);
+  flex-shrink: 0;
+}
+
+.inst-avatar-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inst-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--clr-antique-gold);
+  letter-spacing: 1px;
+}
+
+.inst-name {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0.2rem 0 0.4rem 0;
+}
+
+.inst-bio {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+
+/* --------------------------------------------------------------------------
+   4. STICKY BOOKING SIDEBAR CARD
+   -------------------------------------------------------------------------- */
+.sticky-booking-card {
+  position: sticky;
+  top: 145px;
+  z-index: 5;
+  background: var(--bg-card);
+  border: 1.5px solid var(--clr-antique-gold);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.booking-card-header .lbl {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+}
+
+.card-price .price-val {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--clr-antique-gold);
+  line-height: 1;
+}
+
+.card-price .price-unit {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.booking-specs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.spec-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.spec-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(198, 161, 91, 0.12);
+  border: 1px solid rgba(198, 161, 91, 0.3);
+  color: var(--clr-antique-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.spec-lbl {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.spec-val {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.slots-title {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.slot-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.slot-pill {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--clr-antique-gold);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  padding: 0.3rem 0.65rem;
+  border-radius: 50px;
+}
+
+.widget-action-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.widget-guarantee {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+
+/* --------------------------------------------------------------------------
+   5. LESSONS DETAIL CTA SECTION
+   -------------------------------------------------------------------------- */
+.lessons-cta-section {
+  background-color: var(--bg-primary);
+  padding: 4rem 0 6rem 0;
+}
+
+.lessons-cta-card {
+  position: relative;
+  background: var(--clr-deep-brown);
+  border-radius: 28px;
+  padding: 4rem 2rem;
+  text-align: center;
+  overflow: hidden;
+  border: none !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.cta-glow-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(198, 161, 91, 0.15) 0%, rgba(28, 21, 15, 0.95) 75%);
+  pointer-events: none;
+}
+
+.lessons-cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.cta-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--clr-antique-gold);
+  background: rgba(198, 161, 91, 0.12);
+  border: 1px solid rgba(198, 161, 91, 0.3);
+  padding: 0.3rem 0.9rem;
+  border-radius: 50px;
+  letter-spacing: 1.5px;
+  margin-bottom: 1.15rem;
+}
+
+.lessons-cta-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.85rem;
+  line-height: 1.2;
+}
+
+.lessons-cta-sub {
+  font-size: 1rem;
+  color: var(--clr-beige);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.lessons-cta-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+
+/* --------------------------------------------------------------------------
+   6. RESPONSIVE BREAKPOINTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .detail-hero-title {
+    font-size: 2.4rem;
+  }
+  .detail-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .sticky-booking-card {
+    position: static;
+  }
+  .curriculum-grid {
+    grid-template-columns: 1fr;
+  }
+  .detail-split-blocks {
+    grid-template-columns: 1fr;
+  }
+  .lessons-cta-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .detail-hero-title {
+    font-size: 1.8rem;
+  }
+  .instructor-highlight-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .detail-img-box {
+    height: 280px;
+  }
+  .lessons-cta-title {
+    font-size: 1.6rem;
+  }
+  .lessons-cta-card {
+    padding: 2.5rem 1.25rem;
+  }
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Your Account - Signup | Silver Hoof Stables</title>
+  <meta name="description"
+    content="Join the Silver Hoof Stables equestrian community. Sign up to book riding lessons, trail rides, board your horse, and access personalized training schedules.">
+
+  <!-- Google Fonts: Open Sans & Cormorant Garamond -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500;1,600&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Shared & Custom Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="signup.css">
+</head>
+
+<body class="auth-page-body">
+
+  <!-- Floating Controls Bar Top Right -->
+  <div class="auth-nav-controls">
+    <a href="index.html" class="nav-control-pill" title="Back to Home 1">
+      <i class="fa-solid fa-arrow-left"></i> Home
+    </a>
+    <button class="nav-control-pill" id="rtl-toggle" title="Toggle Layout Direction (LTR / RTL)">
+      RTL
+    </button>
+    <button class="nav-control-pill" id="theme-toggle" title="Toggle Theme (Dark / Light)">
+      <i class="fa-solid fa-moon" id="theme-icon"></i>
+    </button>
+  </div>
+
+  <!-- Main Floating Card Wrapper Container -->
+  <main class="auth-wrapper">
+    <div class="auth-card-container">
+
+      <!-- LEFT HERO BACKDROP CARD -->
+      <div class="auth-hero-col" style="background-image: url('images/our_story_ranch.jpg');">
+        <div class="hero-overlay-gradient"></div>
+        
+        <div class="hero-card-bottom">
+          <div class="hero-pill-badge">
+            <i class="fa-solid fa-horse"></i> Join Our Sanctuary
+          </div>
+          <p class="hero-quote-text">
+            "Begin your journey toward equestrian mastery with world-class trainers and horses."
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT FORM CARD -->
+      <div class="auth-form-col">
+        <div class="auth-form-content">
+
+          <!-- Brand Logo Header (Matching Home 1) -->
+          <a href="index.html" class="brand-logo auth-brand-link" title="Silver Hoof Stables - Home">
+            <div class="logo-icon">
+              <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">SILVER HOOF</span>
+              <span class="brand-sub">STABLES</span>
+            </div>
+          </a>
+
+          <!-- Page Title & Subtitle -->
+          <div class="auth-header-text text-center">
+            <h1 class="auth-heading">Create Your Account</h1>
+            <p class="auth-subheading">Join our organic riding family & reserve your sessions</p>
+          </div>
+
+          <!-- Signup Form -->
+          <form id="signup-page-form" onsubmit="handleSignupPageSubmit(event)" novalidate>
+            
+            <!-- Side-by-side Full Name and Email Address -->
+            <div class="form-grid-2-col">
+              <div class="form-field-group">
+                <label for="signup-name">Full Name</label>
+                <div class="input-pill-wrap">
+                  <i class="fa-regular fa-user field-left-icon"></i>
+                  <input type="text" id="signup-name" placeholder="Enter your name" required>
+                </div>
+              </div>
+
+              <div class="form-field-group">
+                <label for="signup-email">Email Address</label>
+                <div class="input-pill-wrap">
+                  <i class="fa-regular fa-envelope field-left-icon"></i>
+                  <input type="email" id="signup-email" placeholder="Enter your email" required>
+                </div>
+              </div>
+            </div>
+
+            <!-- Side-by-side Password and Confirm Password -->
+            <div class="form-grid-2-col">
+              <div class="form-field-group">
+                <label for="signup-password">Password</label>
+                <div class="input-pill-wrap">
+                  <i class="fa-regular fa-lock field-left-icon"></i>
+                  <input type="password" id="signup-password" placeholder="Enter your password" required>
+                  <i class="fa-regular fa-eye field-right-icon" onclick="togglePasswordVisibility('signup-password', this)"></i>
+                </div>
+              </div>
+
+              <div class="form-field-group">
+                <label for="signup-confirm">Confirm</label>
+                <div class="input-pill-wrap">
+                  <i class="fa-regular fa-shield-halved field-left-icon"></i>
+                  <input type="password" id="signup-confirm" placeholder="Confirm your password" required>
+                  <i class="fa-regular fa-eye field-right-icon" onclick="togglePasswordVisibility('signup-confirm', this)"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-field-group">
+              <label for="signup-level">Riding Experience Level</label>
+              <div class="input-pill-wrap">
+                <i class="fa-solid fa-award field-left-icon"></i>
+                <select id="signup-level" required>
+                  <option value="" disabled selected>Select experience level</option>
+                  <option value="beginner">Beginner / First-Time Rider</option>
+                  <option value="intermediate">Intermediate Rider (Walk, Trot, Canter)</option>
+                  <option value="advanced">Advanced / Dressage / Jumper</option>
+                  <option value="owner">Horse Owner Looking for Boarding</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-options-row">
+              <label class="remember-checkbox-wrap">
+                <input type="checkbox" id="terms-checkbox" required>
+                <span>I agree to the <a href="#" class="terms-link" onclick="alert('Terms & Conditions: Silver Hoof Stables prioritizes safety and professional training.'); return false;">Terms of Service</a> & <a href="#" class="terms-link" onclick="alert('Privacy Policy: Your data is secure and protected.'); return false;">Privacy Policy</a></span>
+              </label>
+            </div>
+
+            <button type="submit" class="auth-submit-btn">
+              Create Your Account <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </button>
+
+          </form>
+
+          <!-- Divider -->
+          <div class="auth-divider-line">
+            <span>OR SIGN UP WITH</span>
+          </div>
+
+          <!-- Social Auth Grid (Side-by-Side 2 Columns) -->
+          <div class="social-auth-row">
+            <button type="button" class="social-auth-pill" onclick="handleSocialAuth('Google')">
+              <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google Logo" class="google-svg-icon">
+              <span>Google</span>
+            </button>
+            
+            <button type="button" class="social-auth-pill" onclick="handleSocialAuth('Apple')">
+              <i class="fa-brands fa-apple apple-icon"></i>
+              <span>Apple</span>
+            </button>
+          </div>
+
+          <!-- Footer Switch to Login -->
+          <div class="auth-footer-switch text-center">
+            <p>Already have an account? <a href="login.html" class="switch-link">Log In</a></p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- JavaScript Scripts -->
+  <script src="index.js"></script>
+  <script src="login.js"></script>
+  <script src="signup.js"></script>
+</body>
+
+</html>
