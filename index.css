@@ -1,4 +1,4 @@
-﻿
+
 
 :root {
   
@@ -820,6 +820,11 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   border-radius: 4px;
   cursor: pointer;
+}
+
+/* Login button inside hamburger menu — hidden on desktop */
+.nav-login-item {
+  display: none;
 }
 
 .hero-section {
@@ -2618,6 +2623,20 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   gap: 0.85rem;
 }
 
+/* RTL header order (left → right): Login → Theme → RTL toggle → Hamburger */
+[dir="rtl"] .header-actions #open-login-btn {
+  order: 0;
+}
+[dir="rtl"] .header-actions #theme-toggle {
+  order: 1;
+}
+[dir="rtl"] .header-actions #rtl-toggle {
+  order: 2;
+}
+[dir="rtl"] .header-actions .hamburger-btn {
+  order: 3;
+}
+
 [dir="rtl"] .header-actions .btn-outline {
   margin-left: 0;
   margin-right: 0.4rem;
@@ -2810,6 +2829,23 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   .hamburger-btn {
     display: block;
   }
+  /* Hide login btn from header, show it inside nav menu */
+  #open-login-btn {
+    display: none;
+  }
+  .nav-login-item {
+    display: flex !important;
+    justify-content: center;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(198, 161, 91, 0.2);
+    width: 100%;
+  }
+  .nav-login-item .btn {
+    width: 100%;
+    max-width: 270px;
+    justify-content: center;
+  }
   .hero-title {
     font-size: 2.75rem;
   }
@@ -2865,6 +2901,27 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   }
   .footer-container {
     grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .footer-socials {
+    justify-content: center;
+  }
+  .footer-contact-details p {
+    justify-content: center;
+  }
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-terms-links {
+    justify-content: center;
+  }
+  .footer-links a {
+    justify-content: center;
   }
   .form-group-row {
     grid-template-columns: 1fr;
@@ -2928,14 +2985,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
     width: 16px !important;
     height: 16px !important;
     font-size: 0.85rem !important;
-  }
-
-  .header-actions #open-login-btn {
-    height: 34px !important;
-    min-height: 34px !important;
-    padding-left: 0.75rem !important;
-    padding-right: 0.75rem !important;
-    font-size: 0.76rem !important;
   }
 
   .hamburger-btn {
