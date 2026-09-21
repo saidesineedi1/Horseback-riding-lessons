@@ -1,10 +1,5 @@
-/* ==========================================================================
-   SILVER HOOF STABLES - ABOUT US PAGE STYLESHEET
-   ========================================================================== */
+﻿
 
-/* --------------------------------------------------------------------------
-   1. HERO BANNER SECTION
-   -------------------------------------------------------------------------- */
 .about-hero-section {
   position: relative;
   min-height: auto;
@@ -64,7 +59,6 @@
   width: 100%;
 }
 
-/* Two Column Aligned Hero Grid */
 .about-hero-grid {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -76,7 +70,6 @@
   grid-template-columns: 1fr 1.1fr;
 }
 
-/* LEFT COLUMN: Narrative & Credentials */
 .about-hero-text-col {
   display: flex;
   flex-direction: column;
@@ -125,7 +118,6 @@
   color: var(--text-secondary);
 }
 
-/* Hero CTA Buttons */
 .about-hero-cta-btns {
   display: flex;
   align-items: center;
@@ -177,7 +169,6 @@
   border-color: #2B2118 !important;
 }
 
-/* Quick Stats Glass Bar */
 .about-hero-stats {
   display: inline-flex;
   align-items: center;
@@ -231,9 +222,6 @@
   background-color: var(--border-color);
 }
 
-/* ==========================================================================
-   RIGHT COLUMN: STYLISH ALIGNED DUAL-IMAGE COMPOSITION
-   ========================================================================== */
 .about-hero-media-col {
   display: flex;
   justify-content: center;
@@ -250,7 +238,6 @@
   margin: 0 auto;
 }
 
-/* Ambient Radial Halo behind cards */
 .hero-media-ambient-glow {
   position: absolute;
   top: 10%;
@@ -263,7 +250,6 @@
   pointer-events: none;
 }
 
-/* Luxury Geometric Corner Bracket */
 .hero-geometric-accent {
   position: absolute;
   top: -12px;
@@ -285,7 +271,6 @@
   border-radius: 28px 0 0 0;
 }
 
-/* Hero Image Cards */
 .hero-image-card {
   position: absolute;
   transition: transform 0.45s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.45s ease;
@@ -326,7 +311,6 @@
   pointer-events: none;
 }
 
-/* Primary Grand Card: Historic Ranch Grounds */
 .hero-image-card.primary-card {
   top: 0;
   left: 0;
@@ -346,7 +330,6 @@
   z-index: 2;
 }
 
-/* Secondary Aligned Card: Rider & Champion Horse */
 .hero-image-card.secondary-card {
   bottom: 0;
   right: 0;
@@ -371,7 +354,6 @@
   box-shadow: 0 22px 50px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.15);
 }
 
-/* Floating Glass Badges */
 .floating-badge {
   position: absolute;
   display: inline-flex;
@@ -474,7 +456,6 @@
   letter-spacing: 0.4px;
 }
 
-/* Responsive Styles for About Hero */
 @media (max-width: 991px) {
   .about-hero-section {
     padding: 2.25rem 0 3rem 0;
@@ -597,10 +578,6 @@
   width: 100%;
 }
 
-
-/* --------------------------------------------------------------------------
-   2. OUR VISION & OUR MISSION
-   -------------------------------------------------------------------------- */
 .vision-mission-section {
   background-color: var(--bg-primary);
   padding: 5rem 0;
@@ -699,10 +676,6 @@
   font-size: 0.95rem;
 }
 
-
-/* --------------------------------------------------------------------------
-   3. COMPANY TIMELINE
-   -------------------------------------------------------------------------- */
 .timeline-section {
   background-color: var(--bg-card);
   padding: 5rem 0;
@@ -745,7 +718,6 @@
   right: auto !important;
 }
 
-/* LTR MODE POSITIONING */
 html:not([dir="rtl"]) .timeline-container,
 [dir="ltr"] .timeline-container {
   direction: ltr;
@@ -795,7 +767,6 @@ html:not([dir="rtl"]) .timeline-right,
   color: #2B2118;
 }
 
-/* LTR Dot Positioning (touches center line from inside edge) */
 html:not([dir="rtl"]) .timeline-left .timeline-dot,
 [dir="ltr"] .timeline-left .timeline-dot {
   right: -23px !important;
@@ -848,7 +819,6 @@ html:not([dir="rtl"]) .timeline-right .timeline-dot,
   margin: 0;
 }
 
-/* RTL MODE POSITIONING - COMPLETE & BALANCED CARD SWAPPING ACROSS CENTRAL LINE */
 [dir="rtl"] .timeline-container {
   direction: rtl;
 }
@@ -864,10 +834,6 @@ html:not([dir="rtl"]) .timeline-right .timeline-dot,
   right: auto !important;
 }
 
-/* In RTL:
-   .timeline-left (Milestone 1 '2012', 3 '2019', 5 '2026') moves to the RIGHT side.
-   margin-right: 0 hugs the right edge of container.
-*/
 [dir="rtl"] .timeline-left {
   align-self: flex-start !important;
   margin-right: 0 !important;
@@ -877,10 +843,6 @@ html:not([dir="rtl"]) .timeline-right .timeline-dot,
   text-align: right !important;
 }
 
-/* In RTL:
-   .timeline-right (Milestone 2 '2016', 4 '2023') moves to the LEFT side.
-   margin-left: 0 hugs the left edge of container.
-*/
 [dir="rtl"] .timeline-right {
   align-self: flex-end !important;
   margin-left: 0 !important;
@@ -890,26 +852,16 @@ html:not([dir="rtl"]) .timeline-right .timeline-dot,
   text-align: left !important;
 }
 
-/* In RTL:
-   Right Card (.timeline-left) touches the center line on its LEFT edge.
-*/
 [dir="rtl"] .timeline-left .timeline-dot {
   left: -23px !important;
   right: auto !important;
 }
 
-/* In RTL:
-   Left Card (.timeline-right) touches the center line on its RIGHT edge.
-*/
 [dir="rtl"] .timeline-right .timeline-dot {
   right: -23px !important;
   left: auto !important;
 }
 
-
-/* --------------------------------------------------------------------------
-   4. TEAM CARDS SECTION
-   -------------------------------------------------------------------------- */
 .team-section {
   background-color: var(--bg-primary);
   padding: 5rem 0;
@@ -1028,10 +980,6 @@ html:not([dir="rtl"]) .timeline-right .timeline-dot,
   border-color: var(--clr-antique-gold);
 }
 
-
-/* --------------------------------------------------------------------------
-   5. FAQS ACCORDION SECTION
-   -------------------------------------------------------------------------- */
 .faq-section {
   background-color: var(--bg-card);
   padding: 5rem 0;
@@ -1127,10 +1075,6 @@ html:not([dir="rtl"]) .timeline-right .timeline-dot,
   margin: 0;
 }
 
-
-/* --------------------------------------------------------------------------
-   6. ABOUT CTA CARD SECTION
-   -------------------------------------------------------------------------- */
 .about-cta-section {
   background-color: var(--bg-primary);
   padding: 4rem 0 6rem 0;
@@ -1199,10 +1143,6 @@ html:not([dir="rtl"]) .timeline-right .timeline-dot,
   flex-wrap: wrap;
 }
 
-
-/* --------------------------------------------------------------------------
-   7. RESPONSIVE BREAKPOINTS
-   -------------------------------------------------------------------------- */
 @media (max-width: 992px) {
   .about-hero-title {
     font-size: 2.6rem;
@@ -1219,7 +1159,7 @@ html:not([dir="rtl"]) .timeline-right .timeline-dot,
     font-size: 2.2rem;
   }
   
-  /* Responsive Timeline */
+  
   .timeline-line {
     left: 20px;
     transform: none;

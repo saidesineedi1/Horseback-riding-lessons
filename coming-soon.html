@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon | Silver Hoof Stables</title>
+  <meta name="description"
+    content="Something extraordinary is galloping your way. Silver Hoof Stables is unveiling a new equestrian experience. Join the waitlist for early access.">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Open+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="coming-soon.css">
+</head>
+
+<body>
+
+  
+  <button class="cs-theme-btn" id="cs-theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+    <i class="fa-solid fa-moon" id="cs-theme-icon"></i>
+  </button>
+
+  
+  <main class="cs-fullpage">
+    <section class="cs-section">
+
+      
+      <div class="cs-orb cs-orb-1"></div>
+      <div class="cs-orb cs-orb-2"></div>
+
+      
+      <div class="cs-card">
+
+        
+        <div class="cs-badge">
+          <i class="fa-solid fa-horse-head"></i>
+          UNVEILING SOON &bull; SILVER HOOF STABLES
+        </div>
+
+        
+        <h1 class="cs-title">A New Equestrian<br>Experience is Coming</h1>
+
+        
+        <p class="cs-desc">
+          Our riding masters and stable curators are crafting something extraordinary — an elite equestrian
+          journey unlike anything before. Prepare for premier lessons, trail rides, and luxury stabling.
+        </p>
+
+        
+        <div class="cs-countdown" id="cs-countdown">
+          <div class="cs-time-block">
+            <span class="cs-time-num" id="cs-days">00</span>
+            <span class="cs-time-label">Days</span>
+          </div>
+          <span class="cs-colon">:</span>
+          <div class="cs-time-block">
+            <span class="cs-time-num" id="cs-hours">00</span>
+            <span class="cs-time-label">Hours</span>
+          </div>
+          <span class="cs-colon">:</span>
+          <div class="cs-time-block">
+            <span class="cs-time-num" id="cs-minutes">00</span>
+            <span class="cs-time-label">Minutes</span>
+          </div>
+          <span class="cs-colon">:</span>
+          <div class="cs-time-block">
+            <span class="cs-time-num" id="cs-seconds">00</span>
+            <span class="cs-time-label">Seconds</span>
+          </div>
+        </div>
+
+        
+        <form class="cs-form" id="cs-form" onsubmit="handleWaitlist(event)">
+          <div class="cs-input-wrap">
+            <i class="fa-regular fa-envelope cs-input-icon"></i>
+            <input
+              type="email"
+              id="cs-email"
+              class="cs-email-input"
+              placeholder="Enter your email for early access..."
+              required
+              autocomplete="email">
+            <button type="submit" class="cs-submit-btn">
+              Join Waitlist <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </form>
+
+        
+        <p class="cs-trust-note">
+          <i class="fa-regular fa-shield-check"></i>
+          Receive priority booking & exclusive launch offer &bull; Zero spam
+        </p>
+
+        
+        <a href="index.html" class="cs-back-btn">
+          <i class="fa-solid fa-house-chimney"></i> Back to Stables
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      const html = document.documentElement;
+      const btn = document.getElementById('cs-theme-toggle');
+      const icon = document.getElementById('cs-theme-icon');
+
+      const saved = localStorage.getItem('theme');
+      if (saved) html.setAttribute('data-theme', saved);
+
+      function syncIcon() {
+        const isDark = html.getAttribute('data-theme') === 'dark';
+        icon.className = isDark ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+      }
+
+      syncIcon();
+
+      btn.addEventListener('click', function () {
+        const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        syncIcon();
+      });
+    })();
+    const TARGET = new Date('2027-06-01T00:00:00').getTime();
+
+    function updateCountdown() {
+      const now = Date.now();
+      const diff = TARGET - now;
+
+      if (diff <= 0) {
+        document.getElementById('cs-days').textContent    = '00';
+        document.getElementById('cs-hours').textContent   = '00';
+        document.getElementById('cs-minutes').textContent = '00';
+        document.getElementById('cs-seconds').textContent = '00';
+        return;
+      }
+
+      const days    = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours   = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('cs-days').textContent    = String(days).padStart(2, '0');
+      document.getElementById('cs-hours').textContent   = String(hours).padStart(2, '0');
+      document.getElementById('cs-minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('cs-seconds').textContent = String(seconds).padStart(2, '0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+    function handleWaitlist(e) {
+      e.preventDefault();
+      const email = document.getElementById('cs-email').value.trim();
+      const btn = document.querySelector('.cs-submit-btn');
+      btn.innerHTML = '<i class="fa-solid fa-check"></i> You\'re In!';
+      btn.style.background = '#4CAF82';
+      btn.disabled = true;
+      document.getElementById('cs-email').value = '';
+      setTimeout(() => {
+        btn.innerHTML = 'Join Waitlist <i class="fa-solid fa-arrow-right"></i>';
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 3500);
+    }
+  </script>
+
+</body>
+</html>

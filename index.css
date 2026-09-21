@@ -1,19 +1,10 @@
-/* 
-  Silver Hoof Stables - Official Stylesheet
-  Color Palette:
-    #2B2118 - Deep Brown
-    #5C4033 - Saddle Brown
-    #C6A15B - Antique Gold
-    #F5F1E8 - Warm White
-    #B9A990 - Beige
-  Font: Open Sans
-*/
+﻿
 
 :root {
-  /* Core Brand Color Tokens */
+  
   --clr-deep-brown: #2B2118;
   --clr-saddle-brown: #5C4033;
-  --clr-primary: #C87D3B; /* Warm Rich Saddle Brown Primary Accent */
+  --clr-primary: #C87D3B; 
   --clr-primary-hover: #D98E4B;
   --clr-antique-gold: #C6A15B;
   --clr-gold-light: #DFBF7A;
@@ -22,7 +13,7 @@
   --clr-beige: #B9A990;
   --clr-beige-light: #E8E2D7;
 
-  /* Dark Theme Variables (Default) */
+  
   --bg-primary: #1C150F;
   --bg-secondary: #2B2118;
   --bg-tertiary: #3A2E23;
@@ -39,8 +30,8 @@
 }
 
 [data-theme="light"] {
-  /* Light Theme Variables */
-  --clr-primary: #6E473B; /* Deep Saddle Brown Primary Accent */
+  
+  --clr-primary: #6E473B; 
   --clr-primary-hover: #5C4033;
   --bg-primary: #F5F1E8;
   --bg-secondary: #EBE5D8;
@@ -57,14 +48,12 @@
   --shadow-lg: 0 12px 36px rgba(43, 33, 24, 0.15);
 }
 
-/* Reset & Base Setup */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Suppress native browser password reveal eye (Edge / IE) to prevent duplicate 2 eyes */
 input[type="password"]::-ms-reveal,
 input[type="password"]::-ms-clear {
   display: none !important;
@@ -85,7 +74,7 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
   max-width: 100%;
 }
@@ -95,7 +84,7 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
   max-width: 100%;
   transition: background-color 0.4s ease, color 0.4s ease;
@@ -117,7 +106,6 @@ img {
   display: block;
 }
 
-/* Typography Utilities */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
@@ -137,7 +125,6 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
-/* Section Common Layout */
 .section {
   padding: 6rem 0;
   position: relative;
@@ -199,7 +186,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
-/* Buttons System */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -337,7 +323,6 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(198, 161, 91, 0.1);
 }
 
-/* === LIGHT MODE OVERRIDES FOR SECONDARY / OUTLINE BUTTONS (ENTIRE WEBSITE) === */
 [data-theme="light"] .btn-outline,
 [data-theme="light"] .btn-secondary,
 [data-theme="light"] .btn-outline-sm {
@@ -381,7 +366,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #2B2118 !important;
 }
 
-/* Default light mode fallback for outline hero */
 [data-theme="light"] .btn-outline-hero {
   border: 2px solid #2B2118;
   color: #2B2118;
@@ -395,7 +379,6 @@ h1, h2, h3, h4, h5, h6 {
   border-color: #2B2118;
 }
 
-/* === CRITICAL: SECONDARY BUTTONS IN ALL DARK SURFACES (CARDS, HEROES, FINAL CTAS) IN BOTH THEMES === */
 .hero-section .btn-outline-hero,
 .final-cta-section .btn-outline-hero,
 .about-cta-card .btn-outline-hero,
@@ -508,7 +491,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--clr-antique-gold);
 }
 
-/* TOP ANNOUNCEMENT BAR */
 .announcement-bar {
   background-color: #16100B;
   color: var(--clr-beige);
@@ -555,13 +537,14 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--clr-antique-gold);
 }
 
-/* HEADER & NAVBAR */
 .header {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1000;
   background-color: var(--header-bg);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
   transition: background-color 0.4s ease, padding 0.3s ease, box-shadow 0.3s ease;
 }
@@ -630,7 +613,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
-/* Navigation Links */
 .nav-menu {
   display: flex;
   align-items: center;
@@ -672,7 +654,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-/* Nav Dropdown Menu */
 .nav-item.dropdown {
   position: relative;
 }
@@ -741,7 +722,6 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 1.35rem;
 }
 
-/* Home 2 Variant Styles */
 [data-home-version="2"] .hero-section {
   background-image: url('images/our_story_ranch.jpg');
 }
@@ -774,12 +754,49 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-actions .icon-btn,
-.header-actions #rtl-toggle,
-.header-actions #theme-toggle {
+.header-actions #rtl-toggle {
   padding-left: 0.85rem !important;
   padding-right: 0.85rem !important;
   font-size: 0.82rem;
   border-radius: 50px !important;
+}
+
+.header-actions #theme-toggle,
+#theme-toggle {
+  width: 44px !important;
+  min-width: 44px !important;
+  max-width: 44px !important;
+  height: 38px !important;
+  min-height: 38px !important;
+  max-height: 38px !important;
+  padding: 0 !important;
+  font-size: 0.85rem !important;
+  border-radius: 50px !important;
+  flex-shrink: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.header-actions #theme-toggle #theme-icon,
+.header-actions #theme-toggle i,
+#theme-toggle #theme-icon,
+#theme-toggle i {
+  width: 18px !important;
+  height: 18px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  font-size: 0.95rem !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  transition: transform 0.25s ease, color 0.25s ease !important;
+}
+
+#theme-toggle:hover #theme-icon,
+#theme-toggle:hover i {
+  transform: rotate(15deg) scale(1.1);
 }
 
 .header-actions #open-login-btn {
@@ -805,7 +822,6 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-/* HERO BANNER SECTION */
 .hero-section {
   position: relative;
   min-height: 80vh;
@@ -948,7 +964,6 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
 }
 
-/* Ensure Book a Riding Lesson outline button is bright and prominent in both Light & Dark themes */
 .hero-section .btn-outline-hero,
 [data-theme="light"] .hero-section .btn-outline-hero,
 [data-theme="dark"] .hero-section .btn-outline-hero {
@@ -978,7 +993,6 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 6px 20px rgba(198, 161, 91, 0.35);
 }
 
-/* FEATURE STRIP (Below Hero) */
 .feature-strip {
   background-color: #1A130D;
   border-top: 1px solid var(--border-color);
@@ -1046,7 +1060,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--border-color);
 }
 
-/* ABOUT COMPANY SECTION ("Our Story") */
 .about-section {
   background-color: var(--bg-primary);
 }
@@ -1193,7 +1206,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-muted);
 }
 
-/* SERVICES SECTION */
 .services-section {
   background-color: var(--bg-secondary);
 }
@@ -1295,9 +1307,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.88rem;
 }
 
-/* ==========================================================================
-   HORSEBACK RIDING LESSONS - MEDIA CARDS STYLES (HOME 1)
-   ========================================================================== */
 .lesson-service-card {
   padding: 0 !important;
   overflow: hidden;
@@ -1487,7 +1496,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--clr-antique-gold);
 }
 
-/* OUR HORSES SECTION */
 .horses-section {
   background-color: var(--bg-primary);
 }
@@ -1578,7 +1586,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--clr-antique-gold);
 }
 
-/* PRICING SECTION */
 .pricing-section {
   background-color: var(--bg-secondary);
 }
@@ -1615,7 +1622,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 0.3rem;
 }
 
-/* Switch styling */
 .switch {
   position: relative;
   display: inline-block;
@@ -1772,7 +1778,6 @@ input:checked + .slider:before {
   color: var(--text-muted);
 }
 
-/* VERTICAL TIMELINE SECTION (PERFECT LTR & RTL ALIGNMENT) */
 .timeline-section {
   background-color: var(--bg-primary);
   overflow: hidden;
@@ -1822,7 +1827,6 @@ input:checked + .slider:before {
   box-shadow: 0 0 15px rgba(200, 125, 59, 0.4);
 }
 
-/* LTR MODE POSITIONING */
 html:not([dir="rtl"]) .timeline-item.left,
 [dir="ltr"] .timeline-item.left {
   align-self: flex-start;
@@ -1853,7 +1857,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   right: auto;
 }
 
-/* RTL MODE POSITIONING (PREVENTS RIGHT OVERFLOW & ALIGNS CENTRALLY) */
 [dir="rtl"] .timeline-wrapper {
   direction: rtl;
 }
@@ -1922,7 +1925,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   color: var(--text-secondary);
 }
 
-/* Mobile & Tablet Timeline Responsive & RTL Styles */
 @media (max-width: 768px) {
   .timeline-line {
     left: 20px !important;
@@ -1971,7 +1973,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   }
 }
 
-/* JOURNALS / BLOG SECTION */
 .journals-section {
   background-color: var(--bg-secondary);
 }
@@ -2069,7 +2070,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   color: var(--clr-gold-light);
 }
 
-/* GALLERY SECTION */
 .gallery-section {
   background-color: var(--bg-primary);
 }
@@ -2163,7 +2163,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   opacity: 1;
 }
 
-/* CONTACT SECTION */
 .contact-section {
   background-color: var(--bg-secondary);
 }
@@ -2297,7 +2296,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   color: #81C784;
 }
 
-/* CTA BANNER CARD */
 .cta-banner-section {
   background-color: var(--bg-primary);
   padding: 3rem 0;
@@ -2326,7 +2324,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   color: var(--clr-beige);
 }
 
-/* FOOTER SECTION */
 .footer {
   background-color: #150F0A;
   color: var(--clr-beige);
@@ -2433,7 +2430,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   margin-top: 0.2rem;
 }
 
-/* Footer Bottom Bar */
 .footer-bottom {
   padding: 1.5rem 0;
   background-color: #0E0A07;
@@ -2467,7 +2463,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   color: var(--text-muted);
 }
 
-/* Light Mode Footer Styles */
 [data-theme="light"] .footer {
   background-color: var(--bg-secondary);
   color: var(--text-primary);
@@ -2498,7 +2493,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   border-top: 1px solid var(--border-color);
 }
 
-/* MODALS STYLING */
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -2584,7 +2578,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   color: var(--clr-antique-gold);
 }
 
-/* Lightbox Modal */
 .lightbox-content {
   position: relative;
   max-width: 900px;
@@ -2607,7 +2600,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   font-weight: 600;
 }
 
-/* RTL (Right to Left) Styles */
 [dir="rtl"] {
   text-align: right;
 }
@@ -2659,7 +2651,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   transform: translateX(-4px);
 }
 
-/* RESPONSIVE MEDIA QUERIES */
 @media (max-width: 1024px) {
   .about-container {
     grid-template-columns: 1fr;
@@ -2718,7 +2709,7 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
     width: 100%;
   }
 
-  /* Mobile Dropdown Styling */
+  
   .nav-item.dropdown {
     width: 100%;
     display: flex;
@@ -2913,13 +2904,30 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   }
 
   .header-actions .icon-btn,
-  .header-actions #rtl-toggle,
-  .header-actions #theme-toggle {
+  .header-actions #rtl-toggle {
     height: 34px !important;
     min-height: 34px !important;
     padding-left: 0.55rem !important;
     padding-right: 0.55rem !important;
     font-size: 0.74rem !important;
+  }
+
+  .header-actions #theme-toggle {
+    width: 38px !important;
+    min-width: 38px !important;
+    max-width: 38px !important;
+    height: 34px !important;
+    min-height: 34px !important;
+    max-height: 34px !important;
+    padding: 0 !important;
+    font-size: 0.8rem !important;
+  }
+
+  .header-actions #theme-toggle #theme-icon,
+  .header-actions #theme-toggle i {
+    width: 16px !important;
+    height: 16px !important;
+    font-size: 0.85rem !important;
   }
 
   .header-actions #open-login-btn {
@@ -3012,9 +3020,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   }
 }
 
-/* ==========================================================================
-   RIDER DASHBOARD MODAL & PORTAL STYLES
-   ========================================================================== */
 .dashboard-modal-card {
   max-width: 900px;
   width: 92%;
@@ -3213,7 +3218,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   color: var(--text-secondary);
 }
 
-/* PROGRESS METERS & NOTES */
 .progress-skills-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -3299,7 +3303,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   border-radius: 4px;
 }
 
-/* TRAIL REGISTRATION CARDS */
 .trail-cards-list {
   display: flex;
   flex-direction: column;
@@ -3338,7 +3341,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   margin-top: 0.4rem;
 }
 
-/* SCHEDULE TABLE & BILLING */
 .schedule-table {
   width: 100%;
   border-collapse: collapse;
@@ -3484,9 +3486,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   }
 }
 
-/* ==========================================
-   NEW CTA REFERENCE CARD SECTION (COMPACT)
-   ========================================== */
 .cta-banner-section {
   padding: 2.5rem 0;
 }
@@ -3511,7 +3510,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.3);
 }
 
-/* Background Leaf SVG */
 .cta-bg-leaf-svg {
   position: absolute;
   bottom: -30px;
@@ -3529,7 +3527,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   transform: scaleX(-1);
 }
 
-/* Left Column Content */
 .cta-left-content {
   position: relative;
   z-index: 1;
@@ -3585,7 +3582,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   font-weight: 700;
 }
 
-/* Features List */
 .cta-features-list {
   display: flex;
   flex-direction: column;
@@ -3611,7 +3607,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   justify-content: center;
 }
 
-/* Buttons Row */
 .cta-buttons-row {
   display: flex;
   align-items: center;
@@ -3668,7 +3663,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   color: var(--text-muted);
 }
 
-/* Right Column Visual */
 .cta-right-visual {
   position: relative;
   display: flex;
@@ -3709,7 +3703,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   border-color: rgba(198, 161, 91, 0.25);
 }
 
-/* Circle Image Wrap */
 .cta-circle-img-wrap {
   position: relative;
   width: 145px;
@@ -3732,7 +3725,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   display: block;
 }
 
-/* Offer Badge Overlay */
 .cta-offer-badge {
   position: absolute;
   bottom: -6px;
@@ -3779,7 +3771,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   text-transform: uppercase;
 }
 
-/* Responsive Styles */
 @media (max-width: 992px) {
   .cta-card {
     grid-template-columns: 1fr;
@@ -3858,9 +3849,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   }
 }
 
-/* ==========================================
-   PREMIUM GALLERY GRID & FILTERS
-   ========================================== */
 .gallery-filters {
   display: flex;
   justify-content: center;
@@ -3948,9 +3936,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   letter-spacing: 0.5px;
 }
 
-/* ==========================================
-   RIDER TESTIMONIALS SECTION
-   ========================================== */
 .testimonials-section {
   background-color: var(--bg-secondary);
   padding: 5rem 0;
@@ -4072,7 +4057,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   font-weight: 700;
 }
 
-/* Trust Stats Bar */
 .trust-stats-strip {
   display: flex;
   align-items: center;
@@ -4131,9 +4115,6 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   }
 }
 
-/* --------------------------------------------------------------------------
-   GLOBAL FAQ ACCORDION STYLES
-   -------------------------------------------------------------------------- */
 .faq-section {
   background-color: var(--bg-card);
   padding: 5rem 0;

@@ -1,10 +1,5 @@
-/* ==========================================================================
-   SILVER HOOF STABLES - BOARDING & CARE PAGE STYLESHEET
-   ========================================================================== */
+﻿
 
-/* --------------------------------------------------------------------------
-   1. HERO BANNER (STYLISH 2-COLUMN DUAL-IMAGE COMPOSITION)
-   -------------------------------------------------------------------------- */
 .boarding-hero-section {
   position: relative;
   min-height: 580px;
@@ -63,7 +58,6 @@
   direction: rtl;
 }
 
-/* Left Text Column */
 .boarding-hero-text-col {
   text-align: left;
 }
@@ -124,7 +118,6 @@
   color: var(--text-secondary);
 }
 
-/* Action CTA Buttons */
 .boarding-hero-cta-btns {
   display: flex;
   align-items: center;
@@ -179,7 +172,6 @@
   border-color: #2B2118 !important;
 }
 
-/* Quick Specs Glass Bar */
 .hero-specs-strip {
   display: inline-flex;
   align-items: center;
@@ -237,10 +229,6 @@
   background-color: var(--border-color);
 }
 
-
-/* ==========================================================================
-   RIGHT COLUMN: DUAL-IMAGE ALIGNED COMPOSITION
-   ========================================================================== */
 .boarding-hero-media-col {
   display: flex;
   justify-content: center;
@@ -257,7 +245,6 @@
   margin: 0 auto;
 }
 
-/* Ambient Radial Halo behind cards */
 .hero-media-ambient-glow {
   position: absolute;
   top: 10%;
@@ -270,7 +257,6 @@
   pointer-events: none;
 }
 
-/* Luxury Geometric Corner Bracket */
 .hero-geometric-accent {
   position: absolute;
   top: -12px;
@@ -292,7 +278,6 @@
   border-radius: 28px 0 0 0;
 }
 
-/* Hero Image Cards */
 .boarding-image-card {
   position: absolute;
   transition: transform 0.45s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.45s ease;
@@ -333,7 +318,6 @@
   pointer-events: none;
 }
 
-/* Primary Grand Card: Sanctuary Grounds & Barns */
 .boarding-image-card.primary-card {
   top: 0;
   left: 0;
@@ -353,7 +337,6 @@
   z-index: 2;
 }
 
-/* Secondary Overlapping Card: Stables & Grooming */
 .boarding-image-card.secondary-card {
   bottom: 0;
   right: 0;
@@ -378,7 +361,6 @@
   box-shadow: 0 22px 50px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.15);
 }
 
-/* Floating Glass Badges */
 .floating-badge {
   position: absolute;
   display: inline-flex;
@@ -468,10 +450,6 @@
   margin-top: 1px;
 }
 
-
-/* --------------------------------------------------------------------------
-   2. EXCELLENCE IN HORSE CARE (PREMIUM SHOWCASE & INTERACTIVE CARDS)
-   -------------------------------------------------------------------------- */
 .boarding-exp-section {
   background-color: var(--bg-primary);
   padding: 6rem 0;
@@ -490,7 +468,6 @@
   direction: rtl;
 }
 
-/* Left Column: Media Composition */
 .care-showcase-media {
   position: relative;
   width: 100%;
@@ -615,7 +592,6 @@
   pointer-events: none;
 }
 
-/* Floating Badges in Care Section */
 .care-floating-badge {
   position: absolute;
   display: inline-flex;
@@ -703,7 +679,6 @@
   margin-top: 2px;
 }
 
-/* Right Column: Narrative & Cards */
 .care-showcase-text {
   text-align: left;
 }
@@ -718,7 +693,6 @@
   font-weight: 400;
 }
 
-/* 4 Interactive Luxury Feature Cards */
 .exp-features-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -801,7 +775,6 @@
   margin: 0;
 }
 
-/* Reassurance Trust Strip */
 .care-trust-strip {
   display: flex;
   align-items: center;
@@ -839,10 +812,6 @@
   opacity: 0.6;
 }
 
-
-/* --------------------------------------------------------------------------
-   3. BOARDING OPTIONS & PACKAGES
-   -------------------------------------------------------------------------- */
 .boarding-options-section {
   background-color: var(--bg-secondary);
   padding: 5rem 0 6rem 0;
@@ -964,10 +933,6 @@
   margin-top: 0.15rem;
 }
 
-
-/* --------------------------------------------------------------------------
-   4. FACILITIES & CARE STANDARDS
-   -------------------------------------------------------------------------- */
 .boarding-facilities-section {
   background-color: var(--bg-primary);
   padding: 5rem 0 6rem 0;
@@ -1021,10 +986,6 @@
   margin: 0;
 }
 
-
-/* --------------------------------------------------------------------------
-   5. PREMIUM CTA SECTION (No Border)
-   -------------------------------------------------------------------------- */
 .boarding-cta-section {
   background-color: var(--bg-primary);
   padding: 3rem 0 6rem 0;
@@ -1093,10 +1054,6 @@
   flex-wrap: wrap;
 }
 
-
-/* --------------------------------------------------------------------------
-   6. RESPONSIVE BREAKPOINTS & MOBILE ADJUSTMENTS
-   -------------------------------------------------------------------------- */
 @media (max-width: 992px) {
   .boarding-hero-grid {
     grid-template-columns: 1fr;
@@ -1140,7 +1097,7 @@
     height: 240px;
   }
 
-  /* Care Section Responsive */
+  
   .care-showcase-grid {
     grid-template-columns: 1fr;
     gap: 3.5rem;
@@ -1215,7 +1172,7 @@
     display: none;
   }
 
-  /* Dual Composition Mobile */
+  
   .boarding-dual-composition {
     max-width: min(100%, 300px);
     width: 100%;
@@ -1263,7 +1220,7 @@
     font-size: 0.62rem;
   }
 
-  /* Care Composition Mobile */
+  
   .care-media-composition {
     max-width: min(100%, 300px);
     width: 100%;

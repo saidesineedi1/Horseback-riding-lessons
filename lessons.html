@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr" data-theme="dark">
 
 <head>
@@ -8,31 +8,29 @@
   <meta name="description"
     content="Explore our premier riding lesson programs. Beginner riding foundations, show jumping, classical dressage, groundwork horsemanship, and guided trail rides.">
 
-  <!-- Google Fonts: Open Sans -->
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
     rel="stylesheet">
 
-  <!-- Font Awesome Icons -->
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Base Stylesheet -->
+  
   <link rel="stylesheet" href="index.css">
-  <!-- Lessons Page Custom Stylesheet -->
+  
   <link rel="stylesheet" href="lessons.css">
 </head>
 
 <body>
 
-  <!-- ==========================================================================
-     HEADER / NAVIGATION BAR (Consistently Matches Home 1)
-     ========================================================================== -->
+  
   <header class="header" id="header">
     <div class="container header-container">
 
-      <!-- Brand Logo -->
+      
       <a href="index.html" class="brand-logo">
         <div class="logo-icon">
           <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
@@ -43,7 +41,7 @@
         </div>
       </a>
 
-      <!-- Navigation Links (Middle) -->
+      
       <nav class="nav-menu" id="nav-menu">
         <ul class="nav-list">
           <li class="nav-item dropdown">
@@ -64,24 +62,24 @@
         </ul>
       </nav>
 
-      <!-- Right Controls & Actions -->
+      
       <div class="header-actions">
-        <!-- RTL Toggle -->
+        
         <button class="icon-btn" id="rtl-toggle" title="Toggle Text Direction (LTR / RTL)" aria-label="Toggle RTL">
           <span class="btn-label">RTL</span>
         </button>
 
-        <!-- Theme Toggle -->
+        
         <button class="icon-btn" id="theme-toggle" title="Toggle Theme (Dark / Light)" aria-label="Toggle Theme">
           <i class="fa-solid fa-moon" id="theme-icon"></i>
         </button>
 
-        <!-- Login Button -->
+        
         <button class="btn btn-primary" id="open-login-btn" onclick="openLoginModal()">
           <i class="fa-solid fa-user"></i> Login
         </button>
 
-        <!-- Mobile Menu Hamburger -->
+        
         <button class="hamburger-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
           <i class="fa-solid fa-bars"></i>
         </button>
@@ -90,22 +88,20 @@
     </div>
   </header>
 
-  <!-- ==========================================================================
-     MAIN CONTENT WRAPPER
-     ========================================================================== -->
+  
   <main>
 
-    <!-- SECTION 01 — HERO BANNER (PREMIUM STYLISH 3-IMAGE COMPOSITION) -->
+    
     <section class="lessons-hero-section">
       <div class="lessons-hero-bg" style="background-image: url('images/lesson_beginner_foundations.jpg');"></div>
       <div class="lessons-hero-overlay"></div>
 
       <div class="container lessons-hero-container">
         
-        <!-- Two Column Aligned Hero Grid -->
+        
         <div class="lessons-hero-grid">
 
-          <!-- LEFT COLUMN: Narrative & Metrics -->
+          
           <div class="lessons-hero-text-col">
             <div class="gold-divider-wrap">
               <span class="gold-line"></span>
@@ -122,7 +118,7 @@
               From foundational posture and gentle pony care to championship hunter jumping and precision dressage — experience 6 progressive instruction tiers guided by certified equestrian masters.
             </p>
 
-            <!-- Hero Action CTA Buttons -->
+            
             <div class="lessons-hero-cta-btns">
               <a href="#lessons-grid" class="btn btn-primary" id="lessons-hero-explore-btn">
                 <i class="fa-solid fa-graduation-cap"></i> Explore All Programs
@@ -132,7 +128,7 @@
               </button>
             </div>
 
-            <!-- Quick Metrics Strip -->
+            
             <div class="lessons-hero-stats">
               <div class="lessons-stat">
                 <span class="stat-num">06</span>
@@ -156,20 +152,20 @@
             </div>
           </div>
 
-          <!-- RIGHT COLUMN: Premium Aligned 3-Image Composition -->
+          
           <div class="lessons-hero-media-col">
             <div class="hero-trio-composition">
               
-              <!-- Ambient Halo Glow behind frames -->
+              
               <div class="hero-trio-ambient-glow"></div>
 
-              <!-- Image 1: Main Centerpiece (Dressage & Precision) -->
+              
               <div class="trio-card card-center">
                 <div class="image-frame-wrapper">
                   <img src="images/lesson_dressage_precision.jpg" alt="Dressage Precision Riding Lesson" class="trio-img">
                   <div class="image-overlay-tint"></div>
                 </div>
-                <!-- Floating Glass Badge: Precision Discipline -->
+                
                 <div class="trio-badge badge-center">
                   <div class="badge-icon-wrap gold-glow">
                     <i class="fa-solid fa-trophy"></i>
@@ -181,13 +177,13 @@
                 </div>
               </div>
 
-              <!-- Image 2: Top Left Offset (Beginner Foundations & Guidance) -->
+              
               <div class="trio-card card-top-left">
                 <div class="image-frame-wrapper">
                   <img src="images/lesson_beginner_foundations.jpg" alt="Beginner Foundations Lesson" class="trio-img">
                   <div class="image-overlay-tint"></div>
                 </div>
-                <!-- Floating Glass Badge: Foundations -->
+                
                 <div class="trio-badge badge-top-left">
                   <div class="badge-icon-wrap">
                     <i class="fa-solid fa-seedling"></i>
@@ -199,13 +195,13 @@
                 </div>
               </div>
 
-              <!-- Image 3: Bottom Right Offset (Show Jumping & Action) -->
+              
               <div class="trio-card card-bottom-right">
                 <div class="image-frame-wrapper">
                   <img src="images/lesson_hunter_jumper.jpg" alt="Hunter Jumper Lesson" class="trio-img">
                   <div class="image-overlay-tint"></div>
                 </div>
-                <!-- Floating Glass Badge: Stars Rating -->
+                
                 <div class="trio-badge badge-bottom-right">
                   <div class="stars-row">
                     <i class="fa-solid fa-star"></i>
@@ -219,7 +215,7 @@
                 </div>
               </div>
 
-              <!-- Decorative Luxury Gold Geometric Corner Frame -->
+              
               <div class="hero-geometric-accent"></div>
 
             </div>
@@ -230,7 +226,7 @@
       </div>
     </section>
 
-    <!-- SECTION 02 — 6 LESSON CARDS GRID -->
+    
     <section class="section lessons-grid-section" id="lessons-grid">
       <div class="container">
 
@@ -246,7 +242,7 @@
 
         <div class="lessons-cards-grid">
 
-          <!-- Card 1: Beginner Riding Foundations -->
+          
           <div class="lesson-card">
             <div class="lesson-card-img-wrap">
               <img src="images/lesson_beginner_foundations.jpg" alt="Beginner Riding Foundations">
@@ -273,7 +269,7 @@
             </div>
           </div>
 
-          <!-- Card 2: Hunter & Show Jumping Mastery -->
+          
           <div class="lesson-card">
             <div class="lesson-card-img-wrap">
               <img src="images/lesson_hunter_jumper.jpg" alt="Hunter & Show Jumping Mastery">
@@ -300,7 +296,7 @@
             </div>
           </div>
 
-          <!-- Card 3: Classical Dressage & Precision -->
+          
           <div class="lesson-card">
             <div class="lesson-card-img-wrap">
               <img src="images/lesson_dressage_precision.jpg" alt="Classical Dressage & Precision">
@@ -327,7 +323,7 @@
             </div>
           </div>
 
-          <!-- Card 4: Groundwork & Equine Horsemanship -->
+          
           <div class="lesson-card">
             <div class="lesson-card-img-wrap">
               <img src="images/lesson_horsemanship.jpg" alt="Groundwork & Equine Horsemanship">
@@ -354,7 +350,7 @@
             </div>
           </div>
 
-          <!-- Card 5: Guided Wilderness & Sunset Trails -->
+          
           <div class="lesson-card">
             <div class="lesson-card-img-wrap">
               <img src="images/lesson_sunset_trail.jpg" alt="Guided Wilderness & Sunset Trails">
@@ -381,7 +377,7 @@
             </div>
           </div>
 
-          <!-- Card 6: Youth & Junior Equestrian Academy -->
+          
           <div class="lesson-card">
             <div class="lesson-card-img-wrap">
               <img src="images/lesson_youth_academy.jpg" alt="Youth & Junior Equestrian Academy">
@@ -413,7 +409,7 @@
       </div>
     </section>
 
-    <!-- SECTION 03 — STUDENT TESTIMONIALS -->
+    
     <section class="section testimonials-section" id="testimonials">
       <div class="container">
 
@@ -429,7 +425,7 @@
 
         <div class="testimonials-grid">
 
-          <!-- Testimonial 1 -->
+          
           <div class="testi-card">
             <div class="testi-stars">
               <i class="fa-solid fa-star"></i>
@@ -452,7 +448,7 @@
             </div>
           </div>
 
-          <!-- Testimonial 2 -->
+          
           <div class="testi-card">
             <div class="testi-stars">
               <i class="fa-solid fa-star"></i>
@@ -475,7 +471,7 @@
             </div>
           </div>
 
-          <!-- Testimonial 3 -->
+          
           <div class="testi-card">
             <div class="testi-stars">
               <i class="fa-solid fa-star"></i>
@@ -503,7 +499,7 @@
       </div>
     </section>
 
-    <!-- SECTION 04 — FAQS -->
+    
     <section class="section faq-section" id="faqs">
       <div class="container">
 
@@ -519,7 +515,7 @@
 
         <div class="faq-accordion-wrap">
 
-          <!-- FAQ Item 1 -->
+          
           <div class="faq-card active">
             <div class="faq-header" onclick="toggleFaq(this)">
               <h3 class="faq-question">
@@ -535,7 +531,7 @@
             </div>
           </div>
 
-          <!-- FAQ Item 2 -->
+          
           <div class="faq-card">
             <div class="faq-header" onclick="toggleFaq(this)">
               <h3 class="faq-question">
@@ -551,7 +547,7 @@
             </div>
           </div>
 
-          <!-- FAQ Item 3 -->
+          
           <div class="faq-card">
             <div class="faq-header" onclick="toggleFaq(this)">
               <h3 class="faq-question">
@@ -567,7 +563,7 @@
             </div>
           </div>
 
-          <!-- FAQ Item 4 -->
+          
           <div class="faq-card">
             <div class="faq-header" onclick="toggleFaq(this)">
               <h3 class="faq-question">
@@ -588,7 +584,7 @@
       </div>
     </section>
 
-    <!-- SECTION 05 — CTA CARD -->
+    
     <section class="section lessons-cta-section" id="cta">
       <div class="container">
         <div class="lessons-cta-card">
@@ -614,13 +610,11 @@
 
   </main>
 
-  <!-- ==========================================================================
-     FOOTER SECTION (Identical to Home 1)
-     ========================================================================== -->
+  
   <footer class="footer">
     <div class="container footer-container">
 
-      <!-- Left Column: Logo & Brand Info & Social Links -->
+      
       <div class="footer-col footer-brand-col">
         <a href="index.html" class="brand-logo footer-logo">
           <div class="logo-icon">
@@ -643,29 +637,29 @@
         </div>
       </div>
 
-      <!-- Middle Column 1: Quick Links -->
+      
       <div class="footer-col">
         <h4 class="footer-title">Quick Links</h4>
         <ul class="footer-links">
           <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
           <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
           <li><a href="lessons.html"><i class="fa-solid fa-chevron-right"></i> Lessons</a></li>
-          <li><a href="index.html#gallery"><i class="fa-solid fa-chevron-right"></i> Trail Rides</a></li>
+          <li><a href="trail-rides.html"><i class="fa-solid fa-chevron-right"></i> Trail Rides</a></li>
         </ul>
       </div>
 
-      <!-- Middle Column 2: Additional Links -->
+      
       <div class="footer-col">
         <h4 class="footer-title">Additional Links</h4>
         <ul class="footer-links">
           <li><a href="index.html#pricing"><i class="fa-solid fa-chevron-right"></i> Pricing</a></li>
-          <li><a href="index.html#boarding"><i class="fa-solid fa-chevron-right"></i> Boarding</a></li>
-          <li><a href="home2.html"><i class="fa-solid fa-chevron-right"></i> Home 2 (Luxury)</a></li>
-          <li><a href="#faqs"><i class="fa-solid fa-chevron-right"></i> FAQs</a></li>
+          <li><a href="404.html"><i class="fa-solid fa-chevron-right"></i> 404</a></li>
+          <li><a href="coming-soon.html"><i class="fa-solid fa-chevron-right"></i> cooming soon</a></li>
+          <li><a href="lessons.html#faqs"><i class="fa-solid fa-chevron-right"></i> FAQs</a></li>
         </ul>
       </div>
 
-      <!-- Right Column: Address & Contact Details -->
+      
       <div class="footer-col">
         <h4 class="footer-title">Contact & Stables</h4>
         <div class="footer-contact-details">
@@ -678,7 +672,7 @@
 
     </div>
 
-    <!-- Bottom Terms & Conditions Line -->
+    
     <div class="footer-bottom">
       <div class="container footer-bottom-content">
         <p>&copy; 2026 Silver Hoof Stables. All Rights Reserved.</p>
@@ -699,10 +693,8 @@
     </div>
   </footer>
 
-  <!-- ==========================================================================
-     MODALS & INTERACTIVE OVERLAYS
-     ========================================================================== -->
-  <!-- BOOK A LESSON MODAL -->
+  
+  
   <div class="modal-backdrop" id="booking-modal">
     <div class="modal-card">
       <button class="modal-close" id="booking-close" onclick="closeBookingModal()">&times;</button>
@@ -764,7 +756,7 @@
     </div>
   </div>
 
-  <!-- LOGIN MODAL -->
+  
   <div class="modal-backdrop" id="login-modal">
     <div class="modal-card">
       <button class="modal-close" id="login-close" onclick="closeLoginModal()">&times;</button>
@@ -789,7 +781,7 @@
     </div>
   </div>
 
-  <!-- JavaScript Files -->
+  
   <script src="index.js"></script>
   <script src="lessons.js"></script>
 </body>

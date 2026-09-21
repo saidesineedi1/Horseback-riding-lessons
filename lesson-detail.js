@@ -1,8 +1,5 @@
-/* ==========================================================================
-   SILVER HOOF STABLES - LESSON DETAIL PAGE DYNAMIC SCRIPT
-   ========================================================================== */
+﻿
 
-// 6 LESSONS BESPOKE DATA DICTIONARY WITH RICH EXTENDED CONTENT
 const LESSONS_DATA = {
   'beginner-foundations': {
     id: 'beginner-foundations',
@@ -425,12 +422,11 @@ const LESSONS_DATA = {
   }
 };
 
-// INITIALIZATION ON DOM READY
 document.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
   let lessonId = urlParams.get('id');
 
-  // Fallback if missing or invalid
+  
   if (!lessonId || !LESSONS_DATA[lessonId]) {
     lessonId = 'beginner-foundations';
   }
@@ -440,14 +436,11 @@ document.addEventListener('DOMContentLoaded', () => {
   highlightActiveTab(lessonId);
 });
 
-/**
- * Populate detail page elements dynamically
- */
 function renderLessonDetails(lesson) {
-  // Page Title & Meta
+  
   document.title = `${lesson.title} | Silver Hoof Stables`;
 
-  // Hero Section Elements
+  
   const heroBg = document.getElementById('detail-hero-bg');
   if (heroBg) heroBg.style.backgroundImage = `url('${lesson.heroImage}')`;
 
@@ -463,18 +456,18 @@ function renderLessonDetails(lesson) {
   const subtitle = document.getElementById('detail-subtitle');
   if (subtitle) subtitle.textContent = lesson.subtitle;
 
-  // Showcase Image
+  
   const mainImg = document.getElementById('detail-main-img');
   if (mainImg) mainImg.src = lesson.heroImage;
 
   const imgCaption = document.getElementById('detail-img-caption');
   if (imgCaption) imgCaption.textContent = `${lesson.title} Session at Silver Hoof Stables`;
 
-  // Overview Text
+  
   const overviewText = document.getElementById('detail-overview-text');
   if (overviewText) overviewText.innerHTML = lesson.overview;
 
-  // Curriculum Grid
+  
   const currGrid = document.getElementById('detail-curriculum-grid');
   if (currGrid && lesson.curriculum) {
     currGrid.innerHTML = lesson.curriculum.map(item => `
@@ -486,7 +479,7 @@ function renderLessonDetails(lesson) {
     `).join('');
   }
 
-  // Session Timeline Breakdown
+  
   const timelineEl = document.getElementById('detail-session-timeline');
   if (timelineEl && lesson.timeline) {
     timelineEl.innerHTML = lesson.timeline.map(item => `
@@ -500,7 +493,7 @@ function renderLessonDetails(lesson) {
     `).join('');
   }
 
-  // Equine Partners Grid
+  
   const equineGrid = document.getElementById('detail-equine-grid');
   if (equineGrid && lesson.equine) {
     equineGrid.innerHTML = lesson.equine.map(eq => `
@@ -518,7 +511,7 @@ function renderLessonDetails(lesson) {
     `).join('');
   }
 
-  // What's Included List
+  
   const incList = document.getElementById('detail-included-list');
   if (incList && lesson.included) {
     incList.innerHTML = lesson.included.map(item => `
@@ -526,7 +519,7 @@ function renderLessonDetails(lesson) {
     `).join('');
   }
 
-  // Gear Needed List
+  
   const gearList = document.getElementById('detail-gear-list');
   if (gearList && lesson.gear) {
     gearList.innerHTML = lesson.gear.map(item => `
@@ -534,7 +527,7 @@ function renderLessonDetails(lesson) {
     `).join('');
   }
 
-  // Milestones Progress Roadmap
+  
   const milestonesList = document.getElementById('detail-milestones-list');
   if (milestonesList && lesson.milestones) {
     milestonesList.innerHTML = lesson.milestones.map(m => `
@@ -548,7 +541,7 @@ function renderLessonDetails(lesson) {
     `).join('');
   }
 
-  // FAQs List
+  
   const faqList = document.getElementById('detail-faq-list');
   if (faqList && lesson.faqs) {
     faqList.innerHTML = lesson.faqs.map(faq => `
@@ -563,13 +556,13 @@ function renderLessonDetails(lesson) {
       </div>
     `).join('');
 
-    // Setup interactive accordion click events
+    
     const faqQuestions = faqList.querySelectorAll('.detail-faq-q');
     faqQuestions.forEach(btn => {
       btn.addEventListener('click', () => {
         const item = btn.closest('.detail-faq-item');
         const isActive = item.classList.contains('active');
-        // Close others
+        
         faqList.querySelectorAll('.detail-faq-item').forEach(i => i.classList.remove('active'));
         if (!isActive) {
           item.classList.add('active');
@@ -578,7 +571,7 @@ function renderLessonDetails(lesson) {
     });
   }
 
-  // Instructor Info
+  
   const instName = document.getElementById('detail-inst-name');
   if (instName) instName.textContent = lesson.instName;
 
@@ -588,7 +581,7 @@ function renderLessonDetails(lesson) {
   const instImg = document.getElementById('detail-inst-img');
   if (instImg) instImg.src = lesson.instImg;
 
-  // Sticky Widget Specs
+  
   const priceVal = document.getElementById('widget-price-val');
   if (priceVal) priceVal.textContent = lesson.price;
 
@@ -601,7 +594,7 @@ function renderLessonDetails(lesson) {
   const level = document.getElementById('widget-level');
   if (level) level.textContent = lesson.level;
 
-  // Booking button onclick
+  
   const bookBtn = document.getElementById('widget-book-btn');
   if (bookBtn) {
     bookBtn.onclick = () => {
@@ -614,9 +607,6 @@ function renderLessonDetails(lesson) {
   }
 }
 
-/**
- * Highlight active program switcher tab
- */
 function highlightActiveTab(activeId) {
   const tabs = document.querySelectorAll('.switcher-tab');
   tabs.forEach(tab => {

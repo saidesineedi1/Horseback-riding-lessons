@@ -1,9 +1,7 @@
-/* ==========================================================================
-   SILVER HOOF STABLES - LOGIN PAGE SCRIPT
-   ========================================================================== */
+﻿
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Ensure Theme and RTL state from index.js are applied correctly
+  
   syncAuthThemeAndRtl();
 });
 
@@ -25,9 +23,6 @@ function syncAuthThemeAndRtl() {
   }
 }
 
-/**
- * Handles Password Eye Icon Toggle
- */
 function togglePasswordVisibility(fieldId, iconEl) {
   const inputEl = document.getElementById(fieldId);
   if (!inputEl) return;
@@ -43,9 +38,6 @@ function togglePasswordVisibility(fieldId, iconEl) {
   }
 }
 
-/**
- * Social Auth Handler (Google & Apple)
- */
 function handleSocialAuth(provider) {
   showAuthToast(`Connecting with ${provider}... Please wait.`);
 
@@ -60,9 +52,6 @@ function handleSocialAuth(provider) {
   }, 900);
 }
 
-/**
- * Login Form Submission Handler
- */
 function handleLoginPageSubmit(event) {
   event.preventDefault();
 
@@ -80,14 +69,14 @@ function handleLoginPageSubmit(event) {
     return;
   }
 
-  // Button loading state
+  
   if (submitBtn) {
     submitBtn.disabled = true;
     submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Authenticating...`;
   }
 
   setTimeout(() => {
-    // Format display name from email
+    
     const username = email.split('@')[0].replace(/[\._]/g, ' ');
     const formattedName = username.charAt(0).toUpperCase() + username.slice(1);
 
@@ -103,9 +92,6 @@ function handleLoginPageSubmit(event) {
   }, 900);
 }
 
-/**
- * Custom Toast Notification for Auth Pages
- */
 function showAuthToast(message, type = 'info') {
   let toastContainer = document.getElementById('auth-toast');
   if (!toastContainer) {

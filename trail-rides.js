@@ -1,15 +1,10 @@
-/* ==========================================================================
-   SILVER HOOF STABLES - TRAIL RIDES PAGE SCRIPT
-   ========================================================================== */
+﻿
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('Silver Hoof Stables - Trail Rides Page Loaded');
   initFaqAccordion();
 });
 
-/**
- * Initialize Trail FAQ Accordion
- */
 function initFaqAccordion() {
   const faqHeaders = document.querySelectorAll('.faq-header');
   faqHeaders.forEach((header) => {
@@ -22,10 +17,6 @@ function initFaqAccordion() {
   });
 }
 
-/**
- * Toggle FAQ Card
- * @param {HTMLElement} headerEl - Clicked header element
- */
 function toggleFaq(headerEl) {
   const currentCard = headerEl.closest('.faq-card');
   if (!currentCard) return;

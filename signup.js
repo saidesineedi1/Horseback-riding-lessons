@@ -1,10 +1,5 @@
-/* ==========================================================================
-   SILVER HOOF STABLES - SIGNUP PAGE SCRIPT
-   ========================================================================== */
+﻿
 
-/**
- * Handles Signup Page Form Submission
- */
 function handleSignupPageSubmit(event) {
   event.preventDefault();
 
@@ -22,7 +17,7 @@ function handleSignupPageSubmit(event) {
   const confirmPass = confirmInput ? confirmInput.value.trim() : '';
   const level = levelSelect ? levelSelect.value : '';
 
-  // Validation Checks
+  
   if (!name || !email || !pass || !confirmPass) {
     showAuthToast('Please fill out all required fields.', 'error');
     return;
@@ -44,14 +39,14 @@ function handleSignupPageSubmit(event) {
     return;
   }
 
-  // Button loading state
+  
   if (submitBtn) {
     submitBtn.disabled = true;
     submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Creating Account...`;
   }
 
   setTimeout(() => {
-    // Save user session state to local storage
+    
     localStorage.setItem('sh_is_logged_in', 'true');
     localStorage.setItem('sh_user_name', name);
     localStorage.setItem('sh_user_email', email);

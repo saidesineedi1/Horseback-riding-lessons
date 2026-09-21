@@ -1,14 +1,9 @@
-/* ==========================================================================
-   SILVER HOOF STABLES - CONTACT PAGE DYNAMIC SCRIPT
-   ========================================================================== */
+﻿
 
 document.addEventListener('DOMContentLoaded', () => {
   initContactFaqs();
 });
 
-/**
- * Handle Contact Form submission
- */
 function handleContactPageSubmit(event) {
   event.preventDefault();
 
@@ -16,17 +11,14 @@ function handleContactPageSubmit(event) {
   const email = document.getElementById('c-email')?.value || '';
   const category = document.getElementById('c-inquiry')?.value || 'General Inquiry';
 
-  // Custom Toast Notification
+  
   showContactToast(`Thank you, ${name}! Your inquiry regarding "${category}" has been sent. Our team will contact you at ${email} shortly.`);
 
-  // Reset form
+  
   const form = document.getElementById('contact-page-form');
   if (form) form.reset();
 }
 
-/**
- * Initialize Interactive FAQs Accordion on Contact Page
- */
 function initContactFaqs() {
   const faqItems = document.querySelectorAll('.faq-accordion-item');
   if (!faqItems.length) return;
@@ -38,10 +30,10 @@ function initContactFaqs() {
     questionBtn.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
 
-      // Close all other accordion items
+      
       faqItems.forEach(otherItem => otherItem.classList.remove('active'));
 
-      // Toggle clicked item
+      
       if (!isActive) {
         item.classList.add('active');
       }
@@ -49,9 +41,6 @@ function initContactFaqs() {
   });
 }
 
-/**
- * Toast Notification Popup
- */
 function showContactToast(message) {
   let toast = document.getElementById('contact-toast');
   if (!toast) {

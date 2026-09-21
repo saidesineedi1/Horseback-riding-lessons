@@ -1,10 +1,5 @@
-/* ==========================================================================
-   SILVER HOOF STABLES - LESSONS OVERVIEW PAGE STYLESHEET
-   ========================================================================== */
+﻿
 
-/* --------------------------------------------------------------------------
-   1. HERO BANNER SECTION
-   -------------------------------------------------------------------------- */
 .lessons-hero-section {
   position: relative;
   min-height: auto;
@@ -64,7 +59,6 @@
   width: 100%;
 }
 
-/* Two Column Aligned Hero Grid */
 .lessons-hero-grid {
   display: grid;
   grid-template-columns: 1.08fr 1fr;
@@ -76,7 +70,6 @@
   grid-template-columns: 1fr 1.08fr;
 }
 
-/* LEFT COLUMN: Narrative & Metrics */
 .lessons-hero-text-col {
   display: flex;
   flex-direction: column;
@@ -125,7 +118,6 @@
   color: var(--text-secondary);
 }
 
-/* Hero CTA Buttons */
 .lessons-hero-cta-btns {
   display: flex;
   align-items: center;
@@ -177,7 +169,6 @@
   border-color: #2B2118 !important;
 }
 
-/* Quick Metrics Strip */
 .lessons-hero-stats {
   display: inline-flex;
   align-items: center;
@@ -231,9 +222,6 @@
   background-color: var(--border-color);
 }
 
-/* ==========================================================================
-   RIGHT COLUMN: STYLISH ALIGNED 3-IMAGE TRIO COMPOSITION
-   ========================================================================== */
 .lessons-hero-media-col {
   display: flex;
   justify-content: center;
@@ -250,7 +238,6 @@
   margin: 0 auto;
 }
 
-/* Ambient Radial Halo */
 .hero-trio-ambient-glow {
   position: absolute;
   top: 10%;
@@ -263,7 +250,6 @@
   pointer-events: none;
 }
 
-/* Luxury Geometric Corner Bracket */
 .hero-geometric-accent {
   position: absolute;
   top: -12px;
@@ -285,7 +271,6 @@
   border-radius: 28px 0 0 0;
 }
 
-/* Trio Image Cards */
 .trio-card {
   position: absolute;
   transition: transform 0.45s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.45s ease;
@@ -319,7 +304,6 @@
   pointer-events: none;
 }
 
-/* Card 1: Centerpiece (Dressage Precision) */
 .trio-card.card-center {
   top: 30px;
   left: 50%;
@@ -340,7 +324,6 @@
   z-index: 5;
 }
 
-/* Card 2: Top Left Offset (Foundations) */
 .trio-card.card-top-left {
   top: 0;
   left: 0;
@@ -365,7 +348,6 @@
   z-index: 6;
 }
 
-/* Card 3: Bottom Right Offset (Hunter Jumper) */
 .trio-card.card-bottom-right {
   bottom: 0;
   right: 0;
@@ -390,7 +372,6 @@
   z-index: 7;
 }
 
-/* Floating Badges */
 .trio-badge {
   position: absolute;
   display: inline-flex;
@@ -503,7 +484,6 @@
   letter-spacing: 0.4px;
 }
 
-/* Responsive Styles for Lessons Hero */
 @media (max-width: 991px) {
   .lessons-hero-section {
     padding: 2.25rem 0 3rem 0;
@@ -631,10 +611,6 @@
   width: 100%;
 }
 
-
-/* --------------------------------------------------------------------------
-   2. 6 LESSON CARDS GRID
-   -------------------------------------------------------------------------- */
 .lessons-grid-section {
   background-color: var(--bg-primary);
   padding: 5rem 0;
@@ -776,10 +752,6 @@
   gap: 0.6rem;
 }
 
-
-/* --------------------------------------------------------------------------
-   3. TESTIMONIALS SECTION
-   -------------------------------------------------------------------------- */
 .testimonials-section {
   background-color: var(--bg-card);
   padding: 5rem 0;
@@ -859,10 +831,6 @@
   font-weight: 600;
 }
 
-
-/* --------------------------------------------------------------------------
-   4. FAQS ACCORDION SECTION
-   -------------------------------------------------------------------------- */
 .faq-section {
   background-color: var(--bg-card);
   padding: 5rem 0;
@@ -958,9 +926,6 @@
   margin: 0;
 }
 
-/* --------------------------------------------------------------------------
-   5. LESSONS CTA SECTION
-   -------------------------------------------------------------------------- */
 .lessons-cta-section {
   background-color: var(--bg-primary);
   padding: 4rem 0 6rem 0;
@@ -1007,10 +972,6 @@
   flex-wrap: wrap;
 }
 
-
-/* --------------------------------------------------------------------------
-   6. RESPONSIVE BREAKPOINTS
-   -------------------------------------------------------------------------- */
 @media (max-width: 992px) {
   .lessons-hero-title {
     font-size: 2.6rem;

@@ -1,10 +1,5 @@
-/* ==========================================================================
-   SILVER HOOF STABLES - CONTACT PAGE STYLESHEET
-   ========================================================================== */
+﻿
 
-/* --------------------------------------------------------------------------
-   1. HERO BANNER
-   -------------------------------------------------------------------------- */
 .contact-hero-section {
   position: relative;
   min-height: auto;
@@ -64,7 +59,6 @@
   width: 100%;
 }
 
-/* Two Column Aligned Hero Grid */
 .contact-hero-grid {
   display: grid;
   grid-template-columns: 1.08fr 1fr;
@@ -76,7 +70,6 @@
   grid-template-columns: 1fr 1.08fr;
 }
 
-/* LEFT COLUMN: Narrative & Quick Contact Actions */
 .contact-hero-text-col {
   display: flex;
   flex-direction: column;
@@ -125,7 +118,6 @@
   color: var(--text-secondary);
 }
 
-/* Hero CTA Buttons */
 .contact-hero-cta-btns {
   display: flex;
   align-items: center;
@@ -177,7 +169,6 @@
   border-color: #2B2118 !important;
 }
 
-/* Quick Metrics / Contact Strip */
 .contact-hero-stats {
   display: inline-flex;
   align-items: center;
@@ -235,7 +226,6 @@
   background-color: var(--border-color);
 }
 
-/* RIGHT COLUMN: UNIQUE 4-IMAGE ALIGNED QUAD COMPOSITION */
 .contact-hero-media-col {
   display: flex;
   justify-content: center;
@@ -252,7 +242,6 @@
   margin: 0 auto;
 }
 
-/* Ambient Radial Halo Glow */
 .hero-quad-ambient-glow {
   position: absolute;
   top: 10%;
@@ -265,7 +254,6 @@
   pointer-events: none;
 }
 
-/* Luxury Geometric Corner Bracket */
 .hero-quad-geometric-accent {
   position: absolute;
   top: -10px;
@@ -287,7 +275,6 @@
   border-radius: 26px 0 0 0;
 }
 
-/* 4-Image Grid */
 .quad-cards-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -340,7 +327,6 @@
   border-color: var(--clr-antique-gold);
 }
 
-/* Subtle Staggered Styling */
 .quad-card.card-top-left {
   border-radius: 24px 14px 14px 14px;
 }
@@ -367,7 +353,6 @@
   border-radius: 14px 14px 24px 14px;
 }
 
-/* Floating Badges for Quad Cards */
 .quad-badge {
   position: absolute;
   display: inline-flex;
@@ -494,7 +479,6 @@
   letter-spacing: 0.3px;
 }
 
-/* Central Floating Gold Shield Badge */
 .quad-center-badge {
   position: absolute;
   top: 50%;
@@ -525,10 +509,6 @@
   box-shadow: 0 10px 25px rgba(43, 33, 24, 0.2), 0 0 15px rgba(198, 161, 91, 0.25);
 }
 
-
-/* --------------------------------------------------------------------------
-   2. MAIN CONTACT SPLIT SECTION (FORM & ADDRESS CARDS)
-   -------------------------------------------------------------------------- */
 .contact-main-section {
   background-color: var(--bg-primary);
   padding: 5rem 0 6rem 0;
@@ -541,7 +521,6 @@
   align-items: start;
 }
 
-/* Contact Form Card */
 .contact-form-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -586,7 +565,6 @@
   accent-color: var(--clr-antique-gold);
 }
 
-/* Address & Info Stack */
 .contact-info-stack {
   display: flex;
   flex-direction: column;
@@ -689,10 +667,6 @@
   border-color: var(--clr-antique-gold);
 }
 
-
-/* --------------------------------------------------------------------------
-   3. MAP SECTION
-   -------------------------------------------------------------------------- */
 .contact-map-section {
   background-color: var(--bg-secondary);
   padding: 5rem 0 6rem 0;
@@ -752,10 +726,6 @@
   color: var(--text-secondary);
 }
 
-
-/* --------------------------------------------------------------------------
-   4. CONTACT FAQS ACCORDION
-   -------------------------------------------------------------------------- */
 .contact-faq-section {
   background-color: var(--bg-primary);
   padding: 5rem 0 6rem 0;
@@ -818,10 +788,6 @@
   display: block;
 }
 
-
-/* --------------------------------------------------------------------------
-   5. PREMIUM CTA SECTION (No Border)
-   -------------------------------------------------------------------------- */
 .contact-cta-section {
   background-color: var(--bg-primary);
   padding: 3rem 0 6rem 0;
@@ -890,10 +856,6 @@
   flex-wrap: wrap;
 }
 
-
-/* --------------------------------------------------------------------------
-   6. RESPONSIVE BREAKPOINTS
-   -------------------------------------------------------------------------- */
 @media (max-width: 992px) {
   .contact-hero-section {
     padding: 2.25rem 0 3rem 0;

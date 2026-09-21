@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr" data-theme="dark">
 
 <head>
@@ -8,19 +8,19 @@
   <meta name="description"
     content="Silver Hoof Stables Premier Rider Portal & Analytics Dashboard. Monitor revenue growth, session volume, riding progress, trail bookings, and horse care.">
 
-  <!-- Google Fonts: Open Sans -->
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
     rel="stylesheet">
 
-  <!-- Font Awesome Icons -->
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Base Stylesheet -->
+  
   <link rel="stylesheet" href="index.css">
-  <!-- Dashboard Page Custom Stylesheet -->
+  
   <link rel="stylesheet" href="dash.css">
 </head>
 
@@ -28,12 +28,10 @@
 
   <div class="dash-portal-layout">
 
-    <!-- ==========================================================================
-       LEFT SIDEBAR NAVIGATION
-       ========================================================================== -->
+    
     <aside class="dash-sidebar" id="dash-sidebar">
 
-      <!-- Brand Logo Header (Matches Home 1 Exactly & Links Back) -->
+      
       <a href="index.html" class="dash-sidebar-brand" title="Return to Silver Hoof Stables Home">
         <div class="logo-icon">
           <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
@@ -44,7 +42,7 @@
         </div>
       </a>
 
-      <!-- Sidebar Main Navigation Menu -->
+      
       <nav class="dash-sidebar-nav">
         <span class="nav-section-label">PORTAL NAVIGATION</span>
 
@@ -89,7 +87,7 @@
         </ul>
       </nav>
 
-      <!-- Bottom Compact VIP Member Card & Site Return -->
+      
       <div class="sidebar-vip-card">
         <div class="vip-card-header">
           <div class="vip-badge-icon">
@@ -108,12 +106,10 @@
 
     </aside>
 
-    <!-- ==========================================================================
-       MAIN CONTENT AREA
-       ========================================================================== -->
+    
     <div class="dash-main-wrapper">
 
-      <!-- TOP PORTAL HEADER BAR -->
+      
       <header class="dash-top-bar">
         <div class="top-bar-left">
           <button class="mobile-sidebar-toggle" id="sidebar-toggle-btn" aria-label="Toggle Navigation Sidebar">
@@ -121,25 +117,25 @@
           </button>
           <div class="page-title-wrap">
             <span class="portal-tag"><i class="fa-solid fa-gem"></i> PREMIUM RIDER PORTAL</span>
-            <h1 class="portal-heading" id="dash-user-welcome">Welcome back, Sarah Vance</h1>
+            <h1 class="portal-heading" id="dash-user-welcome">Welcome back, Dashboard</h1>
           </div>
         </div>
 
         <div class="top-bar-right">
-          <!-- Search Box -->
+          
           <div class="top-search-wrap">
             <i class="fa-solid fa-magnifying-glass search-icon"></i>
             <input type="text" id="dash-search-input" placeholder="Search orders, batch, lessons..."
               oninput="handleDashSearch(this.value)">
           </div>
 
-          <!-- Controls: RTL & Theme Toggles -->
+          
           <div class="top-controls">
             <button class="icon-btn" id="rtl-toggle" title="Toggle RTL">RTL</button>
             <button class="icon-btn" id="theme-toggle" title="Toggle Theme"><i class="fa-solid fa-moon"
                 id="theme-icon"></i></button>
 
-            <!-- Notification Bell -->
+            
             <button class="icon-btn notif-btn" title="Notifications"
               onclick="showDashToast('You have 3 unread instructor notes and booking updates.')">
               <i class="fa-solid fa-bell"></i>
@@ -147,7 +143,7 @@
             </button>
           </div>
 
-          <!-- User Profile Avatar Pill -->
+          
           <div class="user-profile-pill" onclick="switchDashTab('settings')">
             <img src="images/hero2_rider_portrait.jpg" alt="Sarah Vance Avatar" class="profile-avatar">
             <div class="profile-meta">
@@ -159,18 +155,16 @@
         </div>
       </header>
 
-      <!-- PORTAL CONTENT WRAPPER -->
+      
       <main class="dash-content-area">
 
-        <!-- ===================================================================
-             PANEL 1: OVERVIEW & ANALYTICS (DEFAULT VIEW WITH CHARTS)
-             =================================================================== -->
+        
         <div class="dash-panel active" id="panel-overview">
 
-          <!-- TOP 4 KPI METRIC CARDS STRIP -->
+          
           <div class="kpi-grid-4">
 
-            <!-- KPI 1: MONTHLY REVENUE -->
+            
             <div class="kpi-card">
               <div class="kpi-header">
                 <span class="kpi-label">MONTHLY REVENUE</span>
@@ -187,7 +181,7 @@
               </div>
             </div>
 
-            <!-- KPI 2: TOTAL ORDERS / BOOKINGS -->
+            
             <div class="kpi-card">
               <div class="kpi-header">
                 <span class="kpi-label">TOTAL ORDERS</span>
@@ -204,7 +198,7 @@
               </div>
             </div>
 
-            <!-- KPI 3: ACTIVE MEMBERS -->
+            
             <div class="kpi-card">
               <div class="kpi-header">
                 <span class="kpi-label">ACTIVE MEMBERS</span>
@@ -221,7 +215,7 @@
               </div>
             </div>
 
-            <!-- KPI 4: STOCK / STABLE HEALTH -->
+            
             <div class="kpi-card">
               <div class="kpi-header">
                 <span class="kpi-label">STOCK HEALTH</span>
@@ -240,10 +234,10 @@
 
           </div>
 
-          <!-- ANALYTICS CHARTS SECTION 1 -->
+          
           <div class="charts-row-grid">
 
-            <!-- LEFT CHART: REVENUE & VISITOR GROWTH (LINE CHART) -->
+            
             <div class="chart-card chart-card-large">
               <div class="chart-header">
                 <div class="chart-title-group">
@@ -256,7 +250,7 @@
                 </div>
               </div>
 
-              <!-- Line Chart Legend -->
+              
               <div class="chart-legend-bar">
                 <div class="legend-item">
                   <span class="legend-color legend-revenue"></span>
@@ -268,23 +262,23 @@
                 </div>
               </div>
 
-              <!-- Line Chart Canvas / SVG Container -->
+              
               <div class="svg-chart-container">
                 <svg class="line-chart-svg" viewBox="0 0 700 280" preserveAspectRatio="none">
                   <defs>
-                    <!-- Purple Area Gradient -->
+                    
                     <linearGradient id="purpleGrad" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.38" />
                       <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.0" />
                     </linearGradient>
-                    <!-- Green Line Gradient -->
+                    
                     <linearGradient id="greenGrad" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="0%" stop-color="#10B981" stop-opacity="0.2" />
                       <stop offset="100%" stop-color="#10B981" stop-opacity="0.0" />
                     </linearGradient>
                   </defs>
 
-                  <!-- Y-Axis Horizontal Grid Lines -->
+                  
                   <line x1="50" y1="30" x2="680" y2="30" class="chart-grid-line" />
                   <line x1="50" y1="70" x2="680" y2="70" class="chart-grid-line" />
                   <line x1="50" y1="110" x2="680" y2="110" class="chart-grid-line" />
@@ -292,7 +286,7 @@
                   <line x1="50" y1="190" x2="680" y2="190" class="chart-grid-line" />
                   <line x1="50" y1="230" x2="680" y2="230" class="chart-grid-line" />
 
-                  <!-- Y-Axis Labels -->
+                  
                   <text x="40" y="34" class="chart-axis-text">$50000</text>
                   <text x="40" y="74" class="chart-axis-text">$45000</text>
                   <text x="40" y="114" class="chart-axis-text">$40000</text>
@@ -301,7 +295,7 @@
                   <text x="40" y="234" class="chart-axis-text">$25000</text>
                   <text x="40" y="260" class="chart-axis-text">$10000</text>
 
-                  <!-- X-Axis Month Labels -->
+                  
                   <text x="80" y="260" class="chart-axis-text">Mar</text>
                   <text x="200" y="260" class="chart-axis-text">Apr</text>
                   <text x="320" y="260" class="chart-axis-text">May</text>
@@ -309,17 +303,17 @@
                   <text x="560" y="260" class="chart-axis-text">Jul</text>
                   <text x="660" y="260" class="chart-axis-text">Aug</text>
 
-                  <!-- Revenue Gradient Filled Area -->
+                  
                   <polygon points="80,200 200,175 320,120 440,105 560,85 660,42 660,230 80,230"
                     fill="url(#purpleGrad)" />
 
-                  <!-- Green Dashed Line (Visitors) -->
+                  
                   <path d="M 80,220 Q 200,205 320,185 T 440,170 T 560,150 T 660,135" class="chart-line-green" />
 
-                  <!-- Purple Solid Line (Revenue) -->
+                  
                   <path d="M 80,200 Q 200,175 320,120 T 440,105 T 560,85 T 660,42" class="chart-line-purple" />
 
-                  <!-- Revenue Line Data Dots -->
+                  
                   <circle cx="80" cy="200" r="5" class="chart-dot dot-purple"
                     onclick="showDashToast('Mar Revenue: $28,400')" />
                   <circle cx="200" cy="175" r="5" class="chart-dot dot-purple"
@@ -333,7 +327,7 @@
                   <circle cx="660" cy="42" r="6" class="chart-dot dot-purple active-dot"
                     onclick="showDashToast('Aug Revenue: $48,250 Peak!')" />
 
-                  <!-- Visitor Line Data Dots -->
+                  
                   <circle cx="80" cy="220" r="4" class="chart-dot dot-green" />
                   <circle cx="200" cy="205" r="4" class="chart-dot dot-green" />
                   <circle cx="320" cy="185" r="4" class="chart-dot dot-green" />
@@ -344,7 +338,7 @@
               </div>
             </div>
 
-            <!-- RIGHT CHART: CATEGORY SALES / DISCIPLINE BOOKINGS (BAR GRAPH) -->
+            
             <div class="chart-card chart-card-small">
               <div class="chart-header">
                 <div class="chart-title-group">
@@ -353,7 +347,7 @@
                 </div>
               </div>
 
-              <!-- Bar Graph Canvas / Container -->
+              
               <div class="bar-graph-wrapper">
                 <div class="bar-graph-y-axis">
                   <span>600</span>
@@ -366,7 +360,7 @@
                 </div>
 
                 <div class="bar-graph-columns">
-                  <!-- Bar 1: Face Oils / Dressage -->
+                  
                   <div class="bar-col" onclick="showDashToast('Dressage / Face Oils: 540 Sales')">
                     <div class="bar-fill bar-purple" style="height: 90%;">
                       <span class="bar-tooltip">540</span>
@@ -374,7 +368,7 @@
                     <span class="bar-label">Face Oils</span>
                   </div>
 
-                  <!-- Bar 2: Soaps / Hunter Jumper -->
+                  
                   <div class="bar-col" onclick="showDashToast('Soaps / Jumping: 420 Sales')">
                     <div class="bar-fill bar-light-purple" style="height: 70%;">
                       <span class="bar-tooltip">420</span>
@@ -382,7 +376,7 @@
                     <span class="bar-label">Soaps</span>
                   </div>
 
-                  <!-- Bar 3: Toners / Trail Rides -->
+                  
                   <div class="bar-col" onclick="showDashToast('Toners / Trail Rides: 310 Sales')">
                     <div class="bar-fill bar-sage-green" style="height: 51%;">
                       <span class="bar-tooltip">310</span>
@@ -390,7 +384,7 @@
                     <span class="bar-label">Toners</span>
                   </div>
 
-                  <!-- Bar 4: Butters / Youth Academy -->
+                  
                   <div class="bar-col" onclick="showDashToast('Butters / Youth Acad.: 280 Sales')">
                     <div class="bar-fill bar-gold" style="height: 46%;">
                       <span class="bar-tooltip">280</span>
@@ -398,7 +392,7 @@
                     <span class="bar-label">Butters</span>
                   </div>
 
-                  <!-- Bar 5: Ritual Sets / Boarding -->
+                  
                   <div class="bar-col" onclick="showDashToast('Ritual Sets / Boarding: 190 Sales')">
                     <div class="bar-fill bar-terracotta" style="height: 31%;">
                       <span class="bar-tooltip">190</span>
@@ -411,10 +405,10 @@
 
           </div>
 
-          <!-- ANALYTICS CHARTS SECTION 2 (ADDITIONAL BARCHARTS & RADARS) -->
+          
           <div class="charts-row-grid grid-even">
 
-            <!-- CHART 3: WEEKLY ARENA & LESSON OCCUPANCY (HORIZONTAL BAR CHART) -->
+            
             <div class="chart-card">
               <div class="chart-header">
                 <div class="chart-title-group">
@@ -487,7 +481,7 @@
               </div>
             </div>
 
-            <!-- CHART 4: RIDER SKILL GAUGES & PERFORMANCE GAUGES -->
+            
             <div class="chart-card">
               <div class="chart-header">
                 <div class="chart-title-group">
@@ -531,7 +525,7 @@
 
           </div>
 
-          <!-- RECENT ORDERS & BOOKINGS DATA TABLE -->
+          
           <div class="table-card">
             <div class="table-card-header">
               <div class="table-title-group">
@@ -618,9 +612,7 @@
 
         </div>
 
-        <!-- ===================================================================
-             PANEL 2: BOOKINGS & SALES
-             =================================================================== -->
+        
         <div class="dash-panel" id="panel-book">
           <div class="panel-header-bar">
             <h2>Book a Riding Slot</h2>
@@ -673,9 +665,7 @@
           </div>
         </div>
 
-        <!-- ===================================================================
-             PANEL 3: RIDER PROGRESS & NOTES
-             =================================================================== -->
+        
         <div class="dash-panel" id="panel-progress">
           <div class="panel-header-bar flex-header">
             <div>
@@ -690,7 +680,7 @@
             </div>
           </div>
 
-          <!-- 4 Quick KPI Progress Cards -->
+          
           <div class="progress-kpi-grid">
             <div class="prog-kpi-card">
               <div class="prog-kpi-icon gold-glow"><i class="fa-solid fa-award"></i></div>
@@ -734,12 +724,12 @@
             </div>
           </div>
 
-          <!-- 2-Column Layout: Left Competency Matrix & Right Evaluation Feed -->
+          
           <div class="progress-details-grid">
 
-            <!-- Left: Competencies & Goals -->
+            
             <div class="prog-left-col">
-              <!-- Skill Competency Card -->
+              
               <div class="prog-card">
                 <div class="prog-card-header">
                   <div>
@@ -807,7 +797,7 @@
                 </div>
               </div>
 
-              <!-- Active Training Focus Card -->
+              
               <div class="prog-card goal-focus-card">
                 <div class="prog-card-header">
                   <h3>Active Q3 Focus Goals</h3>
@@ -830,7 +820,7 @@
               </div>
             </div>
 
-            <!-- Right: Instructor Evaluation Timeline Logs -->
+            
             <div class="prog-right-col">
               <div class="prog-card">
                 <div class="prog-card-header">
@@ -841,7 +831,7 @@
                 </div>
 
                 <div class="eval-cards-list">
-                  <!-- Eval 1 -->
+                  
                   <div class="eval-log-card">
                     <div class="eval-log-header">
                       <div class="eval-instructor-info">
@@ -872,7 +862,7 @@
                     </div>
                   </div>
 
-                  <!-- Eval 2 -->
+                  
                   <div class="eval-log-card">
                     <div class="eval-log-header">
                       <div class="eval-instructor-info">
@@ -903,7 +893,7 @@
                     </div>
                   </div>
 
-                  <!-- Eval 3 -->
+                  
                   <div class="eval-log-card">
                     <div class="eval-log-header">
                       <div class="eval-instructor-info">
@@ -934,7 +924,7 @@
                     </div>
                   </div>
 
-                  <!-- Eval 4 -->
+                  
                   <div class="eval-log-card">
                     <div class="eval-log-header">
                       <div class="eval-instructor-info">
@@ -971,9 +961,7 @@
           </div>
         </div>
 
-        <!-- ===================================================================
-             PANEL 4: TRAIL & BOARDING CARE
-             =================================================================== -->
+        
         <div class="dash-panel" id="panel-trail">
           <div class="panel-header-bar flex-header">
             <div>
@@ -986,7 +974,7 @@
             </div>
           </div>
 
-          <!-- Section A: Live Horse Boarding & Stable Telemetry Card -->
+          
           <div class="boarding-telemetry-card">
             <div class="boarding-header">
               <div class="boarding-horse-profile">
@@ -1014,7 +1002,7 @@
               </div>
             </div>
 
-            <!-- Telemetry Stats Grid -->
+            
             <div class="care-telemetry-grid">
               <div class="telemetry-box">
                 <div class="telem-icon gold-box"><i class="fa-solid fa-utensils"></i></div>
@@ -1058,7 +1046,7 @@
             </div>
           </div>
 
-          <!-- Section B: Scenic Trail Expeditions -->
+          
           <div class="trail-expeditions-section">
             <div class="section-title-wrap">
               <div>
@@ -1068,7 +1056,7 @@
             </div>
 
             <div class="trail-expeditions-grid">
-              <!-- Card 1 -->
+              
               <div class="trail-exp-card">
                 <div class="trail-exp-media">
                   <img src="images/lesson_sunset_trail.jpg" alt="Sunset Mountain Ridge Trail">
@@ -1093,7 +1081,7 @@
                 </div>
               </div>
 
-              <!-- Card 2 -->
+              
               <div class="trail-exp-card">
                 <div class="trail-exp-media">
                   <img src="images/gallery_trail_creek.jpg" alt="Whispering Pines Forest &amp; Creek Loop">
@@ -1118,7 +1106,7 @@
                 </div>
               </div>
 
-              <!-- Card 3 -->
+              
               <div class="trail-exp-card">
                 <div class="trail-exp-media">
                   <img src="images/hero2_gallop_meadow.jpg" alt="Alpine Valley Extended Expedition">
@@ -1146,9 +1134,7 @@
           </div>
         </div>
 
-        <!-- ===================================================================
-             PANEL 5: BILLING & INVOICES
-             =================================================================== -->
+        
         <div class="dash-panel" id="panel-payments">
           <div class="panel-header-bar">
             <h2>Payment Receipts &amp; Invoices</h2>
@@ -1188,9 +1174,7 @@
           </div>
         </div>
 
-        <!-- ===================================================================
-             PANEL 6: SETTINGS & PREFS
-             =================================================================== -->
+        
         <div class="dash-panel" id="panel-settings">
           <div class="panel-header-bar flex-header">
             <div>
@@ -1208,7 +1192,7 @@
             onsubmit="event.preventDefault(); showDashToast('Portal preferences updated successfully!');">
             <div class="settings-cards-grid">
 
-              <!-- Card 1: Rider Profile & Contact -->
+              
               <div class="settings-card">
                 <div class="settings-card-header">
                   <div class="settings-icon gold-icon"><i class="fa-solid fa-user-astronaut"></i></div>
@@ -1246,7 +1230,7 @@
                 </div>
               </div>
 
-              <!-- Card 2: Notification Toggles -->
+              
               <div class="settings-card">
                 <div class="settings-card-header">
                   <div class="settings-icon purple-icon"><i class="fa-solid fa-bell"></i></div>
@@ -1304,7 +1288,7 @@
                 </div>
               </div>
 
-              <!-- Card 3: Horse Boarding Directives -->
+              
               <div class="settings-card">
                 <div class="settings-card-header">
                   <div class="settings-icon emerald-icon"><i class="fa-solid fa-horse-head"></i></div>
@@ -1337,7 +1321,7 @@
                 </div>
               </div>
 
-              <!-- Card 4: Portal Security & Login -->
+              
               <div class="settings-card">
                 <div class="settings-card-header">
                   <div class="settings-icon teal-icon"><i class="fa-solid fa-lock"></i></div>
@@ -1374,7 +1358,7 @@
 
             </div>
 
-            <!-- Settings Action Bar -->
+            
             <div class="settings-action-bar">
               <span class="save-hint"><i class="fa-solid fa-circle-info text-gold"></i> Changes are synced to your
                 stable member account</span>
@@ -1392,7 +1376,7 @@
     </div>
   </div>
 
-  <!-- Dynamic Dashboard Script -->
+  
   <script src="dash.js"></script>
 </body>
 

@@ -1,12 +1,8 @@
-/* ==========================================================================
-   SILVER HOOF STABLES - HOME 2 (LUXURY RANCH) JAVASCRIPT LOGIC
-   ========================================================================== */
+﻿
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ==========================================================================
-     1. SCROLLSPY & NAVIGATION FOR HOME 2
-     ========================================================================== */
+  
   const home2Sections = document.querySelectorAll('section[id]');
   const home2NavLinks = document.querySelectorAll('.nav-menu a[href*="#"]');
 
@@ -31,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-/* Helper Scroll Function */
 function scrollToSection(sectionId) {
   const targetSection = document.getElementById(sectionId);
   if (targetSection) {

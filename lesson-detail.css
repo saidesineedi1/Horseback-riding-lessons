@@ -1,10 +1,5 @@
-/* ==========================================================================
-   SILVER HOOF STABLES - LESSON DETAIL PAGE STYLESHEET
-   ========================================================================== */
+﻿
 
-/* --------------------------------------------------------------------------
-   1. HERO BANNER
-   -------------------------------------------------------------------------- */
 .detail-hero-section {
   position: relative;
   min-height: 420px;
@@ -108,10 +103,6 @@
   line-height: 1.6;
 }
 
-
-/* --------------------------------------------------------------------------
-   2. PROGRAM SWITCHER BAR
-   -------------------------------------------------------------------------- */
 .program-switcher-bar {
   background-color: var(--bg-card);
   border-bottom: 1px solid var(--border-color);
@@ -166,10 +157,6 @@
   color: #2B2118;
 }
 
-
-/* --------------------------------------------------------------------------
-   3. LESSON DETAIL MAIN LAYOUT & CONTENT
-   -------------------------------------------------------------------------- */
 .detail-main-section {
   background-color: var(--bg-primary);
   padding: 4rem 0 6rem 0;
@@ -186,7 +173,6 @@
   height: 100%;
 }
 
-/* Left Column Content */
 .detail-content-col {
   display: flex;
   flex-direction: column;
@@ -257,7 +243,6 @@
   margin-bottom: 0;
 }
 
-/* Curriculum Grid */
 .curriculum-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -296,7 +281,6 @@
   margin: 0;
 }
 
-/* Session Timeline Breakdown */
 .session-timeline {
   display: flex;
   flex-direction: column;
@@ -347,7 +331,6 @@
   margin: 0;
 }
 
-/* Equine Partners Grid */
 .equine-partners-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -420,7 +403,6 @@
   margin: 0.3rem 0 0 0;
 }
 
-/* Split Subblocks (What's Included & Gear Needed) */
 .detail-split-blocks {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -468,7 +450,6 @@
   margin-top: 0.15rem;
 }
 
-/* Milestones List */
 .milestones-list {
   display: flex;
   flex-direction: column;
@@ -513,7 +494,6 @@
   margin: 0;
 }
 
-/* Arena Safety Grid */
 .safety-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -548,7 +528,6 @@
   margin: 0;
 }
 
-/* Program Specific FAQs */
 .detail-faq-list {
   display: flex;
   flex-direction: column;
@@ -598,7 +577,6 @@
   display: block;
 }
 
-/* Instructor Highlight Card */
 .instructor-highlight-card {
   background: var(--bg-card);
   border: 1.5px solid var(--clr-antique-gold);
@@ -646,10 +624,6 @@
   line-height: 1.5;
 }
 
-
-/* --------------------------------------------------------------------------
-   4. STICKY BOOKING SIDEBAR CARD
-   -------------------------------------------------------------------------- */
 .sticky-booking-card {
   position: sticky;
   top: 145px;
@@ -774,10 +748,6 @@
   gap: 0.4rem;
 }
 
-
-/* --------------------------------------------------------------------------
-   5. LESSONS DETAIL CTA SECTION
-   -------------------------------------------------------------------------- */
 .lessons-cta-section {
   background-color: var(--bg-primary);
   padding: 4rem 0 6rem 0;
@@ -846,10 +816,6 @@
   flex-wrap: wrap;
 }
 
-
-/* --------------------------------------------------------------------------
-   6. RESPONSIVE BREAKPOINTS
-   -------------------------------------------------------------------------- */
 @media (max-width: 992px) {
   .detail-hero-title {
     font-size: 2.4rem;

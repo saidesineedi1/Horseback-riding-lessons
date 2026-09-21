@@ -1,9 +1,7 @@
-/* ==========================================================================
-   SILVER HOOF STABLES - BOARDING PAGE DYNAMIC SCRIPT
-   ========================================================================== */
+﻿
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Check URL params for pre-selected package
+  
   const urlParams = new URLSearchParams(window.location.search);
   const pkgParam = urlParams.get('package');
   if (pkgParam) {
@@ -11,9 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-/**
- * Open Booking / Boarding Modal with pre-selected package
- */
 function openBoardingModal(packageName) {
   const modal = document.getElementById('booking-modal');
   const programSelect = document.getElementById('b-program');

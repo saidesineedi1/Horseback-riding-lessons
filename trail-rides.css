@@ -1,10 +1,5 @@
-/* ==========================================================================
-   SILVER HOOF STABLES - TRAIL RIDES PAGE STYLESHEET
-   ========================================================================== */
+﻿
 
-/* --------------------------------------------------------------------------
-   SECTION 1 — HERO BANNER SECTION
-   -------------------------------------------------------------------------- */
 .trail-hero-section {
   position: relative;
   min-height: auto;
@@ -64,7 +59,6 @@
   width: 100%;
 }
 
-/* Two Column Aligned Hero Grid */
 .trail-hero-grid {
   display: grid;
   grid-template-columns: 1.08fr 1fr;
@@ -76,7 +70,6 @@
   grid-template-columns: 1fr 1.08fr;
 }
 
-/* LEFT COLUMN: Narrative & Metrics */
 .trail-hero-text-col {
   display: flex;
   flex-direction: column;
@@ -125,7 +118,6 @@
   color: var(--text-secondary);
 }
 
-/* Hero CTA Buttons */
 .trail-hero-cta-btns {
   display: flex;
   align-items: center;
@@ -177,7 +169,6 @@
   border-color: #2B2118 !important;
 }
 
-/* Quick Metrics Bar */
 .trail-hero-stats {
   display: inline-flex;
   align-items: center;
@@ -231,7 +222,6 @@
   background-color: var(--border-color);
 }
 
-/* RIGHT COLUMN: STYLISH ALIGNED DUAL-IMAGE COMPOSITION */
 .trail-hero-media-col {
   display: flex;
   justify-content: center;
@@ -248,7 +238,6 @@
   margin: 0 auto;
 }
 
-/* Ambient Radial Halo Glow */
 .trail-hero-ambient-glow {
   position: absolute;
   top: 12%;
@@ -261,7 +250,6 @@
   pointer-events: none;
 }
 
-/* Luxury Geometric Corner Bracket */
 .trail-hero-geometric-accent {
   position: absolute;
   top: -10px;
@@ -283,7 +271,6 @@
   border-radius: 26px 0 0 0;
 }
 
-/* Image Cards */
 .trail-image-card {
   position: absolute;
   transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
@@ -317,7 +304,6 @@
   pointer-events: none;
 }
 
-/* Primary Grand Card (Pine Creek Sunset Trail) */
 .trail-image-card.primary-card {
   top: 0;
   left: 0;
@@ -342,7 +328,6 @@
   box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
 
-/* Secondary Overlapping Card (Rolling Hills Meadow Gallop) */
 .trail-image-card.secondary-card {
   bottom: 0;
   right: 0;
@@ -367,7 +352,6 @@
   box-shadow: 0 22px 50px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.15);
 }
 
-/* Floating Badges */
 .floating-badge {
   position: absolute;
   display: inline-flex;
@@ -485,10 +469,6 @@
   width: 100%;
 }
 
-
-/* --------------------------------------------------------------------------
-   SECTION 2 — TRAIL PACKAGES & ROUTES SHOWCASE
-   -------------------------------------------------------------------------- */
 .trail-packages-section {
   background-color: var(--bg-primary);
   padding: 5rem 0;
@@ -636,10 +616,6 @@
   color: var(--text-secondary);
 }
 
-
-/* --------------------------------------------------------------------------
-   SECTION 3 — THE SILVER HOOF DIFFERENCE (PREMIUM NEATLY ALIGNED SHOWCASE)
-   -------------------------------------------------------------------------- */
 .trail-experience-section {
   background-color: var(--bg-card);
   padding: 5rem 0;
@@ -659,7 +635,6 @@
   grid-template-columns: 1fr 1.15fr;
 }
 
-/* LEFT COLUMN: 4 Neatly Aligned Feature Cards */
 .diff-cards-col {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -755,7 +730,6 @@
   border-color: rgba(198, 161, 91, 0.4);
 }
 
-/* RIGHT COLUMN: MULTI-LAYERED VISUAL SHOWCASE */
 .diff-media-col {
   display: flex;
   justify-content: center;
@@ -772,7 +746,6 @@
   margin: 0 auto;
 }
 
-/* Ambient Glow */
 .diff-ambient-glow {
   position: absolute;
   top: 15%;
@@ -785,7 +758,6 @@
   pointer-events: none;
 }
 
-/* Geometric Corner Accent */
 .diff-geometric-accent {
   position: absolute;
   top: -12px;
@@ -807,7 +779,6 @@
   border-radius: 24px 0 0 0;
 }
 
-/* Diff Image Cards */
 .diff-image-card {
   position: absolute;
   transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
@@ -834,7 +805,6 @@
   transform: scale(1.06);
 }
 
-/* Primary Diff Card (Crystal Creek Crossings) */
 .diff-image-card.primary-diff-card {
   top: 0;
   left: 0;
@@ -859,7 +829,6 @@
   box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
 
-/* Secondary Inset Diff Card (Sunset Ranch Campfire Vista) */
 .diff-image-card.secondary-diff-card {
   bottom: 0;
   right: 0;
@@ -884,7 +853,6 @@
   box-shadow: 0 22px 48px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.15);
 }
 
-/* Diff Floating Glass Badges */
 .diff-glass-badge {
   position: absolute;
   display: inline-flex;
@@ -937,9 +905,6 @@
   right: -12px;
 }
 
-/* --------------------------------------------------------------------------
-   SECTION 4 — FAQS & HIGH-IMPACT CTA CARD
-   -------------------------------------------------------------------------- */
 .trail-faq-cta-section {
   background-color: var(--bg-primary);
   padding: 5rem 0 6rem 0;
@@ -990,10 +955,6 @@
   flex-wrap: wrap;
 }
 
-
-/* --------------------------------------------------------------------------
-   RESPONSIVE BREAKPOINTS
-   -------------------------------------------------------------------------- */
 @media (max-width: 992px) {
   .trail-hero-section {
     padding: 2.25rem 0 3rem 0;

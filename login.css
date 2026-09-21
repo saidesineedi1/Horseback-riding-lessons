@@ -1,10 +1,5 @@
-/* ==========================================================================
-   SILVER HOOF STABLES - AUTHENTICATION STYLESHEET (LOGIN & SIGNUP)
-   ========================================================================== */
+﻿
 
-/* --------------------------------------------------------------------------
-   1. OUTER PAGE BODY & CONTROLS
-   -------------------------------------------------------------------------- */
 .auth-page-body {
   margin: 0;
   padding: 0;
@@ -23,7 +18,7 @@
 @media (min-height: 580px) and (min-width: 901px) {
   .auth-page-body {
     height: 100vh;
-    overflow-y: hidden; /* Prevent vertical scroll on desktop / laptop viewports */
+    overflow-y: hidden; 
   }
 }
 
@@ -35,7 +30,6 @@
   background: linear-gradient(135deg, #1C150F 0%, #120D09 100%);
 }
 
-/* Floating Controls Bar Top Right */
 .auth-nav-controls {
   position: fixed;
   top: 14px;
@@ -74,9 +68,6 @@
   transform: translateY(-2px);
 }
 
-/* --------------------------------------------------------------------------
-   2. MAIN FLOATING CARD WRAPPER
-   -------------------------------------------------------------------------- */
 .auth-wrapper {
   width: 100%;
   max-width: 960px;
@@ -99,9 +90,6 @@
   grid-template-columns: 1.15fr 1fr;
 }
 
-/* --------------------------------------------------------------------------
-   3. LEFT HERO BACKDROP CARD
-   -------------------------------------------------------------------------- */
 .auth-hero-col {
   border-radius: 24px;
   background-size: cover;
@@ -160,9 +148,6 @@
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-/* --------------------------------------------------------------------------
-   4. RIGHT FORM CARD
-   -------------------------------------------------------------------------- */
 .auth-form-col {
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -181,7 +166,6 @@
   width: 100%;
 }
 
-/* Brand Header in Auth Forms (Matched to Home 1) */
 .auth-brand-link,
 .auth-brand-center {
   display: inline-flex;
@@ -277,7 +261,6 @@
   box-shadow: 0 3px 10px rgba(43, 33, 24, 0.08);
 }
 
-/* Page Titles */
 .auth-header-text .auth-heading {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 1.48rem;
@@ -292,7 +275,6 @@
   margin: 0;
 }
 
-/* Form Fields & Pills */
 #login-page-form,
 #signup-page-form {
   display: flex;
@@ -364,7 +346,6 @@
   padding: 0.48rem 2.35rem 0.48rem 0.85rem;
 }
 
-/* Suppress default browser password reveal eye icon (Edge / IE) to eliminate duplicate 2 eyes */
 input[type="password"]::-ms-reveal,
 input[type="password"]::-ms-clear {
   display: none !important;
@@ -401,14 +382,12 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
   color: var(--clr-antique-gold);
 }
 
-/* 2-Column Grid for Signup Form Fields */
 .form-grid-2-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
 
-/* Checkbox & Options Row */
 .form-options-row {
   display: flex;
   align-items: center;
@@ -449,7 +428,6 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
   color: var(--clr-gold-light);
 }
 
-/* Primary Submit Button */
 .auth-submit-btn {
   width: 100%;
   padding: 0.6rem 1.25rem;
@@ -485,7 +463,6 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
   transform: rotate(180deg);
 }
 
-/* Divider Line */
 .auth-divider-line {
   display: flex;
   align-items: center;
@@ -508,7 +485,6 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
   padding: 0 12px;
 }
 
-/* Social Auth Grid (Side-by-Side) */
 .social-auth-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -550,7 +526,6 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
   font-size: 1rem;
 }
 
-/* Footer Switch Text */
 .auth-footer-switch {
   margin-top: 0.15rem;
 }
@@ -574,14 +549,13 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
   color: var(--clr-gold-light);
 }
 
-/* Responsive Styles */
 @media (max-width: 900px) {
   .auth-card-container {
     grid-template-columns: 1fr;
   }
 
   .auth-hero-col {
-    display: none; /* Hide visual backdrop on small screens */
+    display: none; 
   }
 
   .auth-form-col {

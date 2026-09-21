@@ -1,6 +1,4 @@
-/* ==========================================================================
-   SILVER HOOF STABLES - RIDER DASHBOARD SCRIPT
-   ========================================================================== */
+﻿
 
 document.addEventListener('DOMContentLoaded', () => {
   initDashboardTabs();
@@ -8,11 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initSidebarToggle();
   syncUserProfileFromStorage();
   initPortalToggles();
+  initStickyHeader();
 });
 
-/**
- * Synchronize user profile info from localStorage (from Login/Signup)
- */
 function syncUserProfileFromStorage() {
   const savedName = localStorage.getItem('sh_user_name');
   const welcomeHeading = document.getElementById('dash-user-welcome');
@@ -28,9 +24,6 @@ function syncUserProfileFromStorage() {
   }
 }
 
-/**
- * Mobile Sidebar Drawer Toggle
- */
 function initSidebarToggle() {
   const toggleBtn = document.getElementById('sidebar-toggle-btn');
   const sidebar = document.getElementById('dash-sidebar');
@@ -49,15 +42,12 @@ function initSidebarToggle() {
   }
 }
 
-/**
- * Portal Theme & RTL Toggles
- */
 function initPortalToggles() {
   const themeToggle = document.getElementById('theme-toggle');
   const themeIcon = document.getElementById('theme-icon');
   const rtlToggle = document.getElementById('rtl-toggle');
 
-  // Unified theme setter helper
+  
   function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('silverhoof_theme', theme);
@@ -70,7 +60,7 @@ function initPortalToggles() {
     }
   }
 
-  // Unified RTL setter helper
+  
   function applyDir(dir) {
     document.documentElement.setAttribute('dir', dir);
     localStorage.setItem('silverhoof_dir', dir);
@@ -99,7 +89,7 @@ function initPortalToggles() {
     });
   }
 
-  // Restore preferences on load
+  
   const savedTheme = localStorage.getItem('silverhoof_theme') || localStorage.getItem('theme') || 'dark';
   applyTheme(savedTheme);
 
@@ -107,9 +97,6 @@ function initPortalToggles() {
   applyDir(savedDir);
 }
 
-/**
- * Tab Switching Logic for Portal Sidebar
- */
 function initDashboardTabs() {
   const tabItems = document.querySelectorAll('.dash-tab-item');
   const panels = document.querySelectorAll('.dash-panel');
@@ -124,9 +111,6 @@ function initDashboardTabs() {
   });
 }
 
-/**
- * Programmatic tab switcher helper
- */
 function switchDashTab(tabName) {
   const tabItems = document.querySelectorAll('.dash-tab-item');
   const panels = document.querySelectorAll('.dash-panel');
@@ -153,9 +137,6 @@ function switchDashTab(tabName) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-/**
- * Toggle Line Chart 6 Months vs 1 Year
- */
 function toggleLineChartSpan(span, btnEl) {
   const filterBtns = document.querySelectorAll('.time-filter-btn');
   filterBtns.forEach(b => b.classList.remove('active'));
@@ -170,9 +151,6 @@ function toggleLineChartSpan(span, btnEl) {
   }
 }
 
-/**
- * Live Dashboard Search Filter
- */
 function handleDashSearch(query) {
   const term = query.toLowerCase().trim();
   const tableRows = document.querySelectorAll('.dash-table tbody tr');
@@ -189,9 +167,6 @@ function handleDashSearch(query) {
   });
 }
 
-/**
- * Skill Level Filter Buttons for Slot Booking Tab
- */
 function initSkillFilters() {
   const filterBtns = document.querySelectorAll('.skill-btn');
   const slotCards = document.querySelectorAll('.slot-card');
@@ -217,23 +192,14 @@ function initSkillFilters() {
   });
 }
 
-/**
- * Confirm Slot Booking Action
- */
 function confirmSlotBooking(slotTitle, timeSlot) {
   showDashToast(`Successfully reserved slot for "${slotTitle}" (${timeSlot}). Confirmation details sent to your registered email!`);
 }
 
-/**
- * Trail Registration Action
- */
 function registerForTrail(trailTitle) {
   showDashToast(`Registered for "${trailTitle}"! Our trail guide will contact you 24h prior to confirm horse assignment.`);
 }
 
-/**
- * Custom Dashboard Toast Alert
- */
 function showDashToast(message) {
   let toast = document.getElementById('dash-toast');
   if (!toast) {
@@ -275,4 +241,20 @@ function showDashToast(message) {
     toast.style.transform = 'translateY(100px)';
     toast.style.opacity = '0';
   }, 4500);
+}
+
+function initStickyHeader() {
+  const topBar = document.querySelector('.dash-top-bar');
+  if (!topBar) return;
+
+  const updateHeaderScroll = () => {
+    if (window.pageYOffset > 15) {
+      topBar.classList.add('scrolled');
+    } else {
+      topBar.classList.remove('scrolled');
+    }
+  };
+
+  window.addEventListener('scroll', updateHeaderScroll, { passive: true });
+  updateHeaderScroll();
 }

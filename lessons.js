@@ -1,15 +1,10 @@
-/* ==========================================================================
-   SILVER HOOF STABLES - LESSONS OVERVIEW PAGE SCRIPT
-   ========================================================================== */
+﻿
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('Silver Hoof Stables - Lessons Page Loaded');
   initFaqAccordion();
 });
 
-/**
- * Initialize FAQ Accordion
- */
 function initFaqAccordion() {
   const faqHeaders = document.querySelectorAll('.faq-header');
   faqHeaders.forEach((header) => {
@@ -22,10 +17,6 @@ function initFaqAccordion() {
   });
 }
 
-/**
- * FAQ Accordion Toggle
- * @param {HTMLElement} headerEl - Clicked FAQ header element
- */
 function toggleFaq(headerEl) {
   const currentCard = headerEl.closest('.faq-card');
   if (!currentCard) return;
