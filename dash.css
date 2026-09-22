@@ -1,4 +1,4 @@
-﻿
+
 
 .dash-body {
   margin: 0;
@@ -132,7 +132,7 @@
   transition: color 0.25s ease;
 }
 
-.sidebar-link span {
+.sidebar-link .nav-link-text {
   flex: 1;
 }
 
