@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr" data-theme="dark">
 
 <head>
@@ -8,31 +8,27 @@
   <meta name="description"
     content="Silver Hoof Stables Premier Rider Portal & Analytics Dashboard. Monitor revenue growth, session volume, riding progress, trail bookings, and horse care.">
 
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
+  <link rel="icon" type="image/jpeg" href="favicon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
     rel="stylesheet">
 
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+<link rel="stylesheet" href="index.css">
   
-  <link rel="stylesheet" href="index.css">
-  
-  <link rel="stylesheet" href="dash.css">
+<link rel="stylesheet" href="dash.css">
 </head>
 
 <body class="dash-body">
 
   <div class="dash-portal-layout">
 
-    
-    <aside class="dash-sidebar" id="dash-sidebar">
+<aside class="dash-sidebar" id="dash-sidebar">
 
-      
-      <a href="index.html" class="dash-sidebar-brand" title="Return to Silver Hoof Stables Home">
+<a href="index.html" class="dash-sidebar-brand" title="Return to Silver Hoof Stables Home">
         <div class="logo-icon">
           <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
         </div>
@@ -42,8 +38,7 @@
         </div>
       </a>
 
-      
-      <nav class="dash-sidebar-nav">
+<nav class="dash-sidebar-nav">
         <span class="nav-section-label">PORTAL NAVIGATION</span>
 
         <ul class="sidebar-menu">
@@ -87,8 +82,7 @@
         </ul>
       </nav>
 
-      
-      <div class="sidebar-vip-card">
+<div class="sidebar-vip-card">
         <div class="vip-card-header">
           <div class="vip-badge-icon">
             <i class="fa-solid fa-shield-halved"></i>
@@ -106,11 +100,9 @@
 
     </aside>
 
-    
-    <div class="dash-main-wrapper">
+<div class="dash-main-wrapper">
 
-      
-      <header class="dash-top-bar">
+<header class="dash-top-bar">
         <div class="top-bar-left">
           <button class="mobile-sidebar-toggle" id="sidebar-toggle-btn" aria-label="Toggle Navigation Sidebar">
             <i class="fa-solid fa-bars"></i>
@@ -129,43 +121,119 @@
               oninput="handleDashSearch(this.value)">
           </div>
 
-          
-          <div class="top-controls">
+<div class="top-controls">
             <button class="icon-btn" id="rtl-toggle" title="Toggle RTL">RTL</button>
             <button class="icon-btn" id="theme-toggle" title="Toggle Theme"><i class="fa-solid fa-moon"
                 id="theme-icon"></i></button>
 
-            
-            <button class="icon-btn notif-btn" title="Notifications"
+<button class="icon-btn notif-btn" title="Notifications"
               onclick="showDashToast('You have 3 unread instructor notes and booking updates.')">
               <i class="fa-solid fa-bell"></i>
               <span class="notif-badge">3</span>
             </button>
           </div>
 
-          
-          <div class="user-profile-pill" onclick="switchDashTab('settings')">
-            <img src="images/hero2_rider_portrait.jpg" alt="Sarah Vance Avatar" class="profile-avatar">
-            <div class="profile-meta">
-              <span class="profile-name" id="pill-user-name">Elena Vance</span>
-              <span class="profile-role">Apothecary Admin</span>
+          <div class="profile-dropdown-wrapper" id="profile-dropdown-wrapper">
+            <div class="user-profile-pill" id="profile-dropdown-btn" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false" title="Click to open profile menu">
+              <img src="images/hero2_rider_portrait.jpg" alt="Elena Vance Avatar" class="profile-avatar">
+              <div class="profile-meta">
+                <span class="profile-name" id="pill-user-name">Elena Vance</span>
+                <span class="profile-role">Apothecary Admin</span>
+              </div>
+              <i class="fa-solid fa-chevron-down profile-arrow"></i>
             </div>
-            <i class="fa-solid fa-chevron-down profile-arrow"></i>
+
+            <div class="profile-dropdown-menu" id="profile-dropdown-menu">
+              <div class="dropdown-user-header">
+                <img src="images/hero2_rider_portrait.jpg" alt="Elena Vance Avatar" class="dropdown-avatar">
+                <div class="dropdown-user-info">
+                  <h4 class="dropdown-name" id="dropdown-user-name">Elena Vance</h4>
+                  <span class="dropdown-role">Apothecary Admin</span>
+                  <span class="dropdown-email">elena.vance@silverhoof.com</span>
+                </div>
+              </div>
+
+              <div class="dropdown-membership-tag">
+                <i class="fa-solid fa-gem"></i>
+                <span>VIP Equestrian Member #SH-8849</span>
+              </div>
+
+              <div class="dropdown-divider"></div>
+
+              <ul class="dropdown-menu-list">
+                <li>
+                  <button type="button" class="dropdown-menu-item" onclick="switchDashTab('settings'); closeProfileDropdown();">
+                    <span class="menu-icon"><i class="fa-solid fa-user-gear"></i></span>
+                    <div class="menu-text">
+                      <span class="menu-title">Profile &amp; Account</span>
+                      <span class="menu-desc">Personal details, credentials &amp; security</span>
+                    </div>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-menu-item" onclick="switchDashTab('progress'); closeProfileDropdown();">
+                    <span class="menu-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                    <div class="menu-text">
+                      <span class="menu-title">Rider Progress</span>
+                      <span class="menu-desc">Tier 4 Hunter Jumper certifications</span>
+                    </div>
+                    <span class="dropdown-badge">Tier 4</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-menu-item" onclick="switchDashTab('book'); closeProfileDropdown();">
+                    <span class="menu-icon"><i class="fa-solid fa-calendar-check"></i></span>
+                    <div class="menu-text">
+                      <span class="menu-title">Bookings &amp; Schedule</span>
+                      <span class="menu-desc">Upcoming lessons, arena reservations</span>
+                    </div>
+                    <span class="dropdown-badge count">14</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-menu-item" onclick="switchDashTab('payments'); closeProfileDropdown();">
+                    <span class="menu-icon"><i class="fa-solid fa-receipt"></i></span>
+                    <div class="menu-text">
+                      <span class="menu-title">Billing &amp; Invoices</span>
+                      <span class="menu-desc">Invoices, memberships &amp; payment methods</span>
+                    </div>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-menu-item" onclick="switchDashTab('settings'); closeProfileDropdown();">
+                    <span class="menu-icon"><i class="fa-solid fa-sliders"></i></span>
+                    <div class="menu-text">
+                      <span class="menu-title">Portal Preferences</span>
+                      <span class="menu-desc">Notifications, theme, display settings</span>
+                    </div>
+                  </button>
+                </li>
+              </ul>
+
+              <div class="dropdown-divider"></div>
+
+              <div class="dropdown-footer-actions">
+                <a href="index.html" class="dropdown-footer-link" title="Return to Main Website">
+                  <i class="fa-solid fa-house-chimney"></i>
+                  <span>Main Website</span>
+                </a>
+                <button type="button" class="dropdown-footer-link logout-link" onclick="handleDashLogout()" title="Log out of Rider Portal">
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                  <span>Sign Out</span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </header>
 
-      
-      <main class="dash-content-area">
+<main class="dash-content-area">
 
-        
-        <div class="dash-panel active" id="panel-overview">
+<div class="dash-panel active" id="panel-overview">
 
-          
-          <div class="kpi-grid-4">
+<div class="kpi-grid-4">
 
-            
-            <div class="kpi-card">
+<div class="kpi-card">
               <div class="kpi-header">
                 <span class="kpi-label">MONTHLY REVENUE</span>
                 <div class="kpi-icon-pill icon-purple">
@@ -181,8 +249,7 @@
               </div>
             </div>
 
-            
-            <div class="kpi-card">
+<div class="kpi-card">
               <div class="kpi-header">
                 <span class="kpi-label">TOTAL ORDERS</span>
                 <div class="kpi-icon-pill icon-green">
@@ -198,8 +265,7 @@
               </div>
             </div>
 
-            
-            <div class="kpi-card">
+<div class="kpi-card">
               <div class="kpi-header">
                 <span class="kpi-label">ACTIVE MEMBERS</span>
                 <div class="kpi-icon-pill icon-gold">
@@ -215,8 +281,7 @@
               </div>
             </div>
 
-            
-            <div class="kpi-card">
+<div class="kpi-card">
               <div class="kpi-header">
                 <span class="kpi-label">STOCK HEALTH</span>
                 <div class="kpi-icon-pill icon-teal">
@@ -234,11 +299,9 @@
 
           </div>
 
-          
-          <div class="charts-row-grid">
+<div class="charts-row-grid">
 
-            
-            <div class="chart-card chart-card-large">
+<div class="chart-card chart-card-large">
               <div class="chart-header">
                 <div class="chart-title-group">
                   <h3 class="chart-title">Revenue & Visitor Growth</h3>
@@ -250,8 +313,7 @@
                 </div>
               </div>
 
-              
-              <div class="chart-legend-bar">
+<div class="chart-legend-bar">
                 <div class="legend-item">
                   <span class="legend-color legend-revenue"></span>
                   <span>Monthly Revenue ($)</span>
@@ -262,8 +324,7 @@
                 </div>
               </div>
 
-              
-              <div class="svg-chart-container">
+<div class="svg-chart-container">
                 <svg class="line-chart-svg" viewBox="0 0 700 280" preserveAspectRatio="none">
                   <defs>
                     
@@ -278,16 +339,14 @@
                     </linearGradient>
                   </defs>
 
-                  
-                  <line x1="50" y1="30" x2="680" y2="30" class="chart-grid-line" />
+<line x1="50" y1="30" x2="680" y2="30" class="chart-grid-line" />
                   <line x1="50" y1="70" x2="680" y2="70" class="chart-grid-line" />
                   <line x1="50" y1="110" x2="680" y2="110" class="chart-grid-line" />
                   <line x1="50" y1="150" x2="680" y2="150" class="chart-grid-line" />
                   <line x1="50" y1="190" x2="680" y2="190" class="chart-grid-line" />
                   <line x1="50" y1="230" x2="680" y2="230" class="chart-grid-line" />
 
-                  
-                  <text x="40" y="34" class="chart-axis-text">$50000</text>
+<text x="40" y="34" class="chart-axis-text">$50000</text>
                   <text x="40" y="74" class="chart-axis-text">$45000</text>
                   <text x="40" y="114" class="chart-axis-text">$40000</text>
                   <text x="40" y="154" class="chart-axis-text">$35000</text>
@@ -295,26 +354,21 @@
                   <text x="40" y="234" class="chart-axis-text">$25000</text>
                   <text x="40" y="260" class="chart-axis-text">$10000</text>
 
-                  
-                  <text x="80" y="260" class="chart-axis-text">Mar</text>
+<text x="80" y="260" class="chart-axis-text">Mar</text>
                   <text x="200" y="260" class="chart-axis-text">Apr</text>
                   <text x="320" y="260" class="chart-axis-text">May</text>
                   <text x="440" y="260" class="chart-axis-text">Jun</text>
                   <text x="560" y="260" class="chart-axis-text">Jul</text>
                   <text x="660" y="260" class="chart-axis-text">Aug</text>
 
-                  
-                  <polygon points="80,200 200,175 320,120 440,105 560,85 660,42 660,230 80,230"
+<polygon points="80,200 200,175 320,120 440,105 560,85 660,42 660,230 80,230"
                     fill="url(#purpleGrad)" />
 
-                  
-                  <path d="M 80,220 Q 200,205 320,185 T 440,170 T 560,150 T 660,135" class="chart-line-green" />
+<path d="M 80,220 Q 200,205 320,185 T 440,170 T 560,150 T 660,135" class="chart-line-green" />
 
-                  
-                  <path d="M 80,200 Q 200,175 320,120 T 440,105 T 560,85 T 660,42" class="chart-line-purple" />
+<path d="M 80,200 Q 200,175 320,120 T 440,105 T 560,85 T 660,42" class="chart-line-purple" />
 
-                  
-                  <circle cx="80" cy="200" r="5" class="chart-dot dot-purple"
+<circle cx="80" cy="200" r="5" class="chart-dot dot-purple"
                     onclick="showDashToast('Mar Revenue: $28,400')" />
                   <circle cx="200" cy="175" r="5" class="chart-dot dot-purple"
                     onclick="showDashToast('Apr Revenue: $32,100')" />
@@ -327,8 +381,7 @@
                   <circle cx="660" cy="42" r="6" class="chart-dot dot-purple active-dot"
                     onclick="showDashToast('Aug Revenue: $48,250 Peak!')" />
 
-                  
-                  <circle cx="80" cy="220" r="4" class="chart-dot dot-green" />
+<circle cx="80" cy="220" r="4" class="chart-dot dot-green" />
                   <circle cx="200" cy="205" r="4" class="chart-dot dot-green" />
                   <circle cx="320" cy="185" r="4" class="chart-dot dot-green" />
                   <circle cx="440" cy="170" r="4" class="chart-dot dot-green" />
@@ -338,8 +391,7 @@
               </div>
             </div>
 
-            
-            <div class="chart-card chart-card-small">
+<div class="chart-card chart-card-small">
               <div class="chart-header">
                 <div class="chart-title-group">
                   <h3 class="chart-title">Category Sales</h3>
@@ -347,8 +399,7 @@
                 </div>
               </div>
 
-              
-              <div class="bar-graph-wrapper">
+<div class="bar-graph-wrapper">
                 <div class="bar-graph-y-axis">
                   <span>600</span>
                   <span>500</span>
@@ -368,32 +419,28 @@
                     <span class="bar-label">Face Oils</span>
                   </div>
 
-                  
-                  <div class="bar-col" onclick="showDashToast('Soaps / Jumping: 420 Sales')">
+<div class="bar-col" onclick="showDashToast('Soaps / Jumping: 420 Sales')">
                     <div class="bar-fill bar-light-purple" style="height: 70%;">
                       <span class="bar-tooltip">420</span>
                     </div>
                     <span class="bar-label">Soaps</span>
                   </div>
 
-                  
-                  <div class="bar-col" onclick="showDashToast('Toners / Trail Rides: 310 Sales')">
+<div class="bar-col" onclick="showDashToast('Toners / Trail Rides: 310 Sales')">
                     <div class="bar-fill bar-sage-green" style="height: 51%;">
                       <span class="bar-tooltip">310</span>
                     </div>
                     <span class="bar-label">Toners</span>
                   </div>
 
-                  
-                  <div class="bar-col" onclick="showDashToast('Butters / Youth Acad.: 280 Sales')">
+<div class="bar-col" onclick="showDashToast('Butters / Youth Acad.: 280 Sales')">
                     <div class="bar-fill bar-gold" style="height: 46%;">
                       <span class="bar-tooltip">280</span>
                     </div>
                     <span class="bar-label">Butters</span>
                   </div>
 
-                  
-                  <div class="bar-col" onclick="showDashToast('Ritual Sets / Boarding: 190 Sales')">
+<div class="bar-col" onclick="showDashToast('Ritual Sets / Boarding: 190 Sales')">
                     <div class="bar-fill bar-terracotta" style="height: 31%;">
                       <span class="bar-tooltip">190</span>
                     </div>
@@ -405,11 +452,9 @@
 
           </div>
 
-          
-          <div class="charts-row-grid grid-even">
+<div class="charts-row-grid grid-even">
 
-            
-            <div class="chart-card">
+<div class="chart-card">
               <div class="chart-header">
                 <div class="chart-title-group">
                   <h3 class="chart-title"><i class="fa-solid fa-chart-column"></i> Weekly Arena & Riding Slot Capacity
@@ -481,8 +526,7 @@
               </div>
             </div>
 
-            
-            <div class="chart-card">
+<div class="chart-card">
               <div class="chart-header">
                 <div class="chart-title-group">
                   <h3 class="chart-title"><i class="fa-solid fa-bullseye"></i> Rider Skill Mastery Scores</h3>
@@ -525,8 +569,7 @@
 
           </div>
 
-          
-          <div class="table-card">
+<div class="table-card">
             <div class="table-card-header">
               <div class="table-title-group">
                 <h3 class="table-title">Recent Rider Bookings & Orders</h3>
@@ -612,8 +655,7 @@
 
         </div>
 
-        
-        <div class="dash-panel" id="panel-book">
+<div class="dash-panel" id="panel-book">
           <div class="panel-header-bar">
             <h2>Book a Riding Slot</h2>
             <p>Select your skill level and reserve an available arena time slot</p>
@@ -665,8 +707,7 @@
           </div>
         </div>
 
-        
-        <div class="dash-panel" id="panel-progress">
+<div class="dash-panel" id="panel-progress">
           <div class="panel-header-bar flex-header">
             <div>
               <h2>Instructor Evaluations &amp; Rider Progress</h2>
@@ -680,8 +721,7 @@
             </div>
           </div>
 
-          
-          <div class="progress-kpi-grid">
+<div class="progress-kpi-grid">
             <div class="prog-kpi-card">
               <div class="prog-kpi-icon gold-glow"><i class="fa-solid fa-award"></i></div>
               <div class="prog-kpi-meta">
@@ -724,11 +764,9 @@
             </div>
           </div>
 
-          
-          <div class="progress-details-grid">
+<div class="progress-details-grid">
 
-            
-            <div class="prog-left-col">
+<div class="prog-left-col">
               
               <div class="prog-card">
                 <div class="prog-card-header">
@@ -797,8 +835,7 @@
                 </div>
               </div>
 
-              
-              <div class="prog-card goal-focus-card">
+<div class="prog-card goal-focus-card">
                 <div class="prog-card-header">
                   <h3>Active Q3 Focus Goals</h3>
                   <span class="status-pill pill-confirmed">On Schedule</span>
@@ -820,8 +857,7 @@
               </div>
             </div>
 
-            
-            <div class="prog-right-col">
+<div class="prog-right-col">
               <div class="prog-card">
                 <div class="prog-card-header">
                   <div>
@@ -849,7 +885,7 @@
                     <div class="eval-body">
                       <div class="eval-title-row">
                         <h4>Dressage Seat &amp; Rein Contact Evaluation</h4>
-                        <span class="eval-horse-tag"><i class="fa-solid fa-horse"></i> Dakota (Warmblood)</span>
+                        <span class="eval-horse-tag">Dakota (Warmblood)</span>
                       </div>
                       <p class="eval-notes">“Sarah displayed superb balance and upright pelvic alignment during extended
                         trot transitions. Rein contact remained remarkably elastic and soft throughout the serpentine
@@ -862,8 +898,7 @@
                     </div>
                   </div>
 
-                  
-                  <div class="eval-log-card">
+<div class="eval-log-card">
                     <div class="eval-log-header">
                       <div class="eval-instructor-info">
                         <img src="images/instructor_eleanor.jpg" alt="Guide Elena Rostova" class="eval-coach-thumb">
@@ -880,7 +915,7 @@
                     <div class="eval-body">
                       <div class="eval-title-row">
                         <h4>Trail Obstacle &amp; Creek Ford Crossing</h4>
-                        <span class="eval-horse-tag"><i class="fa-solid fa-horse"></i> Apollo (Quarter Horse)</span>
+                        <span class="eval-horse-tag">Apollo (Quarter Horse)</span>
                       </div>
                       <p class="eval-notes">“Flawless execution crossing steep rocky terrain and rapid stream crossings.
                         Demonstrated superior trail mindfulness, keeping horse relaxed and confident. Superb seat weight
@@ -893,8 +928,7 @@
                     </div>
                   </div>
 
-                  
-                  <div class="eval-log-card">
+<div class="eval-log-card">
                     <div class="eval-log-header">
                       <div class="eval-instructor-info">
                         <div class="coach-initials-thumb">SJ</div>
@@ -911,7 +945,7 @@
                     <div class="eval-body">
                       <div class="eval-title-row">
                         <h4>3-Foot Oxer Lines &amp; Striding Precision</h4>
-                        <span class="eval-horse-tag"><i class="fa-solid fa-horse"></i> Dakota (Warmblood)</span>
+                        <span class="eval-horse-tag">Dakota (Warmblood)</span>
                       </div>
                       <p class="eval-notes">“Consistent 5-stride counts achieved through the related distance oxer line.
                         Crest release timing was natural. Only minor adjustment needed on keeping eyes focused forward
@@ -924,8 +958,7 @@
                     </div>
                   </div>
 
-                  
-                  <div class="eval-log-card">
+<div class="eval-log-card">
                     <div class="eval-log-header">
                       <div class="eval-instructor-info">
                         <div class="coach-initials-thumb">DM</div>
@@ -942,7 +975,7 @@
                     <div class="eval-body">
                       <div class="eval-title-row">
                         <h4>Ground Manners, Lunging &amp; Roundpen Communication</h4>
-                        <span class="eval-horse-tag"><i class="fa-solid fa-horse"></i> Valkyrie (Friesian)</span>
+                        <span class="eval-horse-tag">Valkyrie (Friesian)</span>
                       </div>
                       <p class="eval-notes">“Calm, authoritative body language in the roundpen. Horse hooked-on within 8
                         minutes. Exemplary safety checks on saddle fitting, girth tightness, and snaffle bit placement.”
@@ -961,8 +994,7 @@
           </div>
         </div>
 
-        
-        <div class="dash-panel" id="panel-trail">
+<div class="dash-panel" id="panel-trail">
           <div class="panel-header-bar flex-header">
             <div>
               <h2>Trail Expeditions &amp; Boarding Care Telemetry</h2>
@@ -974,8 +1006,7 @@
             </div>
           </div>
 
-          
-          <div class="boarding-telemetry-card">
+<div class="boarding-telemetry-card">
             <div class="boarding-header">
               <div class="boarding-horse-profile">
                 <img src="images/horse_dakota.jpg" alt="Dakota" class="boarding-horse-avatar">
@@ -1002,8 +1033,7 @@
               </div>
             </div>
 
-            
-            <div class="care-telemetry-grid">
+<div class="care-telemetry-grid">
               <div class="telemetry-box">
                 <div class="telem-icon gold-box"><i class="fa-solid fa-utensils"></i></div>
                 <div class="telem-meta">
@@ -1046,8 +1076,7 @@
             </div>
           </div>
 
-          
-          <div class="trail-expeditions-section">
+<div class="trail-expeditions-section">
             <div class="section-title-wrap">
               <div>
                 <h3>Scenic Trail Expeditions &amp; Wilderness Rides</h3>
@@ -1081,8 +1110,7 @@
                 </div>
               </div>
 
-              
-              <div class="trail-exp-card">
+<div class="trail-exp-card">
                 <div class="trail-exp-media">
                   <img src="images/gallery_trail_creek.jpg" alt="Whispering Pines Forest &amp; Creek Loop">
                   <span class="trail-badge badge-pines"><i class="fa-solid fa-tree"></i> Woodland Trail</span>
@@ -1106,8 +1134,7 @@
                 </div>
               </div>
 
-              
-              <div class="trail-exp-card">
+<div class="trail-exp-card">
                 <div class="trail-exp-media">
                   <img src="images/hero2_gallop_meadow.jpg" alt="Alpine Valley Extended Expedition">
                   <span class="trail-badge badge-alpine"><i class="fa-solid fa-compass"></i> Half-Day Trek</span>
@@ -1134,8 +1161,7 @@
           </div>
         </div>
 
-        
-        <div class="dash-panel" id="panel-payments">
+<div class="dash-panel" id="panel-payments">
           <div class="panel-header-bar">
             <h2>Payment Receipts &amp; Invoices</h2>
             <p>View transaction history and download official statements</p>
@@ -1174,8 +1200,7 @@
           </div>
         </div>
 
-        
-        <div class="dash-panel" id="panel-settings">
+<div class="dash-panel" id="panel-settings">
           <div class="panel-header-bar flex-header">
             <div>
               <h2>Account &amp; Stable Portal Preferences</h2>
@@ -1192,8 +1217,7 @@
             onsubmit="event.preventDefault(); showDashToast('Portal preferences updated successfully!');">
             <div class="settings-cards-grid">
 
-              
-              <div class="settings-card">
+<div class="settings-card">
                 <div class="settings-card-header">
                   <div class="settings-icon gold-icon"><i class="fa-solid fa-user-astronaut"></i></div>
                   <div>
@@ -1230,8 +1254,7 @@
                 </div>
               </div>
 
-              
-              <div class="settings-card">
+<div class="settings-card">
                 <div class="settings-card-header">
                   <div class="settings-icon purple-icon"><i class="fa-solid fa-bell"></i></div>
                   <div>
@@ -1288,8 +1311,7 @@
                 </div>
               </div>
 
-              
-              <div class="settings-card">
+<div class="settings-card">
                 <div class="settings-card-header">
                   <div class="settings-icon emerald-icon"><i class="fa-solid fa-horse-head"></i></div>
                   <div>
@@ -1321,8 +1343,7 @@
                 </div>
               </div>
 
-              
-              <div class="settings-card">
+<div class="settings-card">
                 <div class="settings-card-header">
                   <div class="settings-icon teal-icon"><i class="fa-solid fa-lock"></i></div>
                   <div>
@@ -1358,8 +1379,7 @@
 
             </div>
 
-            
-            <div class="settings-action-bar">
+<div class="settings-action-bar">
               <span class="save-hint"><i class="fa-solid fa-circle-info text-gold"></i> Changes are synced to your
                 stable member account</span>
               <div class="action-buttons-group">
@@ -1376,8 +1396,7 @@
     </div>
   </div>
 
-  
-  <script src="dash.js"></script>
+<script src="dash.js"></script>
 </body>
 
 </html>

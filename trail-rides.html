@@ -8,30 +8,26 @@
   <meta name="description"
     content="Experience breathtaking horseback trail rides across 150+ acres of private countryside, pine forests, and mountain stream paths at Silver Hoof Stables.">
 
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
+  <link rel="icon" type="image/jpeg" href="favicon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
     rel="stylesheet">
 
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  
-  <link rel="stylesheet" href="index.css">
-  
-  <link rel="stylesheet" href="trail-rides.css">
+<link rel="stylesheet" href="index.css">
+
+<link rel="stylesheet" href="trail-rides.css">
 </head>
 
 <body>
 
-  
-  <header class="header" id="header">
+<header class="header" id="header">
     <div class="container header-container">
 
-      
-      <a href="index.html" class="brand-logo">
+<a href="index.html" class="brand-logo">
         <div class="logo-icon">
           <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
         </div>
@@ -41,8 +37,7 @@
         </div>
       </a>
 
-      
-      <nav class="nav-menu" id="nav-menu">
+<nav class="nav-menu" id="nav-menu">
         <ul class="nav-list">
           <li class="nav-item dropdown">
             <a href="index.html" class="nav-link" id="home-dropdown-btn">
@@ -67,25 +62,21 @@
         </ul>
       </nav>
 
-      
-      <div class="header-actions">
-        
+<div class="header-actions">
+
         <button class="icon-btn" id="rtl-toggle" title="Toggle Text Direction (LTR / RTL)" aria-label="Toggle RTL">
           <span class="btn-label">RTL</span>
         </button>
 
-        
-        <button class="icon-btn" id="theme-toggle" title="Toggle Theme (Dark / Light)" aria-label="Toggle Theme">
+<button class="icon-btn" id="theme-toggle" title="Toggle Theme (Dark / Light)" aria-label="Toggle Theme">
           <i class="fa-solid fa-moon" id="theme-icon"></i>
         </button>
 
-        
-        <button class="btn btn-primary" id="open-login-btn" onclick="openLoginModal()">
+<button class="btn btn-primary" id="open-login-btn" onclick="openLoginModal()">
           <i class="fa-solid fa-user"></i> Login
         </button>
 
-        
-        <button class="hamburger-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+<button class="hamburger-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
@@ -93,21 +84,21 @@
     </div>
   </header>
 
-  
-  <main>
+<main>
 
-    
-    <section class="trail-hero-section">
+<section class="trail-hero-section">
       <div class="trail-hero-bg" style="background-image: url('images/lesson_sunset_trail.jpg');"></div>
       <div class="trail-hero-overlay"></div>
 
       <div class="container trail-hero-container">
-        
-        
-        <div class="trail-hero-grid">
 
-          
-          <div class="trail-hero-text-col">
+<div class="trail-hero-symmetrical-wrap">
+
+          <div class="trail-hero-flank trail-hero-flank-left" aria-hidden="true">
+            <img src="images/trail_hero_rider.png" alt="Horseback Jumping Rider" class="trail-flank-img">
+          </div>
+
+          <div class="trail-hero-center-col">
             <div class="gold-divider-wrap">
               <span class="gold-line"></span>
               <span class="hero-welcome">LUXURY OUTDOOR EXCURSIONS</span>
@@ -120,10 +111,10 @@
             </h1>
 
             <p class="trail-hero-subtitle">
-              Explore 150+ acres of private pine forest trails, gentle creek crossings, and rolling meadow hilltops guided by certified wilderness naturalists.
+              Explore 150+ acres of private pine forest trails, gentle creek crossings, and rolling meadow hilltops
+              guided by certified wilderness naturalists.
             </p>
 
-            
             <div class="trail-hero-cta-btns">
               <a href="#packages" class="btn btn-primary" id="trail-hero-explore-btn">
                 <i class="fa-solid fa-compass"></i> Explore Trail Packages
@@ -133,7 +124,6 @@
               </button>
             </div>
 
-            
             <div class="trail-hero-stats">
               <div class="trail-stat">
                 <span class="stat-num">150+</span>
@@ -157,60 +147,9 @@
             </div>
           </div>
 
-          
-          <div class="trail-hero-media-col">
-            <div class="trail-dual-composition">
-              
-              
-              <div class="trail-hero-ambient-glow"></div>
-
-              
-              <div class="trail-image-card primary-card">
-                <div class="image-frame-wrapper">
-                  <img src="images/lesson_sunset_trail.jpg" alt="Pine Creek Sunset Trail Ride" class="trail-img-primary">
-                  <div class="image-overlay-tint"></div>
-                </div>
-                
-                <div class="floating-badge badge-top-left">
-                  <div class="badge-icon-wrap">
-                    <i class="fa-solid fa-tree"></i>
-                  </div>
-                  <div class="badge-text-wrap">
-                    <span class="badge-title">Pine Canopy Trails</span>
-                    <span class="badge-caption">150+ Acres Sanctuary</span>
-                  </div>
-                </div>
-              </div>
-
-              
-              <div class="trail-image-card secondary-card">
-                <div class="image-frame-wrapper">
-                  <img src="images/hero2_gallop_meadow.jpg" alt="Rolling Hills Meadow Trail Excursion" class="trail-img-secondary">
-                  <div class="image-overlay-tint"></div>
-                </div>
-                
-                <div class="floating-badge badge-bottom-right">
-                  <div class="badge-icon-wrap gold-glow">
-                    <i class="fa-solid fa-award"></i>
-                  </div>
-                  <div class="badge-text-wrap">
-                    <div class="stars-row">
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star"></i>
-                    </div>
-                    <span class="badge-title">5.0 Star Rated</span>
-                    <span class="badge-caption">Scenic Creek &amp; Meadow Routes</span>
-                  </div>
-                </div>
-              </div>
-
-              
-              <div class="trail-hero-geometric-accent"></div>
-
-            </div>
+          <div class="trail-hero-flank trail-hero-flank-right" aria-hidden="true">
+            <img src="images/trail_hero_rider.png" alt="Horseback Jumping Rider"
+              class="trail-flank-img trail-flank-flipped">
           </div>
 
         </div>
@@ -218,8 +157,7 @@
       </div>
     </section>
 
-    
-    <section class="section trail-packages-section" id="packages">
+<section class="section trail-packages-section" id="packages">
       <div class="container">
 
         <div class="section-tag-row center">
@@ -230,12 +168,12 @@
           </div>
         </div>
         <h2 class="section-title text-center">Choose Your Trail Experience</h2>
-        <p class="section-subtitle text-center">Whether seeking a relaxing sunset ride, a romantic couples excursion, or a backcountry adventure, we have the ideal trail for you.</p>
+        <p class="section-subtitle text-center">Whether seeking a relaxing sunset ride, a romantic couples excursion, or
+          a backcountry adventure, we have the ideal trail for you.</p>
 
         <div class="trail-packages-grid">
 
-          
-          <div class="trail-card">
+<div class="trail-card">
             <div class="trail-card-img">
               <img src="images/lesson_sunset_trail.jpg" alt="Pine Creek Sunset Trek">
               <span class="trail-card-badge gold-badge">MOST POPULAR</span>
@@ -247,7 +185,8 @@
               </div>
               <h3 class="trail-card-title">Pine Creek Sunset Trek</h3>
               <p class="trail-card-desc">
-                Ride through pine canopies and cross shallow mountain streams as the evening sun sets over the distant rolling hills.
+                Ride through pine canopies and cross shallow mountain streams as the evening sun sets over the distant
+                rolling hills.
               </p>
               <ul class="trail-highlights">
                 <li><i class="fa-solid fa-circle-check icon-gold"></i> Scenic stream crossing & photo stop</li>
@@ -266,8 +205,7 @@
             </div>
           </div>
 
-          
-          <div class="trail-card">
+<div class="trail-card">
             <div class="trail-card-img">
               <img src="images/hero2_gallop_meadow.jpg" alt="Rolling Hills Panorama Ride">
               <span class="trail-card-badge">SCENIC VIEWS</span>
@@ -279,11 +217,13 @@
               </div>
               <h3 class="trail-card-title">Rolling Hills Panorama Ride</h3>
               <p class="trail-card-desc">
-                Ascend to high-elevation meadow lookouts with 360-degree panoramic countryside views and open galloping stretches.
+                Ascend to high-elevation meadow lookouts with 360-degree panoramic countryside views and open galloping
+                stretches.
               </p>
               <ul class="trail-highlights">
                 <li><i class="fa-solid fa-circle-check icon-gold"></i> High-elevation mountain lookout stop</li>
-                <li><i class="fa-solid fa-circle-check icon-gold"></i> Open trot/canter option for experienced riders</li>
+                <li><i class="fa-solid fa-circle-check icon-gold"></i> Open trot/canter option for experienced riders
+                </li>
                 <li><i class="fa-solid fa-circle-check icon-gold"></i> Complimentary saddlebags & bottled water</li>
               </ul>
               <div class="trail-card-footer">
@@ -291,15 +231,15 @@
                   <span class="val">$120</span>
                   <span class="unit">/ person</span>
                 </div>
-                <button class="btn btn-gold-pill btn-sm" onclick="openBookingWithProgram('Rolling Hills Panorama Ride')">
+                <button class="btn btn-gold-pill btn-sm"
+                  onclick="openBookingWithProgram('Rolling Hills Panorama Ride')">
                   Reserve Ride <i class="fa-solid fa-arrow-right"></i>
                 </button>
               </div>
             </div>
           </div>
 
-          
-          <div class="trail-card">
+<div class="trail-card">
             <div class="trail-card-img">
               <img src="images/hero2_ranch_sunset.jpg" alt="Private Romantic Couples Trail">
               <span class="trail-card-badge gold-badge">EXCLUSIVE</span>
@@ -311,7 +251,8 @@
               </div>
               <h3 class="trail-card-title">Private Romantic Couples Trail</h3>
               <p class="trail-card-desc">
-                A private 1-on-1 guided trail experience through secluded birch groves ending with a private champagne picnic setup.
+                A private 1-on-1 guided trail experience through secluded birch groves ending with a private champagne
+                picnic setup.
               </p>
               <ul class="trail-highlights">
                 <li><i class="fa-solid fa-circle-check icon-gold"></i> Completely private guide & trail route</li>
@@ -323,15 +264,15 @@
                   <span class="val">$250</span>
                   <span class="unit">/ couple</span>
                 </div>
-                <button class="btn btn-gold-pill btn-sm" onclick="openBookingWithProgram('Private Romantic Couples Trail')">
+                <button class="btn btn-gold-pill btn-sm"
+                  onclick="openBookingWithProgram('Private Romantic Couples Trail')">
                   Reserve Ride <i class="fa-solid fa-arrow-right"></i>
                 </button>
               </div>
             </div>
           </div>
 
-          
-          <div class="trail-card">
+<div class="trail-card">
             <div class="trail-card-img">
               <img src="images/gallery_trail_creek.jpg" alt="Backcountry Wilderness Expedition">
               <span class="trail-card-badge">HALF-DAY ADVENTURE</span>
@@ -343,7 +284,8 @@
               </div>
               <h3 class="trail-card-title">Backcountry Wilderness Expedition</h3>
               <p class="trail-card-desc">
-                Deep backcountry excursion traversing rugged ridges, timber forests, wildlife habitats, and rustic campfire lunch.
+                Deep backcountry excursion traversing rugged ridges, timber forests, wildlife habitats, and rustic
+                campfire lunch.
               </p>
               <ul class="trail-highlights">
                 <li><i class="fa-solid fa-circle-check icon-gold"></i> Gourmet campfire lunch & espresso</li>
@@ -355,7 +297,8 @@
                   <span class="val">$175</span>
                   <span class="unit">/ person</span>
                 </div>
-                <button class="btn btn-gold-pill btn-sm" onclick="openBookingWithProgram('Backcountry Wilderness Expedition')">
+                <button class="btn btn-gold-pill btn-sm"
+                  onclick="openBookingWithProgram('Backcountry Wilderness Expedition')">
                   Reserve Ride <i class="fa-solid fa-arrow-right"></i>
                 </button>
               </div>
@@ -367,12 +310,10 @@
       </div>
     </section>
 
-    
-    <section class="section trail-experience-section" id="experience">
+<section class="section trail-experience-section" id="experience">
       <div class="container">
 
-        
-        <div class="section-tag-row center">
+<div class="section-tag-row center">
           <div class="section-tag">
             <span class="tag-line"></span>
             THE SILVER HOOF DIFFERENCE
@@ -381,27 +322,26 @@
         </div>
         <h2 class="section-title text-center">Uncompromising Safety, Unrivaled Wilderness Luxury</h2>
         <p class="section-subtitle text-center">
-          Discover why riders of all experience levels trust Silver Hoof for peaceful, inspiring journeys through our private countryside sanctuary.
+          Discover why riders of all experience levels trust Silver Hoof for peaceful, inspiring journeys through our
+          private countryside sanctuary.
         </p>
 
-        
-        <div class="diff-split-grid">
-          
-          
-          <div class="diff-cards-col">
-            
-            
-            <div class="diff-feature-card">
+<div class="diff-split-grid">
+
+<div class="diff-cards-col">
+
+<div class="diff-feature-card">
               <div class="diff-card-header">
                 <div class="diff-icon-box">
-                  <i class="fa-solid fa-horse icon-gold"></i>
+                  <i class="fa-solid fa-shield-heart icon-gold"></i>
                 </div>
                 <span class="diff-card-num">01</span>
               </div>
               <div class="diff-card-content">
-                <h4 class="diff-title">Gentle, Trail-Tested Horses</h4>
+                <h4 class="diff-title">Gentle, Trail-Tested <br> Horses</h4>
                 <p class="diff-desc">
-                  Hand-selected and calm-conditioned specifically for trail composure, sure-footed creek crossings, and beginner-friendly temperaments.
+                  Hand-selected and calm-conditioned specifically for trail composure, sure-footed creek crossings, and
+                  beginner-friendly temperaments.
                 </p>
                 <div class="diff-pill">
                   <i class="fa-solid fa-shield-heart"></i> Calm &amp; Sure-Footed
@@ -409,8 +349,7 @@
               </div>
             </div>
 
-            
-            <div class="diff-feature-card">
+<div class="diff-feature-card">
               <div class="diff-card-header">
                 <div class="diff-icon-box">
                   <i class="fa-solid fa-user-shield icon-gold"></i>
@@ -420,7 +359,8 @@
               <div class="diff-card-content">
                 <h4 class="diff-title">Certified Wilderness Naturalists</h4>
                 <p class="diff-desc">
-                  Every excursion is accompanied by guides certified in Wilderness First Aid (WFA), satellite radio comms, and native flora and wildlife.
+                  Every excursion is accompanied by guides certified in Wilderness First Aid (WFA), satellite radio
+                  comms, and native flora and wildlife.
                 </p>
                 <div class="diff-pill">
                   <i class="fa-solid fa-certificate"></i> WFA Certified Guides
@@ -428,8 +368,7 @@
               </div>
             </div>
 
-            
-            <div class="diff-feature-card">
+<div class="diff-feature-card">
               <div class="diff-card-header">
                 <div class="diff-icon-box">
                   <i class="fa-solid fa-camera icon-gold"></i>
@@ -439,7 +378,8 @@
               <div class="diff-card-content">
                 <h4 class="diff-title">Complimentary High-Res Keepsakes</h4>
                 <p class="diff-desc">
-                  Our guides capture professional high-resolution photos of your ride at scenic vista stops, delivered digitally after your excursion.
+                  Our guides capture professional high-resolution photos of your ride at scenic vista stops, delivered
+                  digitally after your excursion.
                 </p>
                 <div class="diff-pill">
                   <i class="fa-solid fa-images"></i> Digital Album Included
@@ -447,8 +387,7 @@
               </div>
             </div>
 
-            
-            <div class="diff-feature-card">
+<div class="diff-feature-card">
               <div class="diff-card-header">
                 <div class="diff-icon-box">
                   <i class="fa-solid fa-mug-hot icon-gold"></i>
@@ -456,9 +395,10 @@
                 <span class="diff-card-num">04</span>
               </div>
               <div class="diff-card-content">
-                <h4 class="diff-title">Bespoke Trail Refreshments</h4>
+                <h4 class="diff-title">Bespoke Trail <br>Refreshments</h4>
                 <p class="diff-desc">
-                  Enjoy complimentary leather saddlebags, chilled spring water, and cozy post-ride artisanal cider or hot espresso in the clubhouse lounge.
+                  Enjoy complimentary leather saddlebags, chilled spring water, and cozy post-ride artisanal cider or
+                  hot espresso in the clubhouse lounge.
                 </p>
                 <div class="diff-pill">
                   <i class="fa-solid fa-fire"></i> Fireside Clubhouse Lounge
@@ -468,20 +408,18 @@
 
           </div>
 
-          
-          <div class="diff-media-col">
+<div class="diff-media-col">
             <div class="diff-showcase-composition">
-              
-              
-              <div class="diff-ambient-glow"></div>
 
-              
-              <div class="diff-image-card primary-diff-card">
+<div class="diff-ambient-glow"></div>
+
+<div class="diff-image-card primary-diff-card">
                 <div class="image-frame-wrapper">
-                  <img src="images/gallery_trail_creek.jpg" alt="Trail Ride Stream Crossing Experience" class="diff-showcase-img">
+                  <img src="images/gallery_trail_creek.jpg" alt="Trail Ride Stream Crossing Experience"
+                    class="diff-showcase-img">
                   <div class="image-overlay-tint"></div>
                 </div>
-                
+
                 <div class="diff-glass-badge badge-top-right">
                   <div class="stars-row">
                     <i class="fa-solid fa-star"></i>
@@ -495,13 +433,13 @@
                 </div>
               </div>
 
-              
-              <div class="diff-image-card secondary-diff-card">
+<div class="diff-image-card secondary-diff-card">
                 <div class="image-frame-wrapper">
-                  <img src="images/hero2_ranch_sunset.jpg" alt="Sunset Countryside Trail Vista" class="diff-showcase-img-small">
+                  <img src="images/hero2_ranch_sunset.jpg" alt="Sunset Countryside Trail Vista"
+                    class="diff-showcase-img-small">
                   <div class="image-overlay-tint"></div>
                 </div>
-                
+
                 <div class="diff-glass-badge badge-bottom-left">
                   <div class="badge-icon-wrap gold-glow">
                     <i class="fa-solid fa-shield-check"></i>
@@ -513,8 +451,7 @@
                 </div>
               </div>
 
-              
-              <div class="diff-geometric-accent"></div>
+<div class="diff-geometric-accent"></div>
 
             </div>
           </div>
@@ -524,12 +461,10 @@
       </div>
     </section>
 
-    
-    <section class="section trail-faq-cta-section" id="faqs">
+<section class="section trail-faq-cta-section" id="faqs">
       <div class="container">
 
-        
-        <div class="section-tag-row center">
+<div class="section-tag-row center">
           <div class="section-tag">
             <span class="tag-line"></span>
             TRAIL EXCURSION FAQS
@@ -537,12 +472,12 @@
           </div>
         </div>
         <h2 class="section-title text-center">Trail Ride Questions & Answers</h2>
-        <p class="section-subtitle text-center">Everything you need to know before heading out on our countryside trails.</p>
+        <p class="section-subtitle text-center">Everything you need to know before heading out on our countryside
+          trails.</p>
 
         <div class="faq-accordion-wrap">
 
-          
-          <div class="faq-card active">
+<div class="faq-card active">
             <div class="faq-header" onclick="toggleFaq(this)">
               <h3 class="faq-question">
                 <i class="fa-solid fa-circle-question icon-gold"></i>
@@ -552,13 +487,14 @@
             </div>
             <div class="faq-body">
               <p>
-                No experience is needed! Our Pine Creek Sunset Trek and Rolling Hills Panorama Ride are specially designed for beginners and first-time riders. Our gentle horses walk at a comfortable single-file pace with friendly guide assistance.
+                No experience is needed! Our Pine Creek Sunset Trek and Rolling Hills Panorama Ride are specially
+                designed for beginners and first-time riders. Our gentle horses walk at a comfortable single-file pace
+                with friendly guide assistance.
               </p>
             </div>
           </div>
 
-          
-          <div class="faq-card">
+<div class="faq-card">
             <div class="faq-header" onclick="toggleFaq(this)">
               <h3 class="faq-question">
                 <i class="fa-solid fa-circle-question icon-gold"></i>
@@ -568,13 +504,13 @@
             </div>
             <div class="faq-body">
               <p>
-                We require long pants (jeans or riding tights) and sturdy closed-toe shoes or boots with a small heel. We provide ASTM-certified helmets and optional waterproof trail jackets.
+                We require long pants (jeans or riding tights) and sturdy closed-toe shoes or boots with a small heel.
+                We provide ASTM-certified helmets and optional waterproof trail jackets.
               </p>
             </div>
           </div>
 
-          
-          <div class="faq-card">
+<div class="faq-card">
             <div class="faq-header" onclick="toggleFaq(this)">
               <h3 class="faq-question">
                 <i class="fa-solid fa-circle-question icon-gold"></i>
@@ -584,13 +520,13 @@
             </div>
             <div class="faq-body">
               <p>
-                Riders must be at least 8 years old for general trail rides (younger children can enjoy pony lessons in the arena!). For horse comfort and welfare, our maximum rider weight limit is 240 lbs.
+                Riders must be at least 8 years old for general trail rides (younger children can enjoy pony lessons in
+                the arena!). For horse comfort and welfare, our maximum rider weight limit is 240 lbs.
               </p>
             </div>
           </div>
 
-          
-          <div class="faq-card">
+<div class="faq-card">
             <div class="faq-header" onclick="toggleFaq(this)">
               <h3 class="faq-question">
                 <i class="fa-solid fa-circle-question icon-gold"></i>
@@ -600,22 +536,23 @@
             </div>
             <div class="faq-body">
               <p>
-                Rides proceed in light rain (we provide trail slickers!). In the event of heavy lightning or storm warnings, you can reschedule free of charge or receive a full refund up to 24 hours prior.
+                Rides proceed in light rain (we provide trail slickers!). In the event of heavy lightning or storm
+                warnings, you can reschedule free of charge or receive a full refund up to 24 hours prior.
               </p>
             </div>
           </div>
 
         </div>
 
-        
-        <div class="trail-cta-card-wrap">
+<div class="trail-cta-card-wrap">
           <div class="trail-cta-card">
             <div class="cta-glow-overlay"></div>
             <div class="trail-cta-content">
               <span class="cta-badge-tag"><i class="fa-solid fa-compass"></i> DISCOVER THE WILDERNESS</span>
               <h2 class="trail-cta-title">Ready for an Unforgettable Trail Adventure?</h2>
               <p class="trail-cta-sub">
-                Book your trail ride online in seconds or call our ranch concierge to plan a custom private group excursion.
+                Book your trail ride online in seconds or call our ranch concierge to plan a custom private group
+                excursion.
               </p>
               <div class="trail-cta-btns">
                 <button class="btn btn-gold-pill btn-large" onclick="openBookingModal()">
@@ -634,12 +571,10 @@
 
   </main>
 
-  
-  <footer class="footer">
+<footer class="footer">
     <div class="container footer-container">
 
-      
-      <div class="footer-col footer-brand-col">
+<div class="footer-col footer-brand-col">
         <a href="index.html" class="brand-logo footer-logo">
           <div class="logo-icon">
             <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
@@ -661,8 +596,7 @@
         </div>
       </div>
 
-      
-      <div class="footer-col">
+<div class="footer-col">
         <h4 class="footer-title">Quick Links</h4>
         <ul class="footer-links">
           <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
@@ -672,8 +606,7 @@
         </ul>
       </div>
 
-      
-      <div class="footer-col">
+<div class="footer-col">
         <h4 class="footer-title">Additional Links</h4>
         <ul class="footer-links">
           <li><a href="index.html#pricing"><i class="fa-solid fa-chevron-right"></i> Pricing</a></li>
@@ -683,8 +616,7 @@
         </ul>
       </div>
 
-      
-      <div class="footer-col">
+<div class="footer-col">
         <h4 class="footer-title">Contact & Stables</h4>
         <div class="footer-contact-details">
           <p><i class="fa-solid fa-location-dot"></i> 450 Equestrian Trail, Rolling Hills, CA 90274</p>
@@ -696,8 +628,7 @@
 
     </div>
 
-    
-    <div class="footer-bottom">
+<div class="footer-bottom">
       <div class="container footer-bottom-content">
         <p>&copy; 2026 Silver Hoof Stables. All Rights Reserved.</p>
         <div class="footer-terms-links">
@@ -717,13 +648,10 @@
     </div>
   </footer>
 
-  
-  
-  <div class="modal-backdrop" id="booking-modal">
+<div class="modal-backdrop" id="booking-modal">
     <div class="modal-card">
       <button class="modal-close" id="booking-close" onclick="closeBookingModal()">&times;</button>
       <div class="modal-header">
-        <i class="fa-solid fa-horse modal-header-icon"></i>
         <h3>Book Your Trail Ride</h3>
         <p>Select your trail excursion and preferred date</p>
       </div>
@@ -778,8 +706,7 @@
     </div>
   </div>
 
-  
-  <div class="modal-backdrop" id="login-modal">
+<div class="modal-backdrop" id="login-modal">
     <div class="modal-card">
       <button class="modal-close" id="login-close" onclick="closeLoginModal()">&times;</button>
       <div class="modal-header">
@@ -803,8 +730,7 @@
     </div>
   </div>
 
-  
-  <script src="index.js"></script>
+<script src="index.js"></script>
   <script src="trail-rides.js"></script>
 </body>
 

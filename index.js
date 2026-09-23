@@ -1,16 +1,14 @@
-﻿
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  
-  const htmlEl = document.documentElement;
+const htmlEl = document.documentElement;
   const themeToggleBtn = document.getElementById('theme-toggle');
   const themeIcon = document.getElementById('theme-icon');
   const rtlToggleBtn = document.getElementById('rtl-toggle');
   const rtlLabel = rtlToggleBtn ? rtlToggleBtn.querySelector('.btn-label') : null;
 
-  
-  const savedTheme = localStorage.getItem('silverhoof_theme') || 'dark';
+const savedTheme = localStorage.getItem('silverhoof_theme') || 'dark';
   htmlEl.setAttribute('data-theme', savedTheme);
   updateThemeIcon(savedTheme);
 
@@ -33,8 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  
-  const savedDir = localStorage.getItem('silverhoof_dir') || 'ltr';
+const savedDir = localStorage.getItem('silverhoof_dir') || 'ltr';
   htmlEl.setAttribute('dir', savedDir);
   if (rtlLabel) rtlLabel.textContent = savedDir === 'rtl' ? 'LTR' : 'RTL';
 
@@ -52,8 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  
-  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
   const navMenu = document.getElementById('nav-menu');
   const navLinks = document.querySelectorAll('.nav-link');
   const header = document.getElementById('header');
@@ -82,16 +78,14 @@ document.addEventListener('DOMContentLoaded', () => {
         icon.className = isNowActive ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
       }
 
-      
-      if (isNowActive && dropdownItem && dropdownMenu) {
+if (isNowActive && dropdownItem && dropdownMenu) {
         dropdownItem.classList.add('open');
         dropdownMenu.classList.add('show');
       }
     });
   }
 
-  
-  if (homeDropdownBtn && dropdownItem) {
+if (homeDropdownBtn && dropdownItem) {
     homeDropdownBtn.addEventListener('click', (e) => {
       const isMobile = window.innerWidth <= 768 || (navMenu && navMenu.classList.contains('active'));
       if (isMobile) {
@@ -105,8 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  
-  navLinks.forEach(link => {
+navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       const isMobile = window.innerWidth <= 768 || (navMenu && navMenu.classList.contains('active'));
       if (isMobile && (link.id === 'home-dropdown-btn' || link.closest('.dropdown') === dropdownItem)) {
@@ -116,15 +109,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  
-  dropdownLinks.forEach(item => {
+dropdownLinks.forEach(item => {
     item.addEventListener('click', () => {
       closeMobileMenu();
     });
   });
 
-  
-  document.addEventListener('click', (e) => {
+document.addEventListener('click', (e) => {
     if (navMenu && navMenu.classList.contains('active')) {
       if (!navMenu.contains(e.target) && mobileMenuToggle && !mobileMenuToggle.contains(e.target)) {
         closeMobileMenu();
@@ -132,8 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  
-  window.addEventListener('resize', () => {
+window.addEventListener('resize', () => {
     if (window.innerWidth > 768) {
       closeMobileMenu();
       if (dropdownItem) dropdownItem.classList.remove('open');
@@ -141,13 +131,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  
-  const sections = document.querySelectorAll('section[id]');
+const sections = document.querySelectorAll('section[id]');
   window.addEventListener('scroll', () => {
     const scrollY = window.pageYOffset;
 
-    
-    if (header) {
+if (header) {
       if (scrollY > 50) {
         header.style.boxShadow = 'var(--shadow-sm)';
       } else {
@@ -155,8 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    
-    sections.forEach(current => {
+sections.forEach(current => {
       const sectionHeight = current.offsetHeight;
       const sectionTop = current.offsetTop - 120;
       const sectionId = current.getAttribute('id');
@@ -172,8 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  
-  const pricingToggle = document.getElementById('pricing-toggle');
+const pricingToggle = document.getElementById('pricing-toggle');
   const singleLabel = document.getElementById('single-label');
   const monthlyLabel = document.getElementById('monthly-label');
   const priceVals = document.querySelectorAll('.price-val');
@@ -197,9 +183,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       priceVals.forEach(valEl => {
         const targetVal = isMonthly ? valEl.getAttribute('data-monthly') : valEl.getAttribute('data-single');
-        
-        
-        valEl.style.opacity = '0';
+
+valEl.style.opacity = '0';
         setTimeout(() => {
           valEl.textContent = targetVal;
           valEl.style.opacity = '1';
@@ -212,16 +197,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  
-  const filterBtns = document.querySelectorAll('.filter-btn');
+const filterBtns = document.querySelectorAll('.filter-btn');
   const galleryItems = document.querySelectorAll('.gallery-item');
   const lightboxModal = document.getElementById('lightbox-modal');
   const lightboxImg = document.getElementById('lightbox-img');
   const lightboxCaption = document.getElementById('lightbox-caption');
   const lightboxClose = document.getElementById('lightbox-close');
 
-  
-  filterBtns.forEach(btn => {
+filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
@@ -240,8 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  
-  galleryItems.forEach(item => {
+galleryItems.forEach(item => {
     item.addEventListener('click', () => {
       const img = item.querySelector('img');
       const title = item.querySelector('.gallery-overlay h4').textContent;
@@ -267,8 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  
-  const bookingModal = document.getElementById('booking-modal');
+const bookingModal = document.getElementById('booking-modal');
   const bookingClose = document.getElementById('booking-close');
   const openBookingBtns = [
     document.getElementById('open-booking-btn'),
@@ -283,8 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const dashModal = document.getElementById('rider-dashboard-modal');
   const dashClose = document.getElementById('dashboard-close');
 
-  
-  openBookingBtns.forEach(btn => {
+openBookingBtns.forEach(btn => {
     if (btn) {
       btn.addEventListener('click', () => {
         openBookingModal();
@@ -304,8 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  
-  if (openLoginBtn) {
+if (openLoginBtn) {
     openLoginBtn.addEventListener('click', () => {
       openLoginModal();
     });
@@ -335,8 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  
-  document.addEventListener('keydown', (e) => {
+document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       if (lightboxModal) lightboxModal.classList.remove('active');
       if (bookingModal) bookingModal.classList.remove('active');

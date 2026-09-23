@@ -1,4 +1,4 @@
-﻿
+
 
 .cs-theme-btn {
   position: fixed;
@@ -78,8 +78,7 @@
   padding: 2rem 1.5rem;
   overflow: hidden;
 
-  
-  background: radial-gradient(ellipse at 50% 20%,
+background: radial-gradient(ellipse at 50% 20%,
     rgba(198, 161, 91, 0.12) 0%,
     rgba(20, 14, 9, 1) 68%);
 }

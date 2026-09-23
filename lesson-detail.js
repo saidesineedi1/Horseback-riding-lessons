@@ -1,4 +1,4 @@
-﻿
+
 
 const LESSONS_DATA = {
   'beginner-foundations': {
@@ -426,8 +426,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
   let lessonId = urlParams.get('id');
 
-  
-  if (!lessonId || !LESSONS_DATA[lessonId]) {
+if (!lessonId || !LESSONS_DATA[lessonId]) {
     lessonId = 'beginner-foundations';
   }
 
@@ -440,8 +439,7 @@ function renderLessonDetails(lesson) {
   
   document.title = `${lesson.title} | Silver Hoof Stables`;
 
-  
-  const heroBg = document.getElementById('detail-hero-bg');
+const heroBg = document.getElementById('detail-hero-bg');
   if (heroBg) heroBg.style.backgroundImage = `url('${lesson.heroImage}')`;
 
   const crumbTitle = document.getElementById('crumb-lesson-title');
@@ -456,19 +454,16 @@ function renderLessonDetails(lesson) {
   const subtitle = document.getElementById('detail-subtitle');
   if (subtitle) subtitle.textContent = lesson.subtitle;
 
-  
-  const mainImg = document.getElementById('detail-main-img');
+const mainImg = document.getElementById('detail-main-img');
   if (mainImg) mainImg.src = lesson.heroImage;
 
   const imgCaption = document.getElementById('detail-img-caption');
   if (imgCaption) imgCaption.textContent = `${lesson.title} Session at Silver Hoof Stables`;
 
-  
-  const overviewText = document.getElementById('detail-overview-text');
+const overviewText = document.getElementById('detail-overview-text');
   if (overviewText) overviewText.innerHTML = lesson.overview;
 
-  
-  const currGrid = document.getElementById('detail-curriculum-grid');
+const currGrid = document.getElementById('detail-curriculum-grid');
   if (currGrid && lesson.curriculum) {
     currGrid.innerHTML = lesson.curriculum.map(item => `
       <div class="curr-card">
@@ -479,8 +474,7 @@ function renderLessonDetails(lesson) {
     `).join('');
   }
 
-  
-  const timelineEl = document.getElementById('detail-session-timeline');
+const timelineEl = document.getElementById('detail-session-timeline');
   if (timelineEl && lesson.timeline) {
     timelineEl.innerHTML = lesson.timeline.map(item => `
       <div class="timeline-step">
@@ -493,8 +487,7 @@ function renderLessonDetails(lesson) {
     `).join('');
   }
 
-  
-  const equineGrid = document.getElementById('detail-equine-grid');
+const equineGrid = document.getElementById('detail-equine-grid');
   if (equineGrid && lesson.equine) {
     equineGrid.innerHTML = lesson.equine.map(eq => `
       <div class="equine-card">
@@ -511,24 +504,21 @@ function renderLessonDetails(lesson) {
     `).join('');
   }
 
-  
-  const incList = document.getElementById('detail-included-list');
+const incList = document.getElementById('detail-included-list');
   if (incList && lesson.included) {
     incList.innerHTML = lesson.included.map(item => `
       <li><i class="fa-solid fa-circle-check icon-gold"></i> ${item}</li>
     `).join('');
   }
 
-  
-  const gearList = document.getElementById('detail-gear-list');
+const gearList = document.getElementById('detail-gear-list');
   if (gearList && lesson.gear) {
     gearList.innerHTML = lesson.gear.map(item => `
       <li><i class="fa-solid fa-shirt icon-gold"></i> ${item}</li>
     `).join('');
   }
 
-  
-  const milestonesList = document.getElementById('detail-milestones-list');
+const milestonesList = document.getElementById('detail-milestones-list');
   if (milestonesList && lesson.milestones) {
     milestonesList.innerHTML = lesson.milestones.map(m => `
       <div class="milestone-item">
@@ -541,8 +531,7 @@ function renderLessonDetails(lesson) {
     `).join('');
   }
 
-  
-  const faqList = document.getElementById('detail-faq-list');
+const faqList = document.getElementById('detail-faq-list');
   if (faqList && lesson.faqs) {
     faqList.innerHTML = lesson.faqs.map(faq => `
       <div class="detail-faq-item">
@@ -556,8 +545,7 @@ function renderLessonDetails(lesson) {
       </div>
     `).join('');
 
-    
-    const faqQuestions = faqList.querySelectorAll('.detail-faq-q');
+const faqQuestions = faqList.querySelectorAll('.detail-faq-q');
     faqQuestions.forEach(btn => {
       btn.addEventListener('click', () => {
         const item = btn.closest('.detail-faq-item');
@@ -571,8 +559,7 @@ function renderLessonDetails(lesson) {
     });
   }
 
-  
-  const instName = document.getElementById('detail-inst-name');
+const instName = document.getElementById('detail-inst-name');
   if (instName) instName.textContent = lesson.instName;
 
   const instBio = document.getElementById('detail-inst-bio');
@@ -581,8 +568,7 @@ function renderLessonDetails(lesson) {
   const instImg = document.getElementById('detail-inst-img');
   if (instImg) instImg.src = lesson.instImg;
 
-  
-  const priceVal = document.getElementById('widget-price-val');
+const priceVal = document.getElementById('widget-price-val');
   if (priceVal) priceVal.textContent = lesson.price;
 
   const duration = document.getElementById('widget-duration');
@@ -594,8 +580,7 @@ function renderLessonDetails(lesson) {
   const level = document.getElementById('widget-level');
   if (level) level.textContent = lesson.level;
 
-  
-  const bookBtn = document.getElementById('widget-book-btn');
+const bookBtn = document.getElementById('widget-book-btn');
   if (bookBtn) {
     bookBtn.onclick = () => {
       if (typeof openBookingWithProgram === 'function') {

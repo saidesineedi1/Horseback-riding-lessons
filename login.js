@@ -1,4 +1,4 @@
-﻿
+
 
 document.addEventListener('DOMContentLoaded', function () {
   
@@ -69,8 +69,7 @@ function handleLoginPageSubmit(event) {
     return;
   }
 
-  
-  if (submitBtn) {
+if (submitBtn) {
     submitBtn.disabled = true;
     submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Authenticating...`;
   }

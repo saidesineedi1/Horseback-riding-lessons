@@ -1,4 +1,4 @@
-﻿
+
 
 .error-fullpage {
   margin: 0;
@@ -11,8 +11,7 @@
   right: 20px;
   z-index: 9999;
 
-  
-  width: 44px !important;
+width: 44px !important;
   min-width: 44px !important;
   max-width: 44px !important;
   height: 38px !important;
@@ -21,8 +20,7 @@
   padding: 0 !important;
   box-sizing: border-box !important;
 
-  
-  background: transparent;
+background: transparent;
   border: 1.5px solid var(--border-color, rgba(198, 161, 91, 0.25));
   border-radius: 50px !important;
   color: var(--text-primary);

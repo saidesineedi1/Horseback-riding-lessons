@@ -2,8 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  
-  const home2Sections = document.querySelectorAll('section[id]');
+const home2Sections = document.querySelectorAll('section[id]');
   const home2NavLinks = document.querySelectorAll('.nav-menu a[href*="#"]');
 
   window.addEventListener('scroll', () => {

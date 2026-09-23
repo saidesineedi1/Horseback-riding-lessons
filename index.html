@@ -10,28 +10,23 @@
 
 
   <link rel="icon" type="image/jpeg" href="favicon.jpg">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
     rel="stylesheet">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-
-  <link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
-
-  <header class="header" id="header">
+<header class="header" id="header">
     <div class="container header-container">
 
-
-      <a href="#home" class="brand-logo">
+<a href="#home" class="brand-logo">
         <div class="logo-icon">
           <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
         </div>
@@ -41,8 +36,7 @@
         </div>
       </a>
 
-
-      <nav class="nav-menu" id="nav-menu">
+<nav class="nav-menu" id="nav-menu">
         <ul class="nav-list">
           <li class="nav-item dropdown">
             <a href="index.html" class="nav-link active" id="home-dropdown-btn">
@@ -72,18 +66,15 @@
           <span class="btn-label">RTL</span>
         </button>
 
-
-        <button class="icon-btn" id="theme-toggle" title="Toggle Theme (Dark / Light)" aria-label="Toggle Theme">
+<button class="icon-btn" id="theme-toggle" title="Toggle Theme (Dark / Light)" aria-label="Toggle Theme">
           <i class="fa-solid fa-moon" id="theme-icon"></i>
         </button>
 
-
-        <button class="btn btn-primary" id="open-login-btn">
+<button class="btn btn-primary" id="open-login-btn">
           <i class="fa-solid fa-user"></i> Login
         </button>
 
-
-        <button class="hamburger-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+<button class="hamburger-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
@@ -91,11 +82,9 @@
     </div>
   </header>
 
+<main>
 
-  <main>
-
-
-    <section class="hero-section" id="home">
+<section class="hero-section" id="home">
       <div class="container hero-container">
         <div class="hero-content">
           <div class="gold-divider-wrap">
@@ -110,12 +99,12 @@
             skills, and create lasting connections with horses.
           </p>
           <div class="hero-buttons">
-            <button class="btn btn-gold btn-large" onclick="openLoginModal()">
-              Login <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            <button class="btn btn-gold btn-large" onclick="openBookingModal()" id="hero-book-btn">
+              Book a Riding Lesson
             </button>
-            <button class="btn btn-outline-hero btn-large" onclick="openBookingModal()">
-              Book a Riding Lesson <i class="fa-solid fa-horse"></i>
-            </button>
+            <a href="#about" class="btn btn-outline-hero btn-large" id="hero-explore-btn">
+              Explore Our Stable <i class="fa-solid fa-compass"></i>
+            </a>
           </div>
         </div>
 
@@ -125,8 +114,7 @@
       </div>
     </section>
 
-
-    <section class="feature-strip">
+<section class="feature-strip">
       <div class="container feature-container">
         <div class="feature-item">
           <div class="feature-icon">
@@ -188,8 +176,7 @@
       </div>
     </section>
 
-
-    <section class="section about-section">
+<section class="section about-section" id="about">
       <div class="container about-container">
 
         <div class="about-image-column">
@@ -214,8 +201,7 @@
             instruction, and supportive growth in breathtaking natural surroundings.
           </p>
 
-
-          <div class="services-grid" style="grid-template-columns: 1fr; gap: 1rem; margin: 1.5rem 0;">
+<div class="services-grid" style="grid-template-columns: 1fr; gap: 1rem; margin: 1.5rem 0;">
             <div class="service-card" style="padding: 1.25rem;">
               <div style="display: flex; align-items: center; gap: 1rem;">
                 <div class="service-icon-wrapper"
@@ -276,8 +262,7 @@
       </div>
     </section>
 
-
-    <section class="section lessons-section">
+<section class="section lessons-section">
       <div class="container">
 
         <div class="section-header text-center">
@@ -295,8 +280,7 @@
 
         <div class="services-grid">
 
-
-          <div class="service-card lesson-service-card">
+<div class="service-card lesson-service-card">
             <div class="lesson-card-media">
               <img src="images/lesson_youth_academy.jpg" alt="Young Riders Equestrian Lesson" class="lesson-card-img">
               <div class="skill-level-badge">Ages 5 – 10</div>
@@ -314,8 +298,7 @@
             </div>
           </div>
 
-
-          <div class="service-card lesson-service-card">
+<div class="service-card lesson-service-card">
             <div class="lesson-card-media">
               <img src="images/lesson_horsemanship.jpg" alt="Teen Riders Equestrian Lesson" class="lesson-card-img">
               <div class="skill-level-badge">Ages 11 – 17</div>
@@ -333,8 +316,7 @@
             </div>
           </div>
 
-
-          <div class="service-card lesson-service-card">
+<div class="service-card lesson-service-card">
             <div class="lesson-card-media">
               <img src="images/lesson_sunset_trail.jpg" alt="Adult Riders Equestrian Lesson" class="lesson-card-img">
               <div class="skill-level-badge">Ages 18+ Leisure</div>
@@ -352,8 +334,7 @@
             </div>
           </div>
 
-
-          <div class="service-card lesson-service-card featured-service">
+<div class="service-card lesson-service-card featured-service">
             <div class="badge-featured">Most Popular</div>
             <div class="lesson-card-media">
               <img src="images/lesson_beginner_foundations.jpg" alt="Beginner Riders Equestrian Lesson"
@@ -372,8 +353,7 @@
             </div>
           </div>
 
-
-          <div class="service-card lesson-service-card">
+<div class="service-card lesson-service-card">
             <div class="lesson-card-media">
               <img src="images/lesson_hunter_jumper.jpg" alt="Intermediate Riders Equestrian Lesson"
                 class="lesson-card-img">
@@ -391,8 +371,7 @@
             </div>
           </div>
 
-
-          <div class="service-card lesson-service-card">
+<div class="service-card lesson-service-card">
             <div class="lesson-card-media">
               <img src="images/lesson_dressage_precision.jpg" alt="Advanced Riders Equestrian Lesson"
                 class="lesson-card-img">
@@ -415,8 +394,7 @@
       </div>
     </section>
 
-
-    <section class="section boarding-section">
+<section class="section boarding-section">
       <div class="container">
 
         <div class="section-header text-center">
@@ -504,8 +482,7 @@
       </div>
     </section>
 
-
-    <section class="section pricing-section" id="pricing">
+<section class="section pricing-section" id="pricing">
       <div class="container">
 
         <div class="section-header text-center">
@@ -520,8 +497,7 @@
             memberships available.
           </p>
 
-
-          <div class="pricing-toggle-wrap">
+<div class="pricing-toggle-wrap">
             <span class="toggle-label active" id="single-label">Single Session</span>
             <label class="switch">
               <input type="checkbox" id="pricing-toggle">
@@ -534,8 +510,7 @@
 
         <div class="pricing-grid">
 
-
-          <div class="pricing-card">
+<div class="pricing-card">
             <div class="plan-header">
               <h3>Discovery Rider</h3>
               <p>Ideal for beginners trying their first lesson</p>
@@ -556,8 +531,7 @@
               Plan</button>
           </div>
 
-
-          <div class="pricing-card featured-plan">
+<div class="pricing-card featured-plan">
             <div class="popular-ribbon">Best Value</div>
             <div class="plan-header">
               <h3>Equestrian Explorer</h3>
@@ -579,8 +553,7 @@
               Started</button>
           </div>
 
-
-          <div class="pricing-card">
+<div class="pricing-card">
             <div class="plan-header">
               <h3>Royal Stabling & Board</h3>
               <p>Complete luxury care for horse owners</p>
@@ -606,8 +579,7 @@
       </div>
     </section>
 
-
-    <section class="section timeline-section" id="heritage">
+<section class="section timeline-section" id="heritage">
       <div class="container">
 
         <div class="section-header text-center">
@@ -625,8 +597,7 @@
         <div class="timeline-wrapper">
           <div class="timeline-line"></div>
 
-
-          <div class="timeline-item left">
+<div class="timeline-item left">
             <div class="timeline-dot"><i class="fa-solid fa-seedling"></i></div>
             <div class="timeline-content">
               <span class="timeline-date">1999</span>
@@ -636,8 +607,7 @@
             </div>
           </div>
 
-
-          <div class="timeline-item right">
+<div class="timeline-item right">
             <div class="timeline-dot"><i class="fa-solid fa-trophy"></i></div>
             <div class="timeline-content">
               <span class="timeline-date">2006</span>
@@ -647,8 +617,7 @@
             </div>
           </div>
 
-
-          <div class="timeline-item left">
+<div class="timeline-item left">
             <div class="timeline-dot"><i class="fa-solid fa-mountain"></i></div>
             <div class="timeline-content">
               <span class="timeline-date">2014</span>
@@ -658,8 +627,7 @@
             </div>
           </div>
 
-
-          <div class="timeline-item right">
+<div class="timeline-item right">
             <div class="timeline-dot"><i class="fa-solid fa-heart-pulse"></i></div>
             <div class="timeline-content">
               <span class="timeline-date">2020</span>
@@ -669,8 +637,7 @@
             </div>
           </div>
 
-
-          <div class="timeline-item left">
+<div class="timeline-item left">
             <div class="timeline-dot"><i class="fa-solid fa-crown"></i></div>
             <div class="timeline-content">
               <span class="timeline-date">2025</span>
@@ -685,8 +652,7 @@
       </div>
     </section>
 
-
-    <section class="section journals-section" id="journals">
+<section class="section journals-section" id="journals">
       <div class="container">
 
         <div class="section-header text-center">
@@ -759,8 +725,7 @@
       </div>
     </section>
 
-
-    <section class="section gallery-section" id="gallery">
+<section class="section gallery-section" id="gallery">
       <div class="container">
 
         <div class="section-header text-center">
@@ -774,8 +739,7 @@
             Explore glimpses of our majestic horses, picturesque trails, and vibrant riding community.
           </p>
 
-
-          <div class="gallery-filters">
+<div class="gallery-filters">
             <button class="filter-btn active" data-filter="all">All Photos</button>
             <button class="filter-btn" data-filter="horses">Our Horses</button>
             <button class="filter-btn" data-filter="trails">Trail Rides</button>
@@ -786,8 +750,7 @@
 
         <div class="gallery-grid">
 
-
-          <div class="gallery-item" data-category="jumping">
+<div class="gallery-item" data-category="jumping">
             <img src="images/gallery_jumping.jpg" alt="Show Jumping Hurdle Practice">
             <div class="gallery-overlay">
               <i class="fa-solid fa-magnifying-glass-plus"></i>
@@ -796,8 +759,7 @@
             </div>
           </div>
 
-
-          <div class="gallery-item" data-category="trails">
+<div class="gallery-item" data-category="trails">
             <img src="images/gallery_trail_creek.jpg" alt="Mountain Stream Trail Ride">
             <div class="gallery-overlay">
               <i class="fa-solid fa-magnifying-glass-plus"></i>
@@ -806,8 +768,7 @@
             </div>
           </div>
 
-
-          <div class="gallery-item" data-category="ranch">
+<div class="gallery-item" data-category="ranch">
             <img src="images/gallery_stable_bonding.jpg" alt="Rider Bonding with Gray Horse in Stables">
             <div class="gallery-overlay">
               <i class="fa-solid fa-magnifying-glass-plus"></i>
@@ -816,8 +777,7 @@
             </div>
           </div>
 
-
-          <div class="gallery-item" data-category="trails">
+<div class="gallery-item" data-category="trails">
             <img src="images/hero_sunset_riding.jpg" alt="Golden Hour Sunset Trail Ride">
             <div class="gallery-overlay">
               <i class="fa-solid fa-magnifying-glass-plus"></i>
@@ -826,8 +786,7 @@
             </div>
           </div>
 
-
-          <div class="gallery-item" data-category="ranch">
+<div class="gallery-item" data-category="ranch">
             <img src="images/our_story_ranch.jpg" alt="Historic Ranch House & Barn">
             <div class="gallery-overlay">
               <i class="fa-solid fa-magnifying-glass-plus"></i>
@@ -836,8 +795,7 @@
             </div>
           </div>
 
-
-          <div class="gallery-item" data-category="horses">
+<div class="gallery-item" data-category="horses">
             <img src="images/horse_valkyrie.jpg" alt="Valkyrie Dressage Warmblood">
             <div class="gallery-overlay">
               <i class="fa-solid fa-magnifying-glass-plus"></i>
@@ -846,8 +804,7 @@
             </div>
           </div>
 
-
-          <div class="gallery-item" data-category="horses">
+<div class="gallery-item" data-category="horses">
             <img src="images/horse_apollo.jpg" alt="Apollo Palomino Stallion">
             <div class="gallery-overlay">
               <i class="fa-solid fa-magnifying-glass-plus"></i>
@@ -856,8 +813,7 @@
             </div>
           </div>
 
-
-          <div class="gallery-item" data-category="horses">
+<div class="gallery-item" data-category="horses">
             <img src="images/horse_sierra.jpg" alt="Sierra Chestnut Thoroughbred">
             <div class="gallery-overlay">
               <i class="fa-solid fa-magnifying-glass-plus"></i>
@@ -866,8 +822,7 @@
             </div>
           </div>
 
-
-          <div class="gallery-item" data-category="horses">
+<div class="gallery-item" data-category="horses">
             <img src="images/horse_dakota.jpg" alt="Dakota Grey Arabian">
             <div class="gallery-overlay">
               <i class="fa-solid fa-magnifying-glass-plus"></i>
@@ -881,8 +836,7 @@
       </div>
     </section>
 
-
-    <section class="section testimonials-section" id="testimonials">
+<section class="section testimonials-section" id="testimonials">
       <div class="container">
 
         <div class="section-header text-center">
@@ -900,8 +854,7 @@
 
         <div class="testimonials-grid">
 
-
-          <div class="testimonial-card">
+<div class="testimonial-card">
             <div class="quote-bg-icon"><i class="fa-solid fa-quote-right"></i></div>
             <div class="testimonial-rating">
               <i class="fa-solid fa-star"></i>
@@ -911,22 +864,21 @@
               <i class="fa-solid fa-star"></i>
             </div>
             <p class="testimonial-quote">
-              "Silver Hoof Stables completely transformed my riding confidence. As an adult beginner, I was nervous at
-              first, but the instructors were patient, encouraging, and paired me with the gentlest school horse!"
+              "Silver Hoof Stables completely transformed my riding confidence. As an adult beginner, but the
+              instructors were patient, encouraging, and paired me with the gentlest school horse!"
             </p>
             <div class="testimonial-author">
               <img src="images/instructor_eleanor.jpg" alt="Victoria Sterling" class="author-avatar">
               <div class="author-info">
                 <h4>Victoria Sterling</h4>
-                <p>Adult Explorer Rider &bull; <span class="verified-badge"><i class="fa-solid fa-circle-check"></i>
+                <p>Adult Trail Explorer Rider &bull; <span class="verified-badge"><i
+                      class="fa-solid fa-circle-check"></i>
                     Verified Rider</span></p>
               </div>
             </div>
           </div>
 
-
-          <div class="testimonial-card featured-testimonial">
-            <div class="testimonial-tag-badge">Most Loved</div>
+<div class="testimonial-card">
             <div class="quote-bg-icon"><i class="fa-solid fa-quote-right"></i></div>
             <div class="testimonial-rating">
               <i class="fa-solid fa-star"></i>
@@ -949,8 +901,7 @@
             </div>
           </div>
 
-
-          <div class="testimonial-card">
+<div class="testimonial-card">
             <div class="quote-bg-icon"><i class="fa-solid fa-quote-right"></i></div>
             <div class="testimonial-rating">
               <i class="fa-solid fa-star"></i>
@@ -975,8 +926,7 @@
 
         </div>
 
-
-        <div class="trust-stats-strip">
+<div class="trust-stats-strip">
           <div class="trust-stat-item">
             <span class="trust-number">4.95 / 5.0</span>
             <span class="trust-label">Average Rider Rating</span>
@@ -996,8 +946,7 @@
       </div>
     </section>
 
-
-    <section class="section cta-banner-section" id="cta">
+<section class="section cta-banner-section" id="cta">
       <div class="container">
         <div class="cta-card">
 
@@ -1013,8 +962,7 @@
               stroke-width="1.5" />
           </svg>
 
-
-          <div class="cta-left-content">
+<div class="cta-left-content">
             <div class="cta-pill-badge">
               <i class="fa-regular fa-clock"></i>
               <span>LIMITED TIME OFFER</span>
@@ -1025,12 +973,7 @@
               <span class="cta-highlight-italic">Silver Hoof's Finest Experience</span>
             </h2>
 
-            <p class="cta-description">
-              Join over <strong>4,200+ members</strong> embracing equestrian excellence. Get your first riding session
-              package with an exclusive welcome discount — crafted just for your skill level.
-            </p>
-
-            <ul class="cta-features-list">
+<ul class="cta-features-list">
               <li class="cta-feature-item">
                 <i class="fa-solid fa-check cta-check-icon"></i>
                 <span>Free safety gear & helmet rental on first lesson</span>
@@ -1050,15 +993,14 @@
                 Start My Journey <i class="fa-solid fa-arrow-right"></i>
               </button>
               <button class="btn btn-cta-secondary" onclick="openRiderDashboard()">
-                Explore Dashboard
+                Explore Dashboard <i class="fa-solid fa-gauge-high"></i>
               </button>
             </div>
 
             <p class="cta-subtext">No commitment. Cancel anytime. 100% satisfaction guaranteed.</p>
           </div>
 
-
-          <div class="cta-right-visual">
+<div class="cta-right-visual">
             <div class="cta-bg-circles">
               <div class="circle-ring ring-outer"></div>
               <div class="circle-ring ring-inner"></div>
@@ -1079,12 +1021,10 @@
 
   </main>
 
-
-  <footer class="footer">
+<footer class="footer">
     <div class="container footer-container">
 
-
-      <div class="footer-col footer-brand-col">
+<div class="footer-col footer-brand-col">
         <a href="index.html" class="brand-logo footer-logo">
           <div class="logo-icon">
             <img src="images/logo.png" alt="Silver Hoof Stables Logo" class="brand-logo-img">
@@ -1106,8 +1046,7 @@
         </div>
       </div>
 
-
-      <div class="footer-col">
+<div class="footer-col">
         <h4 class="footer-title">Quick Links</h4>
         <ul class="footer-links">
           <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
@@ -1117,8 +1056,7 @@
         </ul>
       </div>
 
-
-      <div class="footer-col">
+<div class="footer-col">
         <h4 class="footer-title">Additional Links</h4>
         <ul class="footer-links">
           <li><a href="index.html#pricing"><i class="fa-solid fa-chevron-right"></i> Pricing</a></li>
@@ -1128,8 +1066,7 @@
         </ul>
       </div>
 
-
-      <div class="footer-col">
+<div class="footer-col">
         <h4 class="footer-title">Contact & Stables</h4>
         <div class="footer-contact-details">
           <p><i class="fa-solid fa-location-dot"></i> 450 Equestrian Trail, Rolling Hills, CA 90274</p>
@@ -1141,8 +1078,7 @@
 
     </div>
 
-
-    <div class="footer-bottom">
+<div class="footer-bottom">
       <div class="container footer-bottom-content">
         <p>&copy; 2026 Silver Hoof Stables. All Rights Reserved.</p>
         <div class="footer-terms-links">
@@ -1162,8 +1098,7 @@
     </div>
   </footer>
 
-
-  <div class="modal-backdrop" id="lightbox-modal">
+<div class="modal-backdrop" id="lightbox-modal">
     <div class="lightbox-content">
       <button class="modal-close" id="lightbox-close">&times;</button>
       <img src="" id="lightbox-img" alt="Gallery preview">
@@ -1171,12 +1106,10 @@
     </div>
   </div>
 
-
-  <div class="modal-backdrop" id="booking-modal">
+<div class="modal-backdrop" id="booking-modal">
     <div class="modal-card">
       <button class="modal-close" id="booking-close">&times;</button>
       <div class="modal-header">
-        <i class="fa-solid fa-horse modal-header-icon"></i>
         <h3>Book Your Lesson</h3>
         <p>Select your program and preferred schedule</p>
       </div>
@@ -1234,8 +1167,7 @@
     </div>
   </div>
 
-
-  <div class="modal-backdrop" id="login-modal">
+<div class="modal-backdrop" id="login-modal">
     <div class="modal-card login-modal-card">
       <button class="modal-close" id="login-close">&times;</button>
       <div class="modal-header">
@@ -1263,13 +1195,11 @@
     </div>
   </div>
 
-
-  <div class="modal-backdrop" id="rider-dashboard-modal">
+<div class="modal-backdrop" id="rider-dashboard-modal">
     <div class="modal-card dashboard-modal-card">
       <button class="modal-close" id="dashboard-close">&times;</button>
 
-
-      <div class="dashboard-header-banner">
+<div class="dashboard-header-banner">
         <div class="dashboard-user-info">
           <div class="dashboard-avatar"><i class="fa-solid fa-user-ninja"></i></div>
           <div>
@@ -1277,7 +1207,7 @@
             <p class="dashboard-user-meta">
               <span><i class="fa-solid fa-id-badge"></i> ID: #RH-8842</span>
               <span class="badge-level"><i class="fa-solid fa-star"></i> Intermediate Level II</span>
-              <span><i class="fa-solid fa-horse"></i> Assigned: Dakota</span>
+              <span>Assigned: Dakota</span>
             </p>
           </div>
         </div>
@@ -1285,8 +1215,7 @@
             class="fa-solid fa-right-from-bracket"></i> Sign Out</button>
       </div>
 
-
-      <div class="dashboard-body">
+<div class="dashboard-body">
         <div class="dashboard-tabs">
           <button class="dash-tab-btn active" onclick="switchDashTab('overview', this)"><i
               class="fa-solid fa-chart-pie"></i> Overview</button>
@@ -1302,11 +1231,9 @@
             Manage Payments</button>
         </div>
 
+<div class="dashboard-tab-content">
 
-        <div class="dashboard-tab-content">
-
-
-          <div class="dash-pane active" id="pane-overview">
+<div class="dash-pane active" id="pane-overview">
             <h4>Rider Performance Overview</h4>
             <div class="dash-stats-grid">
               <div class="dash-stat-card">
@@ -1337,7 +1264,7 @@
                 <div>
                   <h5>Intermediate Jumping & Trot Transition</h5>
                   <p><i class="fa-solid fa-calendar"></i> Tomorrow, 10:30 AM &bull; <i class="fa-solid fa-user-tie"></i>
-                    Coach Marcus Sterling &bull; <i class="fa-solid fa-horse"></i> Horse: Dakota</p>
+                    Coach Marcus Sterling &bull; Horse: Dakota</p>
                 </div>
                 <button class="btn btn-gold btn-sm"
                   onclick="switchDashTab('schedule', document.querySelectorAll('.dash-tab-btn')[4])">View
@@ -1346,8 +1273,7 @@
             </div>
           </div>
 
-
-          <div class="dash-pane" id="pane-book-lesson">
+<div class="dash-pane" id="pane-book-lesson">
             <h4>Book Lesson Slot by Skill Level</h4>
             <form id="dash-book-form" onsubmit="handleDashBooking(event)">
               <div class="form-group-row">
@@ -1411,8 +1337,7 @@
             </form>
           </div>
 
-
-          <div class="dash-pane" id="pane-progress-notes">
+<div class="dash-pane" id="pane-progress-notes">
             <h4>Instructor Riding Progress & Feedback Notes</h4>
 
             <div class="progress-skills-grid">
@@ -1483,8 +1408,7 @@
             </div>
           </div>
 
-
-          <div class="dash-pane" id="pane-trail-register">
+<div class="dash-pane" id="pane-trail-register">
             <h4>Register for Guided Scenic Trail Rides</h4>
             <p class="subtext">Join our group trail rides across 150 acres of private woodland loops & mountain ridges.
             </p>
@@ -1526,8 +1450,7 @@
             </div>
           </div>
 
-
-          <div class="dash-pane" id="pane-schedule">
+<div class="dash-pane" id="pane-schedule">
             <h4>Upcoming Session Schedules</h4>
             <table class="schedule-table">
               <thead>
@@ -1561,8 +1484,7 @@
             </table>
           </div>
 
-
-          <div class="dash-pane" id="pane-payments">
+<div class="dash-pane" id="pane-payments">
             <h4>Manage Billing & Payments</h4>
 
             <div class="billing-summary-box">
@@ -1616,8 +1538,7 @@
     </div>
   </div>
 
-
-  <script src="index.js"></script>
+<script src="index.js"></script>
 </body>
 
 </html>

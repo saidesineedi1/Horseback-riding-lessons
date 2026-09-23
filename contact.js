@@ -1,4 +1,4 @@
-﻿
+
 
 document.addEventListener('DOMContentLoaded', () => {
   initContactFaqs();
@@ -11,11 +11,9 @@ function handleContactPageSubmit(event) {
   const email = document.getElementById('c-email')?.value || '';
   const category = document.getElementById('c-inquiry')?.value || 'General Inquiry';
 
-  
-  showContactToast(`Thank you, ${name}! Your inquiry regarding "${category}" has been sent. Our team will contact you at ${email} shortly.`);
+showContactToast(`Thank you, ${name}! Your inquiry regarding "${category}" has been sent. Our team will contact you at ${email} shortly.`);
 
-  
-  const form = document.getElementById('contact-page-form');
+const form = document.getElementById('contact-page-form');
   if (form) form.reset();
 }
 
@@ -30,11 +28,9 @@ function initContactFaqs() {
     questionBtn.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
 
-      
-      faqItems.forEach(otherItem => otherItem.classList.remove('active'));
+faqItems.forEach(otherItem => otherItem.classList.remove('active'));
 
-      
-      if (!isActive) {
+if (!isActive) {
         item.classList.add('active');
       }
     });

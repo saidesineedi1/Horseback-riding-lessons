@@ -1,4 +1,4 @@
-﻿
+
 
 document.addEventListener('DOMContentLoaded', () => {
   initDashboardTabs();
@@ -7,12 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
   syncUserProfileFromStorage();
   initPortalToggles();
   initStickyHeader();
+  initProfileDropdown();
 });
 
 function syncUserProfileFromStorage() {
   const savedName = localStorage.getItem('sh_user_name');
   const welcomeHeading = document.getElementById('dash-user-welcome');
   const pillName = document.getElementById('pill-user-name');
+  const dropdownName = document.getElementById('dropdown-user-name');
 
   if (savedName) {
     if (welcomeHeading) {
@@ -21,7 +23,61 @@ function syncUserProfileFromStorage() {
     if (pillName) {
       pillName.textContent = savedName;
     }
+    if (dropdownName) {
+      dropdownName.textContent = savedName;
+    }
   }
+}
+
+function initProfileDropdown() {
+  const wrapper = document.getElementById('profile-dropdown-wrapper');
+  const btn = document.getElementById('profile-dropdown-btn');
+
+  if (!wrapper || !btn) return;
+
+btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = wrapper.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+btn.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      const isOpen = wrapper.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+    if (e.key === 'Escape') {
+      closeProfileDropdown();
+    }
+  });
+
+document.addEventListener('click', (e) => {
+    if (!wrapper.contains(e.target)) {
+      closeProfileDropdown();
+    }
+  });
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeProfileDropdown();
+    }
+  });
+}
+
+function closeProfileDropdown() {
+  const wrapper = document.getElementById('profile-dropdown-wrapper');
+  const btn = document.getElementById('profile-dropdown-btn');
+  if (wrapper) wrapper.classList.remove('open');
+  if (btn) btn.setAttribute('aria-expanded', 'false');
+}
+
+function handleDashLogout() {
+  closeProfileDropdown();
+  showDashToast('Signing out... Redirecting to the main website.');
+  setTimeout(() => {
+    window.location.href = 'index.html';
+  }, 1800);
 }
 
 function initSidebarToggle() {
@@ -47,8 +103,7 @@ function initPortalToggles() {
   const themeIcon = document.getElementById('theme-icon');
   const rtlToggle = document.getElementById('rtl-toggle');
 
-  
-  function applyTheme(theme) {
+function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('silverhoof_theme', theme);
     localStorage.setItem('theme', theme);
@@ -60,8 +115,7 @@ function initPortalToggles() {
     }
   }
 
-  
-  function applyDir(dir) {
+function applyDir(dir) {
     document.documentElement.setAttribute('dir', dir);
     localStorage.setItem('silverhoof_dir', dir);
     localStorage.setItem('dir', dir);
@@ -89,8 +143,7 @@ function initPortalToggles() {
     });
   }
 
-  
-  const savedTheme = localStorage.getItem('silverhoof_theme') || localStorage.getItem('theme') || 'dark';
+const savedTheme = localStorage.getItem('silverhoof_theme') || localStorage.getItem('theme') || 'dark';
   applyTheme(savedTheme);
 
   const savedDir = localStorage.getItem('silverhoof_dir') || localStorage.getItem('dir') || 'ltr';

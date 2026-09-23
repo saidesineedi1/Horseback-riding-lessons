@@ -1,4 +1,4 @@
-﻿
+
 
 function handleSignupPageSubmit(event) {
   event.preventDefault();
@@ -17,8 +17,7 @@ function handleSignupPageSubmit(event) {
   const confirmPass = confirmInput ? confirmInput.value.trim() : '';
   const level = levelSelect ? levelSelect.value : '';
 
-  
-  if (!name || !email || !pass || !confirmPass) {
+if (!name || !email || !pass || !confirmPass) {
     showAuthToast('Please fill out all required fields.', 'error');
     return;
   }
@@ -39,8 +38,7 @@ function handleSignupPageSubmit(event) {
     return;
   }
 
-  
-  if (submitBtn) {
+if (submitBtn) {
     submitBtn.disabled = true;
     submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Creating Account...`;
   }
