@@ -2938,6 +2938,41 @@ html:not([dir="rtl"]) .timeline-item.right .timeline-dot,
   .footer-container {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 2.5rem;
+  }
+  .footer-col.footer-brand-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem auto;
+    text-align: center;
+    width: fit-content;
+  }
+  .footer-logo .logo-icon {
+    margin: 0;
+  }
+  .footer-logo .brand-text {
+    align-items: center;
+    text-align: center;
+  }
+  .footer-logo .brand-name {
+    text-align: center;
+  }
+  .footer-logo .brand-sub {
+    text-align: center;
+  }
+  .footer-about {
+    text-align: center;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
   }
   .footer-title::after {
     left: 50%;
